@@ -20,7 +20,7 @@ The skill routes tasks to measurement/estimating, drawing-set review, commercial
 
 ## One source of truth
 
-`skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown. Memory and update checks are independent optional standard-library scripts.
+`skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown, with an optional blank XLSX estimating workbook in the pending 2.1.0 source. Memory and update checks are independent optional standard-library scripts.
 
 ## Release boundary
 

@@ -46,11 +46,11 @@ Expected: **31.2 m² net; 32.76 m² purchased; 4,024.80 total.** No currency was
 | Maintenance and lifecycle costs | Schedule maintenance/replacements and discount costs using consistent timing and price assumptions. | Event schedule, present-value comparison and sensitivities. |
 | Coding and audit trail | Use your supplied cost-code definitions; retain uncertain mappings and source evidence. | Reconciled coded totals, unallocated amounts and queries linked to affected items. |
 
-The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and limits for each workflow. [Example requests](docs/QUICKSTART.md) help you start. Five blank CSV templates cover estimates, forecasts, changes, drawing registers and quantity evidence; a project-basis Markdown template records the brief.
+The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and limits for each workflow. [Example requests](docs/QUICKSTART.md) help you start. Five blank CSV templates cover estimates, forecasts, changes, drawing registers and quantity evidence; a project-basis Markdown template records the brief. The pending 2.1.0 source also includes an [optional estimating workbook](skills/quantity-surveyor/assets/templates/estimating-template.xlsx) with seven sheets, visible missing-input queries, allocation checks and a revision bridge. Read its [usage and limits](skills/quantity-surveyor/references/workbook-pattern.md).
 
 These are workflows for your AI app to carry out. Drawing viewing, calculation, file export and current-source access depend on the host. Optional private memory and release checking are separate helpers, off by default.
 
-Version **2.0.3** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
+The latest published version is **2.0.3**; source changes for **2.1.0** are pending release. Version **2.0.3** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 

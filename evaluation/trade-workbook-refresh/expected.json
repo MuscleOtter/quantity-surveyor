@@ -1,0 +1,25 @@
+{
+  "A": {
+    "net_R1": 19.8,
+    "purchase_R1": 20.79,
+    "cost_R1": 2554.2,
+    "net_R2": 21.96,
+    "purchase_R2": 23.058,
+    "cost_R2": 2832.84,
+    "cost_delta": 278.64
+  },
+  "B": {
+    "x_factor_m_per_point": 0.025,
+    "vertical_check_m": 2.25,
+    "relative_error_percent": 12.5,
+    "target": "unresolved; no single-factor measurement or unverified rectification"
+  },
+  "C": {
+    "P_net": 26,
+    "Q_net": 15,
+    "P_install": 1352,
+    "Q_install": 780,
+    "subtotal_install_only": 2132,
+    "stone_purchase": "unpriced; bedding not duplicated"
+  }
+}
