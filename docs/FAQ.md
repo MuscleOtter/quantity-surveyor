@@ -14,7 +14,7 @@ The skill provides instructions and templates, not a bundled drawing parser, sym
 
 ## Does it work with Claude, Codex and open-source models?
 
-The instructions are model-neutral Markdown in the Agent Skills folder format. Skill-capable hosts can load the folder; other chat apps can use the complete Markdown attachment. Tools, context capacity and instruction following differ, so portable instructions do not imply equivalent accuracy. Cross-model performance and every native installation path have not been tested. See [compatibility](COMPATIBILITY.md).
+The instructions are model-neutral Markdown in the Agent Skills folder format. Skill-capable hosts can load the folder; other chat apps can use the complete Markdown attachment. Tools, context capacity and instruction following differ, so portable instructions do not imply equivalent accuracy. One native Claude Code activation and four correct published-case answers on 2.0.1 have been reported as a [smoke check](../evaluation/claude-smoke-report.md). That does not establish cross-model parity or all native installation paths. See [compatibility](COMPATIBILITY.md).
 
 ## Do I need to code or buy a service?
 

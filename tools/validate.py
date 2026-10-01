@@ -35,6 +35,7 @@ def main():
         archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
         return archived if archived.is_file() else ROOT/name
     editorial=json.loads((EVAL/'documentation-refresh/editorial-changes.json').read_text())
+    routing=json.loads((EVAL/'routing-refresh/changes.json').read_text())
     s=(SKILL/'SKILL.md').read_text()
     require(s.startswith('---\n'),'Missing frontmatter')
     head,body=s[4:].split('\n---\n',1)
@@ -66,11 +67,14 @@ def main():
         source=v2_source(name)
         require(digest(source)==expected,'Frozen v2 source changed: '+name)
         if source != ROOT/name:
-            renamed=source.read_text().replace('universal-quantity-surveyor','quantity-surveyor').replace('"2.0.0"','"2.0.2"')
+            renamed=source.read_text().replace('universal-quantity-surveyor','quantity-surveyor').replace('"2.0.0"','"2.0.3"')
             for before,after in editorial.get(name.removeprefix('skills/quantity-surveyor/'),[]):
                 require(before in renamed,'Editorial source text missing: '+name)
                 renamed=renamed.replace(before,after)
-            require((ROOT/name).read_text()==renamed,'Unexpected release/editorial delta: '+name)
+            for before,after in routing.get(name.removeprefix('skills/quantity-surveyor/'),[]):
+                require(renamed.count(before)==1,'Routing source text missing or ambiguous: '+name)
+                renamed=renamed.replace(before,after)
+            require((ROOT/name).read_text()==renamed,'Unexpected release/editorial/routing delta: '+name)
     verify_manifest(EVAL/'v2-drawing-workflow',EVAL/'v2-drawing-workflow/response-hashes.json')
     for name in json.loads((EVAL/'candidate-round2-hashes.json').read_text()):
         if name not in ('SKILL.md','README.md'):
@@ -79,6 +83,9 @@ def main():
     allowed |= {'references/updates.md','scripts/check_updates.py','version.json','references/large-drawing-sets.md','templates/drawing-register.csv','templates/quantity-evidence.csv'}
     actual={p.relative_to(SKILL).as_posix() for p in SKILL.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
     require(actual==allowed,'Unexpected or missing distributable files: '+str(actual^allowed))
+    require(not list((ROOT/'docs').rglob('CLAUDE.md')),'User-facing guides must not use the reserved CLAUDE.md filename')
+    for template in (SKILL/'templates').iterdir():
+        require('(templates/'+template.name+')' in s,'Template missing from core routing: '+template.name)
     documents=list((ROOT/'docs').glob('*.md'))+[ROOT/'README.md',ROOT/'quantity-surveyor-review.md',ROOT/'CONTRIBUTING.md']+list(SKILL.rglob('*.md'))
     for p in documents:
         for label,url in re.findall(r'\[([^\]]+)\]\(([^)]+)\)',p.read_text()):

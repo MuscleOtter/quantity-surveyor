@@ -30,7 +30,7 @@ This is a host-managed preference, not an installed scheduler. It requires expli
 
 ## Claude uploads
 
-For this release ZIP, download the approved version and upload/update it through Customize → Skills; confirm the enabled version before relying on it. The checker only reads metadata. A modified file in a task sandbox is not proof that the installed skill was replaced. If GitHub access is restricted, use the release page manually. See [Claude guidance](CLAUDE.md#updates-and-storage).
+For this release ZIP, download the approved version and upload/update it through Customize → Skills; confirm the enabled version before relying on it. The checker only reads metadata. A modified file in a task sandbox is not proof that the installed skill was replaced. If GitHub access is restricted, use the release page manually. See [Claude guidance](USING-WITH-CLAUDE.md#updates-and-storage).
 
 ## Installing an approved update
 

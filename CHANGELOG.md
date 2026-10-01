@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.3 — 2026-10-01
+
+- Rename the user-facing Claude guide to `docs/USING-WITH-CLAUDE.md` and update its links.
+- Record the reported native Claude Code activation and four correct published-case answers on 2.0.1 as a smoke check, with no new score or later-version claim.
+- Clarify simple-take-off versus coordinated-set routing, conditional standards loading and early-stage pricing advice; link all six templates from the core skill.
+- Preserve previous evaluation evidence and record the exact routing delta. Helper code is unchanged.
+
 ## 2.0.2 — 2026-10-01
 
 - Describe the skill across new buildings, renovations, construction packages and associated site works; remove sector-specific specialization from current package wording.

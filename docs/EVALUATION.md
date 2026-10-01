@@ -8,7 +8,7 @@ The original version 2 release preserved the assessed six QS references, origina
 
 A separate Astra session (`gpt-6-astra`, high; exact model revision not exposed) answered six frozen text-only probes and reviewed the new workflow. The [cases](../evaluation/v2-drawing-workflow/cases.md), [source hashes](../evaluation/v2-drawing-workflow/frozen.json), [actual answers](../evaluation/v2-drawing-workflow/astra-responses.md) and [review](../evaluation/v2-drawing-workflow/astra-review.md) are retained. The initial reviewed source and subsequent two refinements are distinguished in the [change record](../evaluation/v2-drawing-workflow/changes-after-review.md); the critic verified the final delta separately. Cases cover issue conflicts, mixed scales/repeated depictions, incomplete detection, revision caches, unavailable visual tools and a proportionate simple calculation. The same session answers and then critiques, so this is a bounded instruction check, not independent grading of an unseen test run. No new numeric competence score is assigned.
 
-There were no real drawing PDFs in these probes. Full-set visual accuracy, practical review effort, native host routing and Claude/open-model performance remain unmeasured. See the proposed [real-set validation plan](DRAWING-SETS.md).
+There were no real drawing PDFs in these probes. Those probes did not evaluate full-set visual accuracy, practical review effort, native host routing or Claude/open-model performance. The later reported Claude smoke check is documented separately below. See the proposed [real-set validation plan](DRAWING-SETS.md).
 
 ## What was evaluated
 
@@ -54,7 +54,7 @@ Helpers use only the standard library; tests write synthetic state under the exp
 
 ## Limits of the evidence
 
-No professional credential, certified-estimator equivalence, human top-5% percentile, real-project validation, market-rate calibration or universal correctness is established. The 5/9 rubric anchors are aspirations/behavioral anchors, not measured human comparisons. No native automatic routing, Claude execution, open-model execution or cross-harness behavior was tested. Local environment was macOS arm64/Python 3.12.6/Codex desktop; CI results are reported separately when available. The instructions need real evidence, competent models and the tools appropriate to the task.
+No professional credential, certified-estimator equivalence, human top-5% percentile, real-project validation, market-rate calibration or universal correctness is established. The 5/9 rubric anchors are aspirations/behavioral anchors, not measured human comparisons. The original scored evaluation did not exercise native automatic routing, Claude or open models. The subsequent user-reported Claude smoke check adds limited evidence, not cross-model accuracy parity. Local environment was macOS arm64/Python 3.12.6/Codex desktop; CI results are reported separately when available. The instructions need real evidence, competent models and the tools appropriate to the task.
 
 ## Repository rename patch (2.0.1)
 
@@ -63,3 +63,9 @@ Only repository addresses, the checker User-Agent and release metadata change in
 ## Documentation refresh (2.0.2)
 
 Current wording describes construction projects and work packages without the earlier sector specialization. The core description/opening and affected references have bounded wording changes; the [change record](../evaluation/documentation-refresh/README.md) and exact substitutions retain their relationship to the frozen sources. Feature pages explain existing workflows rather than adding a parser, estimating engine or new accuracy claim. Optional-memory instructions clarify storage durability, and update guidance clarifies Claude ZIP installation; helper code is unchanged. Historical cases and their descriptions remain evidence of what was actually tested, not current market positioning.
+
+## Reported Claude smoke check and routing follow-up (2.0.3)
+
+On 1 October 2026 the user reported one native activation in Claude Code and a four-case run on version 2.0.1, all answers correct. The cases came from the published suite. This is smoke/regression evidence, not a new blind benchmark, numeric score or validation of later releases. [Report, provenance and unknowns](../evaluation/claude-smoke-report.md).
+
+Version 2.0.3 addresses the reported friction by separating simple take-off from coordinated drawing review, making standards loading conditional, routing early-stage pricing advice, and linking all six templates directly from SKILL.md. The [routing change record](../evaluation/routing-refresh/README.md) documents the intended selections and exact instruction delta. These changes have not been rerun on Claude in the evidence supplied here.

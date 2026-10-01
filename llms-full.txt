@@ -1,6 +1,6 @@
 # Quantity Surveyor — complete chat edition
 
-Version 2.0.2. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
+Version 2.0.3. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
 
 <a id="part-SKILL-md"></a>
 
@@ -12,12 +12,13 @@ Deliver useful quantity surveying work from the available evidence. Support new 
 
 Identify the relevant scope, stage, deliverable, jurisdiction, currency, price date, tax basis, programme, drawings/specification revisions and measurement convention. A simple calculation needs only the inputs that affect it. For a substantive estimate, use [project-basis.md](#part-templates-project-basis-md) as a prompt, not a mandatory questionnaire. Start supported work and ask targeted questions for material gaps.
 
-Select contractual/project requirements, local measurement practice and professional obligations explicitly. Read [standards.md](#part-references-standards-md) for selection and official links. UK NRM is an available framework, not a universal mandate. ICMS is high-level international reporting, not a replacement for detailed trade rules. Identify the adopted edition; if a requested exact rule is unavailable, state that limitation and offer a clearly labelled project convention or conditional calculation. Never claim compliance from a familiar standard name alone.
+Select contractual/project requirements, local measurement practice and professional obligations explicitly. Load [standards.md](#part-references-standards-md) when choosing or interpreting an applicable standard, edition or formal measurement rule. A simple calculation using explicit user-supplied dimensions and arithmetic conventions does not require loading it. UK NRM is an available framework, not a universal mandate. ICMS is high-level international reporting, not a replacement for detailed trade rules. Identify the adopted edition; if a requested exact rule is unavailable, state that limitation and offer a clearly labelled project convention or conditional calculation. Never claim compliance from a familiar standard name alone.
 
 ## Choose the task reference
 
-- Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](#part-references-large-drawing-sets-md).
-- Take-offs, bills, cost plans, rate build-ups, package interfaces or whole-building scope: [measurement-and-estimating.md](#part-references-measurement-and-estimating-md).
+- Simple take-off from supplied dimensions or one self-contained drawing view; bills, cost plans, rate build-ups, package interfaces or whole-building scope: start with [measurement-and-estimating.md](#part-references-measurement-and-estimating-md).
+- Coordinated drawing sets, unresolved cross-sheet dependencies, revision comparison or a requested drawing-set inventory: add [large-drawing-sets.md](#part-references-large-drawing-sets-md) for document control and coverage. When the task also requires quantities, use measurement-and-estimating for the calculation rules. Do not load the large-set workflow merely because a simple take-off uses a drawing.
+- Early-stage advice or “not enough information to price”: start with [measurement-and-estimating.md](#part-references-measurement-and-estimating-md) to establish the cost boundary and supported quantities/benchmarks. Deliver a supported subtotal if possible, an unpriced scope outline and prioritized missing inputs with next actions; if nothing can be priced, state that directly without inventing rates. Add [commercial-control.md](#part-references-commercial-control-md) only when procurement, decision or process advice is needed.
 - Tender comparison, forecast/change control, cash flow, risk, value engineering or process advice: [commercial-control.md](#part-references-commercial-control-md).
 - Maintenance, renewals, lifecycle costing and economic options: [lifecycle.md](#part-references-lifecycle-md).
 - User-supplied references, tool limitations, evidence and auditable output interfaces: [evidence-and-interfaces.md](#part-references-evidence-and-interfaces-md).
@@ -26,6 +27,19 @@ Select contractual/project requirements, local measurement practice and professi
 Load only references needed for the task. The workflows work with readable documents, tables, ordinary calculation tools and visual inspection. No service, connector, model or proprietary library is required. When a capability is absent, complete the supported portion and identify the specific unfinished step. Do not present unavailable visual, live-price or recalculation checks as completed.
 
 For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.
+
+## Choose an output template only when useful
+
+Use the user's existing format when supplied. These blank templates are optional starting columns, not mandatory deliverables for a simple calculation:
+
+| Output | Template |
+|---|---|
+| Project scope, stage and pricing basis | [project-basis.md](#part-templates-project-basis-md) |
+| Quantities, rates, extensions and assumptions | [estimate.csv](#part-templates-estimate-csv) |
+| Budget, commitments, remaining work and final-cost variance | [forecast.csv](#part-templates-forecast-csv) |
+| Change basis, status, inclusion and net forecast effect | [changes.csv](#part-templates-changes-csv) |
+| Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](#part-templates-drawing-register-csv) |
+| Quantity calculations with source/location evidence | [quantity-evidence.csv](#part-templates-quantity-evidence-csv) |
 
 ## Preserve these invariants
 

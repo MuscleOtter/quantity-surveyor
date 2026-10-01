@@ -1,6 +1,6 @@
 # Using Quantity Surveyor with Claude
 
-The package is designed for Claude's skill format. **Actual Claude execution and automatic selection remain untested in this repository's evaluation.** Structural checks and successful Python helper tests do not establish Claude's task accuracy.
+The package has a **user-reported Claude smoke check**: one native activation in Claude Code and a four-case run on version 2.0.1, with all four answers reported correct. These were published evaluation cases, so this is a small smoke/regression check, not a new blind benchmark or accuracy score. See the [report and limits](../evaluation/claude-smoke-report.md). The report does not establish execution of the subsequent 2.0.2 or 2.0.3 changes.
 
 ## Installation and selection
 
@@ -16,9 +16,9 @@ For this GitHub distribution, download an approved release and upload/update it 
 
 A successful memory write proves only that data was written at that location during that session. Before promising persistence, verify the chosen root is durable and accessible later. If unknown, call it session-only and offer an export. Do not assume all Cowork storage is temporary: it can access connected local folders under the conditions documented in [Cowork's platform guide](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile). Keep private memory outside the replaceable skill folder.
 
-## Suggested host validation — not yet executed
+## Further host validation
 
-Use synthetic inputs in a fresh session and record the Claude model/version, host, skill release, enabled skills, prompt, references actually loaded and full output.
+The reported smoke check is partial evidence; the following is a checklist for broader testing, not a claim that every step has run. Use synthetic inputs in a fresh session and record the Claude model/version, host, skill release, enabled skills, prompt, references actually loaded and full output.
 
 1. **Explicit invocation:** run the README wall calculation with the skill named. Check 31.2 m² net, 32.76 m² purchased and 4,024.80 before tax, without an invented currency.
 2. **Natural routing:** try “prepare a take-off for this apartment refurbishment” and “compare these subcontractor quotes” without naming the skill. Provide sufficient synthetic inputs. Verify activation separately from numerical correctness.

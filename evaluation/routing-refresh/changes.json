@@ -1,0 +1,16 @@
+{
+  "SKILL.md": [
+    [
+      "Read [standards.md](references/standards.md) for selection and official links.",
+      "Load [standards.md](references/standards.md) when choosing or interpreting an applicable standard, edition or formal measurement rule. A simple calculation using explicit user-supplied dimensions and arithmetic conventions does not require loading it."
+    ],
+    [
+      "- Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](references/large-drawing-sets.md).\n- Take-offs, bills, cost plans, rate build-ups, package interfaces or whole-building scope: [measurement-and-estimating.md](references/measurement-and-estimating.md).",
+      "- Simple take-off from supplied dimensions or one self-contained drawing view; bills, cost plans, rate build-ups, package interfaces or whole-building scope: start with [measurement-and-estimating.md](references/measurement-and-estimating.md).\n- Coordinated drawing sets, unresolved cross-sheet dependencies, revision comparison or a requested drawing-set inventory: add [large-drawing-sets.md](references/large-drawing-sets.md) for document control and coverage. When the task also requires quantities, use measurement-and-estimating for the calculation rules. Do not load the large-set workflow merely because a simple take-off uses a drawing.\n- Early-stage advice or \u201cnot enough information to price\u201d: start with [measurement-and-estimating.md](references/measurement-and-estimating.md) to establish the cost boundary and supported quantities/benchmarks. Deliver a supported subtotal if possible, an unpriced scope outline and prioritized missing inputs with next actions; if nothing can be priced, state that directly without inventing rates. Add [commercial-control.md](references/commercial-control.md) only when procurement, decision or process advice is needed."
+    ],
+    [
+      "## Preserve these invariants",
+      "## Choose an output template only when useful\n\nUse the user's existing format when supplied. These blank templates are optional starting columns, not mandatory deliverables for a simple calculation:\n\n| Output | Template |\n|---|---|\n| Project scope, stage and pricing basis | [project-basis.md](templates/project-basis.md) |\n| Quantities, rates, extensions and assumptions | [estimate.csv](templates/estimate.csv) |\n| Budget, commitments, remaining work and final-cost variance | [forecast.csv](templates/forecast.csv) |\n| Change basis, status, inclusion and net forecast effect | [changes.csv](templates/changes.csv) |\n| Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](templates/drawing-register.csv) |\n| Quantity calculations with source/location evidence | [quantity-evidence.csv](templates/quantity-evidence.csv) |\n\n## Preserve these invariants"
+    ]
+  ]
+}

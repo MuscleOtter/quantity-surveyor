@@ -19,7 +19,7 @@ Copy this into Codex:
 
 ```text
 Use skill-installer to install the Quantity Surveyor skill from
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.2/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.3/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Keep private memory intact; do not overwrite it.
 Then tell me how to invoke the new skill.
@@ -50,19 +50,19 @@ The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and l
 
 These are workflows for your AI app to carry out. Drawing viewing, calculation, file export and current-source access depend on the host. Optional private memory and release checking are separate helpers, off by default.
 
-Version **2.0.2** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
+Version **2.0.3** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 
 ## Documentation
 
-[Features](docs/FEATURES.md) · [Claude guidance](docs/CLAUDE.md) · [FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
+[Features](docs/FEATURES.md) · [Claude guidance](docs/USING-WITH-CLAUDE.md) · [FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 ## Quality and limits
 
 **Accuracy on a huge coordinated drawing set has not been measured.** The skill guides a reviewable workflow; the app/model must supply and correctly use document, visual and calculation tools. Start with a representative, independently checked pilot. [What it can review and how to validate it](docs/DRAWING-SETS.md).
 
-The historical Astra score of **9.96448/10** covers 23 bounded synthetic responses from the earlier QS instructions. It is not a 99.6% accuracy rate or a score for the new large-set workflow. Version 2 has a separate bounded instruction review; neither establishes real-project or cross-model performance. [Actual evidence and limits](docs/EVALUATION.md).
+The historical Astra score of **9.96448/10** covers 23 bounded synthetic responses from the earlier QS instructions. It is not a 99.6% accuracy rate or a score for the new large-set workflow. Version 2 has a separate bounded instruction review. A [user-reported Claude smoke check](evaluation/claude-smoke-report.md) adds one native Claude Code activation and four correct published-case answers on 2.0.1. These do not establish real-project accuracy or cross-model parity. [Actual evidence and limits](docs/EVALUATION.md).
 
 ## For AI readers and search
 

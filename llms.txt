@@ -2,7 +2,7 @@
 
 > A portable, MIT-licensed AI agent skill for construction quantity take-off, estimating and commercial cost control, for new buildings, renovations, construction work packages and associated site works.
 
-Published by MuscleOtter. Current release: 2.0.2. Skill identifier: quantity-surveyor. Canonical repository: MuscleOtter/quantity-surveyor. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark.
+Published by MuscleOtter. Current release: 2.0.3. Skill identifier: quantity-surveyor. Canonical repository: MuscleOtter/quantity-surveyor. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark. A user-reported Claude check records one native Claude Code activation and four correct published-case answers on 2.0.1; it does not validate later releases.
 
 ## Start
 
@@ -14,7 +14,7 @@ Published by MuscleOtter. Current release: 2.0.2. Skill identifier: quantity-sur
 - [Features](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/FEATURES.md): Inputs, operations, deliverables and capability limits for every workflow.
 - [Example requests](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/QUICKSTART.md): Practical task prompts and what to attach.
 
-- [Claude guidance](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/CLAUDE.md): Installation, update/storage boundaries and an unexecuted host-validation checklist.
+- [Claude guidance](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/USING-WITH-CLAUDE.md): Installation, update/storage boundaries, reported 2.0.1 smoke evidence and further validation.
 
 ## Instructions and evidence
 
