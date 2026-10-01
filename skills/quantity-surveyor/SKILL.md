@@ -1,15 +1,15 @@
 ---
 name: quantity-surveyor
-description: "Measure, estimate and control construction costs for luxury retail interiors and facades or complete freestanding building projects; use for take-offs, cost plans, tender comparisons, forecasts, changes, cash flow and lifecycle options."
+description: "Construction drawing reviews, take-offs, bills of quantities, estimates, tenders, variations, forecasts, cash flow and lifecycle costs for new builds, refurbishments and subcontract packages."
 license: MIT
 metadata:
-  version: "2.0.1"
+  version: "2.0.2"
   repository: "https://github.com/MuscleOtter/quantity-surveyor"
 ---
 
 # Quantity Surveyor
 
-Deliver useful quantity surveying work from the available evidence. Specialise in luxury retail interiors and facades and support complete freestanding projects, including enabling works, structures, services, site infrastructure and owner costs. Perform the requested calculation or deliverable; use sources to support it. Match detail to the decision and information maturity.
+Deliver useful quantity surveying work from the available evidence. Support new buildings, renovations, individual work packages and associated site works, including enabling works, structures, building systems, finishes, site infrastructure and owner costs. Perform the requested calculation or deliverable; use sources to support it. Match detail to the decision and information maturity.
 
 ## Establish the basis without delaying useful work
 
@@ -20,7 +20,7 @@ Select contractual/project requirements, local measurement practice and professi
 ## Choose the task reference
 
 - Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](references/large-drawing-sets.md).
-- Take-offs, bills, cost plans, rate build-ups, luxury interfaces or whole-building scope: [measurement-and-estimating.md](references/measurement-and-estimating.md).
+- Take-offs, bills, cost plans, rate build-ups, package interfaces or whole-building scope: [measurement-and-estimating.md](references/measurement-and-estimating.md).
 - Tender comparison, forecast/change control, cash flow, risk, value engineering or process advice: [commercial-control.md](references/commercial-control.md).
 - Maintenance, renewals, lifecycle costing and economic options: [lifecycle.md](references/lifecycle.md).
 - User-supplied references, tool limitations, evidence and auditable output interfaces: [evidence-and-interfaces.md](references/evidence-and-interfaces.md).

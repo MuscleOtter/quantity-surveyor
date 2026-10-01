@@ -14,6 +14,10 @@ flowchart LR
   C --> A[Ask user before normal installation]
 ```
 
+## Workflow responsibilities
+
+The skill routes tasks to measurement/estimating, drawing-set review, commercial control, lifecycle analysis and evidence-handling references. Templates define optional columns; the host reads inputs, performs calculations and creates outputs. The [feature guide](FEATURES.md) maps each workflow to its inputs and deliverables. No background document processor or finance-system integration is bundled.
+
 ## One source of truth
 
 `skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown. Memory and update checks are independent optional standard-library scripts.

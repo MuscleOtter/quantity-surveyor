@@ -8,9 +8,13 @@
 | Agent says it cannot open references | Preserve the complete folder; in plain chat use the combined Markdown edition. Ask it to name what it actually read. |
 | An open model ignores instructions | Give a smaller task, load just the relevant reference, and verify calculations externally. A different host/model may be needed for complex work. |
 | Drawing has no usable dimensions | Supply a dimension or calibrated scale. Do not ask the model to guess image scale. |
+| Response is too general | Choose a deliverable from the [feature guide](FEATURES.md), specify the scope/cut-off and attach the necessary inputs. Ask for the output columns shown there. |
+| Agent claims the full set is checked after text extraction | Ask for the sheet/view review register, actual visual inspections and unresolved dependencies. Use the [drawing-set guide](DRAWING-SETS.md). |
+| Update check says unavailable after the repository rename | Install 2.0.1 or later manually from Releases once; older checkers require the old exact repository URL. Preserve customizations and private memory. |
 | Prices are missing | Ask for quantities, scope gaps and a rate-evidence request. Supply lawful current quotes before treating costs as a project estimate. |
 | Update check says unavailable | The release API may be offline/rate-limited or restricted. Open Releases manually; continue the current QS task. |
 | Optional helper is unavailable | Continue without memory/update helper. It needs Python 3.10+ but the core instructions do not. |
+| Memory disappeared in a new conversation | Verify whether its root was temporary session storage. A successful prior write does not prove durability. Use a chosen durable location or export; do not claim lost records were recovered. |
 | Memory primary file is missing but backup exists | Stop writes. Use the documented explicit recovery process; inspect the backup and expect loss of records newer than that backup. Do not start a new store over it. |
 | Two versions seem active | Ask the host to show loaded skill paths/versions, then disable the duplicate through its normal UI. Preserve private memory and customizations. |
 

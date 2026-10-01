@@ -31,11 +31,17 @@ def verify_manifest(base,manifest):
 
 
 def main():
+    def v2_source(name):
+        archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
+        return archived if archived.is_file() else ROOT/name
+    editorial=json.loads((EVAL/'documentation-refresh/editorial-changes.json').read_text())
     s=(SKILL/'SKILL.md').read_text()
     require(s.startswith('---\n'),'Missing frontmatter')
     head,body=s[4:].split('\n---\n',1)
     require(re.search(r'^name: quantity-surveyor$',head,re.M),'Name mismatch')
-    require(re.search(r'^description: .+',head,re.M),'Missing description')
+    description=re.search(r'^description: (.+)$',head,re.M)
+    require(description,'Missing description')
+    require(len(description.group(1).strip('"'))<=200,'Description exceeds conservative Claude upload guidance')
     manifest=json.loads((SKILL/'version.json').read_text())
     require(re.fullmatch(r'(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)',manifest['version']),'Expected stable major.minor.patch version')
     require('version: "'+manifest['version']+'"' in head,'Version mismatch')
@@ -45,15 +51,12 @@ def main():
     for round_name in ['round1','round2']:
         verify_manifest(EVAL/round_name/'responses',EVAL/round_name/'response-hashes.json')
     old=(EVAL/'candidate-round2/SKILL.md').read_text().split('\n---\n',1)[1]
-    qs_body=body.split('\n## Optional release updates\n',1)[0]
+    qs_body=v2_source('skills/quantity-surveyor/SKILL.md').read_text().split('\n---\n',1)[1].split('\n## Optional release updates\n',1)[0]
     # v2 adds explicit routing and a drawing-set gate; preserve the historical
     # base without claiming its old behavioral score applies to the additions.
     qs_body=qs_body.replace('- Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](references/large-drawing-sets.md).\n','')
     qs_body=qs_body.replace('For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.\n\n','')
     require(qs_body==old,'Historical QS base changed; update evidence deliberately')
-    def v2_source(name):
-        archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
-        return archived if archived.is_file() else ROOT/name
     initial=json.loads((EVAL/'v2-drawing-workflow/frozen-initial.json').read_text())
     for name,expected in initial.items():
         archived=EVAL/'v2-drawing-workflow/initial-candidate'/name.removeprefix('skills/quantity-surveyor/')
@@ -63,12 +66,15 @@ def main():
         source=v2_source(name)
         require(digest(source)==expected,'Frozen v2 source changed: '+name)
         if source != ROOT/name:
-            renamed=source.read_text().replace('universal-quantity-surveyor','quantity-surveyor').replace('"2.0.0"','"2.0.1"')
-            require((ROOT/name).read_text()==renamed,'Unexpected repository-rename delta: '+name)
+            renamed=source.read_text().replace('universal-quantity-surveyor','quantity-surveyor').replace('"2.0.0"','"2.0.2"')
+            for before,after in editorial.get(name.removeprefix('skills/quantity-surveyor/'),[]):
+                require(before in renamed,'Editorial source text missing: '+name)
+                renamed=renamed.replace(before,after)
+            require((ROOT/name).read_text()==renamed,'Unexpected release/editorial delta: '+name)
     verify_manifest(EVAL/'v2-drawing-workflow',EVAL/'v2-drawing-workflow/response-hashes.json')
     for name in json.loads((EVAL/'candidate-round2-hashes.json').read_text()):
         if name not in ('SKILL.md','README.md'):
-            require(digest(SKILL/name)==digest(EVAL/'candidate-round2'/name),'Scored reference/helper changed: '+name)
+            require(digest(v2_source('skills/quantity-surveyor/'+name))==digest(EVAL/'candidate-round2'/name),'Scored reference/helper changed: '+name)
     allowed=set(json.loads((EVAL/'candidate-round2-hashes.json').read_text()))-{'README.md'}
     allowed |= {'references/updates.md','scripts/check_updates.py','version.json','references/large-drawing-sets.md','templates/drawing-register.csv','templates/quantity-evidence.csv'}
     actual={p.relative_to(SKILL).as_posix() for p in SKILL.rglob('*') if p.is_file() and '__pycache__' not in p.parts}

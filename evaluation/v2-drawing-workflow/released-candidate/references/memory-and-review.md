@@ -2,8 +2,6 @@
 
 Memory is disabled by default. Enable only when the user chooses a dedicated location and identifiers. Never discover or copy another user's existing memory. Use a separate location per user; every read/write also requires explicit user and project scope. No automatic general/organisation sharing or background uploads are provided. Use a distinct project key for transferable lessons only if explicitly chosen; it is still isolated within that user.
 
-Before promising cross-session memory, verify that the chosen root is durable storage available in a later session; a successful write in a temporary sandbox proves only that session's write. If durability is unknown, label the record session-only and offer an export to a user-chosen persistent location. Do not assume that all folders in a cloud or desktop host have the same lifecycle.
-
 The optional Python 3.10+ standard-library helper is resolved relative to this package:
 
 ```text

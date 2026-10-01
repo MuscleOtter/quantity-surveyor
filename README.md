@@ -2,7 +2,7 @@
 
 ![Quantity Surveyor: architectural section with a blue highlighted bay and the words Measure. Estimate. Control.](assets/cover.png)
 
-**Quantity Surveyor is a free, MIT-licensed AI skill for construction quantity take-off, cost estimating and commercial cost control.** Measure quantities, build estimates, compare tenders, reconcile forecasts and changes, plan cash flow, and assess lifecycle options. Covers complete buildings and luxury retail interiors and facades.
+**Quantity Surveyor is a free, MIT-licensed AI skill for construction quantity take-off, cost estimating and commercial cost control.** Measure quantities, build estimates, compare tenders, reconcile forecasts and changes, plan cash flow, and assess lifecycle options. Use it for new buildings, renovations, individual construction packages and associated site works.
 
 One open **Agent Skills** folder. The same instructions for Claude, Codex and skill-capable agents running open models. No required subscription, connector, API key, service or Python installation. Your chosen AI app may have its own requirements. Optional helpers use Python's standard library.
 
@@ -19,7 +19,7 @@ Copy this into Codex:
 
 ```text
 Use skill-installer to install the Quantity Surveyor skill from
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.1/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.2/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Keep private memory intact; do not overwrite it.
 Then tell me how to invoke the new skill.
@@ -31,23 +31,32 @@ Start a new chat if your app does not show the installed skill. Then try:
 
 Expected: **31.2 m² net; 32.76 m² purchased; 4,024.80 total.** No currency was supplied, so the answer should avoid inventing one.
 
-## What you get
+## Features and deliverables
 
-- Large drawing-set review: issued-sheet inventory, per-view scales, cross-references, resumable coverage and quantity evidence.
-- Evidence-led take-offs and estimates with visible scope gaps, units, revisions and pricing boundaries.
-- Whole-building scope checks, including site infrastructure, utilities, contractor additions and owner costs.
-- Tender bridges, commitments, revised orders, payments, pending changes and forecast reconciliations.
-- Practical risk, value engineering, cash flow and lifecycle analysis.
-- Optional private project memory with provenance, corrections and explicit recovery.
-- CSV templates you can open in a spreadsheet.
+| Feature | What it helps you do | What you receive |
+|---|---|---|
+| Drawing-set review | Check issued sheets and revisions, follow details/schedules, track inspected areas and flag missing references. | Drawing register, coverage statement and prioritized questions. |
+| Quantity take-off | Calculate counts, lengths, areas and volumes; show openings, deductions, repeated items and material waste separately. | Quantity schedule with units, calculations and drawing/revision locations. |
+| Estimates and rate build-ups | Combine quantities with supplied or evidenced labour, material and equipment rates; show fees, overhead, risk, escalation, FX and tax bases. | Itemized estimate, transparent rate build-ups and a total reconciled to the detail. |
+| Scope-gap review | Check work packages, shared site costs, utilities, temporary works and owner/contractor responsibilities. | Coverage matrix showing included, excluded and unpriced scope without double counting. |
+| Tender comparison | Retain original bids, align supported scope differences and expose exclusions and qualifications. | Side-by-side comparison with adjustment evidence and conditional recommendations. |
+| Budget, changes and final-cost forecast | Reconcile purchase orders, amendments, paid amounts, remaining work and pending changes. | Forecast final cost, budget variance, change log and explanation of movements. |
+| Cash-flow planning | Apply programme dates, payment lags, deposits, retention and releases. | Period-by-period payment forecast with cumulative cash and balance checks. |
+| Risk and value engineering | Show named exposures and compare options including consequential costs and required approvals. | Risk/assumption register, supported scenarios and net-savings comparison. |
+| Maintenance and lifecycle costs | Schedule maintenance/replacements and discount costs using consistent timing and price assumptions. | Event schedule, present-value comparison and sensitivities. |
+| Coding and audit trail | Use your supplied cost-code definitions; retain uncertain mappings and source evidence. | Reconciled coded totals, unallocated amounts and queries linked to affected items. |
 
-Version **2.0.1** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
+The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and limits for each workflow. [Example requests](docs/QUICKSTART.md) help you start. Five blank CSV templates cover estimates, forecasts, changes, drawing registers and quantity evidence; a project-basis Markdown template records the brief.
+
+These are workflows for your AI app to carry out. Drawing viewing, calculation, file export and current-source access depend on the host. Optional private memory and release checking are separate helpers, off by default.
+
+Version **2.0.2** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 
 ## Documentation
 
-[FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
+[Features](docs/FEATURES.md) · [Claude guidance](docs/CLAUDE.md) · [FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 ## Quality and limits
 

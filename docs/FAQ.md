@@ -2,7 +2,15 @@
 
 ## What is Quantity Surveyor?
 
-Quantity Surveyor is a free, MIT-licensed AI agent skill for construction quantity take-off, cost estimating and commercial cost control. It covers complete buildings and luxury retail interiors/facades. It is published by MuscleOtter and is not affiliated with a professional institution or model provider.
+Quantity Surveyor is a free, MIT-licensed AI agent skill for construction quantity take-off, cost estimating and commercial cost control. It supports new buildings, renovations, individual construction packages and associated site works. It is published by MuscleOtter and is not affiliated with a professional institution or model provider.
+
+## What can it produce?
+
+A drawing register, quantity take-off, itemized estimate, rate build-up, scope-gap matrix, tender comparison, budget/forecast reconciliation, change log, payment forecast or lifecycle-cost comparison. Outputs retain calculations, units, source/revision locations, assumptions and unresolved questions. The [feature guide](FEATURES.md) lists what you need to supply and the deliverable for each task.
+
+## Does it automatically scan drawings or supply construction prices?
+
+The skill provides instructions and templates, not a bundled drawing parser, symbol detector or live price database. Your app must supply document/image access and calculation tools; drawings need readable dimensions or calibrated views. Rates need project quotes, supplied evidence or appropriate authorized research. If those inputs are missing, ask for supported quantities, scope gaps and a pricing query list.
 
 ## Does it work with Claude, Codex and open-source models?
 

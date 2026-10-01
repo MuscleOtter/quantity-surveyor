@@ -13,13 +13,15 @@ If Skills is missing, enable code execution/file creation in Settings → Capabi
 
 Use the release **skill ZIP**, not GitHub's “Download ZIP” source archive. The install ZIP has exactly one top-level folder with `SKILL.md` inside, following [Claude's packaging guidance](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
 
+For future releases, use the [Claude update instructions](CLAUDE.md#updates-and-storage). A downloaded or edited sandbox copy is not evidence that the enabled skill was replaced.
+
 ## Codex
 
 Paste this into Codex:
 
 ```text
 Use skill-installer to install this skill:
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.1/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.2/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Preserve private memory. Show me the installed location
 and how to select quantity-surveyor.
@@ -50,6 +52,8 @@ For someone helping with a manual copy:
 
 These paths are for the host, not a specific model. OpenCode also supports its own `.opencode/skills` directories. [Claude Code documentation](https://code.claude.com/docs/en/skills), [OpenCode documentation](https://opencode.ai/docs/skills/). Windows users can ask their agent to resolve the matching user/project folder; do not type a literal `~` into File Explorer.
 
+In Claude Code, invoke `/quantity-surveyor` directly after installation or test a relevant natural-language request. The shared folder works without a plugin manifest. Automatic routing must still be checked in the actual host. [Claude-specific checks](CLAUDE.md).
+
 ## Any chat app or open model
 
 1. [Download quantity-surveyor.md](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/quantity-surveyor.md).
@@ -71,6 +75,10 @@ If a skill named `quantity-surveyor` already exists, stop replacement and compar
 For a normal version 1 migration, back up the old folder **outside active skill discovery directories**, install version 2 through your host, and disable/remove the active old copy once the new version is confirmed. Avoid two enabled versions giving conflicting instructions. Confirm the loaded name/version and run the wall check. Keep project memory outside the installed folder. Restoring the old folder/ZIP restores the previous behavior.
 
 The release also includes legacy-named download aliases so earlier README links keep working. Those aliases contain version 2 with the new `quantity-surveyor` folder; they are not a second skill edition.
+
+## Choose your first task
+
+Use the [feature guide](FEATURES.md) to select the deliverable and required inputs, then copy a request from [Quickstart](QUICKSTART.md). Start with one scope and one issued set. No optional memory or online update preference is required to perform the task.
 
 ## Uninstall
 

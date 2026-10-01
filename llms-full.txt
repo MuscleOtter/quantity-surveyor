@@ -1,12 +1,12 @@
 # Quantity Surveyor — complete chat edition
 
-Version 2.0.1. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
+Version 2.0.2. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
 
 <a id="part-SKILL-md"></a>
 
 # Quantity Surveyor
 
-Deliver useful quantity surveying work from the available evidence. Specialise in luxury retail interiors and facades and support complete freestanding projects, including enabling works, structures, services, site infrastructure and owner costs. Perform the requested calculation or deliverable; use sources to support it. Match detail to the decision and information maturity.
+Deliver useful quantity surveying work from the available evidence. Support new buildings, renovations, individual work packages and associated site works, including enabling works, structures, building systems, finishes, site infrastructure and owner costs. Perform the requested calculation or deliverable; use sources to support it. Match detail to the decision and information maturity.
 
 ## Establish the basis without delaying useful work
 
@@ -17,7 +17,7 @@ Select contractual/project requirements, local measurement practice and professi
 ## Choose the task reference
 
 - Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](#part-references-large-drawing-sets-md).
-- Take-offs, bills, cost plans, rate build-ups, luxury interfaces or whole-building scope: [measurement-and-estimating.md](#part-references-measurement-and-estimating-md).
+- Take-offs, bills, cost plans, rate build-ups, package interfaces or whole-building scope: [measurement-and-estimating.md](#part-references-measurement-and-estimating-md).
 - Tender comparison, forecast/change control, cash flow, risk, value engineering or process advice: [commercial-control.md](#part-references-commercial-control-md).
 - Maintenance, renewals, lifecycle costing and economic options: [lifecycle.md](#part-references-lifecycle-md).
 - User-supplied references, tool limitations, evidence and auditable output interfaces: [evidence-and-interfaces.md](#part-references-evidence-and-interfaces-md).
@@ -238,22 +238,22 @@ Record item ID, drawing/specification revision, location, description, dimension
 
 Separate rooms, floors, elevations, phases and buildings; reconcile repeated modules to counts and avoid common works appearing on every building. Distinguish openings, reveals, returns, soffits, interfaces, junctions and extra operations as the selected rule requires. Clarify conflicts between stated dimensions, geometry and revisions. Do not silently resolve design conflicts. Net measurement, procurement rounding and billed quantity may differ; show each basis.
 
-## Luxury retail and facade boundaries
+## Building work and package interfaces
 
 Use these as completeness prompts tied to actual scope, not automatic priced additions:
 
 | Scope | Interfaces to inspect |
 |---|---|
-| Interior | demolition/strip-out; landlord/base-build tie-ins; partitions and finishes; stone/timber/metal detailing; bespoke millwork; display fixtures; lighting; services alterations; security, IT and AV; signage; specialist rooms; accessibility and life safety |
+| Building fit-out and alterations | demolition/strip-out; landlord/base-build tie-ins; partitions and finishes; stone/timber/metal detailing; bespoke millwork; display fixtures; lighting; services alterations; security, IT and AV; signage; specialist rooms; accessibility and life safety |
 | Direct purchase | who specifies, supplies, ships, clears customs, stores, installs, insures, protects and warrants each fixture/material; spare stock; samples; installer coordination |
-| Facade | framing and cladding/glazing; backing and supports; anchors and structural openings; waterproofing; drainage and movement joints; thermal/fire/acoustic performance; scaffold/cranes/access; mock-ups, shop drawings, testing and approval interfaces |
-| Programme | restricted/night work, logistics/storage, temporary protection/security, trading continuity, landlord constraints, long-lead procurement and handover commissioning |
+| Building envelope | framing and cladding/glazing; backing and supports; anchors and structural openings; waterproofing; drainage and movement joints; thermal/fire/acoustic performance; scaffold/cranes/access; mock-ups, shop drawings, testing and approval interfaces |
+| Programme | restricted/night work, logistics/storage, temporary protection/security, continued occupancy, site/landlord constraints, long-lead procurement and handover commissioning |
 
-An all-in facade quote may include supports/testing; examine its inclusions before adding separate allowances. Removing owner supply from a contractor quote must preserve installation and ancillary responsibility. Design performance and permission costs need project-specific evidence; a branded aesthetic alone does not specify material quality.
+An all-in building-envelope quote may include supports/testing; examine its inclusions before adding separate allowances. Removing owner supply from a contractor quote must preserve installation and ancillary responsibility. Design performance and permission costs need project-specific evidence; appearance alone does not specify material quality.
 
-## Complete freestanding projects
+## Whole-project scope
 
-Build a coverage matrix: scope, responsible package, evidence, pricing status, inclusion point, unresolved interface. Start from the whole brief, site boundary and programme, not only the retail fit-out. Inspect, as relevant: surveys/ground investigation; demolition and hazardous materials; enabling works; groundworks, earthworks, dewatering and temporary support; foundations and frame; upper floors, stairs and roof; external envelope; interiors; mechanical, electrical, plumbing and specialist systems; lifts; utilities/diversions/connections; roads, drainage, landscaping and external works; testing/commissioning/handover; contractor preliminaries; design/consultant/permit costs and owner direct costs. Land, finance, taxes and operational costs belong only where the requested cost boundary includes them; disclose exclusions explicitly.
+Build a coverage matrix: scope, responsible package, evidence, pricing status, inclusion point, unresolved interface. Start from the whole brief, site boundary and programme, not only the individual work package. Inspect, as relevant: surveys/ground investigation; demolition and hazardous materials; enabling works; groundworks, earthworks, dewatering and temporary support; foundations and frame; upper floors, stairs and roof; external envelope; interiors; mechanical, electrical, plumbing and specialist systems; lifts; utilities/diversions/connections; roads, drainage, landscaping and external works; testing/commissioning/handover; contractor preliminaries; design/consultant/permit costs and owner direct costs. Land, finance, taxes and operational costs belong only where the requested cost boundary includes them; disclose exclusions explicitly.
 
 Separate each building from shared site/infrastructure and allocate common costs once with a stated basis. Interfaces include ground conditions, utility capacity, fire strategy, structural/MEP coordination, temporary works, weather protection, site access and commissioning. A partial set of package prices supports a subtotal, not a complete construction budget. Do not fabricate unit costs to conceal missing packages.
 
@@ -287,6 +287,8 @@ Use [estimate.csv](#part-templates-estimate-csv) as an optional starting schema.
 # Optional scoped memory and review
 
 Memory is disabled by default. Enable only when the user chooses a dedicated location and identifiers. Never discover or copy another user's existing memory. Use a separate location per user; every read/write also requires explicit user and project scope. No automatic general/organisation sharing or background uploads are provided. Use a distinct project key for transferable lessons only if explicitly chosen; it is still isolated within that user.
+
+Before promising cross-session memory, verify that the chosen root is durable storage available in a later session; a successful write in a temporary sandbox proves only that session's write. If durability is unknown, label the record session-only and offer an export to a user-chosen persistent location. Do not assume that all folders in a cloud or desktop host have the same lifecycle.
 
 The optional Python 3.10+ standard-library helper is resolved relative to this package:
 
@@ -345,7 +347,7 @@ These examples help select evidence, not prescribe universal local requirements:
 
 - Australia/New Zealand: ANZSMM 2022 is offered as a common building-work measurement basis. Check actual adoption, amendments and NZ adaptations rather than assuming migration in every contract. [NZIQS publication](https://nziqs.co.nz/NZIQS/NZIQS/Shop/Item_Detail.aspx?iProductCode=ANZSMM2022), [AIQS publications](https://www.aiqs.com.au/publications).
 - Hong Kong: HKIS lists HKSMM5 (fifth edition, 2025); ArchSD has a separate 2020 elemental measurement method. Choose the appointment's required basis and edition, not a presumed single method for all projects. [HKIS catalogue](https://www.hkis.org.hk/tc/publication_sales.html), [ArchSD](https://www.archsd.gov.hk/en/publications-publicity/standard-method-of-measurement-for-building-elements.html).
-- United States: owner's specifications may use elemental or work-result classifications. GSA P120 is agency-specific and specifies ASTM UNIFORMAT II; its requirements are not automatically applicable to a private retail build. [GSA active P120](https://www.gsa.gov/directives-library/p120-public-buildings-service-cost-and-schedule-management-policy-1).
+- United States: owner's specifications may use elemental or work-result classifications. GSA P120 is agency-specific and specifies ASTM UNIFORMAT II; its requirements are not automatically applicable to a private construction project. [GSA active P120](https://www.gsa.gov/directives-library/p120-public-buildings-service-cost-and-schedule-management-policy-1).
 - NSW, Australia: an estimated development cost planning-submission report has a defined purpose/boundary and qualification requirements, distinct from a full owner budget. Verify project threshold/category and the current state form/AIQS requirements. Do not imply the assistant can provide required professional sign-off. [NSW EDC requirements](https://www.planning.nsw.gov.au/the-planning-system/estimated-development-cost), [AIQS second edition notice](https://www.aiqs.com.au/standards/construction-cost-assessments-for-nsw-estimated-development-cost-reports-2nd-edition).
 
 For any location, verify relevant taxes, permits, building/fire/accessibility/environmental requirements, procurement rules and qualification/signature requirements through the actual authorities when they affect scope/cost or advice. Avoid inventing a worldwide legal inventory. A technical building requirement and a quantity-measurement convention answer different questions.
@@ -374,6 +376,8 @@ For an explicit request, read the installed version and public latest stable rel
 If the user explicitly opts into check-on-use and the host can retain a private per-user preference outside the skill, record that preference and the time of a successful check. Check at most once every seven days when the skill is next used; do not create a background schedule. If preferences cannot persist or networking is unavailable, explain that limitation once and offer manual Releases/Watch notification. Failed checks do not count as successful checks and must not repeatedly interrupt work. Do not infer opt-in from installing the skill.
 
 When a newer stable version is verified, show installed/new version, release URL and a short relevant summary of changes. Ask whether to update now or keep the current version. No response is not approval. After explicit approval, use the host's normal installation process, preserve a copy of the current folder/customizations, keep private memory outside replacement, and confirm the selected version. Never run commands from release notes blindly. Stop replacement if the host cannot preserve the existing copy.
+
+For this GitHub ZIP distribution in claude.ai/Cowork, direct the user to download the approved release and upload/update it through Customize → Skills, then confirm which version is enabled. Editing a copy in a task sandbox does not establish that the installed skill changed. If network access to GitHub is unavailable, offer the public release link for a manual check rather than claiming an online result.
 
 If current, ahead, offline, rate-limited or malformed metadata, continue work; never claim a successful online check when none completed. Users can receive notifications by choosing Watch → Custom → Releases on GitHub. There is no automatic update guarantee in a plain chat app.
 

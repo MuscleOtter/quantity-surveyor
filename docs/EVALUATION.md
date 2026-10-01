@@ -4,7 +4,7 @@ The historical pre-version-2 independent Astra critic graded **all 23 sealed rou
 
 ## Version 2: a different evidence boundary
 
-Version 2 preserves the assessed six QS references, original templates and memory helper, but adds a large-drawing-set reference, two templates and core routing guidance. The old behavioral score does **not** grade those additions or the complete version 2 package.
+The original version 2 release preserved the assessed six QS references, original templates and memory helper, but added a large-drawing-set reference, two templates and core routing guidance. The old behavioral score does **not** grade those additions or the complete version 2 package.
 
 A separate Astra session (`gpt-6-astra`, high; exact model revision not exposed) answered six frozen text-only probes and reviewed the new workflow. The [cases](../evaluation/v2-drawing-workflow/cases.md), [source hashes](../evaluation/v2-drawing-workflow/frozen.json), [actual answers](../evaluation/v2-drawing-workflow/astra-responses.md) and [review](../evaluation/v2-drawing-workflow/astra-review.md) are retained. The initial reviewed source and subsequent two refinements are distinguished in the [change record](../evaluation/v2-drawing-workflow/changes-after-review.md); the critic verified the final delta separately. Cases cover issue conflicts, mixed scales/repeated depictions, incomplete detection, revision caches, unavailable visual tools and a proportionate simple calculation. The same session answers and then critiques, so this is a bounded instruction check, not independent grading of an unseen test run. No new numeric competence score is assigned.
 
@@ -59,3 +59,7 @@ No professional credential, certified-estimator equivalence, human top-5% percen
 ## Repository rename patch (2.0.1)
 
 Only repository addresses, the checker User-Agent and release metadata change in the installed package. QS instructions, the drawing workflow and templates retain their version 2 content. The four affected version 2 source files are preserved under `evaluation/v2-drawing-workflow/released-candidate/`; validation verifies the original frozen hashes and the exact allowed rename/version delta. Old scored answers are untouched. Update tests verify the new fixed repository boundary, including rejection of legacy or unrelated release URLs. This patch does not assign a new behavioral score.
+
+## Documentation refresh (2.0.2)
+
+Current wording describes construction projects and work packages without the earlier sector specialization. The core description/opening and affected references have bounded wording changes; the [change record](../evaluation/documentation-refresh/README.md) and exact substitutions retain their relationship to the frozen sources. Feature pages explain existing workflows rather than adding a parser, estimating engine or new accuracy claim. Optional-memory instructions clarify storage durability, and update guidance clarifies Claude ZIP installation; helper code is unchanged. Historical cases and their descriptions remain evidence of what was actually tested, not current market positioning.

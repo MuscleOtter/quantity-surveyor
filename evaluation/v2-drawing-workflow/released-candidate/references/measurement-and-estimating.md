@@ -10,22 +10,22 @@ Record item ID, drawing/specification revision, location, description, dimension
 
 Separate rooms, floors, elevations, phases and buildings; reconcile repeated modules to counts and avoid common works appearing on every building. Distinguish openings, reveals, returns, soffits, interfaces, junctions and extra operations as the selected rule requires. Clarify conflicts between stated dimensions, geometry and revisions. Do not silently resolve design conflicts. Net measurement, procurement rounding and billed quantity may differ; show each basis.
 
-## Building work and package interfaces
+## Luxury retail and facade boundaries
 
 Use these as completeness prompts tied to actual scope, not automatic priced additions:
 
 | Scope | Interfaces to inspect |
 |---|---|
-| Building fit-out and alterations | demolition/strip-out; landlord/base-build tie-ins; partitions and finishes; stone/timber/metal detailing; bespoke millwork; display fixtures; lighting; services alterations; security, IT and AV; signage; specialist rooms; accessibility and life safety |
+| Interior | demolition/strip-out; landlord/base-build tie-ins; partitions and finishes; stone/timber/metal detailing; bespoke millwork; display fixtures; lighting; services alterations; security, IT and AV; signage; specialist rooms; accessibility and life safety |
 | Direct purchase | who specifies, supplies, ships, clears customs, stores, installs, insures, protects and warrants each fixture/material; spare stock; samples; installer coordination |
-| Building envelope | framing and cladding/glazing; backing and supports; anchors and structural openings; waterproofing; drainage and movement joints; thermal/fire/acoustic performance; scaffold/cranes/access; mock-ups, shop drawings, testing and approval interfaces |
-| Programme | restricted/night work, logistics/storage, temporary protection/security, continued occupancy, site/landlord constraints, long-lead procurement and handover commissioning |
+| Facade | framing and cladding/glazing; backing and supports; anchors and structural openings; waterproofing; drainage and movement joints; thermal/fire/acoustic performance; scaffold/cranes/access; mock-ups, shop drawings, testing and approval interfaces |
+| Programme | restricted/night work, logistics/storage, temporary protection/security, trading continuity, landlord constraints, long-lead procurement and handover commissioning |
 
-An all-in building-envelope quote may include supports/testing; examine its inclusions before adding separate allowances. Removing owner supply from a contractor quote must preserve installation and ancillary responsibility. Design performance and permission costs need project-specific evidence; appearance alone does not specify material quality.
+An all-in facade quote may include supports/testing; examine its inclusions before adding separate allowances. Removing owner supply from a contractor quote must preserve installation and ancillary responsibility. Design performance and permission costs need project-specific evidence; a branded aesthetic alone does not specify material quality.
 
-## Whole-project scope
+## Complete freestanding projects
 
-Build a coverage matrix: scope, responsible package, evidence, pricing status, inclusion point, unresolved interface. Start from the whole brief, site boundary and programme, not only the individual work package. Inspect, as relevant: surveys/ground investigation; demolition and hazardous materials; enabling works; groundworks, earthworks, dewatering and temporary support; foundations and frame; upper floors, stairs and roof; external envelope; interiors; mechanical, electrical, plumbing and specialist systems; lifts; utilities/diversions/connections; roads, drainage, landscaping and external works; testing/commissioning/handover; contractor preliminaries; design/consultant/permit costs and owner direct costs. Land, finance, taxes and operational costs belong only where the requested cost boundary includes them; disclose exclusions explicitly.
+Build a coverage matrix: scope, responsible package, evidence, pricing status, inclusion point, unresolved interface. Start from the whole brief, site boundary and programme, not only the retail fit-out. Inspect, as relevant: surveys/ground investigation; demolition and hazardous materials; enabling works; groundworks, earthworks, dewatering and temporary support; foundations and frame; upper floors, stairs and roof; external envelope; interiors; mechanical, electrical, plumbing and specialist systems; lifts; utilities/diversions/connections; roads, drainage, landscaping and external works; testing/commissioning/handover; contractor preliminaries; design/consultant/permit costs and owner direct costs. Land, finance, taxes and operational costs belong only where the requested cost boundary includes them; disclose exclusions explicitly.
 
 Separate each building from shared site/infrastructure and allocate common costs once with a stated basis. Interfaces include ground conditions, utility capacity, fire strategy, structural/MEP coordination, temporary works, weather protection, site access and commissioning. A partial set of package prices supports a subtotal, not a complete construction budget. Do not fabricate unit costs to conceal missing packages.
 

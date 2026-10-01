@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.2 — 2026-10-01
+
+- Describe the skill across new buildings, renovations, construction packages and associated site works; remove sector-specific specialization from current package wording.
+- Keep a concise general-purpose description within 200 characters; clarify cross-session storage verification and manual Claude release uploads. No Claude execution claim.
+- Replace broad feature claims with explicit inputs, operations, deliverables and boundaries; expand examples and document all supplied templates.
+- Update the README, FAQ, install/compatibility guidance and AI discovery editions. Preserve historical evaluation records; no new accuracy claim.
+
 ## 2.0.1 — 2026-10-01
 
 - Rename the public repository to MuscleOtter/quantity-surveyor and update current documentation, discovery links, package metadata and release checker.
@@ -17,7 +24,7 @@
 
 ## 1.0.0 — 2026-10-01
 
-- First universal Agent Skills distribution for construction cost work: full buildings, luxury interiors/facades, tenders, changes/forecasts, cash flow and lifecycle choices.
+- First universal Agent Skills distribution for construction cost work: building projects, work packages, tenders, changes/forecasts, cash flow and lifecycle choices.
 - One shared skill folder, a Claude-ready install ZIP and a generated single Markdown edition for chat/open-model use.
 - Explicit jurisdiction/measurement choices, auditable quantities/rates, allocation and financial-state reconciliation, proportional advice and optional scoped memory.
 - Fixed a missing-primary memory recovery defect discovered during independent release review; regression tests verify refusal, preservation and explicit recovery.

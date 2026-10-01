@@ -1,0 +1,68 @@
+{
+  "SKILL.md": [
+    [
+      "Measure, estimate and control construction costs for luxury retail interiors and facades or complete freestanding building projects; use for take-offs, cost plans, tender comparisons, forecasts, changes, cash flow and lifecycle options.",
+      "Construction drawing reviews, take-offs, bills of quantities, estimates, tenders, variations, forecasts, cash flow and lifecycle costs for new builds, refurbishments and subcontract packages."
+    ],
+    [
+      "Specialise in luxury retail interiors and facades and support complete freestanding projects, including enabling works, structures, services, site infrastructure and owner costs.",
+      "Support new buildings, renovations, individual work packages and associated site works, including enabling works, structures, building systems, finishes, site infrastructure and owner costs."
+    ],
+    [
+      "luxury interfaces",
+      "package interfaces"
+    ]
+  ],
+  "references/measurement-and-estimating.md": [
+    [
+      "## Luxury retail and facade boundaries",
+      "## Building work and package interfaces"
+    ],
+    [
+      "| Interior |",
+      "| Building fit-out and alterations |"
+    ],
+    [
+      "| Facade |",
+      "| Building envelope |"
+    ],
+    [
+      "trading continuity, landlord constraints",
+      "continued occupancy, site/landlord constraints"
+    ],
+    [
+      "An all-in facade quote",
+      "An all-in building-envelope quote"
+    ],
+    [
+      "a branded aesthetic alone",
+      "appearance alone"
+    ],
+    [
+      "## Complete freestanding projects",
+      "## Whole-project scope"
+    ],
+    [
+      "not only the retail fit-out",
+      "not only the individual work package"
+    ]
+  ],
+  "references/standards.md": [
+    [
+      "a private retail build",
+      "a private construction project"
+    ]
+  ],
+  "references/memory-and-review.md": [
+    [
+      "The optional Python 3.10+",
+      "Before promising cross-session memory, verify that the chosen root is durable storage available in a later session; a successful write in a temporary sandbox proves only that session's write. If durability is unknown, label the record session-only and offer an export to a user-chosen persistent location. Do not assume that all folders in a cloud or desktop host have the same lifecycle.\n\nThe optional Python 3.10+"
+    ]
+  ],
+  "references/updates.md": [
+    [
+      "If current, ahead, offline",
+      "For this GitHub ZIP distribution in claude.ai/Cowork, direct the user to download the approved release and upload/update it through Customize \u2192 Skills, then confirm which version is enabled. Editing a copy in a task sandbox does not establish that the installed skill changed. If network access to GitHub is unavailable, offer the public release link for a manual check rather than claiming an online result.\n\nIf current, ahead, offline"
+    ]
+  ]
+}

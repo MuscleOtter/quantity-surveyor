@@ -28,6 +28,10 @@ Tell your agent:
 
 This is a host-managed preference, not an installed scheduler. It requires explicit opt-in, a private per-user preference outside the skill, and a successful last-check timestamp. No persistent preference capability means no reliable weekly trigger. Failed checks can be retried on a later use, without repeated interruption of the QS task. No universal background promise is made. Default behavior is manual checking.
 
+## Claude uploads
+
+For this release ZIP, download the approved version and upload/update it through Customize → Skills; confirm the enabled version before relying on it. The checker only reads metadata. A modified file in a task sandbox is not proof that the installed skill was replaced. If GitHub access is restricted, use the release page manually. See [Claude guidance](CLAUDE.md#updates-and-storage).
+
 ## Installing an approved update
 
 Read release notes and compare any local customizations. Back up the current skill folder. Install the new release through your app's normal process; for Claude upload the new skill ZIP and confirm which version is enabled. Keep custom additions separately and merge them deliberately. Private memory stays outside the replaceable package. Run the README wall calculation. If needed, restore the previous folder/ZIP and restart the host.
