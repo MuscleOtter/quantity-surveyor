@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/MuscleOtter/universal-quantity-surveyor",
+  "release": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v1.0.0",
+  "authentication": "No authentication or account token in public download verification",
+  "assets": [
+    {
+      "asset": "universal-quantity-surveyor.zip",
+      "http_status": 200,
+      "bytes": 28295,
+      "matches_reviewed_local_asset": true,
+      "sha256": "314cfc2c15382209549cf6059b9c6c6c2955ef6c8608b4e811d86440ed5c4329"
+    },
+    {
+      "asset": "universal-quantity-surveyor.md",
+      "http_status": 200,
+      "bytes": 46551,
+      "matches_reviewed_local_asset": true,
+      "sha256": "d6ab8a44acec38807f4fbb21f10d64c507334418a2c208cb15466481e07e67f5"
+    },
+    {
+      "asset": "SHA256SUMS.txt",
+      "http_status": 200,
+      "bytes": 195,
+      "matches_reviewed_local_asset": true,
+      "sha256": "31187b3141a058a65b0e824e424f492cb59ced25a075306a8b0b00b4f0116808"
+    }
+  ],
+  "cover": {
+    "http_status": 200,
+    "content_type": "image/png"
+  },
+  "native_installation": "Not performed; ZIP structure/extracted files checked, not Claude account installation",
+  "verified_at_utc": "2026-10-01T17:47:27.529656+00:00",
+  "source_commit": "042cd922b131e801939cf958002e2c62adbd50bd",
+  "public_visibility": "PUBLIC",
+  "default_branch": "main",
+  "checker_current": {
+    "status": "current",
+    "installed_version": "1.0.0",
+    "latest_version": "1.0.0",
+    "release_url": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v1.0.0",
+    "action": "No replacement needed."
+  },
+  "checker_older_simulation": {
+    "assumed_installed_version": "0.9.0",
+    "result": {
+      "status": "update_available",
+      "installed_version": "0.9.0",
+      "latest_version": "1.0.0",
+      "release_url": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v1.0.0",
+      "action": "Read the release notes and ask the user before installation."
+    },
+    "limitation": "Simulated older local version against the real published 1.0.0 release; no files replaced"
+  },
+  "ci": {
+    "url": "https://github.com/MuscleOtter/universal-quantity-surveyor/actions/runs/36901819887",
+    "event": "push",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "validate (3.12)",
+        "conclusion": "success"
+      },
+      {
+        "name": "validate (3.10)",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "source_preservation": "Original personalized source files were unchanged; private memory was not accessed or migrated."
+}
