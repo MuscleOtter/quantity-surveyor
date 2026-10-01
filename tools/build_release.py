@@ -36,12 +36,14 @@ def combined_markdown():
                 relative=linked.relative_to(SKILL).as_posix()
             except ValueError:
                 return match.group(0)
+            if relative=='assets/templates/estimating-template.xlsx':
+                return '['+label+'](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v'+version+'/estimating-template.xlsx)'
             return '['+label+'](https://github.com/MuscleOtter/quantity-surveyor/blob/v'+version+'/skills/'+NAME+'/'+relative+')'
         text=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',target,text)
         if p.suffix=='.csv':
             text='## '+p.name+'\n\n```csv\n'+text+'```\n'
         return '<a id="'+anchors[p.resolve()]+'"></a>\n\n'+text.strip()+'\n'
-    header='# Quantity Surveyor — complete chat edition\n\nVersion '+version+'. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.\n\n'
+    header='# Quantity Surveyor — complete chat edition\n\nVersion '+version+'. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original text templates, with a separate link to the binary estimating workbook. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.\n\n'
     return header+'\n\n---\n\n'.join(render(p) for p in paths)+'\n\n## Original content license\n\n'+(SKILL/'LICENSE').read_text()
 
 
@@ -62,9 +64,11 @@ def build(out):
         alias=out/('universal-quantity-surveyor'+item.suffix)
         alias.write_bytes(item.read_bytes())
         legacy.append(alias)
-    checksums=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in [archive,doc,*legacy])
+    workbook=out/'estimating-template.xlsx'
+    workbook.write_bytes((SKILL/'assets/templates/estimating-template.xlsx').read_bytes())
+    checksums=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in [archive,doc,*legacy,workbook])
     (out/'SHA256SUMS.txt').write_text(checksums,encoding='utf-8')
-    print('Built install ZIP, complete Markdown edition and SHA256SUMS.txt.')
+    print('Built install ZIP, complete Markdown edition, standalone workbook and SHA256SUMS.txt.')
 
 
 if __name__=='__main__':

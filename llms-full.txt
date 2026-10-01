@@ -1,6 +1,6 @@
 # Quantity Surveyor — complete chat edition
 
-Version 2.0.3. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
+Version 2.1.0. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original text templates, with a separate link to the binary estimating workbook. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
 
 <a id="part-SKILL-md"></a>
 
@@ -28,9 +28,13 @@ Load only references needed for the task. The workflows work with readable docum
 
 For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.
 
+For graphical measurement, add [drawing-takeoff.md](#part-references-drawing-takeoff-md) for per-viewport calibration, independent checks, tolerance and revision evidence. Load only the relevant trade prompts: [partitions/ceilings](#part-references-trade-partitions-ceilings-md), [stone/specialist finishes](#part-references-trade-finishes-md), [millwork/FF&E](#part-references-trade-millwork-ffe-md), [facades/glazing](#part-references-trade-facades-glazing-md), or [services packages/interfaces](#part-references-trade-services-md). These prompts do not replace the selected project measurement rules.
+
+For a company/Unifier cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
+
 ## Choose an output template only when useful
 
-Use the user's existing format when supplied. These blank templates are optional starting columns, not mandatory deliverables for a simple calculation:
+Use the user's existing format when supplied. These blank templates are optional starting points, not mandatory deliverables for a simple calculation:
 
 | Output | Template |
 |---|---|
@@ -40,6 +44,7 @@ Use the user's existing format when supplied. These blank templates are optional
 | Change basis, status, inclusion and net forecast effect | [changes.csv](#part-templates-changes-csv) |
 | Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](#part-templates-drawing-register-csv) |
 | Quantity calculations with source/location evidence | [quantity-evidence.csv](#part-templates-quantity-evidence-csv) |
+| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx); read [workbook-pattern.md](#part-references-workbook-pattern-md) |
 
 ## Preserve these invariants
 
@@ -107,6 +112,46 @@ Distinguish design incompleteness, named risks, provisional sums, management res
 Compare baseline and option at equivalent installed scope: purchase, installation, redesign, testing, logistics, programme and consequential works. Net savings exclude nothing material; identify provisional consequences. Test mandatory requirements first. Then consider brand/design, durability, warranty, maintenance, operating cost and residual/disposal effects. Cost reductions dependent on approvals need named dependencies and decision owners; do not assert design equivalence without the relevant evidence. Use [lifecycle.md](#part-references-lifecycle-md) for whole-life comparisons.
 
 Diagnose process from a representative record, not a presumed enterprise workflow. Distinguish observed practice, stated policy and proposed practice. Propose the simplest remedy for the demonstrated failure with an owner, adoption effort and success measure. A small refresh may need a versioned schedule and query list. A complex building may justify interface reviews and a change/commitment reconciliation. Fix a missing budget/forecast distinction before demanding unverified finance-system integration. Recommendations should make a current decision easier and remain proportionate to consequence and uncertainty.
+
+
+---
+
+<a id="part-references-drawing-takeoff-md"></a>
+
+# Drawing take-off and revision control
+
+Use this procedure for actual drawing-based measurement. For a simple dimension-only question, keep the traceable calculation and omit unnecessary registers. This is a verification workflow, not a substitute for the selected measurement standard.
+
+## Establish coverage
+
+Record each supplied drawing's identifier, revision, issue date/purpose, PDF page, relevant viewport/detail and whether it was visually reviewed. Identify superseded, missing and duplicate sheets. Inspect plans, elevations, sections, schedules, specifications and relevant details together. List the scope measured, excluded and unresolved; a sheet listed in a register is not a sheet reviewed.
+
+Prefer explicit written dimensions and schedules. Reconcile dimension chains, overall dimensions, room repetition and detail references. Do not decide a drawing/specification conflict solely because one document is later: use the project's stated precedence and issue purpose, or identify the query and affected quantity. Continue unaffected measurement.
+
+## Calibrate each measured viewport
+
+Read the drawing visually. A printed scale or PDF page size alone does not establish the scale of a resized image or a detail pasted into another sheet. For scaled measurement:
+
+1. Identify a known dimension in the same viewport. Record its drawing distance, real distance, units and resulting conversion. Use tool-coordinate or pixel distances only with a recorded rendering/resolution basis.
+2. Check a second independent known dimension, preferably in the other direction. Record the measured-versus-dimensioned difference. Establish a tolerance appropriate to the decision and drawing quality before accepting the check; do not choose it after seeing the error.
+3. Calibrate separately for each scale/view and each revised or resized rendering. Where horizontal/vertical checks disagree, investigate distortion, perspective or incorrect dimensions. Do not use a single factor for nonuniform distortion.
+4. If no reliable calibration is available, preserve supported dimensioned quantities and mark the remaining measurement unresolved. Do not infer dimensions from apparent object sizes or AI confidence.
+
+Vector geometry can improve measurement but still needs scale, viewport, units and scope checks. Raster/vision extraction proposes observations; verify them against dimensions and counted/marked regions. It does not establish unseen thicknesses, heights or specifications.
+
+## Retain measurement evidence
+
+Give every take-off line a stable ID independent of its description. Record drawing/detail/revision, location or room, marked region or coordinate locator, dimension string and multiplicity, calculation, unit, measurement convention/source and quantity status. Use a marked-up copy when available; retain the original unchanged. Label bounds, exclusions and openings so another reviewer can reconstruct the measurement.
+
+Keep net measured work, procurement quantities/waste and installation quantities separate. Confirm deductions and inclusions from the relevant work-section table; do not apply a generic opening threshold. Keep provisional/unmeasured scope visible with a query ID. A blank/TBD quantity is not zero; an unmatched rate is not a default price. Count items exactly and prevent double counting across plans, details, schedules and repeated rooms.
+
+## Compare revisions
+
+Freeze the prior issued baseline. Match by stable scope/location IDs, not descriptions alone. Show added, removed and changed quantities, prior/new units, drawing revisions and the cause. Convert units explicitly before comparison. Separate quantity, specification, rate, scope, coding and currency effects; disclose unresolved effects rather than forcing the bridge to balance.
+
+For quantity and rate changes, one auditable bridge is: quantity effect = (new quantity − old quantity) × old rate; rate effect = new quantity × (new rate − old rate). This places the interaction in the rate effect. State this convention and treat new/removed scope separately. Reconcile the sum of changes to prior/new totals, while preserving unpriced scope outside the priced subtotal.
+
+Before issue, independently check material dimensions/counts, calibration, sheet coverage, unit conversions, deductions, repeated scope, rate compatibility and summary reconciliation. State what was checked and what remains unresolved; a successful arithmetic check does not prove drawing completeness.
 
 
 ---
@@ -379,6 +424,95 @@ ICMS/IPMS publications permit conditional unchanged copies, not unrestricted der
 
 ---
 
+<a id="part-references-trade-facades-glazing-md"></a>
+
+# Facades, shopfronts and glazing
+
+Read the adopted standard's cladding/curtain-wall, windows/screens/shopfront and glazing rules, plus applicable supports, waterproofing, doors and metalwork. Select the complete system or separate operation using project specifications and source rules.
+
+Inspect elevations, plans, sections, glazing schedules, system/fabrication details and structural interfaces. Establish system type, panel sizes, glass build-up/performance, frame profiles/finish, opaque infills, insulation/membranes, anchors/brackets, movement joints, sealants, interfaces and support structure. Distinguish panel area, glazed area, opening counts and linear interfaces; do not mix area bases in rates.
+
+Check the complete-system inclusions before measuring integral framing, glazing, insulation, fixings, hardware or operating equipment again. Distinguish glazing supplied with a component from glazing into prepared openings and identify the ownership of secondary structural support; confirm actual ownership and quoted scope rather than inventing a percentage allowance.
+
+Reconcile integral doors/opening sashes, perimeter flashings, waterproofing, smoke/fire interfaces, adjoining construction and landlord works. Check specialist engineering, surveys, shop drawings, samples/mock-ups, approvals, access/lifting, protection, testing and commissioning where required. Keep design/engineering responsibility with the appropriate project party.
+
+Calibrate each elevation/detail independently, reconcile repeated bays and counts, and inspect corner/return geometry. Record source-backed deductions and separate unsupported panel thicknesses, structural requirements or test allowances as queries. Value-engineering savings must include consequential support, installation, testing and maintenance changes.
+
+
+---
+
+<a id="part-references-trade-finishes-md"></a>
+
+# Stone and specialist finishes
+
+Start with the adopted standard's finish and decoration rules, plus relevant waterproofing, substrates, joinery and fire-protection operations. Select from the actual operation rather than the material name alone; read complete source tables before applying units, deductions or inclusions.
+
+Inspect finish schedules, plans, elevations, sections and fabrication details. Establish material/grade, thickness, panel/tile size, pattern, grain/bookmatching, joint layout, edge profiles, curvature, backing/base, bedding/fixing, waterproofing, sealing/polishing and tolerance requirements. Separate existing preparation/repairs from new work where scope differs. Identify stairs, risers, skirtings, returns, reveals and narrow strips without assuming they share the main area's unit or rate.
+
+Read the source table for the affected finish and its deductions, descriptions and inclusions. Record the net measured quantity, fabrication/procurement quantity and any supported waste allowance separately. Pattern matching, breakage, spare stock and slab yield need project/supplier evidence; never impose a standard luxury-material waste percentage. Waste is not automatically added to installation labour.
+
+Reconcile owner material purchases with the installer's quotation. Check who owns freight, customs, storage, handling, cutting, fixing materials, substrates, ordinary bedding, additional levelling, protection and final cleaning. Retain supplied quotes and their rate basis. Do not count ordinary bedding inside an installation rate and again as floor levelling; use the user's supplied company/Unifier definition if coding is required.
+
+Price mock-ups, samples, specialist access, sequencing and protection only where supported scope or an explicit scenario requires them. Maintain queries for unspecified finish grades, substrate condition, fabrication boundaries or missing local prices. Preserve brand/function and maintenance consequences in value-engineering comparisons.
+
+
+---
+
+<a id="part-references-trade-millwork-ffe-md"></a>
+
+# Millwork, joinery and FF&E
+
+Read the adopted standard's joinery and furniture/fittings/equipment rules, with relevant openings, glazing and decoration operations. Classify by supplied scope and the complete source table; do not assume all cabinetry is measured under one section.
+
+Read item schedules, location plans, shop/design details and specifications. Record each type, overall dimensions, multiplicity, material/veneer/grade, matching requirements, substrate, finish, fabrication/jointing, fixing background, hardware, countertop, lighting and service components. Retain stable item IDs even when several items share the same description. Reconcile item counts and repeated rooms against locations and schedules.
+
+Check whether the price is for a complete assembly or components. Establish supply, fabrication, delivery, installation, fixings, finishing, shop drawings, samples and mock-ups from the actual quote and relevant measurement rule. Avoid pricing component hardware, integral glazing or finishes twice. Mark unsupported design details and provisional assemblies explicitly.
+
+For loose/proprietary equipment, retain manufacturer/model and performance requirements when supplied; substitution requires equivalent function and client/design acceptance where applicable. Check delivery dimensions/access, storage, installation sequencing, structural backing, utilities, final connections, commissioning, warranties and owner/GC/vendor responsibility. Reconcile service connections and associated work against package boundaries and the selected source's inclusion notes.
+
+A procurement list can use purchase units while installation measurement uses another supported basis. Keep the crosswalk and conversion visible. Do not infer market prices or company codes from model numbers, item suffixes or similar descriptions.
+
+
+---
+
+<a id="part-references-trade-partitions-ceilings-md"></a>
+
+# Partitions, linings and ceilings
+
+Read with the drawing workflow and the selected source's complete measurement table. The prompts below identify scope and information; they do not prescribe universal units, deduction thresholds or bill items.
+
+Use the adopted standard's sections for proprietary partitions/linings, suspended ceilings, finishes, decoration and fire-related work. Read full units, descriptions, inclusions and adjacent notes. For NRM work, consult the authorised NRM 2 work-section tables; other project conventions govern where selected.
+
+Establish plans/elevations and reflected ceiling plans, structural and finished heights, partition types, framing and lining build-ups, thicknesses/layers, acoustic/fire performance, fixing backgrounds, curvature, joints, trims and finishes. Record which specification defines each assembly. Count openings, access panels and integral fittings with location references; inspect ceiling void services and support interfaces.
+
+Check whether each quoted system includes framing, normal joint treatment, perimeter work, additional support, cutting/openings and fitting around services. Distinguish proprietary system finishes from later work by another trade, and secondary ceiling support from the ceiling system. Use the full relevant rule and actual quotation before deciding what is included or separately measured.
+
+Check doors/frames/hardware, glazing, bulkheads, pelmets, fire/acoustic seals, backing for heavy fixtures, hangers, structural supports and service coordination for omitted or duplicated ownership. A separately listed component is not automatically a separately chargeable item. Split supply/installation or owner/GC scope only when the project procurement boundary supports it.
+
+Keep differing systems, heights, ratings, finishes and locations distinguishable where they affect measurement or price. Query unsupported heights or build-ups instead of manufacturing quantities. Reconcile partition plans to room elevations and ceiling areas to reflected ceiling plans, retaining the selected deduction convention.
+
+
+---
+
+<a id="part-references-trade-services-md"></a>
+
+# Services packages and interfaces
+
+Use this reference for mechanical, electrical, plumbing, fire/security/IT and transportation package reviews. Early estimates may use a supported functional/area/point basis; detailed measurement needs the applicable design evidence. These prompts are not engineering design instructions.
+
+Use the adopted standard's drainage, mechanical, electrical, transportation and related builders' work sections. For early elemental planning, use the selected cost-planning source and supported pricing/uncertainty evidence. Read complete units, descriptions, inclusions and adjacent notes before measuring.
+
+Establish layouts, schematics, sections, plantroom/details, equipment schedules and specified capacities/performance. Record the quantity basis for each rate: equipment count, point count with its included assembly, route length with fittings convention, served/treated area, capacity or whole system. Define served area and exclusions explicitly; it is not automatically project floor area. Do not compare unlike quantity bases or use a benchmark as a measured trade rate.
+
+Check plant/equipment versus distribution, terminal devices, insulation, supports, fittings, controls/BMS, electrical power, drainage, fire stopping, access panels, penetrations, plinths and builder's work. The source distinguishes detailed fittings where information exists from inclusive measurement where it does not; preserve that convention and reconcile quotation inclusions before adding fittings separately.
+
+Create a small responsibility matrix when interfaces span trades: scope, quantity basis, supplying party, installing party, connection/testing owner, included price, query. In particular check electrical power to mechanical equipment, controls wiring, fire/security/IT links, landlord tie-ins and owner equipment. Mark ownership conflicts rather than allocating them twice.
+
+Inspect testing, balancing, commissioning, certification, as-built information, manuals, training, spare parts and maintenance obligations required by the brief/quote. Review programme, procurement lead times, restricted hours, shutdowns and existing conditions for evidenced cost consequences. Seek specialist clarification for missing capacity/performance or design compliance; continue supported quantities without inventing engineering or productivity assumptions.
+
+
+---
+
 <a id="part-references-updates-md"></a>
 
 # Optional updates
@@ -394,6 +528,41 @@ When a newer stable version is verified, show installed/new version, release URL
 For this GitHub ZIP distribution in claude.ai/Cowork, direct the user to download the approved release and upload/update it through Customize → Skills, then confirm which version is enabled. Editing a copy in a task sandbox does not establish that the installed skill changed. If network access to GitHub is unavailable, offer the public release link for a manual check rather than claiming an online result.
 
 If current, ahead, offline, rate-limited or malformed metadata, continue work; never claim a successful online check when none completed. Users can receive notifications by choosing Watch → Custom → Releases on GitHub. There is no automatic update guarantee in a plain chat app.
+
+
+---
+
+<a id="part-references-workbook-pattern-md"></a>
+
+# Auditable estimating workbook
+
+Use [the optional workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx) as an optional starting point for substantive estimates, not as a mandatory format. Copy it to the project deliverable location, retain the supplied company template when required, and remove unused sheets/columns. A small question can use one concise schedule. Use the spreadsheet authoring capability for edits and verify recalculation.
+
+The template deliberately starts without quantities, rates or percentage allowances. Its formulas cover 100 reserved lines per detail sheet. Extend every formula, validation, summary and check range together when adding capacity; an out-of-range line must not disappear from totals. Titles/instructions identify the reserved capacity.
+
+| Sheet | Purpose |
+|---|---|
+| Summary | Project basis, quantity/rate gaps, measured/supported and provisional/scenario subtotals, included-cost total, allocation and revision checks; a partial total must remain labelled partial |
+| Drawings | Sheet/revision/page/viewport, visual review, scale/calibration checks and coverage/queries |
+| Takeoff | Stable line ID, package/location/scope, source, dimension calculation, quantity/unit/status, rate linkage and calculated amount |
+| Rates | Stable rate ID, source, geography/date/currency/unit, inclusions/exclusions and selected numeric rate |
+| Queries | Missing scope/price/design information, affected IDs, cost implication where supportable, owner and resolution |
+| Codes | Optional line-to-company-code allocation with confirmed/provisional/unallocated states; multiple allocations require an evidenced split |
+| Revision | Prior/new baselines, change basis and independently reconciled amounts |
+
+Keep dimension calculations auditable and typed quantities/rates numeric. Store IDs as strings. Blank quantity/rate means unresolved, not zero. Match units and currency explicitly before extending a line. The template flags duplicate IDs and rate-ID/unit/currency mismatches; identical descriptions are allowed. Stable line IDs prevent a repeated description from overwriting another location.
+
+Summarise confirmed measured/priced lines separately from provisional quantities, scenario prices and unpriced/unmeasured scope. Each allowance needs its cost base, evidence and inclusions; do not apply automatic overhead, waste, risk or tax percentages. Confirm additions are outside item-rate inclusions. The template's included-cost total is not an approved budget or a forecast-final-cost model.
+
+For company reporting, preserve literal identifiers and source/version/definition evidence. Keep confirmed, provisional and unallocated amounts visible and reconciling to the same included-cost basis. Coding uncertainty does not remove a cost from the project subtotal. The Codes sheet is a crosswalk; it cannot approve codes or budget transfers.
+
+For revisions, use stable scope IDs and record the prior/new drawing basis. Distinguish added/removed scope, quantity, rate, specification, currency and coding changes. Record an independently established prior/new total and reconcile against the bridge; do not populate both sides from the same already-summed result.
+
+Before issue inspect representative input changes and copied formulas, duplicate IDs, missing/invalid inputs, units/currency, query counts, rate source/base, additions and detail-to-summary/code/revision reconciliation. Check the saved workbook, not only its appearance. Keep marked drawing evidence and source locators alongside the deliverable. Do not claim complete scope because a total calculates.
+
+## Small example
+
+User-supplied dimensions: 10 m × 6 m. User-supplied installation rate: 50 currency units/m², including ordinary bedding. Measured floor installation = 60 m²; extension = 3,000. If owner-supplied stone has no supplied purchase rate, report that purchase as unpriced scope and label 3,000 an installation-only subtotal. Do not add a default purchase rate, duplicate bedding as levelling, or imply the subtotal is the full project cost. Record the measurement convention and source for any deductions separately.
 
 
 ---

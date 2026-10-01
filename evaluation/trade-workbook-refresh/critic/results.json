@@ -1,0 +1,103 @@
+{
+  "evaluation": "trade-workbook-refresh",
+  "review_type": "fresh bounded independent grading",
+  "overall": "PASS",
+  "mandatory_cases_passed": 3,
+  "mandatory_cases_total": 3,
+  "sources": [
+    "evaluation/trade-workbook-refresh/fixtures/request.txt",
+    "evaluation/trade-workbook-refresh/fixtures/transfer-cases.pdf",
+    "evaluation/trade-workbook-refresh/expected.json",
+    "evaluation/trade-workbook-refresh/run/response.md",
+    "evaluation/trade-workbook-refresh/run/evidence.md"
+  ],
+  "cases": {
+    "A": {
+      "result": "PASS",
+      "source_page": 1,
+      "checks": {
+        "full_opening_deduction": "PASS",
+        "material_only_waste": "PASS",
+        "net_installation": "PASS",
+        "R1_quantity_cost": "PASS",
+        "R2_quantity_cost": "PASS",
+        "quantity_only_revision_bridge": "PASS",
+        "exercise_price_currency_no_additions": "PASS"
+      },
+      "verified": {
+        "R1_net_m2": 19.8,
+        "R1_purchase_m2": 20.79,
+        "R1_total_CU": 2554.2,
+        "R2_net_m2": 21.96,
+        "R2_purchase_m2": 23.058,
+        "R2_total_CU": 2832.84,
+        "delta_CU": 278.64
+      },
+      "material_omissions": [],
+      "misleading_totals": [],
+      "missing_basis": []
+    },
+    "B": {
+      "result": "PASS",
+      "source_page": 2,
+      "checks": {
+        "declared_tolerance_documented": "PASS",
+        "independent_X_Y_check": "PASS",
+        "failed_calibration_rejected": "PASS",
+        "no_unverified_nonuniform_rectification": "PASS",
+        "T1_unresolved_not_zero": "PASS",
+        "source_and_price_queries": "PASS"
+      },
+      "verified": {
+        "control_width_pt": 160,
+        "control_height_pt": 90,
+        "X_m_per_point": 0.025,
+        "Y_check_m": 2.25,
+        "relative_error_percent": 12.5,
+        "tolerance_percent": 2
+      },
+      "evidence_limit": "Premeasurement tolerance declaration is reported in response/evidence; supplied files do not independently expose its chronology.",
+      "material_omissions": [],
+      "misleading_totals": [],
+      "missing_basis": []
+    },
+    "C": {
+      "result": "PASS",
+      "source_page": 3,
+      "checks": {
+        "room_identities_preserved": "PASS",
+        "net_quantities": "PASS",
+        "GC_installation_costs": "PASS",
+        "installation_only_subtotal": "PASS",
+        "owner_stone_unpriced": "PASS",
+        "procurement_quantity_unresolved": "PASS",
+        "ordinary_bedding_not_duplicated": "PASS",
+        "additional_levelling_unresolved": "PASS",
+        "material_and_responsibility_queries": "PASS"
+      },
+      "verified": {
+        "P_m2": 26,
+        "Q_m2": 15,
+        "P_install_CU": 1352,
+        "Q_install_CU": 780,
+        "installation_subtotal_CU": 2132
+      },
+      "material_omissions": [],
+      "misleading_totals": [],
+      "missing_basis": []
+    }
+  },
+  "limitations": [
+    "Only three synthetic cases; no baseline arm, so this review cannot demonstrate general skill lift.",
+    "No human/expert validation or empirical accuracy result is claimed.",
+    "The candidate skill, broader evaluations and private/source audit files were not inspected.",
+    "Run process and prohibited-access assertions are self-reported; this is an output and source check, not a process audit.",
+    "B tolerance declaration chronology is not independently observable in the supplied artifacts.",
+    "No market pricing, formal NRM compliance, live workbook recalculation or broader drawing-set completeness is established."
+  ],
+  "critic_artifacts": [
+    "evaluation/trade-workbook-refresh/critic/review.md",
+    "evaluation/trade-workbook-refresh/critic/results.json"
+  ],
+  "calculation_artifact": "work/public-transfer-critic/calculations.json"
+}

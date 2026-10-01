@@ -3,7 +3,8 @@ name: quantity-surveyor
 description: "Construction drawing reviews, take-offs, bills of quantities, estimates, tenders, variations, forecasts, cash flow and lifecycle costs for new builds, refurbishments and subcontract packages."
 license: MIT
 metadata:
-  version: "2.0.3"
+  author: "Bradley Dworkin"
+  version: "2.1.0"
   repository: "https://github.com/MuscleOtter/quantity-surveyor"
 ---
 
@@ -31,9 +32,13 @@ Load only references needed for the task. The workflows work with readable docum
 
 For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.
 
+For graphical measurement, add [drawing-takeoff.md](references/drawing-takeoff.md) for per-viewport calibration, independent checks, tolerance and revision evidence. Load only the relevant trade prompts: [partitions/ceilings](references/trade-partitions-ceilings.md), [stone/specialist finishes](references/trade-finishes.md), [millwork/FF&E](references/trade-millwork-ffe.md), [facades/glazing](references/trade-facades-glazing.md), or [services packages/interfaces](references/trade-services.md). These prompts do not replace the selected project measurement rules.
+
+For a company/Unifier cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
+
 ## Choose an output template only when useful
 
-Use the user's existing format when supplied. These blank templates are optional starting columns, not mandatory deliverables for a simple calculation:
+Use the user's existing format when supplied. These blank templates are optional starting points, not mandatory deliverables for a simple calculation:
 
 | Output | Template |
 |---|---|
@@ -43,6 +48,7 @@ Use the user's existing format when supplied. These blank templates are optional
 | Change basis, status, inclusion and net forecast effect | [changes.csv](templates/changes.csv) |
 | Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](templates/drawing-register.csv) |
 | Quantity calculations with source/location evidence | [quantity-evidence.csv](templates/quantity-evidence.csv) |
+| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](assets/templates/estimating-template.xlsx); read [workbook-pattern.md](references/workbook-pattern.md) |
 
 ## Preserve these invariants
 

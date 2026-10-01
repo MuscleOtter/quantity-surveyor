@@ -1,0 +1,6 @@
+{
+  "fixtures/transfer-cases.pdf": "1efd6b2183e068823ef2e456e4b06351cf39a9a30cd08d5a478feca456c3f0a5",
+  "fixtures/request.txt": "059ab0336da03eb67e3efa4c5e9f85306b3be495eb2590cc0383f312e8822453",
+  "expected.json": "3fe3c59fc1170f6983830d7566daf4579c17e038b232fb639f4f37626337870f",
+  "candidate-hashes.json": "515e7b59a364db9d332bd6659db4c28ba25d45ffb617434db4214ac95afac1f5"
+}

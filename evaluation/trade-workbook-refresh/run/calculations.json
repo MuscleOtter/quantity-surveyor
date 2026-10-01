@@ -1,0 +1,60 @@
+{
+  "B": {
+    "control_pdf_points": {
+      "x0": 80.0,
+      "top": 275.27560000000005,
+      "x1": 240.0,
+      "bottom": 365.27560000000005,
+      "width": 160.0,
+      "height": 90.0
+    },
+    "metres_per_point_x": "0.025",
+    "height_under_x_scale_m": "2.2500",
+    "height_check_signed_percent": "12.5000",
+    "tolerance_percent": "2",
+    "decision": "fail; T1 unresolved; no nonuniform rectification"
+  },
+  "A": {
+    "R1": {
+      "gross_m2": "22.32",
+      "opening_m2": "2.52",
+      "net_m2": "19.80",
+      "purchase_m2": "20.7900",
+      "supply_cost": "1663.2000",
+      "installation_cost": "891.00",
+      "total": "2554.2000"
+    },
+    "R2": {
+      "gross_m2": "24.48",
+      "opening_m2": "2.52",
+      "net_m2": "21.96",
+      "purchase_m2": "23.0580",
+      "supply_cost": "1844.6400",
+      "installation_cost": "988.20",
+      "total": "2832.8400"
+    },
+    "delta": {
+      "gross_m2": "2.16",
+      "opening_m2": "0.00",
+      "net_m2": "2.16",
+      "purchase_m2": "2.2680",
+      "supply_cost": "181.4400",
+      "installation_cost": "97.20",
+      "total": "278.6400"
+    }
+  },
+  "C": {
+    "P": {
+      "net_m2": "26.0",
+      "installation_cost": "1352.0"
+    },
+    "Q": {
+      "net_m2": "15.0",
+      "installation_cost": "780"
+    },
+    "total": {
+      "net_m2": "41.0",
+      "installation_cost": "2132.0"
+    }
+  }
+}

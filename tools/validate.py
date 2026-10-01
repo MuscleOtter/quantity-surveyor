@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import tempfile
 import zipfile
+import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/quantity-surveyor'
@@ -31,9 +32,28 @@ def verify_manifest(base,manifest):
 
 
 def main():
+    refresh=EVAL/'trade-workbook-refresh'
+    refresh_changes=json.loads((refresh/'changes.json').read_text())
+    verify_manifest(refresh/'baseline-2.0.3', refresh/'baseline-hashes.json')
+    initial=json.loads((refresh/'frozen.json').read_text())
+    for name,expected in initial.items():
+        archived='candidate-hashes-with-caches.json' if name=='candidate-hashes.json' else name
+        require(digest(refresh/archived)==expected,'Initial transfer freeze changed: '+name)
+    for name in ('baseline-hashes','candidate-hashes'):
+        original=json.loads((refresh/(name+'-with-caches.json')).read_text())
+        filtered={k:v for k,v in original.items() if '__pycache__' not in Path(k).parts and Path(k).suffix not in ('.pyc','.pyo')}
+        require(json.loads((refresh/(name+'.json')).read_text())==filtered,'Portable source hashes diverge: '+name)
+    verify_manifest(refresh, refresh/'response-hashes.json')
+    verify_manifest(SKILL, refresh/'candidate-hashes.json')
+    def apply_refresh(name, text):
+        for before,after in refresh_changes.get(name, []):
+            require(text == before, 'Unexpected pre-refresh instruction base: '+name)
+            text=after
+        return text
     def v2_source(name):
         archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
-        return archived if archived.is_file() else ROOT/name
+        baseline=refresh/'baseline-2.0.3'/name.removeprefix('skills/quantity-surveyor/')
+        return archived if archived.is_file() else (baseline if baseline.is_file() else ROOT/name)
     editorial=json.loads((EVAL/'documentation-refresh/editorial-changes.json').read_text())
     routing=json.loads((EVAL/'routing-refresh/changes.json').read_text())
     s=(SKILL/'SKILL.md').read_text()
@@ -74,15 +94,34 @@ def main():
             for before,after in routing.get(name.removeprefix('skills/quantity-surveyor/'),[]):
                 require(renamed.count(before)==1,'Routing source text missing or ambiguous: '+name)
                 renamed=renamed.replace(before,after)
-            require((ROOT/name).read_text()==renamed,'Unexpected release/editorial/routing delta: '+name)
+            renamed=apply_refresh(name.removeprefix('skills/quantity-surveyor/'), renamed)
+            require((ROOT/name).read_text()==renamed,'Unexpected release/editorial/routing/refresh delta: '+name)
     verify_manifest(EVAL/'v2-drawing-workflow',EVAL/'v2-drawing-workflow/response-hashes.json')
     for name in json.loads((EVAL/'candidate-round2-hashes.json').read_text()):
         if name not in ('SKILL.md','README.md'):
             require(digest(v2_source('skills/quantity-surveyor/'+name))==digest(EVAL/'candidate-round2'/name),'Scored reference/helper changed: '+name)
     allowed=set(json.loads((EVAL/'candidate-round2-hashes.json').read_text()))-{'README.md'}
     allowed |= {'references/updates.md','scripts/check_updates.py','version.json','references/large-drawing-sets.md','templates/drawing-register.csv','templates/quantity-evidence.csv'}
+    allowed |= set(json.loads((refresh/'added-files.json').read_text()))
     actual={p.relative_to(SKILL).as_posix() for p in SKILL.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
     require(actual==allowed,'Unexpected or missing distributable files: '+str(actual^allowed))
+    # Inspect the saved optional workbook as a distribution artifact, without
+    # claiming that XML inspection recalculates its formulas.
+    ns={'m':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+    with zipfile.ZipFile(SKILL/'assets/templates/estimating-template.xlsx') as z:
+        require(z.testzip() is None,'Invalid estimating workbook')
+        require(not any('externalLinks/' in n or 'vbaProject' in n for n in z.namelist()),'Unexpected external link or macro')
+        workbook=ET.fromstring(z.read('xl/workbook.xml'))
+        sheets=workbook.find('m:sheets',ns)
+        require([s.get('name') for s in sheets]==['Summary','Drawings','Takeoff','Rates','Queries','Codes','Revision'],'Workbook sheets changed')
+        require(all(s.get('state','visible')=='visible' for s in sheets),'Hidden workbook sheet')
+        for n in z.namelist():
+            if n.endswith('.xml'):
+                text=z.read(n).decode('utf-8')
+                require(not re.search(r'/U[s]ers/[A-Za-z0-9]|/Volumes/',text,re.I),'Private path or mapping in workbook')
+            if re.fullmatch(r'xl/worksheets/sheet\d+\.xml',n):
+                sheet=ET.fromstring(z.read(n))
+                require(not any(c.get('t')=='e' for c in sheet.findall('.//m:c',ns)),'Workbook cached formula error')
     require(not list((ROOT/'docs').rglob('CLAUDE.md')),'User-facing guides must not use the reserved CLAUDE.md filename')
     for template in (SKILL/'templates').iterdir():
         require('(templates/'+template.name+')' in s,'Template missing from core routing: '+template.name)
@@ -100,7 +139,7 @@ def main():
     builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
     require((ROOT/'llms-full.txt').read_text()==builder.combined_markdown(),'Generated llms-full.txt is stale; rebuild with --sync-discovery')
     require(manifest['name']=='quantity-surveyor','Manifest name mismatch')
-    require('Current release: '+manifest['version'] in (ROOT/'llms.txt').read_text(),'Discovery version mismatch')
+    require('Current source: '+manifest['version'] in (ROOT/'llms.txt').read_text(),'Discovery version mismatch')
     with tempfile.TemporaryDirectory(prefix='qs-package-') as temporary:
         out=Path(temporary);builder.build(out)
         with zipfile.ZipFile(out/'quantity-surveyor.zip') as z:
@@ -110,6 +149,12 @@ def main():
             require(z.testzip() is None,'Invalid ZIP')
             for p in builder.source_files():
                 require(z.read('quantity-surveyor/'+p.relative_to(SKILL).as_posix())==p.read_bytes(),'ZIP bytes differ')
+        require((out/'estimating-template.xlsx').read_bytes()==(SKILL/'assets/templates/estimating-template.xlsx').read_bytes(),'Standalone workbook differs')
+        checksums=(out/'SHA256SUMS.txt').read_text().splitlines()
+        require(len(checksums)==5,'Missing release checksum entry')
+        for entry in checksums:
+            expected,name=entry.split('  ',1)
+            require(digest(out/name)==expected,'Release checksum mismatch: '+name)
         for suffix in ('.zip','.md'):
             require((out/('universal-quantity-surveyor'+suffix)).read_bytes()==(out/('quantity-surveyor'+suffix)).read_bytes(),'Legacy alias differs')
         doc=(out/'quantity-surveyor.md').read_text()

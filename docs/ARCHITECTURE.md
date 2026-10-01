@@ -20,11 +20,11 @@ The skill routes tasks to measurement/estimating, drawing-set review, commercial
 
 ## One source of truth
 
-`skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown. Memory and update checks are independent optional standard-library scripts.
+`skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown, with an optional blank XLSX estimating workbook in version 2.1.0. Memory and update checks are independent optional standard-library scripts.
 
 ## Release boundary
 
-A stable semantic version lives in `version.json` and SKILL metadata. A Git tag identifies the source; a GitHub release provides a single-folder install ZIP, the generated Markdown edition and checksums. The ZIP excludes evaluation answers, development logs, documentation artwork and private state. The public repository carries documentation and synthetic evaluation evidence separately.
+A stable semantic version lives in `version.json` and SKILL metadata. A Git tag identifies the source; a GitHub release provides a single-folder install ZIP, the generated Markdown edition, standalone workbook and checksums. The ZIP excludes evaluation answers, development logs, documentation artwork and private state. The public repository carries documentation and synthetic evaluation evidence separately.
 
 ## Updates
 

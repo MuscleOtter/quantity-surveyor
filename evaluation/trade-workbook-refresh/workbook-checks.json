@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Repeated descriptions retain both extensions",
+    "actual": 2700,
+    "expected": 2700
+  },
+  {
+    "name": "Missing rate leaves amount blank",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Partial subtotal retains priced line",
+    "actual": 1200,
+    "expected": 1200
+  },
+  {
+    "name": "Missing rate is explicit",
+    "actual": "Missing rate",
+    "expected": "Missing rate"
+  },
+  {
+    "name": "TBD quantity is not zero",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Unit mismatch is explicit",
+    "actual": "Unit mismatch",
+    "expected": "Unit mismatch"
+  },
+  {
+    "name": "Unit mismatch does not silently price",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Blank rate is not zero",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Explicit zero price remains valid",
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "name": "Duplicate IDs are not silently aggregated",
+    "actual": "Duplicate line ID",
+    "expected": "Duplicate line ID"
+  },
+  {
+    "name": "Currency mismatch is explicit",
+    "actual": "Currency mismatch",
+    "expected": "Currency mismatch"
+  },
+  {
+    "name": "Scenario cost kept outside supported subtotal",
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "name": "Scenario subtotal",
+    "actual": 2700,
+    "expected": 2700
+  },
+  {
+    "name": "Confirmed code subtotal",
+    "actual": 1200,
+    "expected": 1200
+  },
+  {
+    "name": "Provisional code subtotal",
+    "actual": 1500,
+    "expected": 1500
+  },
+  {
+    "name": "Fully allocated residual",
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "name": "Explicit zero remains a valid linked allocation",
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "name": "Zero-cost allocation has no missing-price query",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Incomplete share is queried",
+    "actual": "Line shares must total 1",
+    "expected": "Line shares must total 1"
+  },
+  {
+    "name": "Unresolved allocation stays in total",
+    "actual": 2700,
+    "expected": 2700
+  },
+  {
+    "name": "Unresolved allocation remains residual",
+    "actual": 1500,
+    "expected": 1500
+  },
+  {
+    "name": "Explicit unallocated subtotal",
+    "actual": 1500,
+    "expected": 1500
+  },
+  {
+    "name": "Revision quantity effect",
+    "actual": 500,
+    "expected": 500
+  },
+  {
+    "name": "Independent revision residual",
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "name": "Unexplained change remains visible",
+    "actual": 100,
+    "expected": 100
+  },
+  {
+    "name": "Text other-change is unresolved",
+    "actual": "Non-numeric other change",
+    "expected": "Non-numeric other change"
+  },
+  {
+    "name": "Text other-change cannot disappear in SUM",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Revision quantity requires its unit",
+    "actual": "Missing quantity unit",
+    "expected": "Missing quantity unit"
+  },
+  {
+    "name": "Blank template has no fabricated total",
+    "actual": "",
+    "expected": ""
+  },
+  {
+    "name": "Blank template declares no estimate entered",
+    "actual": "No estimate entered",
+    "expected": "No estimate entered"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "run/evidence.md",
+    "before_sha256": "6410236ac39b0b2344612a59bac083d0ceca0b1c5a50ca3a4244e3f186055622",
+    "after_sha256": "7ecb314f0e6ab121ed14fd05da331eae5195e9092f85f88fd699a2add1a0a1f2",
+    "reason": "Publication-only link correction; synthetic calculations copied out of ignored temporary work directory. Numerical outputs and grades unchanged."
+  },
+  {
+    "file": "critic/review.md",
+    "before_sha256": "ebcd5038cfb99ad860e86f2fde8b617fb005b72303dcabafcae40fb404e1092e",
+    "after_sha256": "f2a5272c42d797eaaf5a1f7b439fd2e5efd3b4830920bb68391a9dff3d564df6",
+    "reason": "Publication-only link correction; synthetic calculations copied out of ignored temporary work directory. Numerical outputs and grades unchanged."
+  }
+]

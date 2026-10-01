@@ -1,0 +1,40 @@
+{
+  "A": {
+    "R1": {
+      "gross": "22.32",
+      "opening": "2.52",
+      "net": "19.80",
+      "purchase": "20.7900",
+      "supply": "1663.2000",
+      "installation": "891.00",
+      "total": "2554.2000"
+    },
+    "R2": {
+      "gross": "24.48",
+      "opening": "2.52",
+      "net": "21.96",
+      "purchase": "23.0580",
+      "supply": "1844.6400",
+      "installation": "988.20",
+      "total": "2832.8400"
+    }
+  },
+  "A_cost_delta": "278.6400",
+  "B": {
+    "control_points": [
+      160,
+      90
+    ],
+    "x_factor": "0.025",
+    "vertical_check": "2.250",
+    "relative_error_percent": "12.500",
+    "chosen_tolerance_percent": "2"
+  },
+  "C": {
+    "P_net": "26.0",
+    "Q_net": "15",
+    "P_install": "1352.0",
+    "Q_install": "780",
+    "installation_subtotal": "2132.0"
+  }
+}

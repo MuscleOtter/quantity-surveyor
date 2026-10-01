@@ -1,0 +1,22 @@
+{
+  "version.json": "ffb0aabfcc0aae85c9e25e40bd902b9ba37942f114d546218bf8d37c6137a369",
+  "LICENSE": "89526fc5f7f316c34ba9d29d4bcf0d67b65f2564436c8fa099cf585062392722",
+  "SKILL.md": "156a3af75ee3f7b4d00f4a66ad1219a1fc8dc1ee4ac8285fa5acc6737de30059",
+  "references/lifecycle.md": "cc69a89c6ce217e8eeab030393b1f3f75278eee1192cfaa48ba878b21a536196",
+  "references/large-drawing-sets.md": "2e88b75994d04d4bac62051387c9c8fbbd29bb832249368d3e38b4540f678686",
+  "references/measurement-and-estimating.md": "c4e2253e65d01dd09761fba51be83515c707c8fa3979df1dda9d7b7f204a86e2",
+  "references/standards.md": "5abce7ea7af73d6150a41cbf89e77d68f9f59497ec4174b027f59adf39b3abb6",
+  "references/updates.md": "55bad00da11d7da007ec8a7488f469c3ce4f86247f072fc6e4ffd1b9831df668",
+  "references/evidence-and-interfaces.md": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+  "references/commercial-control.md": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+  "references/memory-and-review.md": "cedc719477d029e7ae106d70ef280d1340b2830e8dd87a4ca53c6bfa21ca2696",
+  "scripts/memory.py": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+  "scripts/check_updates.py": "1810c11ef7f66a80022e84f50c2e1bf326db119734ea496f3823315b3d73ad00",
+  "templates/forecast.csv": "771def4a541813c6c1302ad7794b32e2304c64d7046e7310c1c8d7e46b46dbec",
+  "templates/changes.csv": "d6341a3d1e4dcf4185f5463d8a6fd2c88326ef905359f9950ec1b9d84e34f00c",
+  "templates/drawing-register.csv": "9c9f5a46e741a8e1a45578e8930f361ab3a1458423f091436a483459bee4b62e",
+  "templates/estimate.csv": "3080958cfbf53429ee3390edecd348ec62e381266aadafcb442f20bd22ef381f",
+  "templates/quantity-evidence.csv": "4083d27cf2791dc0f5a2f2f97a98173c6fa102e62de97b4aa6809e8ed4d022fa",
+  "templates/project-basis.md": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85",
+  "scripts/__pycache__/check_updates.cpython-312.pyc": "1fb2b1d16942eb62bf920f9314c4565189417b83b27abb3dd4fe87892111a7b4"
+}

@@ -69,3 +69,7 @@ Current wording describes construction projects and work packages without the ea
 On 1 October 2026 the user reported one native activation in Claude Code and a four-case run on version 2.0.1, all answers correct. The cases came from the published suite. This is smoke/regression evidence, not a new blind benchmark, numeric score or validation of later releases. [Report, provenance and unknowns](../evaluation/claude-smoke-report.md).
 
 Version 2.0.3 addresses the reported friction by separating simple take-off from coordinated drawing review, making standards loading conditional, routing early-stage pricing advice, and linking all six templates directly from SKILL.md. The [routing change record](../evaluation/routing-refresh/README.md) documents the intended selections and exact instruction delta. These changes have not been rerun on Claude in the evidence supplied here.
+
+## Trade/workbook transfer (2.1.0)
+
+The [new evidence record](../evaluation/trade-workbook-refresh/README.md) preserves the prior public package, an explicit additive delta and a newly frozen three-case drawing exercise with a blind evaluator and separate critic. All three fresh drawing cases passed independent mandatory checks. The optional workbook has 30 recorded input-state checks and structural/export checks; its formulas still need verification in the user's spreadsheet application. Historical scores do not apply to these additions; this bounded exercise cannot establish full-set accuracy or general skill lift.
