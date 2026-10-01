@@ -19,3 +19,7 @@ The public validator checks the exported file's ZIP structure, seven visible she
 Executed repository checks: package validation/build, all ten update tests, all 13 memory-helper subprocess cases, and missing-primary recovery/preservation regression. Helper implementations are unchanged. Gitleaks reported no leaks in the canonical distributable; that is a bounded secret scan, not a security certification.
 
 Source version 2.1.0 is pending review/release. The Git branch/PR does not publish a GitHub release, change existing stable downloads or update anyone's installed skill.
+
+## Clean-checkout packaging correction
+
+The first GitHub checks failed because the initial candidate/baseline hash manifests included temporary interpreter caches excluded by Git. `baseline-hashes-with-caches.json` and `candidate-hashes-with-caches.json` preserve those original manifests; `frozen.json` still records the original dispatch freeze. The portable manifests remove only `__pycache__`, `.pyc` and `.pyo` entries. Validation verifies the archived initial freeze, exact non-cache subset and every shipped source byte. Fixtures, expected answers, candidate instructions, actual responses and grades are unchanged. Clean-checkout validation and CI are rerun rather than relying on locally available caches.

@@ -17,6 +17,7 @@
   "references/trade-services.md": "b30ec01dcbaa45a507fded6fca6d91338b1e6a5ce9e5326431c18fc36e3d5a38",
   "references/updates.md": "55bad00da11d7da007ec8a7488f469c3ce4f86247f072fc6e4ffd1b9831df668",
   "references/workbook-pattern.md": "59f51529414d3f77ae6641186c0baeaa1ff498a79010b113b90c4f8aacd50296",
+  "scripts/__pycache__/check_updates.cpython-312.pyc": "1fb2b1d16942eb62bf920f9314c4565189417b83b27abb3dd4fe87892111a7b4",
   "scripts/check_updates.py": "1810c11ef7f66a80022e84f50c2e1bf326db119734ea496f3823315b3d73ad00",
   "scripts/memory.py": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
   "templates/changes.csv": "d6341a3d1e4dcf4185f5463d8a6fd2c88326ef905359f9950ec1b9d84e34f00c",

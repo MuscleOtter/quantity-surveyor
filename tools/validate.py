@@ -35,7 +35,14 @@ def main():
     refresh=EVAL/'trade-workbook-refresh'
     refresh_changes=json.loads((refresh/'changes.json').read_text())
     verify_manifest(refresh/'baseline-2.0.3', refresh/'baseline-hashes.json')
-    verify_manifest(refresh, refresh/'frozen.json')
+    initial=json.loads((refresh/'frozen.json').read_text())
+    for name,expected in initial.items():
+        archived='candidate-hashes-with-caches.json' if name=='candidate-hashes.json' else name
+        require(digest(refresh/archived)==expected,'Initial transfer freeze changed: '+name)
+    for name in ('baseline-hashes','candidate-hashes'):
+        original=json.loads((refresh/(name+'-with-caches.json')).read_text())
+        filtered={k:v for k,v in original.items() if '__pycache__' not in Path(k).parts and Path(k).suffix not in ('.pyc','.pyo')}
+        require(json.loads((refresh/(name+'.json')).read_text())==filtered,'Portable source hashes diverge: '+name)
     verify_manifest(refresh, refresh/'response-hashes.json')
     verify_manifest(SKILL, refresh/'candidate-hashes.json')
     def apply_refresh(name, text):

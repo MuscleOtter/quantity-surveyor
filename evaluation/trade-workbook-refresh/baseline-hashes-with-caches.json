@@ -17,5 +17,6 @@
   "templates/drawing-register.csv": "9c9f5a46e741a8e1a45578e8930f361ab3a1458423f091436a483459bee4b62e",
   "templates/estimate.csv": "3080958cfbf53429ee3390edecd348ec62e381266aadafcb442f20bd22ef381f",
   "templates/quantity-evidence.csv": "4083d27cf2791dc0f5a2f2f97a98173c6fa102e62de97b4aa6809e8ed4d022fa",
-  "templates/project-basis.md": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85"
+  "templates/project-basis.md": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85",
+  "scripts/__pycache__/check_updates.cpython-312.pyc": "1fb2b1d16942eb62bf920f9314c4565189417b83b27abb3dd4fe87892111a7b4"
 }
