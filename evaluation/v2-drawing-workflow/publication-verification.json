@@ -1,0 +1,106 @@
+{
+  "release": "v2.0.0",
+  "commit": "c0da4a6d31b7ff0db33cdd58ca8f17125f5c6d57",
+  "assets": [
+    {
+      "asset": "SHA256SUMS.txt",
+      "status": 200,
+      "sha256": "9b6cb766ef21b393c2d715ca29850084f30f0a48b9ae6ffc650580f64711aa2a",
+      "bytes": 370
+    },
+    {
+      "asset": "quantity-surveyor.md",
+      "status": 200,
+      "sha256": "b0b01bbddb6d3073647a9179f782f0fc05193706175033e62c8215778ed735e3",
+      "bytes": 57226
+    },
+    {
+      "asset": "quantity-surveyor.zip",
+      "status": 200,
+      "sha256": "267e063e91def19150abf12fc1ddfa2ae6d4aeab6968853c2e5343cceb103929",
+      "bytes": 32984
+    },
+    {
+      "asset": "universal-quantity-surveyor.md",
+      "status": 200,
+      "sha256": "b0b01bbddb6d3073647a9179f782f0fc05193706175033e62c8215778ed735e3",
+      "bytes": 57226
+    },
+    {
+      "asset": "universal-quantity-surveyor.zip",
+      "status": 200,
+      "sha256": "267e063e91def19150abf12fc1ddfa2ae6d4aeab6968853c2e5343cceb103929",
+      "bytes": 32984
+    }
+  ],
+  "discovery_links": [
+    {
+      "path": "README.md",
+      "status": 200
+    },
+    {
+      "path": "docs/INSTALL.md",
+      "status": 200
+    },
+    {
+      "path": "docs/FAQ.md",
+      "status": 200
+    },
+    {
+      "path": "docs/COMPATIBILITY.md",
+      "status": 200
+    },
+    {
+      "path": "skills/quantity-surveyor/SKILL.md",
+      "status": 200
+    },
+    {
+      "path": "llms-full.txt",
+      "status": 200
+    },
+    {
+      "path": "docs/DRAWING-SETS.md",
+      "status": 200
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "status": 200
+    },
+    {
+      "path": "docs/EVALUATION.md",
+      "status": 200
+    },
+    {
+      "path": "docs/UPDATES.md",
+      "status": 200
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "status": 200
+    },
+    {
+      "path": "docs/DISCOVERY.md",
+      "status": 200
+    }
+  ],
+  "cover_http_status": 200,
+  "v1_checker_unchanged": true,
+  "v1_check": {
+    "status": "update_available",
+    "installed_version": "1.0.0",
+    "latest_version": "2.0.0",
+    "release_url": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v2.0.0",
+    "action": "Read the release notes and ask the user before installation."
+  },
+  "v2_check": {
+    "status": "current",
+    "installed_version": "2.0.0",
+    "latest_version": "2.0.0",
+    "release_url": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v2.0.0",
+    "action": "No replacement needed."
+  }
+}
