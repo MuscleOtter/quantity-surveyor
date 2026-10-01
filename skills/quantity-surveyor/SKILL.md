@@ -1,13 +1,13 @@
 ---
-name: universal-quantity-surveyor
+name: quantity-surveyor
 description: "Measure, estimate and control construction costs for luxury retail interiors and facades or complete freestanding building projects; use for take-offs, cost plans, tender comparisons, forecasts, changes, cash flow and lifecycle options."
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   repository: "https://github.com/MuscleOtter/universal-quantity-surveyor"
 ---
 
-# Universal Quantity Surveyor
+# Quantity Surveyor
 
 Deliver useful quantity surveying work from the available evidence. Specialise in luxury retail interiors and facades and support complete freestanding projects, including enabling works, structures, services, site infrastructure and owner costs. Perform the requested calculation or deliverable; use sources to support it. Match detail to the decision and information maturity.
 
@@ -19,6 +19,7 @@ Select contractual/project requirements, local measurement practice and professi
 
 ## Choose the task reference
 
+- Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](references/large-drawing-sets.md).
 - Take-offs, bills, cost plans, rate build-ups, luxury interfaces or whole-building scope: [measurement-and-estimating.md](references/measurement-and-estimating.md).
 - Tender comparison, forecast/change control, cash flow, risk, value engineering or process advice: [commercial-control.md](references/commercial-control.md).
 - Maintenance, renewals, lifecycle costing and economic options: [lifecycle.md](references/lifecycle.md).
@@ -26,6 +27,8 @@ Select contractual/project requirements, local measurement practice and professi
 - Optional persistent lessons or optional independent/semantic checking: [memory-and-review.md](references/memory-and-review.md). Memory is off unless an explicit isolated location and scope are configured.
 
 Load only references needed for the task. The workflows work with readable documents, tables, ordinary calculation tools and visual inspection. No service, connector, model or proprietary library is required. When a capability is absent, complete the supported portion and identify the specific unfinished step. Do not present unavailable visual, live-price or recalculation checks as completed.
+
+For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.
 
 ## Preserve these invariants
 

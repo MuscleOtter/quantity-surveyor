@@ -10,7 +10,7 @@ Or bookmark [Releases](https://github.com/MuscleOtter/universal-quantity-surveyo
 
 ## Ask your AI
 
-> Check whether Universal Quantity Surveyor has a newer stable release. Show my installed version, the new version and the release notes. Ask me before replacing any files.
+> Check whether Quantity Surveyor has a newer stable release. Show my installed version, the new version and the release notes. Ask me before replacing any files.
 
 A capable agent can open the public latest release page, or execute the optional checker in the installed folder:
 
@@ -24,7 +24,7 @@ Without `--online`, the checker only reports the local version. With it, it read
 
 Tell your agent:
 
-> If your app supports persistent preferences, remember privately that I want an update check for Universal Quantity Surveyor at most once a week when I next use it. Use only public release metadata. Show actionable updates and ask before installation. Keep my projects and memory separate. If you cannot persist or check online, tell me once and let me check manually.
+> If your app supports persistent preferences, remember privately that I want an update check for Quantity Surveyor at most once a week when I next use it. Use only public release metadata. Show actionable updates and ask before installation. Keep my projects and memory separate. If you cannot persist or check online, tell me once and let me check manually.
 
 This is a host-managed preference, not an installed scheduler. It requires explicit opt-in, a private per-user preference outside the skill, and a successful last-check timestamp. No persistent preference capability means no reliable weekly trigger. Failed checks can be retried on a later use, without repeated interruption of the QS task. No universal background promise is made. Default behavior is manual checking.
 

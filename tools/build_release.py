@@ -8,7 +8,7 @@ import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / 'skills/universal-quantity-surveyor'
+SKILL = ROOT / 'skills/quantity-surveyor'
 NAME = SKILL.name
 
 
@@ -41,7 +41,7 @@ def combined_markdown():
         if p.suffix=='.csv':
             text='## '+p.name+'\n\n```csv\n'+text+'```\n'
         return '<a id="'+anchors[p.resolve()]+'"></a>\n\n'+text.strip()+'\n'
-    header='# Universal Quantity Surveyor — complete chat edition\n\nVersion '+version+'. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.\n\n'
+    header='# Quantity Surveyor — complete chat edition\n\nVersion '+version+'. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.\n\n'
     return header+'\n\n---\n\n'.join(render(p) for p in paths)+'\n\n## Original content license\n\n'+(SKILL/'LICENSE').read_text()
 
 
@@ -56,7 +56,13 @@ def build(out):
             z.writestr(entry,p.read_bytes())
     doc=out/(NAME+'.md')
     doc.write_text(combined_markdown(),encoding='utf-8')
-    checksums=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in [archive,doc])
+    # Keep v1 README/latest-download URLs working after the skill identity change.
+    legacy=[]
+    for item in (archive,doc):
+        alias=out/('universal-quantity-surveyor'+item.suffix)
+        alias.write_bytes(item.read_bytes())
+        legacy.append(alias)
+    checksums=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in [archive,doc,*legacy])
     (out/'SHA256SUMS.txt').write_text(checksums,encoding='utf-8')
     print('Built install ZIP, complete Markdown edition and SHA256SUMS.txt.')
 
@@ -64,4 +70,8 @@ def build(out):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out',type=Path,default=ROOT/'dist')
-    build(parser.parse_args().out.resolve())
+    parser.add_argument('--sync-discovery',action='store_true',help='Regenerate the checked-in llms-full.txt from canonical instructions.')
+    args=parser.parse_args()
+    if args.sync_discovery:
+        (ROOT/'llms-full.txt').write_text(combined_markdown(),encoding='utf-8')
+    build(args.out.resolve())

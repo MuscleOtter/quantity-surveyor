@@ -1,7 +1,7 @@
 # Cover artwork
 
-`cover.png` was generated on 1 October 2026 using the built-in image generation tool, then visually inspected. It is decorative architectural concept art, not a construction drawing or measured project.
+The Quantity Surveyor cover is the user-selected, AI-generated architectural section with a blue highlighted bay and the words “Measure. Estimate. Control.” It was reused unchanged from the latest image in the related image conversation on 1 October 2026. The original generation prompt is not reproduced here.
 
-Prompt: Create a premium landscape cover titled “UNIVERSAL QUANTITY SURVEYOR”, with an exploded modern architectural model transitioning from cyan blueprint linework on midnight navy; warm copper, ivory type and “Measure. Estimate. Control.” No vendor logos, people or certification seals.
+The cover is illustrative, not a measured construction drawing or evidence of a completed take-off. No company logo or project drawing is included.
 
-To the extent copyright or related rights in this generated image are held by the publisher, they are dedicated under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). This is not a claim that AI output is copyrightable in every jurisdiction. The code and original instructional text use the root MIT license.
+To the extent the publisher can grant rights, the cover is dedicated under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). AI-generated material may have different protection across jurisdictions. The skill's original text and code use the repository MIT license.

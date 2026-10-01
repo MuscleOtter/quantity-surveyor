@@ -1,6 +1,14 @@
 # Evaluation and release review
 
-The latest independent Astra critic graded **all 23 sealed round-2 task outputs at 9.964479813664596/10 (exact 51337/5152), passing the frozen strictly-greater-than-9 rule, with zero material failures**. Core mean 9.952639751552795; held-out mean 10.0. Configured reviewer: **gpt-6-astra, high**; exact tool-exposed model revision unavailable. Read the [actual critic report](../evaluation/round2/astra-critic.md), [all dimension scores](../evaluation/round2/astra-critic.json) and [executed verification](../evaluation/round2/astra-verification.json).
+The historical pre-version-2 independent Astra critic graded **all 23 sealed round-2 task outputs at 9.964479813664596/10 (exact 51337/5152), passing the frozen strictly-greater-than-9 rule, with zero material failures**. Core mean 9.952639751552795; held-out mean 10.0. Configured reviewer: **gpt-6-astra, high**; exact tool-exposed model revision unavailable. Read the [actual critic report](../evaluation/round2/astra-critic.md), [all dimension scores](../evaluation/round2/astra-critic.json) and [executed verification](../evaluation/round2/astra-verification.json).
+
+## Version 2: a different evidence boundary
+
+Version 2 preserves the assessed six QS references, original templates and memory helper, but adds a large-drawing-set reference, two templates and core routing guidance. The old behavioral score does **not** grade those additions or the complete version 2 package.
+
+A separate Astra session (`gpt-6-astra`, high; exact model revision not exposed) answered six frozen text-only probes and reviewed the new workflow. The [cases](../evaluation/v2-drawing-workflow/cases.md), [source hashes](../evaluation/v2-drawing-workflow/frozen.json), [actual answers](../evaluation/v2-drawing-workflow/astra-responses.md) and [review](../evaluation/v2-drawing-workflow/astra-review.md) are retained. The initial reviewed source and subsequent two refinements are distinguished in the [change record](../evaluation/v2-drawing-workflow/changes-after-review.md); the critic verified the final delta separately. Cases cover issue conflicts, mixed scales/repeated depictions, incomplete detection, revision caches, unavailable visual tools and a proportionate simple calculation. The same session answers and then critiques, so this is a bounded instruction check, not independent grading of an unseen test run. No new numeric competence score is assigned.
+
+There were no real drawing PDFs in these probes. Full-set visual accuracy, practical review effort, native host routing and Claude/open-model performance remain unmeasured. See the proposed [real-set validation plan](DRAWING-SETS.md).
 
 ## What was evaluated
 
@@ -24,7 +32,7 @@ The final independent memory suite passed 13/13 groups (108 subprocess calls), p
 
 Two additional original synthetic image cases were actually viewed by a fresh tester and critic. They cover facade installed/purchased quantities and a civil subset. All 27 independent visual recomputations passed. These add visual-reading evidence, with no primary-score bonus. [Visual review](../evaluation/visual/review.md).
 
-## Published universal distribution
+## Historical version 1 distribution
 
 The public release renames only the skill identity/heading, adds license/version/repository metadata, removes the generic in-folder README in favor of root documentation, and adds an optional update section, reference, checker and version manifest. **All six assessed QS references, templates and the memory helper are byte-for-byte unchanged.** The distribution change is recorded in `evaluation/distribution-delta.json`. The score applies to the recorded candidate and outputs; it is not a new behavioral score for the update mechanism or a universal model claim. Packaging, source equivalence, offline/online update policy and release build are verified separately with executable checks. The same configured Astra reviewer also completed a separately labelled [distribution/architecture review](DISTRIBUTION-REVIEW.md), found and independently verified correction of an interrupted HTTP-read defect, and retained the reviewed asset hashes.
 
@@ -37,8 +45,8 @@ From the repository folder, with Python 3.10+:
 ```text
 python3 tools/validate.py
 python3 -m unittest discover -s tests -p 'test_updates.py'
-python3 tests/test_memory_helper.py --package skills/universal-quantity-surveyor --work work/memory --output work/memory-results
-python3 tests/test_missing_primary.py --package skills/universal-quantity-surveyor --work work/recovery --output work/recovery-results
+python3 tests/test_memory_helper.py --package skills/quantity-surveyor --work work/memory --output work/memory-results
+python3 tests/test_missing_primary.py --package skills/quantity-surveyor --work work/recovery --output work/recovery-results
 python3 tools/build_release.py --out dist
 ```
 

@@ -2,7 +2,7 @@
 
 | Problem | What to do |
 |---|---|
-| Claude rejects the ZIP | Download the **skill ZIP** from Releases. Do not use the whole-repository ZIP or add an extra enclosing folder. The folder and frontmatter name must both be `universal-quantity-surveyor`. |
+| Claude rejects the ZIP | Download the **skill ZIP** from Releases. Do not use the whole-repository ZIP or add an extra enclosing folder. The folder and frontmatter name must both be `quantity-surveyor`. |
 | No Skills upload option | Check Claude's code-execution capability and organization policy; use the single Markdown edition if native installation is unavailable. |
 | Local agent cannot find the skill | Ask it to confirm its supported skill directory and that `SKILL.md` is directly inside the named folder. Restart or refresh discovery. |
 | Agent says it cannot open references | Preserve the complete folder; in plain chat use the combined Markdown edition. Ask it to name what it actually read. |

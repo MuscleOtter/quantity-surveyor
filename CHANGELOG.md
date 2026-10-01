@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0 — 2026-10-01
+
+- Rename the display name and installed identifier to Quantity Surveyor / quantity-surveyor. Major version reflects the installation identity change; retain the repository address and legacy download aliases.
+- Add a portable large-drawing-set workflow: issued-set selection, actual/index coverage, view calibration, dependency tracking, instance evidence, missed-candidate review and revision invalidation.
+- Add blank drawing-register and quantity-evidence CSV templates, plus scope/accuracy guidance and a proposed real-set validation plan.
+- Publish source-based research, direct-answer FAQ, llms.txt and a generated llms-full.txt edition. No claim of guaranteed search ranking or full-set accuracy.
+- Reuse the user's selected white architectural cover with the blue highlighted bay.
+- Preserve historical evaluation evidence and separate the new bounded Astra workflow probes from the earlier rubric score.
+
 ## 1.0.0 — 2026-10-01
 
 - First universal Agent Skills distribution for construction cost work: full buildings, luxury interiors/facades, tenders, changes/forecasts, cash flow and lifecycle choices.

@@ -16,7 +16,7 @@ flowchart LR
 
 ## One source of truth
 
-`skills/universal-quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown. Memory and update checks are independent optional standard-library scripts.
+`skills/quantity-surveyor/` is the canonical distributable. `SKILL.md` routes to focused references so capable hosts can load only what they need. A deterministic build concatenates the same guidance into a chat attachment; there is no second hand-maintained model edition. Templates are original CSV/Markdown. Memory and update checks are independent optional standard-library scripts.
 
 ## Release boundary
 
@@ -32,4 +32,8 @@ Memory roots and update preferences are user-owned, outside the installed skill.
 
 ## Maintainer checks
 
-The local validation command checks format, local links, canonical version, sealed evaluation hashes and generated distribution consistency. Executed tests cover the memory helper and update parsing/failure behavior. CI repeats deterministic checks without live market requests, model calls or secrets. Behavioral changes need a new frozen evaluation run; passing packaging tests does not establish estimating competence. See [evaluation methodology](EVALUATION.md).
+The local validation command checks format, local links, canonical version, sealed evaluation hashes and generated distribution consistency. Executed tests cover the memory helper and update parsing/failure behavior. CI repeats deterministic checks without live market requests, model calls or secrets. Behavioral changes need fresh frozen evaluation evidence with its scope and limits stated; passing packaging tests does not establish estimating competence. See [evaluation methodology](EVALUATION.md).
+
+## Large sets without a new platform
+
+The host can maintain drawing and quantity registers as plain tables, use its existing visual/PDF tools and checkpoint batches. The skill specifies the evidence contract, not a parser implementation. Additional databases or remote drawing services remain optional host choices. The generated complete edition also supplies llms-full.txt; llms.txt is a small curated discovery index.

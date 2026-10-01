@@ -1,6 +1,6 @@
 {
-  "name": "universal-quantity-surveyor",
-  "version": "1.0.0",
+  "name": "quantity-surveyor",
+  "version": "2.0.0",
   "repository": "MuscleOtter/universal-quantity-surveyor",
   "release_url": "https://github.com/MuscleOtter/universal-quantity-surveyor/releases",
   "update_policy": "explicit-check-and-ask"

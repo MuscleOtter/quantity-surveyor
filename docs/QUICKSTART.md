@@ -4,7 +4,7 @@ Start with the decision you need, then attach the smallest useful set of inputs.
 
 ## Take-off
 
-> Use Universal Quantity Surveyor. Measure the facade in drawings E01 revision B and detail D03 revision C. Use the supplied deduction convention. Show gross area, each opening, net installed area, separately measured returns and purchased quantities with 7% material waste. Cite each drawing location. Use only the quoted rates I attach.
+> Use Quantity Surveyor. Measure the facade in drawings E01 revision B and detail D03 revision C. Use the supplied deduction convention. Show gross area, each opening, net installed area, separately measured returns and purchased quantities with 7% material waste. Cite each drawing location. Use only the quoted rates I attach.
 
 Provide readable drawings, dimensions/scale, revisions, the measurement convention and rate inclusions. If no prices exist, ask for a quantity schedule first.
 
@@ -12,7 +12,7 @@ Provide readable drawings, dimensions/scale, revisions, the measurement conventi
 
 > Build a preliminary cost plan for this freestanding building from the attached scope and package rates. Include enabling works, structure, envelope, interiors, services, utilities/site works and owner costs. Distinguish measured costs, included scope, excluded scope and unpriced gaps. Show the base for every addition and reconcile to the total.
 
-Provide location/currency, price date, area definition, programme, tax basis and known rate boundaries. The [project basis prompt](../skills/universal-quantity-surveyor/templates/project-basis.md) is optional.
+Provide location/currency, price date, area definition, programme, tax basis and known rate boundaries. The [project basis prompt](../skills/quantity-surveyor/templates/project-basis.md) is optional.
 
 ## Forecast and changes
 
@@ -38,4 +38,4 @@ Ask for quantities with traceable dimensions, explicit units and revision locati
 
 ## Optional memory
 
-Memory starts off. Enable only when you choose a private root, user and project scope. Read [memory-and-review.md](../skills/universal-quantity-surveyor/references/memory-and-review.md) before using the helper. Do not store project data inside the installed skill or this public repository. A scoped file is not encryption or access control.
+Memory starts off. Enable only when you choose a private root, user and project scope. Read [memory-and-review.md](../skills/quantity-surveyor/references/memory-and-review.md) before using the helper. Do not store project data inside the installed skill or this public repository. A scoped file is not encryption or access control.
