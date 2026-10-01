@@ -1,6 +1,6 @@
 # AI and search discovery
 
-The public name is **Quantity Surveyor** and the canonical source is the [GitHub repository](https://github.com/MuscleOtter/universal-quantity-surveyor). The README explains the purpose, install routes, supported tasks, limitations, license and evidence in accessible text. Dedicated FAQ and drawing-set pages answer specific questions directly and link to supporting sources.
+The public name is **Quantity Surveyor** and the canonical source is the [GitHub repository](https://github.com/MuscleOtter/quantity-surveyor). The README explains the purpose, install routes, supported tasks, limitations, license and evidence in accessible text. Dedicated FAQ and drawing-set pages answer specific questions directly and link to supporting sources.
 
 The repository provides [llms.txt](../llms.txt), a concise machine-readable documentation index following the [llms.txt proposal](https://llmstxt.org/), and [llms-full.txt](../llms-full.txt), a generated complete instruction edition. These are conveniences for agents that choose to read them. They do not install a skill, set crawler permissions or guarantee discovery.
 

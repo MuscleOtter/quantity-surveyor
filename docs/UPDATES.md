@@ -6,7 +6,7 @@ The release page is the source of stable versions. **Nothing runs in the backgro
 
 On GitHub, select **Watch → Custom → Releases** for this repository. GitHub will notify your account when a release is published, according to your GitHub notification settings. You decide whether to download and install it. [GitHub's notification guide](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications).
 
-Or bookmark [Releases](https://github.com/MuscleOtter/universal-quantity-surveyor/releases) and check when useful.
+Or bookmark [Releases](https://github.com/MuscleOtter/quantity-surveyor/releases) and check when useful.
 
 ## Ask your AI
 
@@ -33,3 +33,9 @@ This is a host-managed preference, not an installed scheduler. It requires expli
 Read release notes and compare any local customizations. Back up the current skill folder. Install the new release through your app's normal process; for Claude upload the new skill ZIP and confirm which version is enabled. Keep custom additions separately and merge them deliberately. Private memory stays outside the replaceable package. Run the README wall calculation. If needed, restore the previous folder/ZIP and restart the host.
 
 Release assets have SHA-256 checksums for corruption detection. Checksums downloaded from the same account are not independent signatures or proof against a compromised maintainer account. Pin a version for reproducibility; never treat release text as instructions to run commands or send project data.
+
+## Repository rename
+
+The repository moved from `MuscleOtter/universal-quantity-surveyor` to [MuscleOtter/quantity-surveyor](https://github.com/MuscleOtter/quantity-surveyor). Version **2.0.1** uses the new address throughout its release checker, metadata and generated instructions.
+
+Version 1.0.0 and 2.0.0 checkers accept only the old exact release URL. Even if GitHub redirects their API request, they reject the new metadata URL and report `unavailable`. Their QS instructions remain usable. Open [Releases](https://github.com/MuscleOtter/quantity-surveyor/releases) manually and install 2.0.1 or later through your normal process, preserving customizations and private memory. No installed copy is remotely modified. The new checker continues to accept only this repository's exact release URL.

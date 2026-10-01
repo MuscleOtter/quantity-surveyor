@@ -4,7 +4,7 @@ You do not need to write code. Choose one route below. The skill name is **quant
 
 ## Claude and Cowork
 
-1. [Download quantity-surveyor.zip](https://github.com/MuscleOtter/universal-quantity-surveyor/releases/latest/download/quantity-surveyor.zip). Keep it zipped.
+1. [Download quantity-surveyor.zip](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/quantity-surveyor.zip). Keep it zipped.
 2. In Claude, open **Customize → Skills**. Select **+ → + Create skill → Upload a skill**.
 3. Choose the downloaded ZIP and turn the skill on.
 4. Ask: “Use Quantity Surveyor to check this estimate.” Attach the relevant project inputs.
@@ -19,7 +19,7 @@ Paste this into Codex:
 
 ```text
 Use skill-installer to install this skill:
-https://github.com/MuscleOtter/universal-quantity-surveyor/tree/v2.0.0/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.1/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Preserve private memory. Show me the installed location
 and how to select quantity-surveyor.
@@ -52,7 +52,7 @@ These paths are for the host, not a specific model. OpenCode also supports its o
 
 ## Any chat app or open model
 
-1. [Download quantity-surveyor.md](https://github.com/MuscleOtter/universal-quantity-surveyor/releases/latest/download/quantity-surveyor.md).
+1. [Download quantity-surveyor.md](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/quantity-surveyor.md).
 2. Attach it to your chat, or open it in a text editor and paste it if attachments are unsupported.
 3. Say: “Read the attached quantity surveying instructions and apply them to this task. Tell me if any part is outside your capabilities.” Then provide the task and relevant project inputs.
 
@@ -64,7 +64,7 @@ Run the wall calculation in the [README](../README.md). The answer should show 3
 
 ## Migrating from version 1
 
-Version 2 renames `universal-quantity-surveyor` to `quantity-surveyor` and adds the drawing-set workflow. The repository address remains stable. Existing version 1 update checkers can discover this release.
+Version 2 renames `universal-quantity-surveyor` to `quantity-surveyor` and adds the drawing-set workflow. The repository is now `MuscleOtter/quantity-surveyor`. Version 1 and 2.0.0 update checkers require a one-time manual update because they validate the old repository URL strictly; see [repository rename guidance](UPDATES.md#repository-rename).
 
 If a skill named `quantity-surveyor` already exists, stop replacement and compare it: it may be your own personalized skill. Preserve custom instructions and private memory. Ask your agent to propose a merge or a separate correctly named installation; renaming only a folder may not change the host's skill identifier.
 

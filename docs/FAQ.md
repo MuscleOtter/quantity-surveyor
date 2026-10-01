@@ -32,9 +32,9 @@ No private rate library or proprietary standard text is bundled. The skill disti
 
 The package contains no automatic upload or self-update mechanism. Your host app governs its own data handling and tool actions. The optional update checker reads public release metadata only after an explicit online request; installation needs approval. Optional memory is separate and off by default. [Privacy](PRIVACY.md), [updates](UPDATES.md).
 
-## Why does the GitHub address still include “universal”?
+## What is the repository address?
 
-The skill's name and install folder are now **Quantity Surveyor / quantity-surveyor**. The original repository address is retained so existing links and version 1 update checks continue to work. It remains designed for different models and hosts.
+The repository is now [MuscleOtter/quantity-surveyor](https://github.com/MuscleOtter/quantity-surveyor), matching the skill name and folder. It remains designed for different models and hosts. Installations from before the rename need a one-time manual update to restore their release checker; see [updates](UPDATES.md#repository-rename).
 
 ## Can I install it over a skill already named quantity-surveyor?
 

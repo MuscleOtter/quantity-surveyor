@@ -2,27 +2,27 @@
 
 > A portable, MIT-licensed AI agent skill for construction quantity take-off, estimating and commercial cost control, covering complete buildings and luxury retail interiors/facades.
 
-Published by MuscleOtter. Current release: 2.0.0. Skill identifier: quantity-surveyor. The original repository URL retains universal-quantity-surveyor for compatibility. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark.
+Published by MuscleOtter. Current release: 2.0.1. Skill identifier: quantity-surveyor. Canonical repository: MuscleOtter/quantity-surveyor. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark.
 
 ## Start
 
-- [Overview](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/README.md): Purpose, downloads and quick setup check.
-- [Install](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/INSTALL.md): Nontechnical installation and name-change migration.
-- [FAQ](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/FAQ.md): Direct answers about capabilities, models, cost, privacy and evidence.
-- [Compatibility](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/COMPATIBILITY.md): Host capabilities and unverified paths.
+- [Overview](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/README.md): Purpose, downloads and quick setup check.
+- [Install](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/INSTALL.md): Nontechnical installation and name-change migration.
+- [FAQ](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/FAQ.md): Direct answers about capabilities, models, cost, privacy and evidence.
+- [Compatibility](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/COMPATIBILITY.md): Host capabilities and unverified paths.
 
 ## Instructions and evidence
 
-- [Core skill](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/skills/quantity-surveyor/SKILL.md): Routing to task-specific references.
-- [Complete instructions](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/llms-full.txt): Generated skill, references, templates and license in one document.
-- [Large drawing sets](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/DRAWING-SETS.md): Scope, failure modes and proposed validation plan.
-- [Research](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/RESEARCH.md): Pinned public reference projects, lessons and limitations.
-- [Evaluation](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/EVALUATION.md): Historical evidence and version 2 test boundaries.
+- [Core skill](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/skills/quantity-surveyor/SKILL.md): Routing to task-specific references.
+- [Complete instructions](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/llms-full.txt): Generated skill, references, templates and license in one document.
+- [Large drawing sets](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/DRAWING-SETS.md): Scope, failure modes and proposed validation plan.
+- [Research](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/RESEARCH.md): Pinned public reference projects, lessons and limitations.
+- [Evaluation](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/EVALUATION.md): Historical evidence and version 2 test boundaries.
 
 ## Optional
 
-- [Updates](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/UPDATES.md): Explicit checks and approval before installation.
-- [Privacy](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/PRIVACY.md): Optional isolated memory and host responsibilities.
-- [Architecture](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/ARCHITECTURE.md): One instruction source, optional helpers, versioned releases.
-- [Discovery](https://raw.githubusercontent.com/MuscleOtter/universal-quantity-surveyor/main/docs/DISCOVERY.md): What these files do and do not do for AI search.
-- [Releases](https://github.com/MuscleOtter/universal-quantity-surveyor/releases): Versioned install ZIP, Markdown attachment and checksums.
+- [Updates](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/UPDATES.md): Explicit checks and approval before installation.
+- [Privacy](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/PRIVACY.md): Optional isolated memory and host responsibilities.
+- [Architecture](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/ARCHITECTURE.md): One instruction source, optional helpers, versioned releases.
+- [Discovery](https://raw.githubusercontent.com/MuscleOtter/quantity-surveyor/main/docs/DISCOVERY.md): What these files do and do not do for AI search.
+- [Releases](https://github.com/MuscleOtter/quantity-surveyor/releases): Versioned install ZIP, Markdown attachment and checksums.

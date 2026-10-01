@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1 — 2026-10-01
+
+- Rename the public repository to MuscleOtter/quantity-surveyor and update current documentation, discovery links, package metadata and release checker.
+- Preserve prior release tags, evaluation records and download aliases; keep exact release-URL validation.
+- Document the one-time manual update required for pre-rename installed checkers. Quantity-surveying behavior is unchanged.
+
 ## 2.0.0 — 2026-10-01
 
 - Rename the display name and installed identifier to Quantity Surveyor / quantity-surveyor. Major version reflects the installation identity change; retain the repository address and legacy download aliases.

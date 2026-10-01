@@ -21,6 +21,14 @@ def release(tag='v1.1.0', **overrides):
 
 
 class UpdateTests(unittest.TestCase):
+    def test_renamed_repository_boundary(self):
+        self.assertEqual(updates.API, 'https://api.github.com/repos/MuscleOtter/quantity-surveyor/releases/latest')
+        self.assertEqual(updates.compare('2.0.0', release('v2.0.1'))['status'], 'update_available')
+        for url in ['https://github.com/MuscleOtter/universal-quantity-surveyor/releases/tag/v2.0.1',
+                    'https://github.com/another-owner/quantity-surveyor/releases/tag/v2.0.1']:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                updates.compare('2.0.0', release('v2.0.1', html_url=url))
+
     def test_numeric_versions(self):
         self.assertEqual(updates.compare('1.9.0', release('v1.10.0'))['status'], 'update_available')
         self.assertEqual(updates.compare('1.0.0', release('v1.0.0'))['status'], 'current')

@@ -8,7 +8,7 @@ import re
 import urllib.error
 import urllib.request
 
-REPOSITORY = 'MuscleOtter/quantity-surveyor'
+REPOSITORY = 'MuscleOtter/universal-quantity-surveyor'
 RELEASES = 'https://github.com/' + REPOSITORY + '/releases'
 API = 'https://api.github.com/repos/' + REPOSITORY + '/releases/latest'
 MAX_BYTES = 1024 * 1024
@@ -48,7 +48,7 @@ def check(current, online=False):
                 'action': 'Open Releases manually or explicitly enable an online check.'}
     request = urllib.request.Request(API, headers={
         'Accept': 'application/vnd.github+json',
-        'User-Agent': 'quantity-surveyor-release-check',
+        'User-Agent': 'universal-quantity-surveyor-release-check',
         'X-GitHub-Api-Version': '2026-03-10',
     })
     try:

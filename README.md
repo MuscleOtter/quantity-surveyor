@@ -10,16 +10,16 @@ One open **Agent Skills** folder. The same instructions for Claude, Codex and sk
 
 | Your app | Easiest route |
 |---|---|
-| Claude / Cowork | [Download the skill ZIP](https://github.com/MuscleOtter/universal-quantity-surveyor/releases/latest/download/quantity-surveyor.zip), then upload it under **Customize → Skills → + → Create skill → Upload a skill**. [Step-by-step help](docs/INSTALL.md#claude-and-cowork) |
+| Claude / Cowork | [Download the skill ZIP](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/quantity-surveyor.zip), then upload it under **Customize → Skills → + → Create skill → Upload a skill**. [Step-by-step help](docs/INSTALL.md#claude-and-cowork) |
 | Codex | Copy the installation request below into Codex. [Help](docs/INSTALL.md#codex) |
 | Claude Code / OpenCode / another local agent | Ask your agent to install the shared folder using [these instructions](docs/INSTALL.md#local-agents). |
-| Any other chat app, including an open model | [Download the single Markdown edition](https://github.com/MuscleOtter/universal-quantity-surveyor/releases/latest/download/quantity-surveyor.md), attach it to a chat, then say **“Use these quantity surveying instructions for this task.”** [Help](docs/INSTALL.md#any-chat-app-or-open-model) |
+| Any other chat app, including an open model | [Download the single Markdown edition](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/quantity-surveyor.md), attach it to a chat, then say **“Use these quantity surveying instructions for this task.”** [Help](docs/INSTALL.md#any-chat-app-or-open-model) |
 
 Copy this into Codex:
 
 ```text
 Use skill-installer to install the Quantity Surveyor skill from
-https://github.com/MuscleOtter/universal-quantity-surveyor/tree/v2.0.0/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.1/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Keep private memory intact; do not overwrite it.
 Then tell me how to invoke the new skill.
@@ -41,7 +41,7 @@ Expected: **31.2 m² net; 32.76 m² purchased; 4,024.80 total.** No currency was
 - Optional private project memory with provenance, corrections and explicit recovery.
 - CSV templates you can open in a spreadsheet.
 
-Version **2.0.0** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The original repository address is retained for existing links and update checks. [Migration help](docs/INSTALL.md#migrating-from-version-1).
+Version **2.0.1** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 

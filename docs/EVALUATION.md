@@ -55,3 +55,7 @@ Helpers use only the standard library; tests write synthetic state under the exp
 ## Limits of the evidence
 
 No professional credential, certified-estimator equivalence, human top-5% percentile, real-project validation, market-rate calibration or universal correctness is established. The 5/9 rubric anchors are aspirations/behavioral anchors, not measured human comparisons. No native automatic routing, Claude execution, open-model execution or cross-harness behavior was tested. Local environment was macOS arm64/Python 3.12.6/Codex desktop; CI results are reported separately when available. The instructions need real evidence, competent models and the tools appropriate to the task.
+
+## Repository rename patch (2.0.1)
+
+Only repository addresses, the checker User-Agent and release metadata change in the installed package. QS instructions, the drawing workflow and templates retain their version 2 content. The four affected version 2 source files are preserved under `evaluation/v2-drawing-workflow/released-candidate/`; validation verifies the original frozen hashes and the exact allowed rename/version delta. Old scored answers are untouched. Update tests verify the new fixed repository boundary, including rejection of legacy or unrelated release URLs. This patch does not assign a new behavioral score.

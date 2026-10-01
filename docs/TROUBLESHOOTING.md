@@ -14,4 +14,4 @@
 | Memory primary file is missing but backup exists | Stop writes. Use the documented explicit recovery process; inspect the backup and expect loss of records newer than that backup. Do not start a new store over it. |
 | Two versions seem active | Ask the host to show loaded skill paths/versions, then disable the duplicate through its normal UI. Preserve private memory and customizations. |
 
-If you need help, [open an issue](https://github.com/MuscleOtter/universal-quantity-surveyor/issues) with your app, skill version, synthetic input and observed behavior. Do not upload private project data.
+If you need help, [open an issue](https://github.com/MuscleOtter/quantity-surveyor/issues) with your app, skill version, synthetic input and observed behavior. Do not upload private project data.

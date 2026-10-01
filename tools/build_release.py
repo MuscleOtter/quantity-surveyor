@@ -36,7 +36,7 @@ def combined_markdown():
                 relative=linked.relative_to(SKILL).as_posix()
             except ValueError:
                 return match.group(0)
-            return '['+label+'](https://github.com/MuscleOtter/universal-quantity-surveyor/blob/v'+version+'/skills/'+NAME+'/'+relative+')'
+            return '['+label+'](https://github.com/MuscleOtter/quantity-surveyor/blob/v'+version+'/skills/'+NAME+'/'+relative+')'
         text=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',target,text)
         if p.suffix=='.csv':
             text='## '+p.name+'\n\n```csv\n'+text+'```\n'

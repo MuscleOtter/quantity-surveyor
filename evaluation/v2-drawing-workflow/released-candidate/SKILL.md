@@ -3,8 +3,8 @@ name: quantity-surveyor
 description: "Measure, estimate and control construction costs for luxury retail interiors and facades or complete freestanding building projects; use for take-offs, cost plans, tender comparisons, forecasts, changes, cash flow and lifecycle options."
 license: MIT
 metadata:
-  version: "2.0.1"
-  repository: "https://github.com/MuscleOtter/quantity-surveyor"
+  version: "2.0.0"
+  repository: "https://github.com/MuscleOtter/universal-quantity-surveyor"
 ---
 
 # Quantity Surveyor

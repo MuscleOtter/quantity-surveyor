@@ -51,12 +51,20 @@ def main():
     qs_body=qs_body.replace('- Multi-sheet drawing review, large sets, revision comparison or drawing-based take-off: [large-drawing-sets.md](references/large-drawing-sets.md).\n','')
     qs_body=qs_body.replace('For drawing sets, inventory and select the applicable issue before measuring. Track reviewed sheets/views, unresolved references and quantity evidence across batches. Text extraction alone is not visual inspection; unread scope is not zero. Apply the large-set reference proportionately, without imposing a full register on a simple dimension calculation.\n\n','')
     require(qs_body==old,'Historical QS base changed; update evidence deliberately')
+    def v2_source(name):
+        archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
+        return archived if archived.is_file() else ROOT/name
     initial=json.loads((EVAL/'v2-drawing-workflow/frozen-initial.json').read_text())
     for name,expected in initial.items():
         archived=EVAL/'v2-drawing-workflow/initial-candidate'/name.removeprefix('skills/quantity-surveyor/')
-        source=archived if archived.is_file() else ROOT/name
+        source=archived if archived.is_file() else v2_source(name)
         require(digest(source)==expected,'Initial v2 review source changed: '+name)
-    verify_manifest(ROOT,EVAL/'v2-drawing-workflow/frozen.json')
+    for name,expected in json.loads((EVAL/'v2-drawing-workflow/frozen.json').read_text()).items():
+        source=v2_source(name)
+        require(digest(source)==expected,'Frozen v2 source changed: '+name)
+        if source != ROOT/name:
+            renamed=source.read_text().replace('universal-quantity-surveyor','quantity-surveyor').replace('"2.0.0"','"2.0.1"')
+            require((ROOT/name).read_text()==renamed,'Unexpected repository-rename delta: '+name)
     verify_manifest(EVAL/'v2-drawing-workflow',EVAL/'v2-drawing-workflow/response-hashes.json')
     for name in json.loads((EVAL/'candidate-round2-hashes.json').read_text()):
         if name not in ('SKILL.md','README.md'):
