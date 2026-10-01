@@ -21,7 +21,7 @@ Paste this into Codex:
 
 ```text
 Use skill-installer to install this skill:
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.3/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.0/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Preserve private memory. Show me the installed location
 and how to select quantity-surveyor.
@@ -60,7 +60,11 @@ In Claude Code, invoke `/quantity-surveyor` directly after installation or test 
 2. Attach it to your chat, or open it in a text editor and paste it if attachments are unsupported.
 3. Say: “Read the attached quantity surveying instructions and apply them to this task. Tell me if any part is outside your capabilities.” Then provide the task and relevant project inputs.
 
-The file includes all core guidance, references and template content. It needs enough context space; if your model cannot fit it, provide `SKILL.md` and only the task's needed references from the source folder. Chat attachment alone does not install an automatically invoked skill. Plain chat cannot run optional Python helpers without execution tools.
+The file includes all core guidance, references and text template content. The binary workbook is linked separately; [download it here](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx) if needed. It needs enough context space; if your model cannot fit it, provide `SKILL.md` and only the task's needed references from the source folder. Chat attachment alone does not install an automatically invoked skill. Plain chat cannot run optional Python helpers without execution tools.
+
+## Optional estimating workbook
+
+The skill ZIP includes `assets/templates/estimating-template.xlsx`. You can also [download the workbook alone](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx), without installing a skill or running Python. Save a project copy, open it in your spreadsheet app and follow the [workbook guide](ESTIMATING-WORKBOOK.md). Verify recalculation before issuing an estimate.
 
 ## Confirm installation
 

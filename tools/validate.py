@@ -149,6 +149,12 @@ def main():
             require(z.testzip() is None,'Invalid ZIP')
             for p in builder.source_files():
                 require(z.read('quantity-surveyor/'+p.relative_to(SKILL).as_posix())==p.read_bytes(),'ZIP bytes differ')
+        require((out/'estimating-template.xlsx').read_bytes()==(SKILL/'assets/templates/estimating-template.xlsx').read_bytes(),'Standalone workbook differs')
+        checksums=(out/'SHA256SUMS.txt').read_text().splitlines()
+        require(len(checksums)==5,'Missing release checksum entry')
+        for entry in checksums:
+            expected,name=entry.split('  ',1)
+            require(digest(out/name)==expected,'Release checksum mismatch: '+name)
         for suffix in ('.zip','.md'):
             require((out/('universal-quantity-surveyor'+suffix)).read_bytes()==(out/('quantity-surveyor'+suffix)).read_bytes(),'Legacy alias differs')
         doc=(out/'quantity-surveyor.md').read_text()

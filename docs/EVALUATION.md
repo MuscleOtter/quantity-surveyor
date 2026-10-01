@@ -70,6 +70,6 @@ On 1 October 2026 the user reported one native activation in Claude Code and a f
 
 Version 2.0.3 addresses the reported friction by separating simple take-off from coordinated drawing review, making standards loading conditional, routing early-stage pricing advice, and linking all six templates directly from SKILL.md. The [routing change record](../evaluation/routing-refresh/README.md) documents the intended selections and exact instruction delta. These changes have not been rerun on Claude in the evidence supplied here.
 
-## Trade/workbook transfer (pending 2.1.0)
+## Trade/workbook transfer (2.1.0)
 
-The [new evidence record](../evaluation/trade-workbook-refresh/README.md) preserves the prior public package, an explicit additive delta and a newly frozen three-case drawing exercise with a blind evaluator and separate critic. The optional workbook has 30 recorded input-state checks and structural/export checks. Historical scores do not apply to these additions; this bounded exercise cannot establish full-set accuracy or general skill lift.
+The [new evidence record](../evaluation/trade-workbook-refresh/README.md) preserves the prior public package, an explicit additive delta and a newly frozen three-case drawing exercise with a blind evaluator and separate critic. All three fresh drawing cases passed independent mandatory checks. The optional workbook has 30 recorded input-state checks and structural/export checks; its formulas still need verification in the user's spreadsheet application. Historical scores do not apply to these additions; this bounded exercise cannot establish full-set accuracy or general skill lift.

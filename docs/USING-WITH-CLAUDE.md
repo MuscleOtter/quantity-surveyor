@@ -1,6 +1,6 @@
 # Using Quantity Surveyor with Claude
 
-The package has a **user-reported Claude smoke check**: one native activation in Claude Code and a four-case run on version 2.0.1, with all four answers reported correct. These were published evaluation cases, so this is a small smoke/regression check, not a new blind benchmark or accuracy score. See the [report and limits](../evaluation/claude-smoke-report.md). The report does not establish execution of the subsequent 2.0.2 or 2.0.3 changes.
+The package has a **user-reported Claude smoke check**: one native activation in Claude Code and a four-case run on version 2.0.1, with all four answers reported correct. These were published evaluation cases, so this is a small smoke/regression check, not a new blind benchmark or accuracy score. See the [report and limits](../evaluation/claude-smoke-report.md). The report does not establish execution of the subsequent 2.0.2, 2.0.3 or 2.1.0 changes.
 
 ## Installation and selection
 

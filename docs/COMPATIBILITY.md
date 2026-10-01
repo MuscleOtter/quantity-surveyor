@@ -8,7 +8,7 @@ The package follows the [open Agent Skills specification](https://agentskills.io
 | Accurate arithmetic | Calculator, code runner or spreadsheet recommended | Identify arithmetic that could not be independently checked |
 | Drawing-set inspection and take-off | Access to relevant pages/views, legible rendering, explicit dimensions or calibrated scale, and retained review records | Produce only the supported inventory/dimension-based work and identify uninspected scope |
 | Live market/standards verification | Authorized current authoritative sources | Mark the specific claim unverified; use supplied evidence or a conditional scenario |
-| Estimates, registers and schedule files | File access/export; spreadsheet tools for formatted workbooks or executed formulas | Return pasteable tables/CSV and disclose unexecuted calculation checks |
+| Estimates, registers and schedule files | File access/export; an XLSX-capable editor with verified formula recalculation for the supplied workbook | Return pasteable tables/CSV and disclose unexecuted calculation checks |
 | Persistent memory | Optional Python 3.10+, explicitly scoped private storage and verified survival/access across sessions | Label temporary storage session-only; offer an export rather than promise persistence |
 | Release checks | Optional network/browser access or Python 3.10+ | Open Releases manually or skip |
 
@@ -19,3 +19,5 @@ The original evaluation used Codex desktop local agents reading the references d
 The [feature guide](FEATURES.md) separates supplied inputs, instructed work and expected deliverables. Tables, scope checks and calculations do not require a particular provider. Automated PDF parsing, CAD interrogation, symbol detection and financial-system connections are not installed by this skill.
 
 [Claude-specific guidance](USING-WITH-CLAUDE.md) distinguishes documented structure from executed testing. The package description is 191 characters to stay within the stricter upload guidance checked for this release. The reported native activation and four-case run are limited smoke evidence; broader routing and current-release behavior need further testing.
+
+The optional 2.1.0 XLSX template uses formulas and input validations with no macros or external workbook links. Its 30 authoring-run checks do not establish identical behavior in Excel, Google Sheets, LibreOffice or every host export tool. After import/conversion, check representative inputs, query messages, code/revision reconciliation and the saved file. See the [workbook guide](ESTIMATING-WORKBOOK.md).

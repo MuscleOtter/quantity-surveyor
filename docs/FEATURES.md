@@ -8,7 +8,7 @@ These are instructed workflows, not guaranteed automated functions. The host sup
 
 **Supply:** the issued drawings, drawing index/transmittal, relevant specifications and schedules, and the trade/building/floor to review.
 
-**Work:** reconcile listed sheets with actual files; identify missing, duplicate and superseded sheets; establish the applicable issue; follow plan/detail/schedule references; check scales per view; record inspected and unresolved areas. For revisions, recheck affected quantities and linked documents while retaining the previous evidence.
+**Work:** reconcile listed sheets with actual files; identify missing, duplicate and superseded sheets; establish the applicable issue; follow plan/detail/schedule references; calibrate each measured viewport using a known dimension and an independent check, with tolerance selected before verification; record inspected and unresolved areas. For revisions, recheck affected quantities and linked documents while retaining the previous evidence.
 
 **Receive:** a drawing register, review coverage statement, unresolved-reference list and, when supported, a revision comparison with additions, removals and net changes. Large sets can be reviewed in batches with saved progress.
 
@@ -41,6 +41,8 @@ These are instructed workflows, not guaranteed automated functions. The host sup
 **Work:** check enabling works, structure, envelope, finishes, building services, site works/utilities, temporary works, access, testing, commissioning and owner costs as relevant. Separate shared costs from individual buildings or packages; assign each inclusion once.
 
 **Receive:** a coverage matrix showing the responsible package, evidence, included/excluded/unpriced status and unresolved interfaces. It makes missing scope visible without pretending every gap has a price.
+
+Trade-specific prompts cover [partitions/ceilings](../skills/quantity-surveyor/references/trade-partitions-ceilings.md), [stone/specialist finishes](../skills/quantity-surveyor/references/trade-finishes.md), [millwork/FF&E](../skills/quantity-surveyor/references/trade-millwork-ffe.md), [facades/glazing](../skills/quantity-surveyor/references/trade-facades-glazing.md) and [services interfaces](../skills/quantity-surveyor/references/trade-services.md). Load only the relevant prompt, and apply the chosen project measurement convention.
 
 ## 5. Tender comparison
 
@@ -100,7 +102,7 @@ These are instructed workflows, not guaranteed automated functions. The host sup
 
 ## 11. Cost coding and evidence trails
 
-**Supply:** your code definitions, approved version and any authorized crosswalks.
+**Supply:** your company/Unifier code definitions, approved version and any authorized crosswalks. Private configuration and original import paths stay outside the skill.
 
 **Work:** distinguish measurement classifications, procurement packages and financial codes. Preserve confirmed, provisional and unallocated amounts, including credits, while checking that mappings retain the total. Keep assumptions and queries tied to affected items.
 
@@ -116,8 +118,9 @@ These are instructed workflows, not guaranteed automated functions. The host sup
 | [drawing-register.csv](../skills/quantity-surveyor/templates/drawing-register.csv) | File/sheet identity, revision, review stage, disposition and dependencies. |
 | [quantity-evidence.csv](../skills/quantity-surveyor/templates/quantity-evidence.csv) | Physical scope/instance, location, method, quantity and evidence status. |
 | [project-basis.md](../skills/quantity-surveyor/templates/project-basis.md) | Scope, programme, measurement and pricing assumptions. |
+| [estimating-template.xlsx](../skills/quantity-surveyor/assets/templates/estimating-template.xlsx) | Seven linked sheets for basis, drawing evidence, quantities, rates, queries, code allocations and revision checks. [Usage](ESTIMATING-WORKBOOK.md). |
 
-The templates are blank starting points. Your app can populate them, adapt your existing format or return pasteable tables. Formatted spreadsheets and documents depend on the app's export tools; they are not prebuilt features of the package. Other schedules above are generated as needed from the task instructions.
+The templates are blank starting points. Your app can populate them, adapt your existing format or return pasteable tables. A formatted XLSX estimating template is supplied. Populating it, recalculating formulas and exporting other spreadsheets or documents depend on your app; verify the saved file before issue. Other schedules above are generated as needed from the task instructions.
 
 ## Optional helpers
 

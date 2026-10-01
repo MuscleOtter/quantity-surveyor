@@ -1,4 +1,6 @@
-# Trade and workbook transfer — pending 2.1.0
+# Trade and workbook transfer — pre-release 2.1.0 evaluation
+
+This record preserves the evaluation performed before publication. Current downloads are on the [2.1.0 release page](https://github.com/MuscleOtter/quantity-surveyor/releases/tag/v2.1.0). Statements below about pending release describe that evaluation stage.
 
 This candidate ports original, reusable drawing and trade procedures into the portable public skill, alongside an optional blank estimating workbook. It does not distribute the local private company configuration, proprietary sources, source-search database, private memory or company lookup helper. Company/Unifier wording explicitly requires user-supplied definitions and version evidence.
 

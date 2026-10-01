@@ -8,6 +8,14 @@ Quantity Surveyor is a free, MIT-licensed AI agent skill for construction quanti
 
 A drawing register, quantity take-off, itemized estimate, rate build-up, scope-gap matrix, tender comparison, budget/forecast reconciliation, change log, payment forecast or lifecycle-cost comparison. Outputs retain calculations, units, source/revision locations, assumptions and unresolved questions. The [feature guide](FEATURES.md) lists what you need to supply and the deliverable for each task.
 
+## Is there an Excel estimating template?
+
+Yes. Version 2.1.0 includes an [optional blank workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx) with Summary, Drawings, Takeoff, Rates, Queries, Codes and Revision sheets. It preserves missing quantity/price queries and checks allocations and revision residuals. It covers 100 reserved detail lines; extend all linked ranges together for larger estimates. Verify recalculation in your spreadsheet app. [Workbook guide](ESTIMATING-WORKBOOK.md).
+
+## Does it connect to Unifier?
+
+Company/Unifier reporting uses definitions, versions and exports you supply. The package provides coding and reconciliation guidance without a bundled company dictionary or Unifier connection. Keep private configuration outside the skill; an observed mapping does not establish approval.
+
 ## Does it automatically scan drawings or supply construction prices?
 
 The skill provides instructions and templates, not a bundled drawing parser, symbol detector or live price database. Your app must supply document/image access and calculation tools; drawings need readable dimensions or calibrated views. Rates need project quotes, supplied evidence or appropriate authorized research. If those inputs are missing, ask for supported quantities, scope gaps and a pricing query list.

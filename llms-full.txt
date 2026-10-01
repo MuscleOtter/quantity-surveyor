@@ -1,6 +1,6 @@
 # Quantity Surveyor — complete chat edition
 
-Version 2.1.0. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original templates. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
+Version 2.1.0. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original text templates, with a separate link to the binary estimating workbook. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
 
 <a id="part-SKILL-md"></a>
 
@@ -44,7 +44,7 @@ Use the user's existing format when supplied. These blank templates are optional
 | Change basis, status, inclusion and net forecast effect | [changes.csv](#part-templates-changes-csv) |
 | Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](#part-templates-drawing-register-csv) |
 | Quantity calculations with source/location evidence | [quantity-evidence.csv](#part-templates-quantity-evidence-csv) |
-| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](https://github.com/MuscleOtter/quantity-surveyor/blob/v2.1.0/skills/quantity-surveyor/assets/templates/estimating-template.xlsx); read [workbook-pattern.md](#part-references-workbook-pattern-md) |
+| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx); read [workbook-pattern.md](#part-references-workbook-pattern-md) |
 
 ## Preserve these invariants
 
@@ -536,7 +536,7 @@ If current, ahead, offline, rate-limited or malformed metadata, continue work; n
 
 # Auditable estimating workbook
 
-Use [the optional workbook](https://github.com/MuscleOtter/quantity-surveyor/blob/v2.1.0/skills/quantity-surveyor/assets/templates/estimating-template.xlsx) as an optional starting point for substantive estimates, not as a mandatory format. Copy it to the project deliverable location, retain the supplied company template when required, and remove unused sheets/columns. A small question can use one concise schedule. Use the spreadsheet authoring capability for edits and verify recalculation.
+Use [the optional workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx) as an optional starting point for substantive estimates, not as a mandatory format. Copy it to the project deliverable location, retain the supplied company template when required, and remove unused sheets/columns. A small question can use one concise schedule. Use the spreadsheet authoring capability for edits and verify recalculation.
 
 The template deliberately starts without quantities, rates or percentage allowances. Its formulas cover 100 reserved lines per detail sheet. Extend every formula, validation, summary and check range together when adding capacity; an out-of-range line must not disappear from totals. Titles/instructions identify the reserved capacity.
 

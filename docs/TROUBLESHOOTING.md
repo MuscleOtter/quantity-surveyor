@@ -19,3 +19,9 @@
 | Two versions seem active | Ask the host to show loaded skill paths/versions, then disable the duplicate through its normal UI. Preserve private memory and customizations. |
 
 If you need help, [open an issue](https://github.com/MuscleOtter/quantity-surveyor/issues) with your app, skill version, synthetic input and observed behavior. Do not upload private project data.
+
+## Estimating workbook
+
+A blank workbook shows “No estimate entered.” Add a unique line ID and the required quantity/rate basis rather than typing a total into a calculated cell. Follow the Input query on Takeoff or Rates when a price stays blank: missing values, source/date/location, unit and currency differences are deliberate checks. An explicit supported zero rate is allowed; a missing rate stays unresolved.
+
+If totals fail to change after an edit/import, verify automatic recalculation and formula preservation in your spreadsheet app. Grey cells contain formulas. A nonzero code or revision residual needs an explained reconciliation, not an overwritten result. Lines beyond the 100 reserved rows are not automatically covered; extend all linked ranges together or use a suitable larger model. [Detailed guide](ESTIMATING-WORKBOOK.md).

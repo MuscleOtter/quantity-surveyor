@@ -20,6 +20,12 @@ Attach readable drawings or explicit dimensions and the applicable measurement c
 
 Attach quantities, quotes/rate inputs, tax basis and known inclusions. Expect an estimate, rate build-ups and a pricing query list.
 
+## Use the estimating workbook
+
+> Use the Quantity Surveyor estimating template for this estimate. Record the project currency, location and price date, then link each stable take-off ID to its drawing/revision and supplied rate. Keep missing quantities or rates unresolved. Reconcile the priced subtotal, code allocations and prior/new revision totals. Check recalculation and the 100-row capacity before saving.
+
+[Download the blank workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx) and follow the [workbook guide](ESTIMATING-WORKBOOK.md). Attach your drawings, supplied prices and code definitions where needed. A small dimension calculation can still use one concise schedule.
+
 ## Check whole-project scope
 
 > Review this cost plan against the project brief and package scopes. Check enabling works, structure, envelope, finishes, services, utilities/site works, temporary works, commissioning and owner costs as relevant. Show who carries each item, where it is included and what remains excluded or unpriced. Allocate shared costs only once.

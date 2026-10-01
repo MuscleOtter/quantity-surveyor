@@ -19,7 +19,7 @@ Copy this into Codex:
 
 ```text
 Use skill-installer to install the Quantity Surveyor skill from
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.0.3/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.0/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Keep private memory intact; do not overwrite it.
 Then tell me how to invoke the new skill.
@@ -46,19 +46,21 @@ Expected: **31.2 m² net; 32.76 m² purchased; 4,024.80 total.** No currency was
 | Maintenance and lifecycle costs | Schedule maintenance/replacements and discount costs using consistent timing and price assumptions. | Event schedule, present-value comparison and sensitivities. |
 | Coding and audit trail | Use your supplied cost-code definitions; retain uncertain mappings and source evidence. | Reconciled coded totals, unallocated amounts and queries linked to affected items. |
 
-The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and limits for each workflow. [Example requests](docs/QUICKSTART.md) help you start. Five blank CSV templates cover estimates, forecasts, changes, drawing registers and quantity evidence; a project-basis Markdown template records the brief. The pending 2.1.0 source also includes an [optional estimating workbook](skills/quantity-surveyor/assets/templates/estimating-template.xlsx) with seven sheets, visible missing-input queries, allocation checks and a revision bridge. Read its [usage and limits](skills/quantity-surveyor/references/workbook-pattern.md).
+The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and limits for each workflow. [Example requests](docs/QUICKSTART.md) help you start. Five blank CSV templates cover estimates, forecasts, changes, drawing registers and quantity evidence; a project-basis Markdown template records the brief. Version 2.1.0 includes an [optional estimating workbook](skills/quantity-surveyor/assets/templates/estimating-template.xlsx) with seven sheets, visible missing-input queries, allocation checks and a revision bridge. [Download the workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx) and read the [workbook guide](docs/ESTIMATING-WORKBOOK.md).
 
 These are workflows for your AI app to carry out. Drawing viewing, calculation, file export and current-source access depend on the host. Optional private memory and release checking are separate helpers, off by default.
 
-The latest published version is **2.0.3**; source changes for **2.1.0** are pending release. Version **2.0.3** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
+Version **2.1.0** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 
 ## Documentation
 
-[Features](docs/FEATURES.md) · [Claude guidance](docs/USING-WITH-CLAUDE.md) · [FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
+[Features](docs/FEATURES.md) · [Workbook guide](docs/ESTIMATING-WORKBOOK.md) · [Claude guidance](docs/USING-WITH-CLAUDE.md) · [FAQ](docs/FAQ.md) · [Large drawing sets and accuracy](docs/DRAWING-SETS.md) · [Research](docs/RESEARCH.md) · [AI documentation index](llms.txt) · [Installation](docs/INSTALL.md) · [First project and examples](docs/QUICKSTART.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Updates](docs/UPDATES.md) · [Architecture](docs/ARCHITECTURE.md) · [Astra distribution review](docs/DISTRIBUTION-REVIEW.md) · [Privacy](docs/PRIVACY.md) · [Standards and rights](skills/quantity-surveyor/references/standards.md) · [Evaluation](docs/EVALUATION.md) · [Publication checks](docs/PUBLICATION-V2.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 ## Quality and limits
+
+Version 2.1.0 adds viewport calibration/revision guidance, five focused trade references and the blank estimating workbook. A fresh three-case synthetic drawing run passed independent mandatory checks; the workbook has 30 recorded input-state checks. These results do not establish general accuracy, real-project completeness or performance across spreadsheet applications. [Evidence and boundaries](evaluation/trade-workbook-refresh/README.md).
 
 **Accuracy on a huge coordinated drawing set has not been measured.** The skill guides a reviewable workflow; the app/model must supply and correctly use document, visual and calculation tools. Start with a representative, independently checked pilot. [What it can review and how to validate it](docs/DRAWING-SETS.md).
 
