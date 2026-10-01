@@ -1,0 +1,70 @@
+{
+  "purpose": "Provenance follow-up for H04 only; no case rerun or sealed response modification",
+  "evidence_origin": "Original tool results retained in this agent conversation. Excerpts below are transcribed from those results, not recreated by fresh retrieval. Complete raw machine-response objects were not separately archived.",
+  "retrieval_time": "Original results did not expose an exact retrieval timestamp. Session environment date was 2026-10-01.",
+  "tool": "tools.web__run via functions.exec",
+  "retrievals": [
+    {
+      "operation": "search_query",
+      "query": "site.rics.org NRM new rules measurement cost planning building works",
+      "result_id": "turn17search0",
+      "exact_url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "original_status": "Search result returned official RICS content; reported Crawled: 2 weeks ago."
+    },
+    {
+      "operation": "search_query",
+      "query": "site.statutes.capitol.texas.gov Local Government Code 214.216 international building code municipality",
+      "result_id": "turn17search2",
+      "exact_url": "https://statutes.capitol.texas.gov/?artSec=214.216&chapter=LG.214&code=LG&tab=1",
+      "original_status": "Search result returned statute excerpts; reported Crawled: 4 months ago. Subsequent live open did not return these statute contents."
+    },
+    {
+      "operation": "search_query",
+      "query": "site.statutes.capitol.texas.gov Local Government Code 214.216 international building code municipality",
+      "result_id": "turn17search13",
+      "exact_url": "https://statutes.capitol.texas.gov/Docs/LG/pdf/LG.214.pdf",
+      "original_status": "Search result returned PDF-labeled statute excerpts; reported Published: 9 months ago. Subsequent live open returned HTML home page."
+    },
+    {
+      "operation": "open",
+      "result_id": "turn18view0",
+      "requested_exact_url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "returned_exact_url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "original_status": "Successful page-content retrieval; Crawled: today; Content type: text/html; Total lines: 177. No HTTP status code exposed.",
+      "original_excerpt": "NRM provides a standard set of measurement rules and essential guidance for the cost management of construction projects and maintenance works.",
+      "excerpt_locator": "L6"
+    },
+    {
+      "operation": "open",
+      "result_id": "turn18view1",
+      "requested_exact_url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.214.htm#214.216",
+      "returned_exact_url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.214.htm",
+      "original_status": "Returned Texas statutes home-page content rather than section 214.216; Crawled: today; Content type: text/html; Total lines: 155. No HTTP status code or redirect chain exposed.",
+      "original_excerpt": "Texas Constitution and Statutes Home page",
+      "excerpt_locator": "L1 heading text"
+    },
+    {
+      "operation": "open",
+      "result_id": "turn19view0",
+      "requested_exact_url": "https://statutes.capitol.texas.gov/?artSec=214.216&chapter=LG.214&code=LG&tab=1",
+      "returned_exact_url": "https://statutes.capitol.texas.gov/?artSec=214.216&chapter=LG.214&code=LG&tab=1",
+      "original_status": "Returned Texas statutes home-page content rather than section 214.216; Crawled: yesterday; Content type: text/html; Total lines: 155. No HTTP status code or redirect chain exposed."
+    },
+    {
+      "operation": "open",
+      "result_id": "turn20view0",
+      "requested_exact_url": "https://statutes.capitol.texas.gov/Docs/LG/pdf/LG.214.pdf",
+      "returned_exact_url": "https://statutes.capitol.texas.gov/Docs/LG/pdf/LG.214.pdf",
+      "original_status": "Returned HTML Texas statutes home page, not PDF content; Crawled: today; Content type: text/html; Total lines: 155. No HTTP status code or redirect chain exposed."
+    },
+    {
+      "operation": "find",
+      "result_id": "turn20view1",
+      "exact_url": "https://statutes.capitol.texas.gov/Docs/LG/pdf/LG.214.pdf",
+      "pattern": "Sec. 214.216",
+      "original_status": "Search within returned home-page content failed to find intended statutory section; Crawled: today; Content type: text/html; Total lines: 155.",
+      "original_excerpt": "No matching text found for \"Sec. 214.216\""
+    }
+  ],
+  "limits": "Original tool output supports that RICS page content was opened. Texas statute search excerpts were available, but live opens returned home-page content; no project-specific Texas permit requirement was verified. Describing those opens as redirects is shorthand for the content mismatch, not proof of an HTTP redirect. No new retrieval was performed for this follow-up."
+}

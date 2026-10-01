@@ -1,0 +1,401 @@
+{
+  "provenance": {
+    "input": {
+      "path": "outputs/evaluation/tester-input-a.json",
+      "sha256": "e510cafcb38ccc2d01b7249d76b70fac6832d846c5b690d2b3222a9e07d660ce",
+      "status": "Read supplied JSON directly"
+    },
+    "package_sources": [
+      {
+        "path": "outputs/quantity-surveyor-portable/SKILL.md",
+        "sha256": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+        "status": "Read original local file directly; no external source retrieval"
+      },
+      {
+        "path": "outputs/quantity-surveyor-portable/references/measurement-and-estimating.md",
+        "sha256": "d98945d577701eaf8b74593161e6ee35b61fde566c57091629be0d2be23ab3ca",
+        "status": "Read original local file directly; no external source retrieval"
+      },
+      {
+        "path": "outputs/quantity-surveyor-portable/references/commercial-control.md",
+        "sha256": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+        "status": "Read original local file directly; no external source retrieval"
+      },
+      {
+        "path": "outputs/quantity-surveyor-portable/references/evidence-and-interfaces.md",
+        "sha256": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+        "status": "Read original local file directly; no external source retrieval"
+      },
+      {
+        "path": "outputs/quantity-surveyor-portable/references/standards.md",
+        "sha256": "bf3e395e53f05f845df644ba464bfe2d082ad61a14d3d925a30ce7eaffb35343",
+        "status": "Read original local file directly; no external source retrieval"
+      }
+    ],
+    "retrieval_date": "2026-10-01T17:27:39.854095+00:00",
+    "model_identity": "Precise model identity unavailable; not asserted.",
+    "web_retrievals": [],
+    "separation": "Each case used only its own supplied fixture; no memory, prior responses, grading material, or other evaluation outputs read."
+  },
+  "cases": {
+    "QS01": {
+      "source_locator": "tester-input-a.json / fixtures / QS01",
+      "working": {
+        "elements_sum": "1795000",
+        "OHP_base_elements_plus_preliminaries": "1975000",
+        "OHP_8_percent": "158000.00",
+        "construction_subtotal": "2133000.00",
+        "reserve_base": "2133000.00",
+        "reserve_10_percent": "213300.000",
+        "owner_cost_sum": "275000",
+        "fixed_tax": "90000",
+        "total": "2711300.000",
+        "total_per_internal_ft2_unrounded": "564.8541666666666666666666667",
+        "reconciliation_difference": "0.000"
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": "2711300.0000"
+    },
+    "QS02": {
+      "source_locator": "tester-input-a.json / fixtures / QS02",
+      "working": {
+        "FX_direction": "USD per EUR",
+        "converted_supplier": "198000.0",
+        "replacement_supply": "228000.0",
+        "removed_provisional_sum": "220000",
+        "supply_delta": "8000.0",
+        "installation_OHP_base": "70000",
+        "OHP": "7000.0",
+        "owner_fee_base": "198000.0",
+        "owner_fee": "7920.000",
+        "raw_contractor_schedule": "298500",
+        "total": "326420.000",
+        "bridge_check": "0.000"
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": "326420.0000"
+    },
+    "QS03": {
+      "source_locator": "tester-input-a.json / fixtures / QS03",
+      "working": {
+        "gross_floor_m2": "96.00",
+        "floor_core_deduction_m2": "6.00",
+        "stone_net_m2": "90.00",
+        "stone_waste_m2": "10.8000",
+        "stone_procurement_m2": "100.8000",
+        "perimeter_m": "40.0",
+        "wall_gross_m2": "128.00",
+        "opening_deductions_m2": [
+          "4.32",
+          "6.00"
+        ],
+        "wall_net_m2": "117.68",
+        "trim_net_m": "38.2",
+        "slab_thickness_m": "0.15",
+        "slab_m3": "14.4000",
+        "drawing_inspection_status": "No visual drawing supplied; written dimensions inspected in assigned input."
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": {
+        "alternate_wall_calculation_m2": "117.68",
+        "slab_from_area_and_millimetres_m3": "14.40"
+      }
+    },
+    "QS04": {
+      "source_locator": "tester-input-a.json / fixtures / QS04",
+      "working": {
+        "priced_input_count": 0,
+        "budget_total_status": "Cannot calculate from scope-only inputs.",
+        "gross_internal_area_m2": 1250,
+        "site_m2": 6000,
+        "input_area_ratio_unrounded_percent": "20.83333333333333333333333333",
+        "target_months_after_acquisition": 14,
+        "official_regulatory_verification": "Not performed; no project-specific local authority supplied."
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified."
+    },
+    "QS05": {
+      "source_locator": "tester-input-a.json / fixtures / QS05",
+      "working": {
+        "base_elements_sum": "4370000",
+        "OHP_base": "4610000",
+        "OHP": "322700.00",
+        "construction_before_risk_escalation": "4932700.00",
+        "parallel_additions_base": "4932700.00",
+        "risk": "394616.0000",
+        "escalation": "147981.0000",
+        "construction_budget": "5475297.0000",
+        "owner_direct_costs": "520000",
+        "tax": "180000",
+        "owner_development_total": "6175297.0000",
+        "construction_per_gross_m2": "4380.2376",
+        "construction_per_sales_m2": "6441.525882352941176470588235",
+        "owner_total_per_gross_m2": "4940.2376",
+        "owner_total_per_sales_m2": "7265.055294117647058823529412",
+        "reconciliation_difference": "0.0000"
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": "6175297.0000"
+    },
+    "QS06": {
+      "source_locator": "tester-input-a.json / fixtures / QS06",
+      "working": {
+        "A_bridge": "1220000 - 80000 + 95000 + 35000 + 12000",
+        "A_normalized": "1282000",
+        "B_bridge": "1512000 / 1.20",
+        "B_normalized": "1.26000E+6",
+        "B_tax_removed": "252000",
+        "C_bridge": "1180000 + 35000 + 95000 + 12000",
+        "C_normalized": "1322000",
+        "comparable_price_rank": [
+          "B",
+          "A",
+          "C"
+        ],
+        "B_below_A": "22000",
+        "B_below_C": "62000"
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": {
+        "A_net_adjustment": "62000",
+        "B_ex_tax_times_1_20": "1512000.0",
+        "C_net_adjustment": "142000"
+      }
+    },
+    "QS07": {
+      "source_locator": "tester-input-a.json / fixtures / QS07",
+      "working": {
+        "approved_net_changes": "35000",
+        "authorized_contract": "2435000",
+        "C02_forecast_once": "40000",
+        "C03_weighted_exposure_once": "12000.0",
+        "known_likely_outturn": "2487000.0",
+        "separate_reserve": "50000",
+        "planning_provision_including_reserve": "2537000.0",
+        "C01_approved_less_paid": "40000",
+        "certified_to_date": 820000,
+        "total_cash_paid_status": "Unknown; C01 paid amount is only partial cash evidence."
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": {
+        "outturn_from_base_and_each_change": "2487000.0"
+      }
+    },
+    "QS08": {
+      "source_locator": "tester-input-a.json / fixtures / QS08",
+      "working": {
+        "package_rows": [
+          {
+            "id": "structure",
+            "commitment": "600000",
+            "actual_paid": "350000",
+            "remaining_expected_cost": "280000",
+            "forecast_final": "630000",
+            "forecast_minus_commitment": "30000"
+          },
+          {
+            "id": "envelope",
+            "commitment": "420000",
+            "actual_paid": "150000",
+            "remaining_expected_cost": "250000",
+            "forecast_final": "400000",
+            "forecast_minus_commitment": "-20000"
+          },
+          {
+            "id": "MEP",
+            "commitment": "300000",
+            "actual_paid": "80000",
+            "remaining_expected_cost": "260000",
+            "forecast_final": "340000",
+            "forecast_minus_commitment": "40000"
+          }
+        ],
+        "known_commitments": "1320000",
+        "actual_paid_total": "620000",
+        "forecast_before_reserve": "1650000",
+        "remaining_excluding_reserve": "1030000",
+        "residual_reserve": "50000",
+        "expected_final": "1700000",
+        "forecast_minus_budget": "-150000",
+        "paid_bridge_difference": "0",
+        "commitment_bridge_difference": "0"
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": {
+        "sum_final_forecasts_plus_reserve": "1700000"
+      }
+    },
+    "QS09": {
+      "source_locator": "tester-input-a.json / fixtures / QS09",
+      "working": {
+        "periods": [
+          {
+            "month": 0,
+            "gross": "0",
+            "advance_paid": "100000",
+            "recovery": "0",
+            "retention_withheld": "0",
+            "retention_release": "0",
+            "net_receipts": "100000",
+            "retention_balance": "0",
+            "advance_balance": "100000",
+            "cumulative_gross": "0",
+            "cumulative_cash": "100000"
+          },
+          {
+            "month": 1,
+            "gross": "200000",
+            "advance_paid": "0",
+            "recovery": "20000.0",
+            "retention_withheld": "10000.00",
+            "retention_release": "0",
+            "net_receipts": "170000.00",
+            "retention_balance": "10000.00",
+            "advance_balance": "80000.0",
+            "cumulative_gross": "200000",
+            "cumulative_cash": "270000.00"
+          },
+          {
+            "month": 2,
+            "gross": "300000",
+            "advance_paid": "0",
+            "recovery": "30000.0",
+            "retention_withheld": "15000.00",
+            "retention_release": "0",
+            "net_receipts": "255000.00",
+            "retention_balance": "25000.00",
+            "advance_balance": "50000.0",
+            "cumulative_gross": "500000",
+            "cumulative_cash": "525000.00"
+          },
+          {
+            "month": 3,
+            "gross": "300000",
+            "advance_paid": "0",
+            "recovery": "30000.0",
+            "retention_withheld": "15000.00",
+            "retention_release": "0",
+            "net_receipts": "255000.00",
+            "retention_balance": "40000.00",
+            "advance_balance": "20000.0",
+            "cumulative_gross": "800000",
+            "cumulative_cash": "780000.00"
+          },
+          {
+            "month": 4,
+            "gross": "200000",
+            "advance_paid": "0",
+            "recovery": "20000.0",
+            "retention_withheld": "0.00",
+            "retention_release": "20000.00",
+            "net_receipts": "200000.00",
+            "retention_balance": "20000.00",
+            "advance_balance": "0.0",
+            "cumulative_gross": "1000000",
+            "cumulative_cash": "980000.00"
+          },
+          {
+            "month": 10,
+            "gross": "0",
+            "advance_paid": "0",
+            "recovery": "0",
+            "retention_withheld": "0",
+            "retention_release": "20000.00",
+            "net_receipts": "20000.00",
+            "retention_balance": "0.00",
+            "advance_balance": "0.0",
+            "cumulative_gross": "1000000",
+            "cumulative_cash": "1000000.00"
+          }
+        ],
+        "gross_total": "1000000",
+        "advance_paid": "100000",
+        "advance_recovered_total": "100000.0",
+        "retention_withheld_total": "40000.00",
+        "retention_released_total": "40000.00",
+        "cash_total": "1000000.00",
+        "cash_minus_contract_sum": "0.00",
+        "closing_retention": "0.00",
+        "closing_advance": "0.0",
+        "period_conservation_checks": [
+          "0",
+          "0.00",
+          "0.00",
+          "0.00",
+          "0.00",
+          "0.00"
+        ]
+      },
+      "basis": "Supplied synthetic inputs only; cases calculated independently.",
+      "calculation_status": "Executed with Python Decimal arithmetic.",
+      "browsing_performed": false,
+      "external_source_status": "Not required for supplied fictional arithmetic; no external claims verified.",
+      "independent_arithmetic_verification": {
+        "sum_period_receipts": "1000000.00",
+        "sum_valuations": "1000000"
+      }
+    }
+  },
+  "output_checks": {
+    "QS01": {
+      "word_count": 301,
+      "absolute_private_paths_found": false
+    },
+    "QS02": {
+      "word_count": 375,
+      "absolute_private_paths_found": false
+    },
+    "QS03": {
+      "word_count": 313,
+      "absolute_private_paths_found": false
+    },
+    "QS04": {
+      "word_count": 532,
+      "absolute_private_paths_found": false
+    },
+    "QS05": {
+      "word_count": 362,
+      "absolute_private_paths_found": false
+    },
+    "QS06": {
+      "word_count": 318,
+      "absolute_private_paths_found": false
+    },
+    "QS07": {
+      "word_count": 336,
+      "absolute_private_paths_found": false
+    },
+    "QS08": {
+      "word_count": 380,
+      "absolute_private_paths_found": false
+    },
+    "QS09": {
+      "word_count": 419,
+      "absolute_private_paths_found": false
+    }
+  }
+}

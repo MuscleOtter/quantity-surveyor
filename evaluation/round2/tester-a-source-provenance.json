@@ -1,0 +1,38 @@
+{
+  "input": {
+    "path": "outputs/evaluation/tester-input-a.json",
+    "sha256": "e510cafcb38ccc2d01b7249d76b70fac6832d846c5b690d2b3222a9e07d660ce",
+    "status": "Read supplied JSON directly"
+  },
+  "package_sources": [
+    {
+      "path": "outputs/quantity-surveyor-portable/SKILL.md",
+      "sha256": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+      "status": "Read original local file directly; no external source retrieval"
+    },
+    {
+      "path": "outputs/quantity-surveyor-portable/references/measurement-and-estimating.md",
+      "sha256": "d98945d577701eaf8b74593161e6ee35b61fde566c57091629be0d2be23ab3ca",
+      "status": "Read original local file directly; no external source retrieval"
+    },
+    {
+      "path": "outputs/quantity-surveyor-portable/references/commercial-control.md",
+      "sha256": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+      "status": "Read original local file directly; no external source retrieval"
+    },
+    {
+      "path": "outputs/quantity-surveyor-portable/references/evidence-and-interfaces.md",
+      "sha256": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+      "status": "Read original local file directly; no external source retrieval"
+    },
+    {
+      "path": "outputs/quantity-surveyor-portable/references/standards.md",
+      "sha256": "bf3e395e53f05f845df644ba464bfe2d082ad61a14d3d925a30ce7eaffb35343",
+      "status": "Read original local file directly; no external source retrieval"
+    }
+  ],
+  "retrieval_date": "2026-10-01T17:27:39.854095+00:00",
+  "model_identity": "Precise model identity unavailable; not asserted.",
+  "web_retrievals": [],
+  "separation": "Each case used only its own supplied fixture; no memory, prior responses, grading material, or other evaluation outputs read."
+}

@@ -1,0 +1,178 @@
+{
+  "QS10": {
+    "productive_crew_person_hours_per_day": 21,
+    "person_hours_per_net_m2": 1.5,
+    "total_productive_person_hours": 480.0,
+    "crew_days": 22.857142857142858,
+    "purchased_panel_m2": 345.6,
+    "material_per_net_m2": 194.4,
+    "labour_per_net_m2": 78.0,
+    "plant_per_net_m2": 15.0,
+    "fixings_per_net_m2": 12,
+    "logistics_per_net_m2": 18,
+    "direct_per_net_m2": 317.4,
+    "OHP_per_net_m2": 38.087999999999994,
+    "contingency_per_net_m2": 17.774399999999996,
+    "total_per_net_m2": 373.26239999999996,
+    "package_USD": 119443.968,
+    "layers_package_USD": [
+      62208.0,
+      24960.0,
+      4800.0,
+      3840,
+      5760,
+      12188.159999999998,
+      5687.807999999999
+    ]
+  },
+  "QS11": {
+    "civil_USD": 520000.0,
+    "facade_EUR": 275000.0,
+    "facade_USD": 297000.0,
+    "lighting_GBP": 103000.0,
+    "lighting_USD": 127720.0,
+    "fixed_install_USD": 180000,
+    "total_USD": 1124720.0
+  },
+  "QS12": {
+    "annuity_factor": 11.118387432168118,
+    "discount_factor_year15": 0.5552645027132749,
+    "original": {
+      "initial": 180000,
+      "maintenance_PV": 44473.54972867247,
+      "replacement_year": 10,
+      "replacement_PV": 40533.85012954792,
+      "residual_credit_PV": 11105.290054265497,
+      "total_PV": 253902.10980395493
+    },
+    "VE": {
+      "initial": 145000,
+      "maintenance_PV": 77828.71202517684,
+      "replacement_year": 8,
+      "replacement_PV": 36534.51025009919,
+      "residual_credit_PV": 2776.3225135663743,
+      "total_PV": 256586.89976170965
+    },
+    "net_present_saving_original_less_VE": -2684.7899577547214,
+    "initial_capital_saving": 35000
+  },
+  "QS13": {
+    "calculation": "none requested",
+    "source_verification": "official RICS and NYC web pages inspected; no site-specific clearance"
+  },
+  "QS14": {
+    "historical_supply_reference_USD_per_m2": 1050.0,
+    "conditional_210m2_reference_extension_USD": 220500.0,
+    "status": "historical supply-only arithmetic; no live project estimate"
+  },
+  "QS15": {
+    "A_comparable_USD": 113000,
+    "B_comparable_USD": 109000,
+    "B_saving_USD": 4000,
+    "A_completion_weeks": 13,
+    "B_completion_weeks": 9,
+    "B_float_weeks": 1
+  },
+  "QS17": {
+    "supply_only_USD": 24000,
+    "verification_basis": "arithmetic checked by tester externally; in-case answer uses session inputs only and claims no tool or memory operation"
+  },
+  "QS18": {
+    "authorized_value_USD": 943000,
+    "approved_changes_net_USD": 23000,
+    "pending_quote_excluded_USD": 18000,
+    "state": "injected read results only; provisional v3 reconstruction; no restore performed"
+  },
+  "QS16": {
+    "executed": "Python 3 standard library, isolated synthetic data",
+    "valid_output": {
+      "rows": [
+        {
+          "id": "r1",
+          "code": "B01",
+          "label": "Site and substructure",
+          "qty": 30.0,
+          "unit": "m3",
+          "rate_USD": 110.0,
+          "amount_USD": 3300.0
+        },
+        {
+          "id": "r2",
+          "code": "B02",
+          "label": "Structure and envelope",
+          "qty": 250.0,
+          "unit": "m2",
+          "rate_USD": 420.0,
+          "amount_USD": 105000.0
+        },
+        {
+          "id": "r3",
+          "code": "B03",
+          "label": "Interior and display",
+          "qty": 80.0,
+          "unit": "m",
+          "rate_USD": 250.0,
+          "amount_USD": 20000.0
+        }
+      ],
+      "element_totals_USD": {
+        "B01": 3300.0,
+        "B02": 105000.0,
+        "B03": 20000.0
+      },
+      "grand_total_USD": 128300.0
+    },
+    "invalid_validation_results": [
+      {
+        "case": "duplicate id",
+        "result": "ValueError",
+        "message": "Duplicate row id: r1"
+      },
+      {
+        "case": "unknown framework code",
+        "result": "ValueError",
+        "message": "Unknown framework code: 'B99'"
+      },
+      {
+        "case": "negative quantity",
+        "result": "ValueError",
+        "message": "qty must be finite and nonnegative"
+      },
+      {
+        "case": "unit mismatch",
+        "result": "ValueError",
+        "message": "Unit 'kg' is not allowed for B01"
+      },
+      {
+        "case": "non-finite input",
+        "result": "ValueError",
+        "message": "rate_USD must be finite and nonnegative"
+      },
+      {
+        "case": "boolean not number",
+        "result": "ValueError",
+        "message": "qty must be a finite, nonnegative real number"
+      },
+      {
+        "case": "negative rate",
+        "result": "ValueError",
+        "message": "rate_USD must be finite and nonnegative"
+      },
+      {
+        "case": "infinite quantity",
+        "result": "ValueError",
+        "message": "qty must be finite and nonnegative"
+      },
+      {
+        "case": "boolean rate",
+        "result": "ValueError",
+        "message": "rate_USD must be a finite, nonnegative real number"
+      }
+    ],
+    "other_checks": [
+      "input rows unchanged",
+      "empty input returns zero totals for every supplied code",
+      "zero quantity accepted"
+    ]
+  }
+}

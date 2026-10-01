@@ -1,0 +1,39 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "version": "1.0.0",
+  "frozen_at_UTC": "2026-10-01T17:14:52.489869+00:00",
+  "algorithm": "SHA-256",
+  "immutable": true,
+  "candidate_hashes": "Custodian records candidate hashes separately before dispatch; evaluator did not read candidate or development history.",
+  "self_hash_policy": "Manifest excludes itself; verify each listed file.",
+  "files": {
+    "fixtures.json": {
+      "sha256": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+      "bytes": 32694
+    },
+    "oracle.json": {
+      "sha256": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+      "bytes": 27761
+    },
+    "heldout-fixtures.json": {
+      "sha256": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+      "bytes": 8473
+    },
+    "heldout-oracle.json": {
+      "sha256": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+      "bytes": 7502
+    },
+    "rubric.json": {
+      "sha256": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+      "bytes": 16162
+    },
+    "README.md": {
+      "sha256": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+      "bytes": 7999
+    },
+    "validation.json": {
+      "sha256": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+      "bytes": 3110
+    }
+  }
+}

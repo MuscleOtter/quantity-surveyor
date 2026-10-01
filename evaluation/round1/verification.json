@@ -1,0 +1,2166 @@
+{
+  "method": "Independent Python execution; inputs drawn from frozen fixtures, results checked against frozen oracle; QS16 imported from isolated copy. No private package/memory/history read.",
+  "model_identifier": "unavailable",
+  "checks": [
+    {
+      "check": "before frozen hash fixtures.json",
+      "actual": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+      "expected": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes fixtures.json",
+      "actual": 32694,
+      "expected": 32694,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash oracle.json",
+      "actual": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+      "expected": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes oracle.json",
+      "actual": 27761,
+      "expected": 27761,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash heldout-fixtures.json",
+      "actual": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+      "expected": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes heldout-fixtures.json",
+      "actual": 8473,
+      "expected": 8473,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash heldout-oracle.json",
+      "actual": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+      "expected": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes heldout-oracle.json",
+      "actual": 7502,
+      "expected": 7502,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash rubric.json",
+      "actual": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+      "expected": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes rubric.json",
+      "actual": 16162,
+      "expected": 16162,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash README.md",
+      "actual": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+      "expected": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes README.md",
+      "actual": 7999,
+      "expected": 7999,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen hash validation.json",
+      "actual": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+      "expected": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before frozen bytes validation.json",
+      "actual": 3110,
+      "expected": 3110,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS05.md",
+      "actual": "275e9d0ed98c1d0910540e1910d733bf52de971c7be298bb5d4b60ec52861caf",
+      "expected": "275e9d0ed98c1d0910540e1910d733bf52de971c7be298bb5d4b60ec52861caf",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS15.md",
+      "actual": "5ab64645fac95565d3d373c78b999499197efedd9187b4a60d53a2d831859959",
+      "expected": "5ab64645fac95565d3d373c78b999499197efedd9187b4a60d53a2d831859959",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS01.md",
+      "actual": "e737d5884d815b233cda7853091e337c741a7dcf2467c60f077e62281dd063f5",
+      "expected": "e737d5884d815b233cda7853091e337c741a7dcf2467c60f077e62281dd063f5",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash H02.md",
+      "actual": "e0b161636dab77fb2ec7b808ae460722e082c21f72fe3c55e5e9f9f27915900d",
+      "expected": "e0b161636dab77fb2ec7b808ae460722e082c21f72fe3c55e5e9f9f27915900d",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS11.md",
+      "actual": "b5ccd4ca7ae4cfd376807002e3f8b6c1379947937b44da78111757558f57c220",
+      "expected": "b5ccd4ca7ae4cfd376807002e3f8b6c1379947937b44da78111757558f57c220",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash H03.md",
+      "actual": "90bef95f00de724d38bbc60d60d345b39dd0edffb6f141a05582d0ffb5714043",
+      "expected": "90bef95f00de724d38bbc60d60d345b39dd0edffb6f141a05582d0ffb5714043",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS10.md",
+      "actual": "cf342cbcb8856fd3bea517ca214539bd848be02dc63df2da4e3b1f258ca1cfad",
+      "expected": "cf342cbcb8856fd3bea517ca214539bd848be02dc63df2da4e3b1f258ca1cfad",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS04.md",
+      "actual": "4f070e79421b3ffacb1987432208b2b75247438f0ad749421d81ef607a52db17",
+      "expected": "4f070e79421b3ffacb1987432208b2b75247438f0ad749421d81ef607a52db17",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS14.md",
+      "actual": "a560c4326c8ac923c5476ddb63a0c65783b17ce8023ececb4e96751fb7852991",
+      "expected": "a560c4326c8ac923c5476ddb63a0c65783b17ce8023ececb4e96751fb7852991",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS16.py",
+      "actual": "797f0871c24be19c4014fdff2277c2d78f8bd772d623f452cbc5e226b13893ee",
+      "expected": "797f0871c24be19c4014fdff2277c2d78f8bd772d623f452cbc5e226b13893ee",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS09.md",
+      "actual": "7239c957833c56fac726fe2f38a370e684d845380ce1d401b8795c1337176a5b",
+      "expected": "7239c957833c56fac726fe2f38a370e684d845380ce1d401b8795c1337176a5b",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS08.md",
+      "actual": "3b7dde1a3c9ae752e7c334bcf06863722a3e629c7443db7885e6f72593e90ec2",
+      "expected": "3b7dde1a3c9ae752e7c334bcf06863722a3e629c7443db7885e6f72593e90ec2",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS18.md",
+      "actual": "4dcac9fa5e2c0ec518ec5d0d642763a07ab6a92b1804f7e4f8d5e64855b801e5",
+      "expected": "4dcac9fa5e2c0ec518ec5d0d642763a07ab6a92b1804f7e4f8d5e64855b801e5",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS03.md",
+      "actual": "973268faa4fd389508d122f808fa8a0b17a39ecc958d8f71fbd8c12199329f6e",
+      "expected": "973268faa4fd389508d122f808fa8a0b17a39ecc958d8f71fbd8c12199329f6e",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS13.md",
+      "actual": "21ad1ad858540dfd3a291a2043b48b8814b5dfe62396c93e1eef1a2f129feb37",
+      "expected": "21ad1ad858540dfd3a291a2043b48b8814b5dfe62396c93e1eef1a2f129feb37",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash H04.md",
+      "actual": "d27dec73cbeada51f0ad9a35de60141ebce34ffc24557cbe5592e1d0acdb5687",
+      "expected": "d27dec73cbeada51f0ad9a35de60141ebce34ffc24557cbe5592e1d0acdb5687",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS07.md",
+      "actual": "519c075bd9760e1f8806166c2e9641ea10a249f1c5a0eff1521f16c00568bad1",
+      "expected": "519c075bd9760e1f8806166c2e9641ea10a249f1c5a0eff1521f16c00568bad1",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS17.md",
+      "actual": "b115df1a80adeb66290911933a8753c026b6b89961bf0bdfde7a1ca1a1a02dc4",
+      "expected": "b115df1a80adeb66290911933a8753c026b6b89961bf0bdfde7a1ca1a1a02dc4",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash H05.md",
+      "actual": "484692fb9ba13794709a7daa940bf5cc1ceb31ba0f4852bda37b280dccf51b08",
+      "expected": "484692fb9ba13794709a7daa940bf5cc1ceb31ba0f4852bda37b280dccf51b08",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS06.md",
+      "actual": "dc9941d7abcf980b963eae88c6fd37a210f6c27682e352e2f2aa8cc8a3c9d0d0",
+      "expected": "dc9941d7abcf980b963eae88c6fd37a210f6c27682e352e2f2aa8cc8a3c9d0d0",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS16.md",
+      "actual": "cc5ec87b31e9ac10e129b7f2d8430c0525475559b98705dca9a00184d7319450",
+      "expected": "cc5ec87b31e9ac10e129b7f2d8430c0525475559b98705dca9a00184d7319450",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS02.md",
+      "actual": "0278e8620c60e589a28929166f6b42a933cec27de51c962d7feb8d3fcdf1560d",
+      "expected": "0278e8620c60e589a28929166f6b42a933cec27de51c962d7feb8d3fcdf1560d",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash H01.md",
+      "actual": "13fd11161352f345560f2d511bfc7af5211919d92f84318ffd0d13c794c6b594",
+      "expected": "13fd11161352f345560f2d511bfc7af5211919d92f84318ffd0d13c794c6b594",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "before response hash QS12.md",
+      "actual": "1912c84716a3ed57702423fb95a5439d14325c6c26f666a0e0e35c80537a82fc",
+      "expected": "1912c84716a3ed57702423fb95a5439d14325c6c26f666a0e0e35c80537a82fc",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS01 elements",
+      "actual": 1795000,
+      "expected": 1795000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 elements_plus_preliminaries",
+      "actual": 1975000,
+      "expected": 1975000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 OHP",
+      "actual": 158000.0,
+      "expected": 158000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 construction_before_reserve",
+      "actual": 2133000.0,
+      "expected": 2133000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 reserve",
+      "actual": 213300.0,
+      "expected": 213300,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 owner_direct_costs",
+      "actual": 275000,
+      "expected": 275000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 tax",
+      "actual": 90000,
+      "expected": 90000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 total_owner_budget",
+      "actual": 2711300.0,
+      "expected": 2711300,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 construction_before_reserve_per_ft2",
+      "actual": 444.375,
+      "expected": 444.375,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS01 owner_budget_per_ft2",
+      "actual": 564.8541666666666,
+      "expected": 564.8541666667,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 fabrication_USD",
+      "actual": 198000.00000000003,
+      "expected": 198000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 delivered_supply_USD",
+      "actual": 228000.00000000003,
+      "expected": 228000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 site_storage_USD",
+      "actual": 5000,
+      "expected": 5000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 installation_plus_plant_USD",
+      "actual": 70000,
+      "expected": 70000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 contractor_OHP_USD",
+      "actual": 7000.0,
+      "expected": 7000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 owner_management_fee_USD",
+      "actual": 7920.000000000001,
+      "expected": 7920,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 hookup_USD",
+      "actual": 8500,
+      "expected": 8500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS02 combined_total_USD",
+      "actual": 326420.0,
+      "expected": 326420,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 gross_floor_m2",
+      "actual": 96.0,
+      "expected": 96,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 net_installed_floor_m2",
+      "actual": 90.0,
+      "expected": 90,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 procurement_stone_m2",
+      "actual": 100.80000000000001,
+      "expected": 100.8,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 perimeter_m",
+      "actual": 40.0,
+      "expected": 40,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 gross_wall_m2",
+      "actual": 128.0,
+      "expected": 128,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 opening_m2",
+      "actual": 10.32,
+      "expected": 10.32,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 net_wall_m2",
+      "actual": 117.68,
+      "expected": 117.68,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 base_trim_m",
+      "actual": 38.2,
+      "expected": 38.2,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS03 slab_m3",
+      "actual": 14.4,
+      "expected": 14.4,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 base_elements",
+      "actual": 4370000,
+      "expected": 4370000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 plus_preliminaries",
+      "actual": 4610000,
+      "expected": 4610000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 OHP",
+      "actual": 322700.00000000006,
+      "expected": 322700,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 construction_before_risk_escalation",
+      "actual": 4932700.0,
+      "expected": 4932700,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 risk",
+      "actual": 394616.0,
+      "expected": 394616,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 escalation",
+      "actual": 147981.0,
+      "expected": 147981,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 construction_total",
+      "actual": 5475297.0,
+      "expected": 5475297,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 owner_direct_and_tax",
+      "actual": 700000,
+      "expected": 700000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 owner_development_budget",
+      "actual": 6175297.0,
+      "expected": 6175297,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 construction_per_gross_m2",
+      "actual": 4380.2376,
+      "expected": 4380.2376,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 owner_budget_per_gross_m2",
+      "actual": 4940.2376,
+      "expected": 4940.2376,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS05 owner_budget_per_sales_m2",
+      "actual": 7265.0552941176475,
+      "expected": 7265.0552941176,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 A_normalized_ex_tax",
+      "actual": 1282000,
+      "expected": 1282000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 B_normalized_ex_tax",
+      "actual": 1260000.0,
+      "expected": 1260000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 C_normalized_ex_tax",
+      "actual": 1322000,
+      "expected": 1322000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 A_adjustment",
+      "actual": 62000,
+      "expected": 62000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 B_tax_removed",
+      "actual": 252000.0,
+      "expected": 252000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS06 C_adjustment",
+      "actual": 142000,
+      "expected": 142000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 approved_net_changes",
+      "actual": 35000,
+      "expected": 35000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 authorized_contract_value",
+      "actual": 2435000,
+      "expected": 2435000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 C02_forecast",
+      "actual": 40000,
+      "expected": 40000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 C03_weighted_risk",
+      "actual": 12000.0,
+      "expected": 12000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 known_likely_outturn_before_residual_reserve",
+      "actual": 2487000.0,
+      "expected": 2487000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 forecast_including_residual_reserve",
+      "actual": 2537000.0,
+      "expected": 2537000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS07 rejected_C05_outturn",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 total_commitments",
+      "actual": 1320000,
+      "expected": 1320000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 actual_cost_to_date",
+      "actual": 620000,
+      "expected": 620000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 committed_package_final",
+      "actual": 1370000,
+      "expected": 1370000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 remaining_committed_package_forecast",
+      "actual": 790000,
+      "expected": 790000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 uncommitted_remaining",
+      "actual": 180000,
+      "expected": 180000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 owner_remaining",
+      "actual": 60000,
+      "expected": 60000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 cost_to_complete_including_reserve",
+      "actual": 1080000,
+      "expected": 1080000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 forecast_final_including_reserve",
+      "actual": 1700000,
+      "expected": 1700000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 budget_headroom",
+      "actual": 150000,
+      "expected": 150000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS08 expected_package_variation_to_commitments",
+      "actual": 50000,
+      "expected": 50000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 month_0_receipt",
+      "actual": 100000,
+      "expected": 100000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 monthly_new_retention",
+      "actual": [
+        10000.0,
+        15000.0,
+        15000.0,
+        0.0
+      ],
+      "expected": [
+        10000,
+        15000,
+        15000,
+        0
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS09 monthly_advance_recovery",
+      "actual": [
+        20000.0,
+        30000.0,
+        30000.0,
+        20000.0
+      ],
+      "expected": [
+        20000,
+        30000,
+        30000,
+        20000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS09 monthly_net_certificates",
+      "actual": [
+        170000.0,
+        255000.0,
+        255000.0,
+        180000.0
+      ],
+      "expected": [
+        170000,
+        255000,
+        255000,
+        180000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS09 month_4_PC_release",
+      "actual": 20000,
+      "expected": 20000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 month_4_total_receipt",
+      "actual": 200000.0,
+      "expected": 200000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 month_10_release",
+      "actual": 20000,
+      "expected": 20000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 total_receipts",
+      "actual": 1000000.0,
+      "expected": 1000000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 retention_after_month_4",
+      "actual": 20000,
+      "expected": 20000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 advance_after_month_4",
+      "actual": 0.0,
+      "expected": 0,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS09 peak_retention",
+      "actual": 40000.0,
+      "expected": 40000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 material_per_net_m2",
+      "actual": 194.4,
+      "expected": 194.4,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 labour_hours_per_net_m2",
+      "actual": 1.5,
+      "expected": 1.5,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 labour_per_net_m2",
+      "actual": 78.0,
+      "expected": 78,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 plant_per_net_m2",
+      "actual": 15.0,
+      "expected": 15,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 fixings_per_net_m2",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 logistics_per_net_m2",
+      "actual": 18,
+      "expected": 18,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 direct_rate",
+      "actual": 317.4,
+      "expected": 317.4,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 OHP_per_m2",
+      "actual": 38.087999999999994,
+      "expected": 38.088,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 rate_before_contingency",
+      "actual": 355.48799999999994,
+      "expected": 355.488,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 contingency_per_m2",
+      "actual": 17.774399999999996,
+      "expected": 17.7744,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 final_rate_per_m2",
+      "actual": 373.26239999999996,
+      "expected": 373.2624,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 package_cost",
+      "actual": 119443.968,
+      "expected": 119443.968,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS10 purchased_panel_quantity_m2",
+      "actual": 345.6,
+      "expected": 345.6,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 civil_USD",
+      "actual": 520000.0,
+      "expected": 520000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 facade_EUR",
+      "actual": 275000.0,
+      "expected": 275000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 facade_USD",
+      "actual": 297000.0,
+      "expected": 297000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 lighting_GBP",
+      "actual": 103000.0,
+      "expected": 103000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 lighting_USD",
+      "actual": 127720.0,
+      "expected": 127720,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 site_install_USD",
+      "actual": 180000,
+      "expected": 180000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS11 total_USD",
+      "actual": 1124720.0,
+      "expected": 1124720,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS12 original_NPV",
+      "actual": 253902.10980395493,
+      "expected": 253902.10980395493,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS12 VE_NPV",
+      "actual": 256586.89976170965,
+      "expected": 256586.8997617097,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS12 initial_capital_saving",
+      "actual": 35000,
+      "expected": 35000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS12 net_present_saving",
+      "actual": -2684.7899577547214,
+      "expected": -2684.7899577547796,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS14 reference_supply_only_rate_USD_m2",
+      "actual": 1050.0,
+      "expected": 1050,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS14 mechanical_unadjusted_210m2_extension",
+      "actual": 220500.0,
+      "expected": 220500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS15 A_comparable_price",
+      "actual": 113000,
+      "expected": 113000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS15 B_comparable_price",
+      "actual": 109000,
+      "expected": 109000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS15 price_advantage_B",
+      "actual": 4000,
+      "expected": 4000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS15 A_completion_weeks",
+      "actual": 13,
+      "expected": 13,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS15 B_completion_weeks",
+      "actual": 9,
+      "expected": 9,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS17 supply_only_amount_USD",
+      "actual": 24000,
+      "expected": 24000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS18 approved_net_changes",
+      "actual": 23000,
+      "expected": 23000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS18 authorized_contract_value",
+      "actual": 943000,
+      "expected": 943000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS18 unapproved_quote_separate",
+      "actual": 18000,
+      "expected": 18000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H01 gross_m2",
+      "actual": 160,
+      "expected": 160,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H01 net_installed_m2",
+      "actual": 148,
+      "expected": 148,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H01 purchase_quantity_m2",
+      "actual": 162.8,
+      "expected": 162.8,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H01 net_installed_rate_USD_m2",
+      "actual": 300.0,
+      "expected": 300,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H02 fabricated_material_USD",
+      "actual": 150000.0,
+      "expected": 150000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H02 delivered_supply_USD",
+      "actual": 165000.0,
+      "expected": 165000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H02 installer_after_PC_removal_USD",
+      "actual": 85000,
+      "expected": 85000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H02 combined_USD",
+      "actual": 259000.0,
+      "expected": 259000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H02 equivalent_installer_replacement_total_USD",
+      "actual": 250000.0,
+      "expected": 250000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 authorized_contract_value",
+      "actual": 740000,
+      "expected": 740000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 retention_cap",
+      "actual": 37000.0,
+      "expected": 37000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 new_retention",
+      "actual": [
+        9000.0,
+        12000.0,
+        12000.0,
+        4000.0
+      ],
+      "expected": [
+        9000,
+        12000,
+        12000,
+        4000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H03 advance_recovery",
+      "actual": [
+        18000.0,
+        24000.0,
+        24000.0,
+        8000.0
+      ],
+      "expected": [
+        18000,
+        24000,
+        24000,
+        8000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H03 net_certificates_before_releases",
+      "actual": [
+        153000.0,
+        204000.0,
+        204000.0,
+        68000.0
+      ],
+      "expected": [
+        153000,
+        204000,
+        204000,
+        68000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H03 PC_release",
+      "actual": 18500.0,
+      "expected": 18500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 month_4_certificate_including_PC_release",
+      "actual": 86500.0,
+      "expected": 86500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 cash_receipts_months_0_to_4",
+      "actual": [
+        74000,
+        0,
+        153000.0,
+        204000.0,
+        204000.0
+      ],
+      "expected": [
+        74000,
+        0,
+        153000,
+        204000,
+        204000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H03 cash_paid_by_PC",
+      "actual": 635000.0,
+      "expected": 635000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 unpaid_certificate_at_PC",
+      "actual": 86500.0,
+      "expected": 86500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 remaining_retention_after_PC",
+      "actual": 18500.0,
+      "expected": 18500,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H03 eventual_total_receipts",
+      "actual": 740000.0,
+      "expected": 740000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H05 current_supply_amount_USD",
+      "actual": 30000,
+      "expected": 30000,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "H05 older_rate_extension_not_current",
+      "actual": 29400,
+      "expected": 29400,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "QS16 valid row amounts",
+      "actual": [
+        3300.0,
+        105000.0,
+        20000.0
+      ],
+      "expected": [
+        3300,
+        105000,
+        20000
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 valid element totals",
+      "actual": {
+        "B01": 3300.0,
+        "B02": 105000.0,
+        "B03": 20000.0
+      },
+      "expected": {
+        "B01": 3300,
+        "B02": 105000,
+        "B03": 20000
+      },
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 grand total",
+      "actual": 128300.0,
+      "expected": 128300,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 input unchanged",
+      "actual": [
+        {
+          "id": "r1",
+          "code": "B01",
+          "qty": 30,
+          "unit": "m3",
+          "rate_USD": 110
+        },
+        {
+          "id": "r2",
+          "code": "B02",
+          "qty": 250,
+          "unit": "m2",
+          "rate_USD": 420
+        },
+        {
+          "id": "r3",
+          "code": "B03",
+          "qty": 80,
+          "unit": "m",
+          "rate_USD": 250
+        }
+      ],
+      "expected": [
+        {
+          "id": "r1",
+          "code": "B01",
+          "qty": 30,
+          "unit": "m3",
+          "rate_USD": 110
+        },
+        {
+          "id": "r2",
+          "code": "B02",
+          "qty": 250,
+          "unit": "m2",
+          "rate_USD": 420
+        },
+        {
+          "id": "r3",
+          "code": "B03",
+          "qty": 80,
+          "unit": "m",
+          "rate_USD": 250
+        }
+      ],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 labels exact",
+      "actual": {
+        "B01": "Site and substructure",
+        "B02": "Structure and envelope",
+        "B03": "Interior and display"
+      },
+      "expected": {
+        "B01": "Site and substructure",
+        "B02": "Structure and envelope",
+        "B03": "Interior and display"
+      },
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 units exact",
+      "actual": {
+        "B01": [
+          "item",
+          "m2",
+          "m3"
+        ],
+        "B02": [
+          "item",
+          "kg",
+          "m2"
+        ],
+        "B03": [
+          "item",
+          "m",
+          "m2"
+        ]
+      },
+      "expected": {
+        "B01": [
+          "item",
+          "m2",
+          "m3"
+        ],
+        "B02": [
+          "item",
+          "kg",
+          "m2"
+        ],
+        "B03": [
+          "item",
+          "m",
+          "m2"
+        ]
+      },
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid duplicate id",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid unknown code",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid negative quantity",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid unit mismatch",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid NaN rate",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid boolean quantity",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid negative rate",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid infinite quantity",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid boolean rate",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid nonnumeric quantity",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid nonnumeric rate",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid complex quantity",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 invalid overflow amount",
+      "actual": "ValueError",
+      "expected": "ValueError",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 zero quantity",
+      "actual": 0.0,
+      "expected": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 decimal product",
+      "actual": 0.020000000000000004,
+      "expected": 0.02,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "check": "QS16 empty rows",
+      "actual": 0.0,
+      "expected": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS16 function creates no files",
+      "actual": [],
+      "expected": [],
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS13 word cap",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS15 word cap",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "QS17 word cap",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H04 word cap",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "H05 word cap",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash fixtures.json",
+      "actual": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+      "expected": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes fixtures.json",
+      "actual": 32694,
+      "expected": 32694,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash oracle.json",
+      "actual": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+      "expected": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes oracle.json",
+      "actual": 27761,
+      "expected": 27761,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash heldout-fixtures.json",
+      "actual": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+      "expected": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes heldout-fixtures.json",
+      "actual": 8473,
+      "expected": 8473,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash heldout-oracle.json",
+      "actual": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+      "expected": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes heldout-oracle.json",
+      "actual": 7502,
+      "expected": 7502,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash rubric.json",
+      "actual": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+      "expected": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes rubric.json",
+      "actual": 16162,
+      "expected": 16162,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash README.md",
+      "actual": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+      "expected": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes README.md",
+      "actual": 7999,
+      "expected": 7999,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen hash validation.json",
+      "actual": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+      "expected": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after frozen bytes validation.json",
+      "actual": 3110,
+      "expected": 3110,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS05.md",
+      "actual": "275e9d0ed98c1d0910540e1910d733bf52de971c7be298bb5d4b60ec52861caf",
+      "expected": "275e9d0ed98c1d0910540e1910d733bf52de971c7be298bb5d4b60ec52861caf",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS15.md",
+      "actual": "5ab64645fac95565d3d373c78b999499197efedd9187b4a60d53a2d831859959",
+      "expected": "5ab64645fac95565d3d373c78b999499197efedd9187b4a60d53a2d831859959",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS01.md",
+      "actual": "e737d5884d815b233cda7853091e337c741a7dcf2467c60f077e62281dd063f5",
+      "expected": "e737d5884d815b233cda7853091e337c741a7dcf2467c60f077e62281dd063f5",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash H02.md",
+      "actual": "e0b161636dab77fb2ec7b808ae460722e082c21f72fe3c55e5e9f9f27915900d",
+      "expected": "e0b161636dab77fb2ec7b808ae460722e082c21f72fe3c55e5e9f9f27915900d",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS11.md",
+      "actual": "b5ccd4ca7ae4cfd376807002e3f8b6c1379947937b44da78111757558f57c220",
+      "expected": "b5ccd4ca7ae4cfd376807002e3f8b6c1379947937b44da78111757558f57c220",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash H03.md",
+      "actual": "90bef95f00de724d38bbc60d60d345b39dd0edffb6f141a05582d0ffb5714043",
+      "expected": "90bef95f00de724d38bbc60d60d345b39dd0edffb6f141a05582d0ffb5714043",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS10.md",
+      "actual": "cf342cbcb8856fd3bea517ca214539bd848be02dc63df2da4e3b1f258ca1cfad",
+      "expected": "cf342cbcb8856fd3bea517ca214539bd848be02dc63df2da4e3b1f258ca1cfad",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS04.md",
+      "actual": "4f070e79421b3ffacb1987432208b2b75247438f0ad749421d81ef607a52db17",
+      "expected": "4f070e79421b3ffacb1987432208b2b75247438f0ad749421d81ef607a52db17",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS14.md",
+      "actual": "a560c4326c8ac923c5476ddb63a0c65783b17ce8023ececb4e96751fb7852991",
+      "expected": "a560c4326c8ac923c5476ddb63a0c65783b17ce8023ececb4e96751fb7852991",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS16.py",
+      "actual": "797f0871c24be19c4014fdff2277c2d78f8bd772d623f452cbc5e226b13893ee",
+      "expected": "797f0871c24be19c4014fdff2277c2d78f8bd772d623f452cbc5e226b13893ee",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS09.md",
+      "actual": "7239c957833c56fac726fe2f38a370e684d845380ce1d401b8795c1337176a5b",
+      "expected": "7239c957833c56fac726fe2f38a370e684d845380ce1d401b8795c1337176a5b",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS08.md",
+      "actual": "3b7dde1a3c9ae752e7c334bcf06863722a3e629c7443db7885e6f72593e90ec2",
+      "expected": "3b7dde1a3c9ae752e7c334bcf06863722a3e629c7443db7885e6f72593e90ec2",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS18.md",
+      "actual": "4dcac9fa5e2c0ec518ec5d0d642763a07ab6a92b1804f7e4f8d5e64855b801e5",
+      "expected": "4dcac9fa5e2c0ec518ec5d0d642763a07ab6a92b1804f7e4f8d5e64855b801e5",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS03.md",
+      "actual": "973268faa4fd389508d122f808fa8a0b17a39ecc958d8f71fbd8c12199329f6e",
+      "expected": "973268faa4fd389508d122f808fa8a0b17a39ecc958d8f71fbd8c12199329f6e",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS13.md",
+      "actual": "21ad1ad858540dfd3a291a2043b48b8814b5dfe62396c93e1eef1a2f129feb37",
+      "expected": "21ad1ad858540dfd3a291a2043b48b8814b5dfe62396c93e1eef1a2f129feb37",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash H04.md",
+      "actual": "d27dec73cbeada51f0ad9a35de60141ebce34ffc24557cbe5592e1d0acdb5687",
+      "expected": "d27dec73cbeada51f0ad9a35de60141ebce34ffc24557cbe5592e1d0acdb5687",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS07.md",
+      "actual": "519c075bd9760e1f8806166c2e9641ea10a249f1c5a0eff1521f16c00568bad1",
+      "expected": "519c075bd9760e1f8806166c2e9641ea10a249f1c5a0eff1521f16c00568bad1",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS17.md",
+      "actual": "b115df1a80adeb66290911933a8753c026b6b89961bf0bdfde7a1ca1a1a02dc4",
+      "expected": "b115df1a80adeb66290911933a8753c026b6b89961bf0bdfde7a1ca1a1a02dc4",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash H05.md",
+      "actual": "484692fb9ba13794709a7daa940bf5cc1ceb31ba0f4852bda37b280dccf51b08",
+      "expected": "484692fb9ba13794709a7daa940bf5cc1ceb31ba0f4852bda37b280dccf51b08",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS06.md",
+      "actual": "dc9941d7abcf980b963eae88c6fd37a210f6c27682e352e2f2aa8cc8a3c9d0d0",
+      "expected": "dc9941d7abcf980b963eae88c6fd37a210f6c27682e352e2f2aa8cc8a3c9d0d0",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS16.md",
+      "actual": "cc5ec87b31e9ac10e129b7f2d8430c0525475559b98705dca9a00184d7319450",
+      "expected": "cc5ec87b31e9ac10e129b7f2d8430c0525475559b98705dca9a00184d7319450",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS02.md",
+      "actual": "0278e8620c60e589a28929166f6b42a933cec27de51c962d7feb8d3fcdf1560d",
+      "expected": "0278e8620c60e589a28929166f6b42a933cec27de51c962d7feb8d3fcdf1560d",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash H01.md",
+      "actual": "13fd11161352f345560f2d511bfc7af5211919d92f84318ffd0d13c794c6b594",
+      "expected": "13fd11161352f345560f2d511bfc7af5211919d92f84318ffd0d13c794c6b594",
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "after response hash QS12.md",
+      "actual": "1912c84716a3ed57702423fb95a5439d14325c6c26f666a0e0e35c80537a82fc",
+      "expected": "1912c84716a3ed57702423fb95a5439d14325c6c26f666a0e0e35c80537a82fc",
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "independent_recomputations": {
+    "QS01": {
+      "elements": 1795000,
+      "elements_plus_preliminaries": 1975000,
+      "OHP": 158000.0,
+      "construction_before_reserve": 2133000.0,
+      "reserve": 213300.0,
+      "owner_direct_costs": 275000,
+      "tax": 90000,
+      "total_owner_budget": 2711300.0,
+      "construction_before_reserve_per_ft2": 444.375,
+      "owner_budget_per_ft2": 564.8541666666666
+    },
+    "QS02": {
+      "fabrication_USD": 198000.00000000003,
+      "delivered_supply_USD": 228000.00000000003,
+      "site_storage_USD": 5000,
+      "installation_plus_plant_USD": 70000,
+      "contractor_OHP_USD": 7000.0,
+      "owner_management_fee_USD": 7920.000000000001,
+      "hookup_USD": 8500,
+      "combined_total_USD": 326420.0
+    },
+    "QS03": {
+      "gross_floor_m2": 96.0,
+      "net_installed_floor_m2": 90.0,
+      "procurement_stone_m2": 100.80000000000001,
+      "perimeter_m": 40.0,
+      "gross_wall_m2": 128.0,
+      "opening_m2": 10.32,
+      "net_wall_m2": 117.68,
+      "base_trim_m": 38.2,
+      "slab_m3": 14.4
+    },
+    "QS05": {
+      "base_elements": 4370000,
+      "plus_preliminaries": 4610000,
+      "OHP": 322700.00000000006,
+      "construction_before_risk_escalation": 4932700.0,
+      "risk": 394616.0,
+      "escalation": 147981.0,
+      "construction_total": 5475297.0,
+      "owner_direct_and_tax": 700000,
+      "owner_development_budget": 6175297.0,
+      "construction_per_gross_m2": 4380.2376,
+      "owner_budget_per_gross_m2": 4940.2376,
+      "owner_budget_per_sales_m2": 7265.0552941176475
+    },
+    "QS06": {
+      "A_normalized_ex_tax": 1282000,
+      "B_normalized_ex_tax": 1260000.0,
+      "C_normalized_ex_tax": 1322000,
+      "A_adjustment": 62000,
+      "B_tax_removed": 252000.0,
+      "C_adjustment": 142000
+    },
+    "QS07": {
+      "approved_net_changes": 35000,
+      "authorized_contract_value": 2435000,
+      "C02_forecast": 40000,
+      "C03_weighted_risk": 12000.0,
+      "known_likely_outturn_before_residual_reserve": 2487000.0,
+      "forecast_including_residual_reserve": 2537000.0,
+      "rejected_C05_outturn": 0
+    },
+    "QS08": {
+      "total_commitments": 1320000,
+      "actual_cost_to_date": 620000,
+      "committed_package_final": 1370000,
+      "remaining_committed_package_forecast": 790000,
+      "uncommitted_remaining": 180000,
+      "owner_remaining": 60000,
+      "cost_to_complete_including_reserve": 1080000,
+      "forecast_final_including_reserve": 1700000,
+      "budget_headroom": 150000,
+      "expected_package_variation_to_commitments": 50000
+    },
+    "QS09": {
+      "month_0_receipt": 100000,
+      "monthly_new_retention": [
+        10000.0,
+        15000.0,
+        15000.0,
+        0.0
+      ],
+      "monthly_advance_recovery": [
+        20000.0,
+        30000.0,
+        30000.0,
+        20000.0
+      ],
+      "monthly_net_certificates": [
+        170000.0,
+        255000.0,
+        255000.0,
+        180000.0
+      ],
+      "month_4_PC_release": 20000,
+      "month_4_total_receipt": 200000.0,
+      "month_10_release": 20000,
+      "total_receipts": 1000000.0,
+      "retention_after_month_4": 20000,
+      "advance_after_month_4": 0.0,
+      "peak_retention": 40000.0
+    },
+    "QS10": {
+      "material_per_net_m2": 194.4,
+      "labour_hours_per_net_m2": 1.5,
+      "labour_per_net_m2": 78.0,
+      "plant_per_net_m2": 15.0,
+      "fixings_per_net_m2": 12,
+      "logistics_per_net_m2": 18,
+      "direct_rate": 317.4,
+      "OHP_per_m2": 38.087999999999994,
+      "rate_before_contingency": 355.48799999999994,
+      "contingency_per_m2": 17.774399999999996,
+      "final_rate_per_m2": 373.26239999999996,
+      "package_cost": 119443.968,
+      "purchased_panel_quantity_m2": 345.6
+    },
+    "QS11": {
+      "civil_USD": 520000.0,
+      "facade_EUR": 275000.0,
+      "facade_USD": 297000.0,
+      "lighting_GBP": 103000.0,
+      "lighting_USD": 127720.0,
+      "site_install_USD": 180000,
+      "total_USD": 1124720.0
+    },
+    "QS12": {
+      "original_NPV": 253902.10980395493,
+      "VE_NPV": 256586.89976170965,
+      "initial_capital_saving": 35000,
+      "net_present_saving": -2684.7899577547214
+    },
+    "QS14": {
+      "reference_supply_only_rate_USD_m2": 1050.0,
+      "mechanical_unadjusted_210m2_extension": 220500.0
+    },
+    "QS15": {
+      "A_comparable_price": 113000,
+      "B_comparable_price": 109000,
+      "price_advantage_B": 4000,
+      "A_completion_weeks": 13,
+      "B_completion_weeks": 9
+    },
+    "QS17": {
+      "supply_only_amount_USD": 24000
+    },
+    "QS18": {
+      "approved_net_changes": 23000,
+      "authorized_contract_value": 943000,
+      "unapproved_quote_separate": 18000
+    },
+    "H01": {
+      "gross_m2": 160,
+      "net_installed_m2": 148,
+      "purchase_quantity_m2": 162.8,
+      "net_installed_rate_USD_m2": 300.0
+    },
+    "H02": {
+      "fabricated_material_USD": 150000.0,
+      "delivered_supply_USD": 165000.0,
+      "installer_after_PC_removal_USD": 85000,
+      "combined_USD": 259000.0,
+      "equivalent_installer_replacement_total_USD": 250000.0
+    },
+    "H03": {
+      "authorized_contract_value": 740000,
+      "retention_cap": 37000.0,
+      "new_retention": [
+        9000.0,
+        12000.0,
+        12000.0,
+        4000.0
+      ],
+      "advance_recovery": [
+        18000.0,
+        24000.0,
+        24000.0,
+        8000.0
+      ],
+      "net_certificates_before_releases": [
+        153000.0,
+        204000.0,
+        204000.0,
+        68000.0
+      ],
+      "PC_release": 18500.0,
+      "month_4_certificate_including_PC_release": 86500.0,
+      "cash_receipts_months_0_to_4": [
+        74000,
+        0,
+        153000.0,
+        204000.0,
+        204000.0
+      ],
+      "cash_paid_by_PC": 635000.0,
+      "unpaid_certificate_at_PC": 86500.0,
+      "remaining_retention_after_PC": 18500.0,
+      "eventual_total_receipts": 740000.0
+    },
+    "H05": {
+      "current_supply_amount_USD": 30000,
+      "older_rate_extension_not_current": 29400
+    }
+  },
+  "QS16_valid_output": {
+    "rows": [
+      {
+        "id": "r1",
+        "code": "B01",
+        "label": "Site and substructure",
+        "qty": 30.0,
+        "unit": "m3",
+        "rate_USD": 110.0,
+        "amount_USD": 3300.0
+      },
+      {
+        "id": "r2",
+        "code": "B02",
+        "label": "Structure and envelope",
+        "qty": 250.0,
+        "unit": "m2",
+        "rate_USD": 420.0,
+        "amount_USD": 105000.0
+      },
+      {
+        "id": "r3",
+        "code": "B03",
+        "label": "Interior and display",
+        "qty": 80.0,
+        "unit": "m",
+        "rate_USD": 250.0,
+        "amount_USD": 20000.0
+      }
+    ],
+    "element_totals_USD": {
+      "B01": 3300.0,
+      "B02": 105000.0,
+      "B03": 20000.0
+    },
+    "grand_total_USD": 128300.0
+  },
+  "QS16_invalid_cases": [
+    {
+      "case": "duplicate id",
+      "result": "ValueError"
+    },
+    {
+      "case": "unknown code",
+      "result": "ValueError"
+    },
+    {
+      "case": "negative quantity",
+      "result": "ValueError"
+    },
+    {
+      "case": "unit mismatch",
+      "result": "ValueError"
+    },
+    {
+      "case": "NaN rate",
+      "result": "ValueError"
+    },
+    {
+      "case": "boolean quantity",
+      "result": "ValueError"
+    },
+    {
+      "case": "negative rate",
+      "result": "ValueError"
+    },
+    {
+      "case": "infinite quantity",
+      "result": "ValueError"
+    },
+    {
+      "case": "boolean rate",
+      "result": "ValueError"
+    },
+    {
+      "case": "nonnumeric quantity",
+      "result": "ValueError"
+    },
+    {
+      "case": "nonnumeric rate",
+      "result": "ValueError"
+    },
+    {
+      "case": "complex quantity",
+      "result": "ValueError"
+    },
+    {
+      "case": "overflow amount",
+      "result": "ValueError"
+    }
+  ],
+  "word_counts": {
+    "QS13": {
+      "rendered_substantive_words": 178,
+      "cap": 220,
+      "passed": true,
+      "raw_whitespace_tokens": 178
+    },
+    "QS15": {
+      "rendered_substantive_words": 69,
+      "cap": 90,
+      "passed": true,
+      "raw_whitespace_tokens": 72
+    },
+    "QS17": {
+      "rendered_substantive_words": 62,
+      "cap": 150,
+      "passed": true,
+      "raw_whitespace_tokens": 64
+    },
+    "H04": {
+      "rendered_substantive_words": 166,
+      "cap": 180,
+      "passed": true,
+      "raw_whitespace_tokens": 169
+    },
+    "H05": {
+      "rendered_substantive_words": 135,
+      "cap": 160,
+      "passed": true,
+      "raw_whitespace_tokens": 137
+    }
+  },
+  "all_checks_passed": true,
+  "check_count": 235,
+  "source_claim_status": {
+    "calculation_logs": "Tester calculation JSON supports their arithmetic-execution claims; independent recomputation and QS16 execution corroborate results.",
+    "original_source_records": [
+      "work/tester-b/source-retrieval-evidence.json",
+      "work/tester-heldout/source-retrieval-evidence.json"
+    ],
+    "assessment": "Original tool-result identifiers, retrieval statuses and short excerpts corroborate successful RICS/NYC page retrievals. Texas opens failed to return intended statute content; H04 correctly makes no local legal assurance. Evaluator independently opened all four cited primary official pages and verified their substantive claims.",
+    "limitations": "Source records were compiled after sealing from retained original outputs, rather than complete raw HTTP/tool archives. No independent original timestamp, HTTP headers or site-specific clearance. No false tool-completion claim demonstrated."
+  },
+  "visual_robustness": "Both additional visual outputs inspected independently; separately reviewed in visual/review.md and not used in primary score.",
+  "word_count_convention": "Rendered prose and link-label text; whitespace-separated lexical tokens; standalone operators/Markdown delimiters and link destinations omitted; numeric-only table cells/standalone formulas excluded by frozen convention. Five capped answers contain no tables/standalone formulas. Raw whitespace counts also pass."
+}

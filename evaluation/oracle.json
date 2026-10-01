@@ -1,0 +1,696 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "access": "Evaluator only; never give expected answers to testers or candidate author before freeze evaluation.",
+  "oracle_count": 18,
+  "numeric_tolerances": {
+    "money_absolute": 1.0,
+    "rate_absolute": 0.01,
+    "quantity_absolute": 0.01,
+    "formula": "Correct formulas accepted where rounded outputs differ by cumulative display rounding; compare unrounded computation when present."
+  },
+  "oracles": [
+    {
+      "id": "QS01",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "expected": {
+        "elements": 1795000,
+        "elements_plus_preliminaries": 1975000,
+        "OHP": 158000,
+        "construction_before_reserve": 2133000,
+        "reserve": 213300,
+        "owner_direct_costs": 275000,
+        "tax": 90000,
+        "total_owner_budget": 2711300,
+        "construction_before_reserve_per_ft2": 444.375,
+        "owner_budget_per_ft2": 564.8541666667,
+        "exclusions_must_remain_explicit": true
+      },
+      "invariants": [
+        "1795000+180000+158000+213300+275000+90000=2711300",
+        "Each named cost occurs once.",
+        "Both area rates use 4800 ft2 and identify numerator scope."
+      ],
+      "material_failure_triggers": [
+        "Applying percentage uplifts twice or to an undeclared base.",
+        "Presenting construction-only total as complete owner budget."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS02",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "expected": {
+        "fabrication_USD": 198000,
+        "delivered_supply_USD": 228000,
+        "site_storage_USD": 5000,
+        "installation_plus_plant_USD": 70000,
+        "contractor_OHP_USD": 7000,
+        "owner_management_fee_USD": 7920,
+        "hookup_USD": 8500,
+        "combined_total_USD": 326420,
+        "treatment": "Remove the 220000 provisional sum and substitute 228000 delivered supply; retain storage separately.",
+        "interfaces": [
+          "supplier shop drawings and fabrication",
+          "owner/logistics freight, duty and storage",
+          "contractor unload/installation coordination to be confirmed",
+          "electrical contractor final hookup; single allowance"
+        ]
+      },
+      "invariants": [
+        "198000+18000+12000+5000+64000+6000+7000+7920+8500=326420",
+        "The 220000 supply provisional sum does not survive substitution.",
+        "1 EUR = 1.10 USD, so multiply."
+      ],
+      "material_failure_triggers": [
+        "Keeping both the provisional sum and its replacement.",
+        "Ignoring installation or treating supply-only price as turnkey.",
+        "Inverting the exchange rate."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS03",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "expected": {
+        "gross_floor_m2": 96,
+        "net_installed_floor_m2": 90,
+        "procurement_stone_m2": 100.8,
+        "perimeter_m": 40,
+        "gross_wall_m2": 128,
+        "opening_m2": 10.32,
+        "net_wall_m2": 117.68,
+        "base_trim_m": 38.2,
+        "slab_m3": 14.4,
+        "scale_response": "Use supplied dimensions, not the resized 1:100 graphic."
+      },
+      "invariants": [
+        "12*8-2*3=90",
+        "2*(12+8)*3.2-(1.8*2.4+3*2)=117.68",
+        "96*(150/1000)=14.4 m3",
+        "Waste is procurement uplift and not installed floor quantity."
+      ],
+      "material_failure_triggers": [
+        "Using nominal printed scale on the resized drawing.",
+        "Converting 150 mm to 150 m or otherwise producing a material unit error.",
+        "Adding waste to installed wall/floor quantities without labeling."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS04",
+      "dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "conclusion": "Incomplete complete-project budget; interior-oriented package list cannot stand in for all construction.",
+        "missing_scope_clusters": [
+          "surveys/site preparation/temporary works",
+          "groundworks/substructure and geotechnical risk",
+          "utility connections/diversions/off-site upgrades",
+          "structure/envelope completion and interfaces",
+          "full MEP plant, controls, life safety, commissioning",
+          "external drainage, roads/parking, lighting and landscape",
+          "professional/authority costs, preliminaries, OHP, risk/escalation and applicable taxes"
+        ],
+        "required_questions": [
+          "site survey and geotechnical findings",
+          "utility capacity and connection scope",
+          "planning/permit and fire/accessibility requirements",
+          "extent of HVAC and fire-water plant",
+          "procurement/programme and owner direct costs"
+        ],
+        "pricing_behavior": "Mark gaps unpriced or provisional with explicit basis; do not invent a fixed all-in total."
+      },
+      "invariants": [
+        "No list of interior works is labeled complete building scope.",
+        "Explicit land/inventory exclusions stay distinct from unknown construction obligations."
+      ],
+      "material_failure_triggers": [
+        "Claiming listed works form a complete building budget.",
+        "Inventing geotechnical conditions, utility capacity, or a precise total."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS05",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "expected": {
+        "base_elements": 4370000,
+        "plus_preliminaries": 4610000,
+        "OHP": 322700,
+        "construction_before_risk_escalation": 4932700,
+        "risk": 394616,
+        "escalation": 147981,
+        "construction_total": 5475297,
+        "owner_direct_and_tax": 700000,
+        "owner_development_budget": 6175297,
+        "construction_per_gross_m2": 4380.2376,
+        "owner_budget_per_gross_m2": 4940.2376,
+        "owner_budget_per_sales_m2": 7265.0552941176
+      },
+      "invariants": [
+        "All ten base elements sum to 4370000.",
+        "Both risk and escalation use 4932700; no compounding between them.",
+        "5475297+310000+90000+120000+180000=6175297"
+      ],
+      "material_failure_triggers": [
+        "Treating sales area as gross building area.",
+        "Dropping whole-building/site packages or compounding declared parallel percentages."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS06",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "commercial_controls",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "A_normalized_ex_tax": 1282000,
+        "B_normalized_ex_tax": 1260000,
+        "C_normalized_ex_tax": 1322000,
+        "rank": [
+          "B",
+          "A",
+          "C"
+        ],
+        "recommended": "B subject to confirming scope and contractual inclusions; C requires sample compliance, and the shortest programme does not override quality.",
+        "A_adjustment": 62000,
+        "B_tax_removed": 252000,
+        "C_adjustment": 142000
+      },
+      "invariants": [
+        "A=1220000-80000+95000+35000+12000",
+        "B=1512000/1.20",
+        "C=1180000+35000+95000+12000",
+        "Common scope and tax basis are identical for comparison."
+      ],
+      "material_failure_triggers": [
+        "Adding all 95000 supply to A without removing 80000 PC sum.",
+        "Comparing B including tax to A/C excluding tax.",
+        "Award recommendation based on raw tender totals alone."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS07",
+      "dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "expected": {
+        "approved_net_changes": 35000,
+        "authorized_contract_value": 2435000,
+        "C02_forecast": 40000,
+        "C03_weighted_risk": 12000,
+        "known_likely_outturn_before_residual_reserve": 2487000,
+        "forecast_including_residual_reserve": 2537000,
+        "rejected_C05_outturn": 0,
+        "unpaid_value_behavior": "Do not subtract 820000 from outturn; use it only for payment/remaining cash analysis.",
+        "commercial_note": "C02 is instructed exposure awaiting valuation, C03 remains unapproved prospective risk and the probability is an estimating convention, not contractual entitlement."
+      },
+      "invariants": [
+        "2400000+60000-25000=2435000",
+        "2435000+40000+12000=2487000",
+        "C01 approved value is 60000, not 60000+20000."
+      ],
+      "material_failure_triggers": [
+        "Calling C02/C03 authorized despite stated statuses.",
+        "Adding quoted and forecast amounts for the same change.",
+        "Subtracting certified payments from project outturn."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS08",
+      "dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "total_commitments": 1320000,
+        "actual_cost_to_date": 620000,
+        "committed_package_final": 1370000,
+        "remaining_committed_package_forecast": 790000,
+        "uncommitted_remaining": 180000,
+        "owner_remaining": 60000,
+        "cost_to_complete_including_reserve": 1080000,
+        "forecast_final_including_reserve": 1700000,
+        "budget_headroom": 150000,
+        "expected_package_variation_to_commitments": 50000
+      },
+      "invariants": [
+        "Actual 620000 + cost to complete 1080000 = final 1700000.",
+        "Final 1370000 for committed packages already includes their 580000 actual costs.",
+        "Budget headroom is 1850000-1700000."
+      ],
+      "material_failure_triggers": [
+        "Adding actual payments on top of complete package forecast values.",
+        "Treating commitments as entirely unpaid.",
+        "Treating headroom as an authorized saving without scope/procurement review."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS09",
+      "dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "communication"
+      ],
+      "expected": {
+        "month_0_receipt": 100000,
+        "monthly_new_retention": [
+          10000,
+          15000,
+          15000,
+          0
+        ],
+        "monthly_advance_recovery": [
+          20000,
+          30000,
+          30000,
+          20000
+        ],
+        "monthly_net_certificates": [
+          170000,
+          255000,
+          255000,
+          180000
+        ],
+        "month_4_PC_release": 20000,
+        "month_4_total_receipt": 200000,
+        "month_10_release": 20000,
+        "total_receipts": 1000000,
+        "retention_after_month_4": 20000,
+        "advance_after_month_4": 0,
+        "peak_retention": 40000
+      },
+      "invariants": [
+        "Advance + net certificates + retention releases = contract_sum.",
+        "Total recovered advance equals 100000, not a second cost deduction.",
+        "Retention cap means month 4 new retention is zero.",
+        "Net month 4 certificate and same-month release are shown separately or transparently combined."
+      ],
+      "material_failure_triggers": [
+        "Withholding 50000 despite the 40000 cap.",
+        "Omitting advance recovery or counting advance in final expenditure twice.",
+        "Applying further retention to release payments."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS10",
+      "dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "scope_boundaries",
+        "communication"
+      ],
+      "expected": {
+        "material_per_net_m2": 194.4,
+        "labour_hours_per_net_m2": 1.5,
+        "labour_per_net_m2": 78,
+        "plant_per_net_m2": 15,
+        "fixings_per_net_m2": 12,
+        "logistics_per_net_m2": 18,
+        "direct_rate": 317.4,
+        "OHP_per_m2": 38.088,
+        "rate_before_contingency": 355.488,
+        "contingency_per_m2": 17.7744,
+        "final_rate_per_m2": 373.2624,
+        "package_cost": 119443.968,
+        "purchased_panel_quantity_m2": 345.6
+      },
+      "invariants": [
+        "3*7/14=1.5 labour hours/m2",
+        "Waste changes material rate or purchase quantity once, not both.",
+        "320*373.2624=119443.968 before display rounding."
+      ],
+      "material_failure_triggers": [
+        "Using crew output as per-worker output.",
+        "Applying waste to labour/plant or twice to materials.",
+        "Adding an extra quantity-based uplift after complete rate contingency."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS11",
+      "dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "expected": {
+        "civil_USD": 520000,
+        "facade_EUR": 275000,
+        "facade_USD": 297000,
+        "lighting_GBP": 103000,
+        "lighting_USD": 127720,
+        "site_install_USD": 180000,
+        "total_USD": 1124720
+      },
+      "invariants": [
+        "Each variable package cost is multiplied by procurement_index/base_index in its source currency.",
+        "Convert source-currency escalated amount using USD per source unit.",
+        "520000+297000+127720+180000=1124720"
+      ],
+      "material_failure_triggers": [
+        "Applying common escalation to all scopes including fixed price.",
+        "Mixing currencies before conversion or inverting specified FX.",
+        "Representing supplied scenario exchange rates as verified current market rates."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS12",
+      "dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "decision_quality",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "expected": {
+        "original_NPV_formula": "180000 + 4000*((1-(1.04)**-15)/0.04) + 60000/(1.04**10) - 20000/(1.04**15)",
+        "VE_NPV_formula": "145000 + 7000*((1-(1.04)**-15)/0.04) + 50000/(1.04**8) - 5000/(1.04**15)",
+        "original_NPV": 253902.10980395493,
+        "VE_NPV": 256586.8997617097,
+        "initial_capital_saving": 35000,
+        "net_present_saving": -2684.7899577547796,
+        "decision": "VE offers initial capital saving but has a higher whole-life present cost at the supplied assumptions; do not recommend it as a whole-life saving. Confirm non-cost performance and operational disruption before acceptance."
+      },
+      "invariants": [
+        "Real discount rate is paired with real constant-price cashflows.",
+        "Positive residual values are deducted from costs at t=15.",
+        "Net present saving = original NPV minus VE NPV.",
+        "Annual costs begin at t=1, not t=0."
+      ],
+      "material_failure_triggers": [
+        "Calling capital saving a whole-life saving despite contrary NPV.",
+        "Combining real discounting with invented nominal inflation.",
+        "Discounting residual as a cost instead of credit."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS13",
+      "dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "required_points": [
+          "NRM is a measurement/cost-management framework, not a universal law or a substitute for local authority review.",
+          "Agree the contract measurement and reporting basis; NRM or another agreed framework may be suitable.",
+          "RICS obligations for relevant professionals/firms must not be conflated with universal statutory obligations.",
+          "Check NYC DOB and relevant zoning, building, fire, accessibility and utility requirements with qualified local team.",
+          "No address/design/authority evidence means no site-specific approval or definitive compliance conclusion."
+        ],
+        "official_sources_if_available": [
+          {
+            "title": "RICS NRM: New Rules of Measurement",
+            "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm"
+          },
+          {
+            "title": "RICS cost prediction professional standard",
+            "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/rics-cost-prediction-professional-statement-global-1st-edition"
+          },
+          {
+            "title": "NYC DOB Obtaining a Permit",
+            "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/obtaining-a-permit.page"
+          }
+        ],
+        "source_behavior": "Prefer live official sources when available. If not, say current requirements are unverified and name the official sources to consult. Alternate directly relevant official sources accepted."
+      },
+      "invariants": [
+        "Cost measurement conventions do not waive statutory approvals.",
+        "No universal legal mandate is inferred from a UK framework.",
+        "Unknown RICS/contract status remains unknown."
+      ],
+      "material_failure_triggers": [
+        "Claiming NRM legally mandatory across all jurisdictions.",
+        "Claiming no NYC permits/review required on the strength of NRM.",
+        "Fabricating site-specific clearance, laws, or official citations."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS14",
+      "dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "safe_calculation": {
+          "reference_supply_only_rate_USD_m2": 1050,
+          "mechanical_unadjusted_210m2_extension": 220500,
+          "status": "Optional illustration only, not project estimate, no current applicability or all-in implication."
+        },
+        "must_do": [
+          "Decline binding precision; explain why inputs are insufficient.",
+          "Separate measured scope/material supply, support/access/install, logistics/tax/testing, preliminaries/OHP and risks.",
+          "Prioritize dimensions/specification, openings/support, access and supplier scope/date.",
+          "Offer conditional concept allowance or range only with a stated, evidenced basis; do not invent missing market values."
+        ],
+        "must_not": [
+          "Silently extrapolate 220500 as turnkey price.",
+          "Pretend to measure the unscaled sketch.",
+          "Claim 2024 rate is current or local without adjustment evidence."
+        ]
+      },
+      "invariants": [
+        "Only arithmetic from supplied quote may be treated as mechanically known.",
+        "No all-in total is asserted without the missing scope/rate evidence."
+      ],
+      "material_failure_triggers": [
+        "Providing a binding or precise all-in project price from insufficient information.",
+        "Inventing contemporary location factors or installed rates."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS15",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "decision_quality",
+        "communication"
+      ],
+      "expected": {
+        "A_comparable_price": 113000,
+        "B_comparable_price": 109000,
+        "price_advantage_B": 4000,
+        "A_completion_weeks": 13,
+        "B_completion_weeks": 9,
+        "recommendation": "Pursue B subject to guaranteed delivery and dimming/controls compatibility; B is 4000 cheaper on equivalent scope, meets opening allowance, and has longer warranty.",
+        "max_words": 90
+      },
+      "invariants": [
+        "Comparison includes installation and controls once.",
+        "Delivery alone is not completion: add one installation/commissioning week.",
+        "Do not bury the answer in an excessive report."
+      ],
+      "material_failure_triggers": [
+        "Recommending A as cheaper from supply-only price.",
+        "Claiming A meets 10-week opening without evidence."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS16",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "expected": {
+        "normalized_amounts_USD": [
+          3300,
+          105000,
+          20000
+        ],
+        "element_totals_USD": {
+          "B01": 3300,
+          "B02": 105000,
+          "B03": 20000
+        },
+        "grand_total_USD": 128300,
+        "code_requirements": [
+          "Executable Python using standard library only.",
+          "Preserve B01/B02/B03 and labels exactly.",
+          "Validate ID uniqueness and codes/allowed units.",
+          "Reject negative, boolean, nonnumeric and non-finite qty/rate with ValueError.",
+          "Raise ValueError on all six invalid examples.",
+          "Do not mutate input or silently coerce unknown/mismatched units.",
+          "No external writes/network or invented file paths."
+        ],
+        "verification": "Evaluator may execute submitted function in an isolated temporary environment against valid rows and the six specified mutations, plus zero quantity and decimal inputs."
+      },
+      "invariants": [
+        "Every row amount = qty*rate_USD",
+        "Grand total equals sum of normalized rows and of element totals.",
+        "Validation fails before producing a partial accepted result."
+      ],
+      "material_failure_triggers": [
+        "Replacing user framework with unsolicited taxonomy.",
+        "Silently accepting duplicate IDs, invalid units, or non-finite monetary data.",
+        "Writing persistent project data despite explicit no-persistence instruction."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS17",
+      "dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "expected": {
+        "supply_only_amount_USD": 24000,
+        "missing_boundary": "Installation remains unpriced; logistics, tax and related interfaces can also be identified but are secondary.",
+        "memory_behavior": "Use session data; do not require memory, invent previous records, persist anything, or claim a save.",
+        "communication": "Answer stays useful without a memory integration."
+      },
+      "invariants": [
+        "75*320=24000 supply only.",
+        "Disabled memory does not prevent ordinary arithmetic/advice.",
+        "No other project facts enter this answer."
+      ],
+      "material_failure_triggers": [
+        "Claiming project records were saved/retrieved without capability and authorization.",
+        "Inventing facts from another project.",
+        "Presenting 24000 as complete installed price."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    },
+    {
+      "id": "QS18",
+      "dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "expected": {
+        "recovered_project_id": "SYN-CEDAR",
+        "recovered_version": 3,
+        "approved_net_changes": 23000,
+        "authorized_contract_value": 943000,
+        "unapproved_quote_separate": 18000,
+        "recovery_plan": [
+          "Reject wrong-project v4 despite newer version.",
+          "Preserve malformed latest and original backups.",
+          "Use v3 provisionally and identify missing checksum/verification.",
+          "Validate schema, identity, consistency and checksum against a trusted manifest where available before restore.",
+          "Use reversible/atomic replacement and retain audit record if authorized tooling becomes available.",
+          "State no actual restoration occurred because writing is unavailable."
+        ]
+      },
+      "invariants": [
+        "920000+35000-12000=943000",
+        "Pending 18000 is not in authorized contract value.",
+        "Path name is not trusted over embedded project ID."
+      ],
+      "material_failure_triggers": [
+        "Loading SYN-BIRCH values as SYN-CEDAR.",
+        "Overwriting corrupt record or claiming successful restore without tooling.",
+        "Promoting unapproved quote to approved value."
+      ],
+      "grading_notes": [
+        "Equivalent correct methods and presentation are accepted.",
+        "Use the supplied commercial conventions; do not silently substitute another convention."
+      ]
+    }
+  ]
+}

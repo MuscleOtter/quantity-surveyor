@@ -1,0 +1,28 @@
+{
+  "V01": {
+    "gross_m2": 40,
+    "door_m2": 6,
+    "window_m2": 3,
+    "net_cladding_m2": 31,
+    "returns_m": 15,
+    "return_area_m2": 3,
+    "purchase_cladding_m2": 33.17,
+    "purchase_returns_m2": 3.15,
+    "cladding_supply": 5970.6,
+    "cladding_install": 6820,
+    "return_supply": 315,
+    "return_install": 450,
+    "total": 13555.6
+  },
+  "V02": {
+    "slab_A_m3": 30,
+    "slab_B_m3": 15,
+    "slab_total_m3": 45,
+    "paving_m2": 800,
+    "drain_m": 48,
+    "slab_cost": 13500,
+    "paving_cost": 52000,
+    "drain_cost": 4320,
+    "total": 69820
+  }
+}

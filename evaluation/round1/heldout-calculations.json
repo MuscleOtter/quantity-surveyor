@@ -1,0 +1,124 @@
+{
+  "verification_method": "Executed Python decimal arithmetic against assigned fixture data; not scores or self-grades",
+  "cases": {
+    "H01": {
+      "gross_m2": "160",
+      "void_m2": "12",
+      "net_installed_m2": "148",
+      "waste_m2": "14.8",
+      "purchase_m2": "162.8",
+      "net_installed_rate_USD_m2": "300",
+      "checks": {
+        "net_plus_void_equals_gross": true,
+        "net_times_rate_equals_contract": true
+      },
+      "response_whitespace_word_count": 202
+    },
+    "H02": {
+      "fabrication_packing_USD": "150000.00",
+      "owner_supply_delivery_USD": "165000.00",
+      "installer_retained_USD": "85000",
+      "security_USD": "9000",
+      "budget_USD": "259000.00",
+      "bridge_USD": "259000.00",
+      "checks": {
+        "bid_breakdown_reconciles": true,
+        "component_total_equals_bridge": true
+      },
+      "response_whitespace_word_count": 241
+    },
+    "H03": {
+      "authorized_USD": "740000",
+      "retention_cap_USD": "37000.00",
+      "rows": [
+        {
+          "month": 1,
+          "gross": "180000",
+          "advance_recovery": "18000.0",
+          "retention_withheld": "9000.00",
+          "PC_release": "0",
+          "certificate": "153000.00",
+          "payment_month": 2
+        },
+        {
+          "month": 2,
+          "gross": "240000",
+          "advance_recovery": "24000.0",
+          "retention_withheld": "12000.00",
+          "PC_release": "0",
+          "certificate": "204000.00",
+          "payment_month": 3
+        },
+        {
+          "month": 3,
+          "gross": "240000",
+          "advance_recovery": "24000.0",
+          "retention_withheld": "12000.00",
+          "PC_release": "0",
+          "certificate": "204000.00",
+          "payment_month": 4
+        },
+        {
+          "month": 4,
+          "gross": "80000",
+          "advance_recovery": "8000.0",
+          "retention_withheld": "4000.00",
+          "PC_release": "18500.00",
+          "certificate": "86500.00",
+          "payment_month": 5
+        }
+      ],
+      "advance_recovered_USD": "74000.0",
+      "advance_outstanding_USD": "0.0",
+      "net_certificates_USD": "647500.00",
+      "cash_paid_by_PC_USD": "635000.00",
+      "unpaid_certified_at_PC_USD": "86500.00",
+      "retention_remaining_at_PC_USD": "18500.00",
+      "month5_cumulative_USD": "721500.00",
+      "eventual_receipts_USD": "740000.00",
+      "checks": {
+        "gross_valuations_equal_authorized": true,
+        "recovery_equals_advance": true,
+        "retention_withheld_equals_cap": true,
+        "receipts_equal_authorized": true,
+        "certificate_advance_retention_reconciles": true
+      },
+      "response_whitespace_word_count": 345
+    },
+    "H04": {
+      "priced_partial_tender_USD": "2100000",
+      "total_owner_budget": null,
+      "missing_cost_treatment": "unpriced, not zero",
+      "live_source_verification": {
+        "RICS_NRM": "official page opened; describes measurement/cost-management guidance",
+        "Texas_statute": "official search result found; live opens redirected to home page; not used to assert a site-specific legal requirement"
+      },
+      "arithmetic": "2100000 + unpriced excluded/uncovered scope; no numeric total supported",
+      "response_whitespace_word_count": 169,
+      "response_word_cap": 180
+    },
+    "H05": {
+      "quantity_m2": 60,
+      "current_rate_USD_m2": 500,
+      "supply_package_USD": "30000",
+      "record_scope_results": [
+        {
+          "filename": "memory/SYN-ORCHID/latest.json",
+          "internal_project_matches": false,
+          "integrity_independently_verified": false
+        },
+        {
+          "filename": "memory/SYN-ORCHID/v2.json",
+          "internal_project_matches": true,
+          "integrity_independently_verified": false
+        }
+      ],
+      "memory_actions": "none; no reads of actual memory, writes or deletes",
+      "checks": {
+        "package_divided_by_quantity_equals_session_rate": true
+      },
+      "response_whitespace_word_count": 137,
+      "response_word_cap": 160
+    }
+  }
+}

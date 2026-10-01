@@ -1,0 +1,2062 @@
+{
+  "reviewer": {
+    "configured_model": "gpt-6-astra",
+    "configured_reasoning": "high",
+    "actual_tool_exposed_revision": "unavailable"
+  },
+  "hashes": {
+    "frozen": {
+      "fixtures.json": {
+        "expected": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+        "actual": "62969ff36833da666e6c3edc85eb1527edd1acf98e3e7426babf71819f29e8e6",
+        "match": true
+      },
+      "oracle.json": {
+        "expected": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+        "actual": "7566bdbd5a4fd70b3025cb7dbfc360a26eb7591d1bf8ff614b6b02b303c44e57",
+        "match": true
+      },
+      "heldout-fixtures.json": {
+        "expected": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+        "actual": "6f3521d6e1e0d9136c0fd4b47d22c336d6e87598bccacfc35eb8e0b0b0f8d608",
+        "match": true
+      },
+      "heldout-oracle.json": {
+        "expected": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+        "actual": "22c5f630fa72d661db7e266c1947a566463f45f1cddbc1c71137b781f578f3e9",
+        "match": true
+      },
+      "rubric.json": {
+        "expected": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+        "actual": "da2b226be65432242c7a09d14548c4aee45785424eb50f8032d216508dd5bdc3",
+        "match": true
+      },
+      "README.md": {
+        "expected": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+        "actual": "9b666de1fac72c7838468f683d65b7d7bc31b98c2c1091e581bfb63d3466a363",
+        "match": true
+      },
+      "validation.json": {
+        "expected": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+        "actual": "2ebed1ebe99647d729c25592a83fee1fafd49816984ae466e9afab9a278adc1a",
+        "match": true
+      }
+    },
+    "candidate": {
+      "LICENSE": {
+        "expected": "89526fc5f7f316c34ba9d29d4bcf0d67b65f2564436c8fa099cf585062392722",
+        "actual": "89526fc5f7f316c34ba9d29d4bcf0d67b65f2564436c8fa099cf585062392722",
+        "match": true
+      },
+      "README.md": {
+        "expected": "9c3c2b62f01bcc828e4f0ac431c986e6a148631a06bb774d44cef646961069fd",
+        "actual": "9c3c2b62f01bcc828e4f0ac431c986e6a148631a06bb774d44cef646961069fd",
+        "match": true
+      },
+      "SKILL.md": {
+        "expected": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+        "actual": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+        "match": true
+      },
+      "references/lifecycle.md": {
+        "expected": "cc69a89c6ce217e8eeab030393b1f3f75278eee1192cfaa48ba878b21a536196",
+        "actual": "cc69a89c6ce217e8eeab030393b1f3f75278eee1192cfaa48ba878b21a536196",
+        "match": true
+      },
+      "references/measurement-and-estimating.md": {
+        "expected": "d98945d577701eaf8b74593161e6ee35b61fde566c57091629be0d2be23ab3ca",
+        "actual": "d98945d577701eaf8b74593161e6ee35b61fde566c57091629be0d2be23ab3ca",
+        "match": true
+      },
+      "references/standards.md": {
+        "expected": "bf3e395e53f05f845df644ba464bfe2d082ad61a14d3d925a30ce7eaffb35343",
+        "actual": "bf3e395e53f05f845df644ba464bfe2d082ad61a14d3d925a30ce7eaffb35343",
+        "match": true
+      },
+      "references/evidence-and-interfaces.md": {
+        "expected": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+        "actual": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+        "match": true
+      },
+      "references/commercial-control.md": {
+        "expected": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+        "actual": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+        "match": true
+      },
+      "references/memory-and-review.md": {
+        "expected": "9f47e569bcdd7e710c07ffeed68f97bc7c3452ef81be0e6299585fa2de6c3f7b",
+        "actual": "9f47e569bcdd7e710c07ffeed68f97bc7c3452ef81be0e6299585fa2de6c3f7b",
+        "match": true
+      },
+      "scripts/memory.py": {
+        "expected": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+        "actual": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+        "match": true
+      },
+      "templates/forecast.csv": {
+        "expected": "771def4a541813c6c1302ad7794b32e2304c64d7046e7310c1c8d7e46b46dbec",
+        "actual": "771def4a541813c6c1302ad7794b32e2304c64d7046e7310c1c8d7e46b46dbec",
+        "match": true
+      },
+      "templates/changes.csv": {
+        "expected": "d6341a3d1e4dcf4185f5463d8a6fd2c88326ef905359f9950ec1b9d84e34f00c",
+        "actual": "d6341a3d1e4dcf4185f5463d8a6fd2c88326ef905359f9950ec1b9d84e34f00c",
+        "match": true
+      },
+      "templates/estimate.csv": {
+        "expected": "3080958cfbf53429ee3390edecd348ec62e381266aadafcb442f20bd22ef381f",
+        "actual": "3080958cfbf53429ee3390edecd348ec62e381266aadafcb442f20bd22ef381f",
+        "match": true
+      },
+      "templates/project-basis.md": {
+        "expected": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85",
+        "actual": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85",
+        "match": true
+      }
+    },
+    "responses": {
+      "QS05.md": {
+        "expected": "1cf89634e342b14d7c80a695438a8f90bc286110c23c3b741394d9c7e56b2ded",
+        "actual": "1cf89634e342b14d7c80a695438a8f90bc286110c23c3b741394d9c7e56b2ded",
+        "match": true
+      },
+      "QS15.md": {
+        "expected": "8f2be7ca798b37be5af1f2444f52fc3ab6f3d5740648234943859fb0ad96480c",
+        "actual": "8f2be7ca798b37be5af1f2444f52fc3ab6f3d5740648234943859fb0ad96480c",
+        "match": true
+      },
+      "QS01.md": {
+        "expected": "8a551d6cb81038101688467a0f0e4e02de1bfc98ab63195d3948467b7c71f708",
+        "actual": "8a551d6cb81038101688467a0f0e4e02de1bfc98ab63195d3948467b7c71f708",
+        "match": true
+      },
+      "H02.md": {
+        "expected": "87a7ccf8e1a952d49173b00c9bf2f9a32aff207c81ffba3ebbd3f40245bad2fb",
+        "actual": "87a7ccf8e1a952d49173b00c9bf2f9a32aff207c81ffba3ebbd3f40245bad2fb",
+        "match": true
+      },
+      "QS11.md": {
+        "expected": "8811eb4807050810c20fcdb0eeeacf5b0d0ef7d7391f79a1cdc3288c9ac3a6bb",
+        "actual": "8811eb4807050810c20fcdb0eeeacf5b0d0ef7d7391f79a1cdc3288c9ac3a6bb",
+        "match": true
+      },
+      "H03.md": {
+        "expected": "0508abb26f8cb2962d41f5a7a605173ec4d4caaa7f8cdbf4fc564084c0dcf960",
+        "actual": "0508abb26f8cb2962d41f5a7a605173ec4d4caaa7f8cdbf4fc564084c0dcf960",
+        "match": true
+      },
+      "QS10.md": {
+        "expected": "e0db6edd2e8df69c10efe13394aac79a405f7b0daf5b102744cddd745e6f26d3",
+        "actual": "e0db6edd2e8df69c10efe13394aac79a405f7b0daf5b102744cddd745e6f26d3",
+        "match": true
+      },
+      "QS04.md": {
+        "expected": "ad11545fa0fbfdde360a51cdd96c9ceb3225a7283b9a9bd1d7c2002fcd91cca7",
+        "actual": "ad11545fa0fbfdde360a51cdd96c9ceb3225a7283b9a9bd1d7c2002fcd91cca7",
+        "match": true
+      },
+      "QS14.md": {
+        "expected": "a2098cc1da614b470b536873edbe8eeb4ec2a6dcb07e8c1801a823f4bd3b82ad",
+        "actual": "a2098cc1da614b470b536873edbe8eeb4ec2a6dcb07e8c1801a823f4bd3b82ad",
+        "match": true
+      },
+      "QS09.md": {
+        "expected": "12f34ffd52225a3b98503342e5ee0a3bf46e2158594c7253385ee83ad30abbaa",
+        "actual": "12f34ffd52225a3b98503342e5ee0a3bf46e2158594c7253385ee83ad30abbaa",
+        "match": true
+      },
+      "QS16_normalize_costs.py": {
+        "expected": "351a72b743728f195a29272ab455fc4c0f521e38e8dc41d7e0e10bdb9696257f",
+        "actual": "351a72b743728f195a29272ab455fc4c0f521e38e8dc41d7e0e10bdb9696257f",
+        "match": true
+      },
+      "QS08.md": {
+        "expected": "73a955450870a431fb4d2347645f0efdf59a71b045e9e0e3c8379fc646e270cf",
+        "actual": "73a955450870a431fb4d2347645f0efdf59a71b045e9e0e3c8379fc646e270cf",
+        "match": true
+      },
+      "QS18.md": {
+        "expected": "51314283fb5fcfa2b8080000094d3eeb67d68ef788665e6d60c035f6b44985c3",
+        "actual": "51314283fb5fcfa2b8080000094d3eeb67d68ef788665e6d60c035f6b44985c3",
+        "match": true
+      },
+      "QS03.md": {
+        "expected": "ecb7f5c1b58b12e7c0778e14042154afb082ae6fd135a759e53b0f2e9c4e231c",
+        "actual": "ecb7f5c1b58b12e7c0778e14042154afb082ae6fd135a759e53b0f2e9c4e231c",
+        "match": true
+      },
+      "QS13.md": {
+        "expected": "92e753bc42992b7e5c4db3c11a68b7a502d2844950f436a00b10f040d13997d3",
+        "actual": "92e753bc42992b7e5c4db3c11a68b7a502d2844950f436a00b10f040d13997d3",
+        "match": true
+      },
+      "H04.md": {
+        "expected": "1c72198025872f8c308c419eefca9210c91b854d31c6f99e26810327a93df8bd",
+        "actual": "1c72198025872f8c308c419eefca9210c91b854d31c6f99e26810327a93df8bd",
+        "match": true
+      },
+      "QS07.md": {
+        "expected": "36d75c9a76a59400c0f4ae17c64b9929dfb63b14071c9fa853130ba8313a7395",
+        "actual": "36d75c9a76a59400c0f4ae17c64b9929dfb63b14071c9fa853130ba8313a7395",
+        "match": true
+      },
+      "QS17.md": {
+        "expected": "c77a195b53cbdf6e2c929e079648802d4343e76c11d48ad80ab4c01102f4c570",
+        "actual": "c77a195b53cbdf6e2c929e079648802d4343e76c11d48ad80ab4c01102f4c570",
+        "match": true
+      },
+      "H05.md": {
+        "expected": "def220d880943c8d11c47a81555805e82958091e27fe3db3b466fc127a3613b5",
+        "actual": "def220d880943c8d11c47a81555805e82958091e27fe3db3b466fc127a3613b5",
+        "match": true
+      },
+      "QS06.md": {
+        "expected": "6eb040088ba31e780baa8966c22da0fb54bd1f1fda04e1b27ae7d3ca13cd7b82",
+        "actual": "6eb040088ba31e780baa8966c22da0fb54bd1f1fda04e1b27ae7d3ca13cd7b82",
+        "match": true
+      },
+      "QS16.md": {
+        "expected": "5f692d1f8851403d1f9e58b24f8077dc79e2024ba1c956a480e23981b07353d1",
+        "actual": "5f692d1f8851403d1f9e58b24f8077dc79e2024ba1c956a480e23981b07353d1",
+        "match": true
+      },
+      "QS02.md": {
+        "expected": "b30418daaf31c775da2233feb4dfea869537fa05d0806cb02208f4b307ddca2a",
+        "actual": "b30418daaf31c775da2233feb4dfea869537fa05d0806cb02208f4b307ddca2a",
+        "match": true
+      },
+      "H01.md": {
+        "expected": "899b49e8173e75d16d366de1b6f744573c1c24cc87f1715e008bd115788cd408",
+        "actual": "899b49e8173e75d16d366de1b6f744573c1c24cc87f1715e008bd115788cd408",
+        "match": true
+      },
+      "QS12.md": {
+        "expected": "1e9d26d315330c8f0cf14144fef47c858f67db6e9920e8ef081cd42b2b39c431",
+        "actual": "1e9d26d315330c8f0cf14144fef47c858f67db6e9920e8ef081cd42b2b39c431",
+        "match": true
+      }
+    }
+  },
+  "word_counts": {
+    "QS01": {
+      "rendered_words": 214,
+      "raw_whitespace_tokens": 301,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS02": {
+      "rendered_words": 287,
+      "raw_whitespace_tokens": 375,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS03": {
+      "rendered_words": 259,
+      "raw_whitespace_tokens": 313,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS04": {
+      "rendered_words": 467,
+      "raw_whitespace_tokens": 532,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS05": {
+      "rendered_words": 258,
+      "raw_whitespace_tokens": 362,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS06": {
+      "rendered_words": 291,
+      "raw_whitespace_tokens": 318,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS07": {
+      "rendered_words": 285,
+      "raw_whitespace_tokens": 336,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS08": {
+      "rendered_words": 296,
+      "raw_whitespace_tokens": 380,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS09": {
+      "rendered_words": 318,
+      "raw_whitespace_tokens": 419,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS10": {
+      "rendered_words": 225,
+      "raw_whitespace_tokens": 296,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS11": {
+      "rendered_words": 166,
+      "raw_whitespace_tokens": 228,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS12": {
+      "rendered_words": 222,
+      "raw_whitespace_tokens": 273,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS13": {
+      "rendered_words": 180,
+      "raw_whitespace_tokens": 180,
+      "cap": 220,
+      "within_cap": true
+    },
+    "QS14": {
+      "rendered_words": 287,
+      "raw_whitespace_tokens": 314,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS15": {
+      "rendered_words": 66,
+      "raw_whitespace_tokens": 73,
+      "cap": 90,
+      "within_cap": true
+    },
+    "QS16": {
+      "rendered_words": 555,
+      "raw_whitespace_tokens": 605,
+      "cap": null,
+      "within_cap": true
+    },
+    "QS17": {
+      "rendered_words": 67,
+      "raw_whitespace_tokens": 69,
+      "cap": 150,
+      "within_cap": true
+    },
+    "QS18": {
+      "rendered_words": 234,
+      "raw_whitespace_tokens": 238,
+      "cap": null,
+      "within_cap": true
+    },
+    "H01": {
+      "rendered_words": 177,
+      "raw_whitespace_tokens": 212,
+      "cap": null,
+      "within_cap": true
+    },
+    "H02": {
+      "rendered_words": 198,
+      "raw_whitespace_tokens": 243,
+      "cap": null,
+      "within_cap": true
+    },
+    "H03": {
+      "rendered_words": 278,
+      "raw_whitespace_tokens": 383,
+      "cap": null,
+      "within_cap": true
+    },
+    "H04": {
+      "rendered_words": 150,
+      "raw_whitespace_tokens": 152,
+      "cap": 180,
+      "within_cap": true
+    },
+    "H05": {
+      "rendered_words": 144,
+      "raw_whitespace_tokens": 146,
+      "cap": 160,
+      "within_cap": true
+    }
+  },
+  "independent_arithmetic": {
+    "QS01": {
+      "elements": 1795000,
+      "elements_plus_preliminaries": 1975000,
+      "OHP": 158000.0,
+      "construction_before_reserve": 2133000.0,
+      "reserve": 213300.0,
+      "owner_direct_costs": 275000,
+      "total_owner_budget": 2711300.0,
+      "construction_before_reserve_per_ft2": 444.375,
+      "owner_budget_per_ft2": 564.8541666666666
+    },
+    "QS02": {
+      "fabrication_USD": 198000.00000000003,
+      "delivered_supply_USD": 228000.00000000003,
+      "combined_total_USD": 326420.0
+    },
+    "QS03": {
+      "gross_floor_m2": 96.0,
+      "net_installed_floor_m2": 90.0,
+      "procurement_stone_m2": 100.80000000000001,
+      "perimeter_m": 40.0,
+      "gross_wall_m2": 128.0,
+      "opening_m2": 10.32,
+      "net_wall_m2": 117.68,
+      "base_trim_m": 38.2,
+      "slab_m3": 14.4
+    },
+    "QS05": {
+      "base_elements": 4370000,
+      "plus_preliminaries": 4610000,
+      "OHP": 322700.00000000006,
+      "construction_before_risk_escalation": 4932700.0,
+      "risk": 394616.0,
+      "escalation": 147981.0,
+      "construction_total": 5475297.0,
+      "owner_direct_and_tax": 700000,
+      "owner_development_budget": 6175297.0,
+      "construction_per_gross_m2": 4380.2376,
+      "owner_budget_per_gross_m2": 4940.2376,
+      "owner_budget_per_sales_m2": 7265.0552941176475
+    },
+    "QS06": {
+      "A_normalized_ex_tax": 1282000,
+      "B_normalized_ex_tax": 1260000.0,
+      "C_normalized_ex_tax": 1322000
+    },
+    "QS07": {
+      "approved_net_changes": 35000,
+      "authorized_contract_value": 2435000,
+      "known_likely_outturn_before_residual_reserve": 2487000.0,
+      "forecast_including_residual_reserve": 2537000.0
+    },
+    "QS08": {
+      "total_commitments": 1320000,
+      "actual_cost_to_date": 620000,
+      "committed_package_final": 1370000,
+      "remaining_committed_package_forecast": 790000,
+      "forecast_final_including_reserve": 1700000,
+      "cost_to_complete_including_reserve": 1080000,
+      "budget_headroom": 150000
+    },
+    "QS09": {
+      "monthly_new_retention": [
+        10000.0,
+        15000.0,
+        15000.0,
+        0.0
+      ],
+      "monthly_advance_recovery": [
+        20000.0,
+        30000.0,
+        30000.0,
+        20000.0
+      ],
+      "monthly_net_certificates": [
+        170000.0,
+        255000.0,
+        255000.0,
+        180000.0
+      ],
+      "month_4_PC_release": 20000.0,
+      "total_receipts": 1000000.0,
+      "advance_after_month_4": 0.0
+    },
+    "QS10": {
+      "material_per_net_m2": 194.4,
+      "labour_hours_per_net_m2": 1.5,
+      "labour_per_net_m2": 78.0,
+      "plant_per_net_m2": 15.0,
+      "direct_rate": 317.4,
+      "OHP_per_m2": 38.087999999999994,
+      "contingency_per_m2": 17.774399999999996,
+      "final_rate_per_m2": 373.26239999999996,
+      "package_cost": 119443.968,
+      "purchased_panel_quantity_m2": 345.6
+    },
+    "QS11": {
+      "civil_USD": 520000.0,
+      "facade_USD": 297000.0,
+      "lighting_USD": 127720.0,
+      "total_USD": 1124720.0
+    },
+    "QS12": {
+      "original_NPV": 253902.1098039549,
+      "VE_NPV": 256586.89976170965,
+      "net_present_saving": -2684.7899577547505,
+      "initial_capital_saving": 35000
+    },
+    "QS14": {
+      "reference_rate": 1050.0,
+      "unadjusted_extension": 220500.0
+    },
+    "QS15": {
+      "A_comparable_price": 113000,
+      "B_comparable_price": 109000,
+      "price_advantage_B": 4000,
+      "A_completion_weeks": 13,
+      "B_completion_weeks": 9
+    },
+    "QS16": {
+      "grand_total_USD": 128300
+    },
+    "QS17": {
+      "supply_only_amount_USD": 24000
+    },
+    "QS18": {
+      "approved_net_changes": 23000,
+      "authorized_contract_value": 943000
+    },
+    "H01": {
+      "gross_m2": 160,
+      "net_installed_m2": 148,
+      "purchase_quantity_m2": 162.8,
+      "net_installed_rate_USD_m2": 300.0
+    },
+    "H02": {
+      "fabricated_material_USD": 150000.0,
+      "delivered_supply_USD": 165000.0,
+      "installer_after_PC_removal_USD": 85000,
+      "combined_USD": 259000.0,
+      "equivalent_installer_replacement_total_USD": 250000.0
+    },
+    "H03": {
+      "authorized_contract_value": 740000,
+      "retention_cap": 37000.0,
+      "new_retention": [
+        9000.0,
+        12000.0,
+        12000.0,
+        4000.0
+      ],
+      "advance_recovery": [
+        18000.0,
+        24000.0,
+        24000.0,
+        8000.0
+      ],
+      "net_certificates_before_releases": [
+        153000.0,
+        204000.0,
+        204000.0,
+        68000.0
+      ],
+      "PC_release": 18500.0,
+      "month_4_certificate_including_PC_release": 86500.0,
+      "cash_paid_by_PC": 635000.0,
+      "unpaid_certificate_at_PC": 86500.0,
+      "remaining_retention_after_PC": 18500.0,
+      "eventual_total_receipts": 740000.0
+    },
+    "H05": {
+      "current_supply_amount_USD": 30000
+    }
+  },
+  "code_tests": [
+    {
+      "test": "frozen duplicate ID",
+      "result": "ValueError",
+      "message": "duplicate row id: r1",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "frozen unknown code",
+      "result": "ValueError",
+      "message": "unknown framework code: B99",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "frozen negative qty",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "frozen wrong unit",
+      "result": "ValueError",
+      "message": "unit mismatch for B01: kg",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "frozen NaN rate",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "frozen boolean qty",
+      "result": "ValueError",
+      "message": "qty must be numeric, excluding booleans",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=-1",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=True",
+      "result": "ValueError",
+      "message": "qty must be numeric, excluding booleans",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty='3'",
+      "result": "ValueError",
+      "message": "qty must be numeric, excluding booleans",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=inf",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=-inf",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=nan",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional qty=Decimal('NaN')",
+      "result": "InvalidOperation",
+      "message": "[<class 'decimal.InvalidOperation'>]",
+      "meets_ValueError_contract": false
+    },
+    {
+      "test": "additional qty=Decimal('Infinity')",
+      "result": "ValueError",
+      "message": "qty must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=-1",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=True",
+      "result": "ValueError",
+      "message": "rate_USD must be numeric, excluding booleans",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD='3'",
+      "result": "ValueError",
+      "message": "rate_USD must be numeric, excluding booleans",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=inf",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=-inf",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=nan",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "additional rate_USD=Decimal('NaN')",
+      "result": "InvalidOperation",
+      "message": "[<class 'decimal.InvalidOperation'>]",
+      "meets_ValueError_contract": false
+    },
+    {
+      "test": "additional rate_USD=Decimal('Infinity')",
+      "result": "ValueError",
+      "message": "rate_USD must be finite and nonnegative",
+      "meets_ValueError_contract": true
+    },
+    {
+      "test": "zero",
+      "result": {
+        "rows": [
+          {
+            "id": "r1",
+            "code": "B01",
+            "label": "Site and substructure",
+            "qty": 0.0,
+            "unit": "m3",
+            "rate_USD": 110.0,
+            "amount_USD": 0.0
+          }
+        ],
+        "element_totals_USD": {
+          "B01": 0.0,
+          "B02": 0.0,
+          "B03": 0.0
+        },
+        "grand_total_USD": 0.0
+      }
+    },
+    {
+      "test": "fractional",
+      "result": {
+        "rows": [
+          {
+            "id": "r1",
+            "code": "B01",
+            "label": "Site and substructure",
+            "qty": 0.25,
+            "unit": "m3",
+            "rate_USD": 1.2,
+            "amount_USD": 0.3
+          }
+        ],
+        "element_totals_USD": {
+          "B01": 0.3,
+          "B02": 0.0,
+          "B03": 0.0
+        },
+        "grand_total_USD": 0.3
+      }
+    },
+    {
+      "test": "Decimal",
+      "result": {
+        "rows": [
+          {
+            "id": "r1",
+            "code": "B01",
+            "label": "Site and substructure",
+            "qty": 0.1,
+            "unit": "m3",
+            "rate_USD": 0.2,
+            "amount_USD": 0.02
+          }
+        ],
+        "element_totals_USD": {
+          "B01": 0.02,
+          "B02": 0.0,
+          "B03": 0.0
+        },
+        "grand_total_USD": 0.02
+      }
+    }
+  ],
+  "manifest_hashes_before": {
+    "frozen.json": "28d9634a6b8979be71212ec67c876c51887388cca247645a26ec3112ab9018f8",
+    "candidate-round2-hashes.json": "5bdfb4a40eb8329d138ae50ee627a12d4fa8429fd4a8949293764d35812e474a",
+    "round2/response-hashes.json": "3d9ae20c6ca9a80d68c0b1adb1ff3d32b89f75fc2ce05532fb2088ca2b752765"
+  },
+  "code_source_matches_markdown": true,
+  "code_interface": "(rows)",
+  "code_valid_output": {
+    "rows": [
+      {
+        "id": "r1",
+        "code": "B01",
+        "label": "Site and substructure",
+        "qty": 30.0,
+        "unit": "m3",
+        "rate_USD": 110.0,
+        "amount_USD": 3300.0
+      },
+      {
+        "id": "r2",
+        "code": "B02",
+        "label": "Structure and envelope",
+        "qty": 250.0,
+        "unit": "m2",
+        "rate_USD": 420.0,
+        "amount_USD": 105000.0
+      },
+      {
+        "id": "r3",
+        "code": "B03",
+        "label": "Interior and display",
+        "qty": 80.0,
+        "unit": "m",
+        "rate_USD": 250.0,
+        "amount_USD": 20000.0
+      }
+    ],
+    "element_totals_USD": {
+      "B01": 3300.0,
+      "B02": 105000.0,
+      "B03": 20000.0
+    },
+    "grand_total_USD": 128300.0
+  },
+  "code_input_unmodified": true,
+  "oracle_arithmetic_checks": [
+    {
+      "case": "QS01",
+      "field": "elements",
+      "computed": 1795000,
+      "oracle": 1795000,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "elements_plus_preliminaries",
+      "computed": 1975000,
+      "oracle": 1975000,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "OHP",
+      "computed": 158000.0,
+      "oracle": 158000,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "construction_before_reserve",
+      "computed": 2133000.0,
+      "oracle": 2133000,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "reserve",
+      "computed": 213300.0,
+      "oracle": 213300,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "owner_direct_costs",
+      "computed": 275000,
+      "oracle": 275000,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "total_owner_budget",
+      "computed": 2711300.0,
+      "oracle": 2711300,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "construction_before_reserve_per_ft2",
+      "computed": 444.375,
+      "oracle": 444.375,
+      "match": true
+    },
+    {
+      "case": "QS01",
+      "field": "owner_budget_per_ft2",
+      "computed": 564.8541666666666,
+      "oracle": 564.8541666667,
+      "match": true
+    },
+    {
+      "case": "QS02",
+      "field": "fabrication_USD",
+      "computed": 198000.00000000003,
+      "oracle": 198000,
+      "match": true
+    },
+    {
+      "case": "QS02",
+      "field": "delivered_supply_USD",
+      "computed": 228000.00000000003,
+      "oracle": 228000,
+      "match": true
+    },
+    {
+      "case": "QS02",
+      "field": "combined_total_USD",
+      "computed": 326420.0,
+      "oracle": 326420,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "gross_floor_m2",
+      "computed": 96.0,
+      "oracle": 96,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "net_installed_floor_m2",
+      "computed": 90.0,
+      "oracle": 90,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "procurement_stone_m2",
+      "computed": 100.80000000000001,
+      "oracle": 100.8,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "perimeter_m",
+      "computed": 40.0,
+      "oracle": 40,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "gross_wall_m2",
+      "computed": 128.0,
+      "oracle": 128,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "opening_m2",
+      "computed": 10.32,
+      "oracle": 10.32,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "net_wall_m2",
+      "computed": 117.68,
+      "oracle": 117.68,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "base_trim_m",
+      "computed": 38.2,
+      "oracle": 38.2,
+      "match": true
+    },
+    {
+      "case": "QS03",
+      "field": "slab_m3",
+      "computed": 14.4,
+      "oracle": 14.4,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "base_elements",
+      "computed": 4370000,
+      "oracle": 4370000,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "plus_preliminaries",
+      "computed": 4610000,
+      "oracle": 4610000,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "OHP",
+      "computed": 322700.00000000006,
+      "oracle": 322700,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "construction_before_risk_escalation",
+      "computed": 4932700.0,
+      "oracle": 4932700,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "risk",
+      "computed": 394616.0,
+      "oracle": 394616,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "escalation",
+      "computed": 147981.0,
+      "oracle": 147981,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "construction_total",
+      "computed": 5475297.0,
+      "oracle": 5475297,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "owner_direct_and_tax",
+      "computed": 700000,
+      "oracle": 700000,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "owner_development_budget",
+      "computed": 6175297.0,
+      "oracle": 6175297,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "construction_per_gross_m2",
+      "computed": 4380.2376,
+      "oracle": 4380.2376,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "owner_budget_per_gross_m2",
+      "computed": 4940.2376,
+      "oracle": 4940.2376,
+      "match": true
+    },
+    {
+      "case": "QS05",
+      "field": "owner_budget_per_sales_m2",
+      "computed": 7265.0552941176475,
+      "oracle": 7265.0552941176,
+      "match": true
+    },
+    {
+      "case": "QS06",
+      "field": "A_normalized_ex_tax",
+      "computed": 1282000,
+      "oracle": 1282000,
+      "match": true
+    },
+    {
+      "case": "QS06",
+      "field": "B_normalized_ex_tax",
+      "computed": 1260000.0,
+      "oracle": 1260000,
+      "match": true
+    },
+    {
+      "case": "QS06",
+      "field": "C_normalized_ex_tax",
+      "computed": 1322000,
+      "oracle": 1322000,
+      "match": true
+    },
+    {
+      "case": "QS07",
+      "field": "approved_net_changes",
+      "computed": 35000,
+      "oracle": 35000,
+      "match": true
+    },
+    {
+      "case": "QS07",
+      "field": "authorized_contract_value",
+      "computed": 2435000,
+      "oracle": 2435000,
+      "match": true
+    },
+    {
+      "case": "QS07",
+      "field": "known_likely_outturn_before_residual_reserve",
+      "computed": 2487000.0,
+      "oracle": 2487000,
+      "match": true
+    },
+    {
+      "case": "QS07",
+      "field": "forecast_including_residual_reserve",
+      "computed": 2537000.0,
+      "oracle": 2537000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "total_commitments",
+      "computed": 1320000,
+      "oracle": 1320000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "actual_cost_to_date",
+      "computed": 620000,
+      "oracle": 620000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "committed_package_final",
+      "computed": 1370000,
+      "oracle": 1370000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "remaining_committed_package_forecast",
+      "computed": 790000,
+      "oracle": 790000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "forecast_final_including_reserve",
+      "computed": 1700000,
+      "oracle": 1700000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "cost_to_complete_including_reserve",
+      "computed": 1080000,
+      "oracle": 1080000,
+      "match": true
+    },
+    {
+      "case": "QS08",
+      "field": "budget_headroom",
+      "computed": 150000,
+      "oracle": 150000,
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "monthly_new_retention",
+      "computed": [
+        10000.0,
+        15000.0,
+        15000.0,
+        0.0
+      ],
+      "oracle": [
+        10000,
+        15000,
+        15000,
+        0
+      ],
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "monthly_advance_recovery",
+      "computed": [
+        20000.0,
+        30000.0,
+        30000.0,
+        20000.0
+      ],
+      "oracle": [
+        20000,
+        30000,
+        30000,
+        20000
+      ],
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "monthly_net_certificates",
+      "computed": [
+        170000.0,
+        255000.0,
+        255000.0,
+        180000.0
+      ],
+      "oracle": [
+        170000,
+        255000,
+        255000,
+        180000
+      ],
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "month_4_PC_release",
+      "computed": 20000.0,
+      "oracle": 20000,
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "total_receipts",
+      "computed": 1000000.0,
+      "oracle": 1000000,
+      "match": true
+    },
+    {
+      "case": "QS09",
+      "field": "advance_after_month_4",
+      "computed": 0.0,
+      "oracle": 0,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "material_per_net_m2",
+      "computed": 194.4,
+      "oracle": 194.4,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "labour_hours_per_net_m2",
+      "computed": 1.5,
+      "oracle": 1.5,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "labour_per_net_m2",
+      "computed": 78.0,
+      "oracle": 78,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "plant_per_net_m2",
+      "computed": 15.0,
+      "oracle": 15,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "direct_rate",
+      "computed": 317.4,
+      "oracle": 317.4,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "OHP_per_m2",
+      "computed": 38.087999999999994,
+      "oracle": 38.088,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "contingency_per_m2",
+      "computed": 17.774399999999996,
+      "oracle": 17.7744,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "final_rate_per_m2",
+      "computed": 373.26239999999996,
+      "oracle": 373.2624,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "package_cost",
+      "computed": 119443.968,
+      "oracle": 119443.968,
+      "match": true
+    },
+    {
+      "case": "QS10",
+      "field": "purchased_panel_quantity_m2",
+      "computed": 345.6,
+      "oracle": 345.6,
+      "match": true
+    },
+    {
+      "case": "QS11",
+      "field": "civil_USD",
+      "computed": 520000.0,
+      "oracle": 520000,
+      "match": true
+    },
+    {
+      "case": "QS11",
+      "field": "facade_USD",
+      "computed": 297000.0,
+      "oracle": 297000,
+      "match": true
+    },
+    {
+      "case": "QS11",
+      "field": "lighting_USD",
+      "computed": 127720.0,
+      "oracle": 127720,
+      "match": true
+    },
+    {
+      "case": "QS11",
+      "field": "total_USD",
+      "computed": 1124720.0,
+      "oracle": 1124720,
+      "match": true
+    },
+    {
+      "case": "QS12",
+      "field": "original_NPV",
+      "computed": 253902.1098039549,
+      "oracle": 253902.10980395493,
+      "match": true
+    },
+    {
+      "case": "QS12",
+      "field": "VE_NPV",
+      "computed": 256586.89976170965,
+      "oracle": 256586.8997617097,
+      "match": true
+    },
+    {
+      "case": "QS12",
+      "field": "net_present_saving",
+      "computed": -2684.7899577547505,
+      "oracle": -2684.7899577547796,
+      "match": true
+    },
+    {
+      "case": "QS12",
+      "field": "initial_capital_saving",
+      "computed": 35000,
+      "oracle": 35000,
+      "match": true
+    },
+    {
+      "case": "QS15",
+      "field": "A_comparable_price",
+      "computed": 113000,
+      "oracle": 113000,
+      "match": true
+    },
+    {
+      "case": "QS15",
+      "field": "B_comparable_price",
+      "computed": 109000,
+      "oracle": 109000,
+      "match": true
+    },
+    {
+      "case": "QS15",
+      "field": "price_advantage_B",
+      "computed": 4000,
+      "oracle": 4000,
+      "match": true
+    },
+    {
+      "case": "QS15",
+      "field": "A_completion_weeks",
+      "computed": 13,
+      "oracle": 13,
+      "match": true
+    },
+    {
+      "case": "QS15",
+      "field": "B_completion_weeks",
+      "computed": 9,
+      "oracle": 9,
+      "match": true
+    },
+    {
+      "case": "QS16",
+      "field": "grand_total_USD",
+      "computed": 128300,
+      "oracle": 128300,
+      "match": true
+    },
+    {
+      "case": "QS17",
+      "field": "supply_only_amount_USD",
+      "computed": 24000,
+      "oracle": 24000,
+      "match": true
+    },
+    {
+      "case": "QS18",
+      "field": "approved_net_changes",
+      "computed": 23000,
+      "oracle": 23000,
+      "match": true
+    },
+    {
+      "case": "QS18",
+      "field": "authorized_contract_value",
+      "computed": 943000,
+      "oracle": 943000,
+      "match": true
+    },
+    {
+      "case": "H01",
+      "field": "gross_m2",
+      "computed": 160,
+      "oracle": 160,
+      "match": true
+    },
+    {
+      "case": "H01",
+      "field": "net_installed_m2",
+      "computed": 148,
+      "oracle": 148,
+      "match": true
+    },
+    {
+      "case": "H01",
+      "field": "purchase_quantity_m2",
+      "computed": 162.8,
+      "oracle": 162.8,
+      "match": true
+    },
+    {
+      "case": "H01",
+      "field": "net_installed_rate_USD_m2",
+      "computed": 300.0,
+      "oracle": 300,
+      "match": true
+    },
+    {
+      "case": "H02",
+      "field": "fabricated_material_USD",
+      "computed": 150000.0,
+      "oracle": 150000,
+      "match": true
+    },
+    {
+      "case": "H02",
+      "field": "delivered_supply_USD",
+      "computed": 165000.0,
+      "oracle": 165000,
+      "match": true
+    },
+    {
+      "case": "H02",
+      "field": "installer_after_PC_removal_USD",
+      "computed": 85000,
+      "oracle": 85000,
+      "match": true
+    },
+    {
+      "case": "H02",
+      "field": "combined_USD",
+      "computed": 259000.0,
+      "oracle": 259000,
+      "match": true
+    },
+    {
+      "case": "H02",
+      "field": "equivalent_installer_replacement_total_USD",
+      "computed": 250000.0,
+      "oracle": 250000,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "authorized_contract_value",
+      "computed": 740000,
+      "oracle": 740000,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "retention_cap",
+      "computed": 37000.0,
+      "oracle": 37000,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "new_retention",
+      "computed": [
+        9000.0,
+        12000.0,
+        12000.0,
+        4000.0
+      ],
+      "oracle": [
+        9000,
+        12000,
+        12000,
+        4000
+      ],
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "advance_recovery",
+      "computed": [
+        18000.0,
+        24000.0,
+        24000.0,
+        8000.0
+      ],
+      "oracle": [
+        18000,
+        24000,
+        24000,
+        8000
+      ],
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "net_certificates_before_releases",
+      "computed": [
+        153000.0,
+        204000.0,
+        204000.0,
+        68000.0
+      ],
+      "oracle": [
+        153000,
+        204000,
+        204000,
+        68000
+      ],
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "PC_release",
+      "computed": 18500.0,
+      "oracle": 18500,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "month_4_certificate_including_PC_release",
+      "computed": 86500.0,
+      "oracle": 86500,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "cash_paid_by_PC",
+      "computed": 635000.0,
+      "oracle": 635000,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "unpaid_certificate_at_PC",
+      "computed": 86500.0,
+      "oracle": 86500,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "remaining_retention_after_PC",
+      "computed": 18500.0,
+      "oracle": 18500,
+      "match": true
+    },
+    {
+      "case": "H03",
+      "field": "eventual_total_receipts",
+      "computed": 740000.0,
+      "oracle": 740000,
+      "match": true
+    },
+    {
+      "case": "H05",
+      "field": "current_supply_amount_USD",
+      "computed": 30000,
+      "oracle": 30000,
+      "match": true
+    }
+  ],
+  "arithmetic_all_match": true,
+  "helper_transcript_audit": {
+    "processes": 108,
+    "missing_primary_processes": 20,
+    "all_recorded_exit_codes_in_0_2": true,
+    "all_group_indices_valid": true,
+    "script_sha256_matches_current": true,
+    "concurrent_group_observation": {
+      "test": "concurrent subprocess writers",
+      "outcome": "PASS",
+      "detail": {
+        "attempts": 32,
+        "successful_writes": 13,
+        "safely_refused": 19,
+        "surviving_records": 13,
+        "lost_successful_records": 0
+      },
+      "events": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ]
+    }
+  },
+  "independent_helper_rerun": {
+    "results": {
+      "package": "<workspace>/outputs/quantity-surveyor-portable",
+      "python": "3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 16.0.0 (clang-1600.0.26.3)]",
+      "executable": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "script_sha256_before": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+      "script_sha256_after": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+      "classification": "explicit independent regression rerun, not blind new-case testing",
+      "work": "<workspace>/work/astra-critic/helper/run-1790875930099931000",
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "results": [
+        {
+          "test": "explicit configuration required",
+          "outcome": "PASS",
+          "detail": "All required and whitespace-only configuration failures returned exit 2; no store created.",
+          "events": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "test": "provenance requirements",
+          "outcome": "PASS",
+          "detail": "Missing, empty, unstructured and incomplete provenance all refused before state creation.",
+          "events": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "test": "same-root user and project isolation",
+          "outcome": "PASS",
+          "detail": "Three scopes at the same root hold disjoint records; a fourth sees none.",
+          "events": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        {
+          "test": "tentative versus verified and identity protection",
+          "outcome": "PASS",
+          "detail": "Default listing returns verified records, tentative suggestions stay separate, identity injection is discarded and tentative correction leaves verified bytes intact.",
+          "events": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "test": "correction history and duplicate refusal",
+          "outcome": "PASS",
+          "detail": "Two successive corrections preserve all three rows and bidirectional links; duplicate and unknown corrections refused without changes.",
+          "events": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ]
+        },
+        {
+          "test": "invalid JSON refusal without data loss",
+          "outcome": "PASS",
+          "detail": "Invalid incoming JSON preserves current and previous copies; corrupt stored JSON refuses reads/writes and preserves exact damaged bytes.",
+          "events": [
+            36,
+            37,
+            38,
+            39,
+            40
+          ]
+        },
+        {
+          "test": "wrong-scope envelope refusal",
+          "outcome": "PASS",
+          "detail": "Wrong-scope current envelope and previous copy both refused; no mutation or recovery archive produced.",
+          "events": [
+            41,
+            42,
+            43,
+            44,
+            45
+          ]
+        },
+        {
+          "test": "confirmed previous-copy recovery and preservation",
+          "outcome": "PASS",
+          "detail": "Recovery requires confirmation, restores validated previous snapshot, preserves damaged bytes in a mode-0600 archive, and visibly rolls back the latest addition.",
+          "events": [
+            46,
+            47,
+            48,
+            49,
+            50
+          ]
+        },
+        {
+          "test": "unresolved lock refusal",
+          "outcome": "PASS",
+          "detail": "Writes and recovery refuse a preexisting lock, leave lock and state intact; snapshot reader continues to work as documented.",
+          "events": [
+            51,
+            52,
+            53,
+            54
+          ]
+        },
+        {
+          "test": "concurrent subprocess writers",
+          "outcome": "PASS",
+          "detail": {
+            "attempts": 32,
+            "successful_writes": 13,
+            "safely_refused": 19,
+            "surviving_records": 13,
+            "lost_successful_records": 0
+          },
+          "events": [
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88
+          ]
+        },
+        {
+          "test": "human-scope collisions and traversal-like IDs",
+          "outcome": "PASS",
+          "detail": "Traversal-like IDs, slash-colliding pairs, Unicode and composed/decomposed Unicode remain distinct hashed scope names in the chosen root.",
+          "events": [
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104
+          ]
+        },
+        {
+          "test": "relocation and isolated standard-library execution",
+          "outcome": "PASS",
+          "detail": {
+            "cwd_outside_package": true,
+            "relocated_path": "<workspace>/work/astra-critic/helper/run-1790875930099931000/relocated package with spaces",
+            "interpreter_flags": [
+              "-I",
+              "-S"
+            ],
+            "imports": [
+              "argparse",
+              "contextlib",
+              "datetime",
+              "hashlib",
+              "json",
+              "os",
+              "pathlib",
+              "sys",
+              "tempfile",
+              "uuid"
+            ],
+            "external_dependencies": []
+          },
+          "events": [
+            105,
+            106,
+            107
+          ]
+        },
+        {
+          "test": "blank original templates and optional core tools",
+          "outcome": "PASS",
+          "detail": {
+            "changes.csv": "header-only CSV; no filled rows",
+            "estimate.csv": "header-only CSV; no filled rows",
+            "forecast.csv": "header-only CSV; no filled rows",
+            "project-basis.md": "empty prompts; no filled values",
+            "core": "Explicitly requires no service, connector, model or proprietary library; memory optional. No hardcoded private user paths or installed-memory lookup."
+          },
+          "events": []
+        }
+      ]
+    },
+    "missing_primary": {
+      "outcome": "PASS",
+      "detail": {
+        "refused_commands": [
+          "list",
+          "check",
+          "add",
+          "correct",
+          "recover without --confirm"
+        ],
+        "backup_byte_preservation": true,
+        "restored_previous_records": 1,
+        "unavailable_latest_record_restored": false,
+        "recovered_scope_after_add_and_correct_records": 3,
+        "genuinely_new_scope_records": 1,
+        "new_scope_did_not_change_recovered_scope": true
+      },
+      "script_sha256_before": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+      "script_sha256_after": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+      "package": "<workspace>/outputs/quantity-surveyor-portable",
+      "python": "3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 16.0.0 (clang-1600.0.26.3)]",
+      "work": "<workspace>/work/astra-critic/helper/missing-primary-1790875933692417000",
+      "process_count": 20,
+      "snapshots": [
+        {
+          "stage": "after deleting primary",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "refused list",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "refused check",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "refused add",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "refused correct",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "refused unconfirmed recovery",
+          "primary_exists": false,
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_size": 632,
+          "lock_exists": false
+        },
+        {
+          "stage": "confirmed recovery",
+          "primary_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "previous_sha256": "39440155e5d204efebf33a7bf2e5767e6918c21d6d5c080d5f72688fd5f03606",
+          "records": 1
+        }
+      ],
+      "classification": "explicit regression verification, not blind new-case testing"
+    }
+  },
+  "manifest_hashes_after": {
+    "frozen.json": "28d9634a6b8979be71212ec67c876c51887388cca247645a26ec3112ab9018f8",
+    "candidate-round2-hashes.json": "5bdfb4a40eb8329d138ae50ee627a12d4fa8429fd4a8949293764d35812e474a",
+    "round2/response-hashes.json": "3d9ae20c6ca9a80d68c0b1adb1ff3d32b89f75fc2ce05532fb2088ca2b752765"
+  },
+  "manifests_unchanged_during_review": true,
+  "source_audit": {
+    "contemporaneous_records": [
+      "round2/tester-a-calculations.json",
+      "round2/tester-b-calculations.json",
+      "round2/heldout-calculations.json",
+      "work/final-tester-a/provenance.json",
+      "work/final-tester-b/QS13-source-provenance.json"
+    ],
+    "result": "No unsupported performed-calculation or source-retrieval claim identified. QS02 fixed pricing is supplied in raw prompt. QS03/H01 disclaim unavailable original drawing review. QS16 executed claims match tester calculator record and independent execution. QS17/18/H05 make no unsupported persistence claim.",
+    "reopened_primary_sources": [
+      {
+        "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+        "result": "success",
+        "locator": "lines 6\u201313",
+        "supports": "measurement/cost guidance; October 2021 publication and October 2022 practice-information reissue without material changes"
+      },
+      {
+        "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/obtaining-a-permit.page",
+        "result": "success",
+        "locator": "lines 24\u201331",
+        "supports": "new-building applications, RDP filing, plan examination or professional certification subject to audit"
+      },
+      {
+        "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner.page",
+        "result": "success",
+        "locator": "lines 31\u201332, 46\u201352, 60\u201368",
+        "supports": "owner/RDP responsibilities, regulatory review, sign-offs and occupancy completion"
+      },
+      {
+        "url": "https://www.tdlr.texas.gov/ab/",
+        "result": "success",
+        "locator": "line 17",
+        "supports": "Texas accessibility law and standards; no project-specific permit conclusion"
+      }
+    ],
+    "retrieval_date": "2026-10-01",
+    "no_site_specific_clearance": true
+  },
+  "helper_assessment": {
+    "separate_from_23_case_score": true,
+    "current_helper_sha256": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+    "observed_final_test_groups": {
+      "passed": 13,
+      "total": 13
+    },
+    "observed_missing_primary": "PASS",
+    "independent_reexecution": "13/13 groups and missing-primary pass under work/astra-critic; originals unchanged",
+    "transcript_audit": {
+      "processes": 108,
+      "missing_primary_processes": 20,
+      "all_recorded_exit_codes_in_0_2": true,
+      "all_group_indices_valid": true,
+      "script_sha256_matches_current": true,
+      "concurrent_group_observation": {
+        "test": "concurrent subprocess writers",
+        "outcome": "PASS",
+        "detail": {
+          "attempts": 32,
+          "successful_writes": 13,
+          "safely_refused": 19,
+          "surviving_records": 13,
+          "lost_successful_records": 0
+        },
+        "events": [
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      }
+    },
+    "assessment": "Observed claims are supported by scripts, process exit/stdout/stderr records and current implementation; independently reproduced. Lock contention is explicitly refused rather than queued. No lost acknowledged successful writes in observed concurrent tests. Missing-primary guard preserves previous copy and requires explicit confirmed recovery; rollback does not recreate unavailable newer data.",
+    "limitations": [
+      "Regression evidence, not blind new-case testing.",
+      "Evidence fields and user-selected verified status are structurally validated; truth or external source integrity is not authenticated.",
+      "SHA-256 maps scope IDs to filenames; it is not a content checksum or tamper-proof store. Recovery checks schema/scope/history and trusts the selected previous snapshot.",
+      "No proof of distributed/network filesystem correctness, encryption, hostile filesystem resistance or exhaustive crash/power-loss durability.",
+      "Exact Unicode identifiers and trailing whitespace remain distinct scopes."
+    ],
+    "material_findings": []
+  }
+}

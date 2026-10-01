@@ -1,0 +1,378 @@
+{
+  "tool": "Python standard library; executed locally",
+  "model_identity": "not exposed",
+  "cases": {
+    "QS10": {
+      "crew_productive_hours_day": "21",
+      "person_hours_m2": "1.5",
+      "package_person_hours": "480.0",
+      "crew_days_equivalent": "22.85714285714285714285714286",
+      "purchased_material_m2": "345.60",
+      "layers_per_m2": {
+        "panel": "194.40",
+        "labour": "78.0",
+        "plant": "15",
+        "fixings": "12",
+        "logistics": "18",
+        "direct": "317.40",
+        "OHP": "38.0880",
+        "contingency": "17.774400"
+      },
+      "rate_m2": "373.262400",
+      "total": "119443.968000"
+    },
+    "QS11": {
+      "civil": {
+        "ratio": "1.04",
+        "source_cost": "520000.00",
+        "FX_USD_per_source": "1",
+        "USD": "520000.00"
+      },
+      "facade": {
+        "ratio": "1.1",
+        "source_cost": "275000.0",
+        "FX_USD_per_source": "1.08",
+        "USD": "297000.000"
+      },
+      "lighting": {
+        "ratio": "1.03",
+        "source_cost": "103000.00",
+        "FX_USD_per_source": "1.24",
+        "USD": "127720.0000"
+      },
+      "installation": {
+        "USD": "180000"
+      },
+      "total_USD": "1124720.0000"
+    },
+    "QS12": {
+      "original": {
+        "initial": 180000,
+        "maintenance_PV": 44473.54972867247,
+        "replacement_PV": 40533.85012954792,
+        "residual_credit_PV": 11105.290054265497,
+        "total_PV": 253902.10980395493,
+        "events": [
+          {
+            "year": 0,
+            "cashflow": 180000,
+            "PV": 180000
+          },
+          {
+            "year": 1,
+            "cashflow": 4000,
+            "PV": 3846.153846153846
+          },
+          {
+            "year": 2,
+            "cashflow": 4000,
+            "PV": 3698.2248520710054
+          },
+          {
+            "year": 3,
+            "cashflow": 4000,
+            "PV": 3555.985434683659
+          },
+          {
+            "year": 4,
+            "cashflow": 4000,
+            "PV": 3419.2167641189026
+          },
+          {
+            "year": 5,
+            "cashflow": 4000,
+            "PV": 3287.7084270374066
+          },
+          {
+            "year": 6,
+            "cashflow": 4000,
+            "PV": 3161.258102920583
+          },
+          {
+            "year": 7,
+            "cashflow": 4000,
+            "PV": 3039.671252808253
+          },
+          {
+            "year": 8,
+            "cashflow": 4000,
+            "PV": 2922.7608200079358
+          },
+          {
+            "year": 9,
+            "cashflow": 4000,
+            "PV": 2810.3469423153224
+          },
+          {
+            "year": 10,
+            "cashflow": 4000,
+            "PV": 2702.2566753031947
+          },
+          {
+            "year": 11,
+            "cashflow": 4000,
+            "PV": 2598.3237262530715
+          },
+          {
+            "year": 12,
+            "cashflow": 4000,
+            "PV": 2498.388198320261
+          },
+          {
+            "year": 13,
+            "cashflow": 4000,
+            "PV": 2402.296344538712
+          },
+          {
+            "year": 14,
+            "cashflow": 4000,
+            "PV": 2309.9003312872233
+          },
+          {
+            "year": 15,
+            "cashflow": 4000,
+            "PV": 2221.0580108530994
+          },
+          {
+            "year": 10,
+            "cashflow": 60000,
+            "PV": 40533.85012954792
+          },
+          {
+            "year": 15,
+            "cashflow": -20000,
+            "PV": -11105.290054265497
+          }
+        ]
+      },
+      "VE": {
+        "initial": 145000,
+        "maintenance_PV": 77828.71202517684,
+        "replacement_PV": 36534.51025009919,
+        "residual_credit_PV": 2776.3225135663743,
+        "total_PV": 256586.89976170965,
+        "events": [
+          {
+            "year": 0,
+            "cashflow": 145000,
+            "PV": 145000
+          },
+          {
+            "year": 1,
+            "cashflow": 7000,
+            "PV": 6730.7692307692305
+          },
+          {
+            "year": 2,
+            "cashflow": 7000,
+            "PV": 6471.8934911242595
+          },
+          {
+            "year": 3,
+            "cashflow": 7000,
+            "PV": 6222.974510696404
+          },
+          {
+            "year": 4,
+            "cashflow": 7000,
+            "PV": 5983.62933720808
+          },
+          {
+            "year": 5,
+            "cashflow": 7000,
+            "PV": 5753.4897473154615
+          },
+          {
+            "year": 6,
+            "cashflow": 7000,
+            "PV": 5532.20168011102
+          },
+          {
+            "year": 7,
+            "cashflow": 7000,
+            "PV": 5319.424692414443
+          },
+          {
+            "year": 8,
+            "cashflow": 7000,
+            "PV": 5114.831435013887
+          },
+          {
+            "year": 9,
+            "cashflow": 7000,
+            "PV": 4918.107149051814
+          },
+          {
+            "year": 10,
+            "cashflow": 7000,
+            "PV": 4728.94918178059
+          },
+          {
+            "year": 11,
+            "cashflow": 7000,
+            "PV": 4547.066520942875
+          },
+          {
+            "year": 12,
+            "cashflow": 7000,
+            "PV": 4372.179347060456
+          },
+          {
+            "year": 13,
+            "cashflow": 7000,
+            "PV": 4204.018602942747
+          },
+          {
+            "year": 14,
+            "cashflow": 7000,
+            "PV": 4042.325579752641
+          },
+          {
+            "year": 15,
+            "cashflow": 7000,
+            "PV": 3886.851518992924
+          },
+          {
+            "year": 8,
+            "cashflow": 50000,
+            "PV": 36534.51025009919
+          },
+          {
+            "year": 15,
+            "cashflow": -5000,
+            "PV": -2776.3225135663743
+          }
+        ]
+      },
+      "annuity_factor": 11.118387432168118,
+      "PV_saving_original_minus_VE": -2684.7899577547214,
+      "initial_saving": 35000,
+      "timing": "t=0 capital; years 1..15 maintenance; only specified replacement; t=15 residual credit; real 4%; no inflation"
+    },
+    "QS13": {
+      "calculation": "none requested; no permit fee calculated",
+      "browsing": "see work/final-tester-b/QS13-source-provenance.json"
+    },
+    "QS14": {
+      "historical_supply_only_rate": "1050",
+      "nominal_210_m2_unadjusted_reference_scenario": "220500",
+      "limits": "unverified live quantity; 2024-04 different unspecified city; synthetic supply-only scope; no installation, current-date or location adjustment; not binding"
+    },
+    "QS15": {
+      "A_normalized_USD": 113000,
+      "B_normalized_USD": 109000,
+      "B_saving": 4000,
+      "A_completion_weeks": 13,
+      "B_completion_weeks": 9
+    },
+    "QS16": {
+      "valid_result": {
+        "rows": [
+          {
+            "id": "r1",
+            "code": "B01",
+            "label": "Site and substructure",
+            "qty": 30.0,
+            "unit": "m3",
+            "rate_USD": 110.0,
+            "amount_USD": 3300.0
+          },
+          {
+            "id": "r2",
+            "code": "B02",
+            "label": "Structure and envelope",
+            "qty": 250.0,
+            "unit": "m2",
+            "rate_USD": 420.0,
+            "amount_USD": 105000.0
+          },
+          {
+            "id": "r3",
+            "code": "B03",
+            "label": "Interior and display",
+            "qty": 80.0,
+            "unit": "m",
+            "rate_USD": 250.0,
+            "amount_USD": 20000.0
+          }
+        ],
+        "element_totals_USD": {
+          "B01": 3300.0,
+          "B02": 105000.0,
+          "B03": 20000.0
+        },
+        "grand_total_USD": 128300.0
+      },
+      "executed_invalid_checks": [
+        {
+          "case": "unknown framework code",
+          "observed": "ValueError",
+          "message": "unknown framework code: B99"
+        },
+        {
+          "case": "negative quantity",
+          "observed": "ValueError",
+          "message": "qty must be finite and nonnegative"
+        },
+        {
+          "case": "unit mismatch",
+          "observed": "ValueError",
+          "message": "unit mismatch for B01: kg"
+        },
+        {
+          "case": "non-finite input",
+          "observed": "ValueError",
+          "message": "rate_USD must be finite and nonnegative"
+        },
+        {
+          "case": "boolean not number",
+          "observed": "ValueError",
+          "message": "qty must be numeric, excluding booleans"
+        },
+        {
+          "case": "negative rate",
+          "observed": "ValueError",
+          "message": "rate_USD must be finite and nonnegative"
+        },
+        {
+          "case": "boolean rate",
+          "observed": "ValueError",
+          "message": "rate_USD must be numeric, excluding booleans"
+        },
+        {
+          "case": "infinite qty",
+          "observed": "ValueError",
+          "message": "qty must be finite and nonnegative"
+        },
+        {
+          "case": "duplicate id",
+          "observed": "ValueError",
+          "message": "duplicate row id: r1"
+        }
+      ],
+      "empty_result": {
+        "rows": [],
+        "element_totals_USD": {
+          "B01": 0.0,
+          "B02": 0.0,
+          "B03": 0.0
+        },
+        "grand_total_USD": 0.0
+      },
+      "persistence": "function performs no filesystem, database or network calls; harness saves verification artifact only"
+    },
+    "QS17": {
+      "amount_USD": 24000,
+      "basis": "session fixture only, supply-only",
+      "memory_actions": "none; simulated tools unavailable respected in response"
+    },
+    "QS18": {
+      "selected_version": 3,
+      "selected_project": "SYN-CEDAR",
+      "approved_change_net": 23000,
+      "authorized_value": 943000,
+      "unapproved_excluded": 18000,
+      "actual_memory_read_write_restore": "none; supplied tool-read results used only"
+    }
+  }
+}

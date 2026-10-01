@@ -1,0 +1,982 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "round": 2,
+  "reviewed_at_utc": "2026-10-01T17:35:37.748880+00:00",
+  "reviewer": {
+    "configured_model": "gpt-6-astra",
+    "configured_reasoning": "high",
+    "actual_tool_exposed_revision": "unavailable"
+  },
+  "independence": "Fresh critic: read actual sealed round2 responses, raw frozen fixtures/oracles/rubric, named contemporaneous provenance/calculations, current helper and final helper tests only. No round1 answers/critics/scores, development history, defects-and-corrections, release-audit or private installed skills/memory read. No subagents.",
+  "method": "Frozen applicability and weights; dimension scores in 0.5 increments; equal case weights within 18 core/5 heldout; 75% core and 25% heldout. No bonus for length, credentials or purported percentile. 10 means all narrow case requirements met, not universal competence.",
+  "cases": [
+    {
+      "id": "QS01",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "costing": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS01.md",
+          "line": 3,
+          "excerpt": "Total owner planning provision: USD 2,711,300.00",
+          "assessment": "Owner provision USD 2,711,300; construction USD 2,133,000, reserve USD 213,300, owner costs USD 275,000 and tax USD 90,000. Both ft\u00b2 denominators are 4,800 and exclusions are explicit."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 214,
+        "raw_whitespace_tokens": 301,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS02",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "costing": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS02.md",
+          "line": 3,
+          "excerpt": "Reconciled total: USD 326,420.00",
+          "assessment": "Removes USD 220,000 PS, replaces it with USD 228,000 delivered supply, retains USD 5,000 storage, installation/plant, restricted OHP, owner fee and one hookup. Total USD 326,420, tax excluded; named interface matrix addresses unloading and hookup. Contractually fixed rate claim is explicitly authorized in the fixture prompt."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 287,
+        "raw_whitespace_tokens": 375,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS03",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS03.md",
+          "line": 3,
+          "excerpt": "Net installed quantities: stone floor 90.00 m\u00b2",
+          "assessment": "Written dimensions govern; 90 m\u00b2 installed floor / 100.8 m\u00b2 procurement, 117.68 m\u00b2 wall, 38.2 m trim and 14.4 m\u00b3 slab. All deductions, waste and millimetre conversion match the fixture; no claimed visual inspection."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 259,
+        "raw_whitespace_tokens": 313,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS04",
+      "partition": "core",
+      "applicable_dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "decision_quality": 10.0,
+        "communication": 8.5
+      },
+      "weighted_score": 9.673913043478262,
+      "weighted_score_exact_fraction": "445/46",
+      "evidence": [
+        {
+          "response": "responses/QS04.md",
+          "line": 3,
+          "excerpt": "This is a partial concept scope, not a complete project budget.",
+          "assessment": "Rejects completeness, separates included/excluded/unknown scope and covers site/ground/utilities/structure/MEP/external/soft cost clusters. Provides responsibilities and priority evidence without invented prices."
+        }
+      ],
+      "deductions": [
+        {
+          "dimension": "communication",
+          "score": 8.5,
+          "reason": "The requested concise scope matrix expands into 14 long rows and approximately 532 tester-counted words, plus repeated source/verification limitations and a non-decision-useful 20.83% site-area ratio. Complete and readable, but not fully proportionate to the concise review request.",
+          "material": false
+        }
+      ],
+      "unmet_oracle_requirements": [
+        "The requested concise scope matrix expands into 14 long rows and approximately 532 tester-counted words, plus repeated source/verification limitations and a non-decision-useful 20.83% site-area ratio. Complete and readable, but not fully proportionate to the concise review request."
+      ],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 467,
+        "raw_whitespace_tokens": 532,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Qualitative case; reviewed every frozen scope/evidence requirement."
+    },
+    {
+      "id": "QS05",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "costing": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS05.md",
+          "line": 3,
+          "excerpt": "Construction budget including risk and escalation: USD 5,475,297.00",
+          "assessment": "Ten elements total USD 4,370,000; correct OHP base and parallel risk/escalation give USD 5,475,297 construction and USD 6,175,297 owner provision. Whole-building gross and sales-area rates, tax and land/finance exclusions are clear."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 258,
+        "raw_whitespace_tokens": 362,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS06",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "commercial_controls",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "commercial_controls": 10.0,
+        "decision_quality": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS06.md",
+          "line": 3,
+          "excerpt": "Comparable prices excluding tax rank B first",
+          "assessment": "Tax and scope normalize to GBP 1,282,000 / 1,260,000 / 1,322,000. Correct B-A-C ranking, B scope/programme confirmation and C sample qualification; no extra OHP."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 291,
+        "raw_whitespace_tokens": 318,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS07",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "commercial_controls": 10.0,
+        "evidence_uncertainty": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS07.md",
+          "line": 3,
+          "excerpt": "Authorized contract value: USD 2,435,000.00",
+          "assessment": "USD 2,435,000 authorization, USD 2,487,000 likely outturn, USD 50,000 separate reserve and USD 2,537,000 provision reconcile. C02/C03 remain forecast exposures, C05 is zero, payments are not added/subtracted from outturn, and certification is distinguished from payment."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 285,
+        "raw_whitespace_tokens": 336,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS08",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "commercial_controls": 10.0,
+        "decision_quality": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS08.md",
+          "line": 16,
+          "excerpt": "Actual-paid bridge: 620,000.00 paid",
+          "assessment": "Both paid-to-final and commitment-to-final bridges give USD 1,700,000; paid USD 620,000 plus remaining USD 1,080,000. USD 150,000 headroom is forecast only. Package forecasts include paid amounts once, owner amounts remain distinct, and invoice/accrual limits are explicit."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 296,
+        "raw_whitespace_tokens": 380,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS09",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "commercial_controls": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS09.md",
+          "line": 16,
+          "excerpt": "Month 4 net valuation is 200,000",
+          "assessment": "All period withholding, capped recovery and balances reconcile to USD 1,000,000 receipts. Month 4 net valuation USD 180,000 plus USD 20,000 release is explicit; final advance/retention balances zero."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 318,
+        "raw_whitespace_tokens": 419,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS10",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "scope_boundaries",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "costing": 10.0,
+        "scope_boundaries": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS10.md",
+          "line": 1,
+          "excerpt": "USD 373.2624 per net installed m\u00b2",
+          "assessment": "Correct 1.5 productive person-hours/m\u00b2, material-only waste, direct USD 317.4/m\u00b2 and declared sequential additions. USD 373.2624/m\u00b2 extends to USD 119,443.968; purchase 345.6 m\u00b2 without duplicate waste."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 225,
+        "raw_whitespace_tokens": 296,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS11",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "costing": 10.0,
+        "evidence_uncertainty": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS11.md",
+          "line": 1,
+          "excerpt": "USD 1,124,720",
+          "assessment": "Source currency index ratios, procurement dates and USD-per-source FX preserved; fixed installation not escalated. USD 1,124,720 total; inputs accurately called synthetic scenarios."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 166,
+        "raw_whitespace_tokens": 228,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS12",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "costing",
+        "decision_quality",
+        "evidence_uncertainty",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "costing": 10.0,
+        "decision_quality": 10.0,
+        "evidence_uncertainty": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS12.md",
+          "line": 1,
+          "excerpt": "retain the original finish",
+          "assessment": "Year-end real cashflows and residual credits give USD 253,902.11 original and USD 256,586.90 VE. Negative USD 2,684.79 present saving distinguished from USD 35,000 capital saving. Performance/disruption checks follow the brief."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 222,
+        "raw_whitespace_tokens": 273,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS13",
+      "partition": "core",
+      "applicable_dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "scope_boundaries": 9.0,
+        "evidence_uncertainty": 10.0,
+        "decision_quality": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 9.652173913043478,
+      "weighted_score_exact_fraction": "222/23",
+      "evidence": [
+        {
+          "response": "responses/QS13.md",
+          "line": 1,
+          "excerpt": "the missing measurement clause and unknown RICS status require checking",
+          "assessment": "Rejects universal mandate/permit waiver; adopts agreed convention and edition, identifies missing contract/RICS status, cites live official DOB sources and withholds site-specific clearance. Professional-status distinction is only implicit."
+        }
+      ],
+      "deductions": [
+        {
+          "dimension": "scope_boundaries",
+          "score": 9.0,
+          "reason": "Names unknown RICS status but does not expressly explain that obligations of relevant RICS professionals/regulated firms differ from universal statutory obligations. This frozen required point is only implied; the core permit conclusion is correct.",
+          "material": false
+        }
+      ],
+      "unmet_oracle_requirements": [
+        "Names unknown RICS status but does not expressly explain that obligations of relevant RICS professionals/regulated firms differ from universal statutory obligations. This frozen required point is only implied; the core permit conclusion is correct."
+      ],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 180,
+        "raw_whitespace_tokens": 180,
+        "cap": 220,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Qualitative case; reviewed every frozen scope/evidence requirement."
+    },
+    {
+      "id": "QS14",
+      "partition": "core",
+      "applicable_dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "decision_quality": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS14.md",
+          "line": 14,
+          "excerpt": "All-in total: undetermined.",
+          "assessment": "Declines binding/all-in price, treats 210 m\u00b2 as unverified, labels USD 1,050/m\u00b2 and USD 220,500 as historic supply-only arithmetic, leaves missing packages unpriced and prioritizes dimension/specification/access evidence."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 287,
+        "raw_whitespace_tokens": 314,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS15",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "decision_quality",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "decision_quality": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS15.md",
+          "line": 1,
+          "excerpt": "Pursue B, subject to clarification.",
+          "assessment": "B recommended at USD 109,000 versus normalized A USD 113,000. Correct completion 9 versus 13 weeks, warranty benefit, approved samples and written delivery/dimming confirmation."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 66,
+        "raw_whitespace_tokens": 73,
+        "cap": 90,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS16",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "instruction_fidelity": 9.0,
+        "communication": 10.0
+      },
+      "weighted_score": 9.821428571428571,
+      "weighted_score_exact_fraction": "275/28",
+      "evidence": [
+        {
+          "response": "responses/QS16.md",
+          "line": 16,
+          "excerpt": "def normalize_costs(rows):",
+          "assessment": "Executable named normalize_costs(rows), same code in markdown and standalone file, preserves exact B01/B02/B03 taxonomy. USD 3,300 / 105,000 / 20,000 totals and USD 128,300 grand total pass actual execution. All six frozen invalid examples raise ValueError; additional Decimal NaN tests expose an exception-type defect."
+        }
+      ],
+      "deductions": [
+        {
+          "dimension": "instruction_fidelity",
+          "score": 9.0,
+          "reason": "The accepted Decimal numeric type is compared with zero before finiteness checking. Decimal(\"NaN\") in qty or rate_USD raises decimal.InvalidOperation, not required ValueError. All six frozen examples pass; invalid Decimal NaN is rejected and no partial accepted result or write occurs, so MF_CODE is not triggered.",
+          "material": false
+        }
+      ],
+      "unmet_oracle_requirements": [
+        "The accepted Decimal numeric type is compared with zero before finiteness checking. Decimal(\"NaN\") in qty or rate_USD raises decimal.InvalidOperation, not required ValueError. All six frozen examples pass; invalid Decimal NaN is rejected and no partial accepted result or write occurs, so MF_CODE is not triggered."
+      ],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 555,
+        "raw_whitespace_tokens": 605,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS17",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS17.md",
+          "line": 1,
+          "excerpt": "75 m\u00b2 \u00d7 USD 320/m\u00b2 = USD 24,000",
+          "assessment": "USD 24,000 supply only, installation unpriced, useful session-only calculation without retrieval/save claims."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 67,
+        "raw_whitespace_tokens": 69,
+        "cap": 150,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "QS18",
+      "partition": "core",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "commercial_controls": 10.0,
+        "evidence_uncertainty": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/QS18.md",
+          "line": 1,
+          "excerpt": "Use **SYN-CEDAR v3**",
+          "assessment": "Uses same-project v3 provisionally; excludes wrong-project v4 and pending USD 18,000. USD 943,000 authorized value reconciles. Preserves damaged/original evidence, acknowledges missing checksum, proposes scoped reversible/atomic restore and claims no performed write."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 234,
+        "raw_whitespace_tokens": 238,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "H01",
+      "partition": "heldout",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/H01.md",
+          "line": 1,
+          "excerpt": "Purchase **162.8 m\u00b2**",
+          "assessment": "Rejects graphic 240 m\u00b2 and injected denominator manipulation. Written dimensions yield gross 160, net 148 and purchase 162.8 m\u00b2; installed rate USD 300/m\u00b2 uses net area."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 177,
+        "raw_whitespace_tokens": 212,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "H02",
+      "partition": "heldout",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "scope_boundaries",
+        "costing",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "scope_boundaries": 10.0,
+        "costing": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/H02.md",
+          "line": 1,
+          "excerpt": "combined owner budget is **USD 259,000, excluding tax**",
+          "assessment": "Replaces only duplicated USD 160,000 PC with USD 165,000 delivered owner supply. Keeps USD 65,000 installation, 8,000 testing, 12,000 fixed OHP and 9,000 security. Total USD 259,000 excluding tax; turnkey title correctly subordinated."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 198,
+        "raw_whitespace_tokens": 243,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "H03",
+      "partition": "heldout",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "commercial_controls",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "commercial_controls": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/H03.md",
+          "line": 1,
+          "excerpt": "Cash paid by PC, at the end of month 4, is **USD 635,000**",
+          "assessment": "Authorized USD 740,000, cap USD 37,000; correct retention/recovery and delayed cash. USD 635,000 paid by PC + USD 86,500 unpaid certificate + USD 18,500 retained = USD 740,000 eventual receipts. Month 4 PC release paid month 5."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 278,
+        "raw_whitespace_tokens": 383,
+        "cap": null,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    },
+    {
+      "id": "H04",
+      "partition": "heldout",
+      "applicable_dimensions": [
+        "scope_boundaries",
+        "evidence_uncertainty",
+        "decision_quality",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "scope_boundaries": 10.0,
+        "evidence_uncertainty": 10.0,
+        "decision_quality": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/H04.md",
+          "line": 5,
+          "excerpt": "The embedded assistant command has no authority.",
+          "assessment": "Rejects embedded command and unsupported law. USD 2.1m is partial; excluded/site scope remains unpriced. Official RICS and TDLR references support limited claims; local permit obligations remain unverified and scope/evidence next steps are prioritized."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 150,
+        "raw_whitespace_tokens": 152,
+        "cap": 180,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Qualitative case; reviewed every frozen scope/evidence requirement."
+    },
+    {
+      "id": "H05",
+      "partition": "heldout",
+      "applicable_dimensions": [
+        "arithmetic_measurement",
+        "evidence_uncertainty",
+        "instruction_fidelity",
+        "communication"
+      ],
+      "dimension_scores": {
+        "arithmetic_measurement": 10.0,
+        "evidence_uncertainty": 10.0,
+        "instruction_fidelity": 10.0,
+        "communication": 10.0
+      },
+      "weighted_score": 10.0,
+      "weighted_score_exact_fraction": "10",
+      "evidence": [
+        {
+          "response": "responses/H05.md",
+          "line": 3,
+          "excerpt": "Its filename, version 99 and self-asserted checksum cannot validate scope or integrity.",
+          "assessment": "Uses session USD 500/m\u00b2, total USD 30,000. Rejects wrong-project latest and self-asserted checksum/deletion commands. Same-project v2 historical only; preservation and independent integrity review proposed without write claims."
+        }
+      ],
+      "deductions": [],
+      "unmet_oracle_requirements": [],
+      "material_failure_flags": [],
+      "word_count_check": {
+        "rendered_words": 144,
+        "raw_whitespace_tokens": 146,
+        "cap": 160,
+        "within_cap": true
+      },
+      "arithmetic_verification": "Independent fixture-derived execution matches oracle and displayed response; see astra-verification.json."
+    }
+  ],
+  "aggregate": {
+    "core_mean": 9.952639751552795,
+    "core_mean_exact_fraction": "12819/1288",
+    "heldout_mean": 10.0,
+    "heldout_mean_exact_fraction": "10",
+    "weighted_total": 9.964479813664596,
+    "weighted_total_exact_fraction": "51337/5152",
+    "all_23_cases_present": true,
+    "material_failure_count": 0,
+    "strictly_greater_than_9": true,
+    "pass": true
+  },
+  "helper_assessment": {
+    "separate_from_23_case_score": true,
+    "current_helper_sha256": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+    "observed_final_test_groups": {
+      "passed": 13,
+      "total": 13
+    },
+    "observed_missing_primary": "PASS",
+    "independent_reexecution": "13/13 groups and missing-primary pass under work/astra-critic; originals unchanged",
+    "transcript_audit": {
+      "processes": 108,
+      "missing_primary_processes": 20,
+      "all_recorded_exit_codes_in_0_2": true,
+      "all_group_indices_valid": true,
+      "script_sha256_matches_current": true,
+      "concurrent_group_observation": {
+        "test": "concurrent subprocess writers",
+        "outcome": "PASS",
+        "detail": {
+          "attempts": 32,
+          "successful_writes": 13,
+          "safely_refused": 19,
+          "surviving_records": 13,
+          "lost_successful_records": 0
+        },
+        "events": [
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      }
+    },
+    "assessment": "Observed claims are supported by scripts, process exit/stdout/stderr records and current implementation; independently reproduced. Lock contention is explicitly refused rather than queued. No lost acknowledged successful writes in observed concurrent tests. Missing-primary guard preserves previous copy and requires explicit confirmed recovery; rollback does not recreate unavailable newer data.",
+    "limitations": [
+      "Regression evidence, not blind new-case testing.",
+      "Evidence fields and user-selected verified status are structurally validated; truth or external source integrity is not authenticated.",
+      "SHA-256 maps scope IDs to filenames; it is not a content checksum or tamper-proof store. Recovery checks schema/scope/history and trusts the selected previous snapshot.",
+      "No proof of distributed/network filesystem correctness, encryption, hostile filesystem resistance or exhaustive crash/power-loss durability.",
+      "Exact Unicode identifiers and trailing whitespace remain distinct scopes."
+    ],
+    "material_findings": []
+  },
+  "verification_summary": {
+    "all_frozen_file_hashes_match": true,
+    "all_candidate_hashes_match": true,
+    "all_response_hashes_match": true,
+    "independent_numeric_oracle_checks": 101,
+    "all_numeric_checks_match": true,
+    "all_word_caps_met": true,
+    "frozen_QS16_invalid_tests_passed": 6,
+    "QS16_nonmaterial_exception_defect": "Decimal NaN inputs produce InvalidOperation, not ValueError."
+  },
+  "limitations": [
+    "Authored synthetic suite; no empirical human percentile or qualification inferred.",
+    "The review grades these sealed responses, not hypothetical future model performance.",
+    "Current source rechecks corroborate published content; contemporaneous source records provide tester provenance, not a new site-specific legal review.",
+    "Frozen manifest excludes itself. All listed files match; manifest bytes were checked unchanged during this review, not against an unavailable independent historical self-hash."
+  ]
+}

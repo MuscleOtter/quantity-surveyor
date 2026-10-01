@@ -1,0 +1,66 @@
+{
+  "purpose": "Corroborate original QS13 official-page retrievals; provenance only. No sealed response changes or case reruns.",
+  "collection_basis": "Current provenance compilation from original retained outputs; not a new retrieval or a reconstruction of page content. First original web.run output remains available verbatim in this agent tool-session storage. Later original outputs remain available in the conversation transcript but were not separately stored. Only brief original excerpts are included here.",
+  "session_date": "2026-10-01",
+  "date_basis": "Date from the original session environment. No independent wall-clock retrieval timestamp was captured.",
+  "original_tool": "web.run invoked through functions.exec as tools.web__run",
+  "first_call_original_output_available": true,
+  "records": [
+    {
+      "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "tool_result_id": "turn14view0",
+      "original_retrieval_status": "Successful open; rendered text/html, 177 lines. Tool stated Crawled: today.",
+      "original_output_excerpt": "L13: These documents were reissued in October 2022 as practice information.",
+      "excerpt_basis": "Exact retained original-output excerpt, limited to the opening sentence of line 13."
+    },
+    {
+      "url": "https://www.nyc.gov/site/buildings/industry/project-requirements-new-building.page",
+      "tool_result_id": "turn14view1",
+      "original_retrieval_status": "Failed: Internal Error; page was not accessible via this tool.",
+      "original_output_excerpt": "L0: URL https://www.nyc.gov/site/buildings/industry/project-requirements-new-building.page is not accessible via this tool.",
+      "excerpt_basis": "Original stored tool-output string; unsuccessful attempt not used as evidence of requirements."
+    },
+    {
+      "url": "https://www.nyc.gov/site/planning/zoning/about-zoning.page",
+      "tool_result_id": "turn14view2",
+      "original_retrieval_status": "Open returned a moved-page notice only; text/html, 3 lines. Tool stated Crawled: yesterday.",
+      "original_output_excerpt": "L2: This page has moved, you will be redirected automatically.",
+      "excerpt_basis": "Exact opening sentence of original moved-page notice. Not used for conclusions."
+    },
+    {
+      "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/rics-cost-prediction-professional-statement-global-1st-edition",
+      "tool_result_ids": [
+        "turn15search0",
+        "turn16view2"
+      ],
+      "original_retrieval_status": "Search returned official source, then successful direct open; text/html, 127 lines. Direct-open tool stated Crawled: today.",
+      "original_output_excerpt": "L8 excerpt: mandatory requirements which RICS professionals and RICS-regulated firms must follow",
+      "excerpt_basis": "Exact contiguous fragment from original conversation tool transcript line 8; no re-retrieval. Full later result was not separately retained in tool-session storage."
+    },
+    {
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/permits-by-type.page",
+      "tool_result_ids": [
+        "turn15search6",
+        "turn16view0"
+      ],
+      "original_retrieval_status": "Search returned official source, then successful direct open; text/html, 100 lines. Direct-open tool stated Crawled: today.",
+      "original_output_excerpt": "L26: To obtain a permit, a licensed Professional Engineer (PE) or Registered Architect (RA) must submit an application to the Department.",
+      "excerpt_basis": "Exact opening sentence of original conversation tool transcript line 26; no re-retrieval. Full later result was not separately retained in tool-session storage."
+    },
+    {
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner.page",
+      "tool_result_ids": [
+        "turn15search9",
+        "turn16view1"
+      ],
+      "original_retrieval_status": "Search returned official source, then successful direct open; text/html, 126 lines. Direct-open tool stated Crawled: today.",
+      "original_output_excerpt": "L52 excerpt: permit path selected (Department plan examination review or professional certification).",
+      "excerpt_basis": "Exact contiguous fragment from original conversation tool transcript line 52; no re-retrieval. Full later result was not separately retained in tool-session storage."
+    }
+  ],
+  "limitations": [
+    "No raw network/HTTP logs, screenshots, response headers, or independent retrieval timestamps were retained.",
+    "Original tool result IDs are transcript identifiers, not publicly accessible URLs.",
+    "No site-specific authority application or legal clearance was inspected or established."
+  ]
+}

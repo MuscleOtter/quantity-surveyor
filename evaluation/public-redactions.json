@@ -1,0 +1,101 @@
+{
+  "policy": "Only incidental absolute host paths in logs/reports were sanitized. Frozen suite, scored responses and candidate instruction files are unchanged. Original raw artifacts retained privately; public manifests verify immutable evidence, not redacted incidental logs.",
+  "files": [
+    {
+      "file": "helper/process-transcript.json",
+      "original_sha256": "2eaf5b3529b5f391f5f06931b32591f65fb45063bf3df003ca1d82820b2c116e",
+      "public_sha256": "64910fab674359503594c7241c5f8825504d366dfad80a82c25603876b14f65c",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper/report.md",
+      "original_sha256": "3596d0343b15d813fc9a785f3a8e88857d8f0e6d2b4aa5876cd0ad1e3ee77a42",
+      "public_sha256": "09dbfd28f25f4622724d402c5d5117ff5a2ec9eb2c2a69a8b299df4a0bddbe66",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper/results.json",
+      "original_sha256": "32beee515397f2e6bf179d903b331f38e69b3297e9658d6180bfeb24061286a0",
+      "public_sha256": "4bb47546ab359f5b98f0433b466d1c9fa2f84f1c8c2cb65bb8f3a2d15830f5c7",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-final/missing-primary-results.json",
+      "original_sha256": "218723446e55234e2e39d537adf8f823178eee37d520529cccd3e5d7b611b882",
+      "public_sha256": "0fbd659ac32f37f2719469acd97ad9543a32806eb9bf2cc76ccf0eb4e81f28b1",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-final/missing-primary-transcript.json",
+      "original_sha256": "7a4a834735c9e03eee3401f8e46610aa52a868e13b46d874f76367b07a3ed63d",
+      "public_sha256": "efbb4fa85e56d14bc86cecce10eaffdf73ac4b7533a01a8590f5f687f1e800e6",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-final/process-transcript.json",
+      "original_sha256": "f25011f53f820b9e70f7aef450349a298814df1fed985c4d1eedcbfee0ba8018",
+      "public_sha256": "d0fa2c2bc9882fc50809af6d0d9215d110ad6cf56edf1ca9ff864e43b654171e",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-final/report.md",
+      "original_sha256": "61a7c9358d461e982d913a55a1d32ccbb189ccffd38ce0fb4871c0ddf290a723",
+      "public_sha256": "b63c8912a315b240750c2325625b22434806fcd818ece0bb3c923595962cdc6e",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-final/results.json",
+      "original_sha256": "7f1c840d642adf69727cf30667863f3d5d0a595b6bb5a42cc619c52a39a7c600",
+      "public_sha256": "4b7deb90bd14dd39fbc06d14a617530b996775f25271ecc1d1824771c562a90d",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-round2/missing-primary.json",
+      "original_sha256": "1ad5ca16bff8f481c471ed58f89b419106e887b37e28fe824c139514f6b1935f",
+      "public_sha256": "956756810d9a9ff9294edc1ce534f9370dacdf57bfcf3fa991849c0bf5e5e2bb",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-round2/process-transcript.json",
+      "original_sha256": "2b10c6d7a69dbc7af13346abab14237d08d739308e7ba2341b47e6f97b8afa11",
+      "public_sha256": "144a9e1bea370d369bdade7900308e1dc67befd0761971e246ee5a495374d1e9",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-round2/report.md",
+      "original_sha256": "70fa07bf857fd76beb7f04855d02affe4f92c46b0adb34a4758918f4a981f8c7",
+      "public_sha256": "0f14778f2e1a7b0ab24039bdbae03bd589eec6c47721bd4a35d1313d78ba453f",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "helper-round2/results.json",
+      "original_sha256": "1b4e5aaf7a921909fb48042c41aa1c6fb908d4f8c0ce164db1dac1adc6684fd7",
+      "public_sha256": "ee5a9d1c160fb893c446654a622f859163c161aa8c768e594c68131781ce37ca",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "reproductions/missing-primary-after-fix.json",
+      "original_sha256": "33bbfc858727a5122665ead3fd7a71bddca0191535eb7c327fbea606125eefdd",
+      "public_sha256": "a0cb75fdbcf80a56390f09c200ed12cf0b59c3a6c00ad9b4434b893697144e86",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "reproductions/missing-primary-before-fix.json",
+      "original_sha256": "afd737cd726b5395f4a8031f36746a8b70676cc159788312ac1a4beaa877932f",
+      "public_sha256": "16cfd7fdcf8b468b376d25bf60e1aeba405c7416b851fe4d5a80dc7d0228509f",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "round2/astra-verification.json",
+      "original_sha256": "24ac2ddd0bf13068efdf839d1bc29824cdb7b5a0d4cf4a1b2bf239c5983115a2",
+      "public_sha256": "493c4e908af404460b6b64423a5da419546271fae810dffbb1810e0e87c09fa3",
+      "change": "Absolute local user/workspace paths replaced with neutral placeholders; no numerical results or case content changed."
+    },
+    {
+      "file": "defects-and-corrections.md",
+      "original_sha256": "8d56f1867135600f70c693fe87a2e4bf8d3a8eb83293573e1eb2fe17f6c72acc",
+      "public_sha256": "5796de038f929e6f51d9ac97b42e08a0c4513d4cb04cad684ccf2de0999213c6",
+      "change": "Nonsealed documentation locator corrected to public repository report and evidence locations."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "tester_role": "Independent visual robustness tester",
+  "configuration": "Same inherited configuration; no model details inferred",
+  "skill_read": "outputs/quantity-surveyor-portable/SKILL.md",
+  "references_read": [
+    "outputs/quantity-surveyor-portable/references/measurement-and-estimating.md",
+    "outputs/quantity-surveyor-portable/references/evidence-and-interfaces.md",
+    "outputs/quantity-surveyor-portable/references/standards.md"
+  ],
+  "fixture_read": "outputs/evaluation/visual/fixtures.json",
+  "cases": [
+    {
+      "id": "V01",
+      "image": "outputs/evaluation/visual/V01-facade.png",
+      "inspection": {
+        "tool": "view_image",
+        "actual_image_displayed_and_inspected": true,
+        "drawing": "E01",
+        "revision": "B",
+        "observations": [
+          "All dimensions in mm; resized figure; labelled dimensions govern",
+          "Elevation 10000 \u00d7 4000",
+          "Door 2000 \u00d7 3000; window 2000 \u00d7 1500",
+          "Deduct all white openings under client convention",
+          "Returns 200 mm deep: door jambs and head only, window all four sides",
+          "Glass/doors, framing and supports explicitly separate unpriced packages"
+        ]
+      },
+      "calculations": {
+        "gross_m2": "40",
+        "door_deduction_m2": "6",
+        "window_deduction_m2": "3.0",
+        "planar_net_m2": "31.0",
+        "door_returns_m2": "1.6",
+        "window_returns_m2": "1.40",
+        "returns_net_m2": "3.00",
+        "planar_purchased_m2": "33.170",
+        "returns_purchased_m2": "3.1500",
+        "cost_extensions_usd": [
+          "5970.600",
+          "6820.0",
+          "315.0000",
+          "450.00"
+        ],
+        "subtotal_usd": "13555.6000"
+      },
+      "response": "outputs/evaluation/visual/responses/V01.md"
+    },
+    {
+      "id": "V02",
+      "image": "outputs/evaluation/visual/V02-site.png",
+      "inspection": {
+        "tool": "view_image",
+        "actual_image_displayed_and_inspected": true,
+        "drawing": "S01",
+        "revision": "C",
+        "observations": [
+          "Dimensions in m; labelled external footprints govern; no scale inference",
+          "Site 40 \u00d7 30; Building A 20 \u00d7 10; Building B 10 \u00d7 10; landscape 10 \u00d7 10",
+          "All remaining grey is paving; paving excludes buildings and landscape",
+          "Slabs to Building A and B external footprints only; 150 mm thick",
+          "Drain horizontal leg 40 m and vertical leg 8 m; no drain below buildings",
+          "Sheet states measured civils subset, not complete building scope"
+        ]
+      },
+      "calculations": {
+        "site_m2": "1200",
+        "building_a_m2": "200",
+        "building_b_m2": "100",
+        "landscape_m2": "100",
+        "slab_thickness_m": "0.15",
+        "building_a_slab_m3": "30.00",
+        "building_b_slab_m3": "15.00",
+        "shared_paving_m2": "800",
+        "shared_drain_m": "48",
+        "cost_extensions_usd": [
+          "9000.00",
+          "4500.00",
+          "52000",
+          "4320"
+        ],
+        "subtotal_usd": "69820.00"
+      },
+      "response": "outputs/evaluation/visual/responses/V02.md"
+    }
+  ],
+  "calculation_execution": {
+    "method": "Python decimal arithmetic",
+    "script": "work/tester-visual/calculate.py",
+    "result": "Executed successfully; all assertions passed",
+    "checks": [
+      "V01 gross/net/opening reconciliation",
+      "V01 return quantity and independently regrouped cost reconciliation",
+      "V02 site area reconciliation",
+      "V02 total slab volume reconciliation",
+      "V02 independently regrouped subtotal reconciliation"
+    ],
+    "intermediate_results": "work/tester-visual/calculations.json"
+  },
+  "isolation": {
+    "cases_processed_independently": true,
+    "forbidden_material_not_read": [
+      "oracle",
+      "frozen.json",
+      "prior outputs",
+      "rubric",
+      "development docs",
+      "private installed skill",
+      "memory"
+    ],
+    "package_edited": false,
+    "external_mutation": false
+  },
+  "grading": "Not performed"
+}

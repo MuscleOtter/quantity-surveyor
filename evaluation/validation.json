@@ -1,0 +1,155 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "status": "passed",
+  "core_count": 18,
+  "heldout_count": 5,
+  "unique_case_ids": 23,
+  "case_oracle_pairing": "passed",
+  "dimension_weight_total": 1.0,
+  "dimension_applicability": "passed",
+  "synthetic_markers": "passed",
+  "independent_arithmetic_checks": 28,
+  "checks": [
+    {
+      "id": "QS01",
+      "field": "total_owner_budget",
+      "passed": true
+    },
+    {
+      "id": "QS02",
+      "field": "combined_total_USD",
+      "passed": true
+    },
+    {
+      "id": "QS03",
+      "field": "net_wall_m2",
+      "passed": true
+    },
+    {
+      "id": "QS03",
+      "field": "slab_m3",
+      "passed": true
+    },
+    {
+      "id": "QS05",
+      "field": "owner_development_budget",
+      "passed": true
+    },
+    {
+      "id": "QS06",
+      "field": "A_normalized_ex_tax",
+      "passed": true
+    },
+    {
+      "id": "QS06",
+      "field": "B_normalized_ex_tax",
+      "passed": true
+    },
+    {
+      "id": "QS06",
+      "field": "C_normalized_ex_tax",
+      "passed": true
+    },
+    {
+      "id": "QS07",
+      "field": "forecast_including_residual_reserve",
+      "passed": true
+    },
+    {
+      "id": "QS08",
+      "field": "forecast_final_including_reserve",
+      "passed": true
+    },
+    {
+      "id": "QS08",
+      "field": "cost_to_complete_including_reserve",
+      "passed": true
+    },
+    {
+      "id": "QS09",
+      "field": "total_receipts",
+      "passed": true
+    },
+    {
+      "id": "QS10",
+      "field": "package_cost",
+      "passed": true
+    },
+    {
+      "id": "QS11",
+      "field": "total_USD",
+      "passed": true
+    },
+    {
+      "id": "QS12",
+      "field": "original_NPV",
+      "passed": true
+    },
+    {
+      "id": "QS12",
+      "field": "VE_NPV",
+      "passed": true
+    },
+    {
+      "id": "QS12",
+      "field": "net_present_saving",
+      "passed": true
+    },
+    {
+      "id": "QS14",
+      "field": "safe_calculation",
+      "passed": true
+    },
+    {
+      "id": "QS15",
+      "field": "A_comparable_price",
+      "passed": true
+    },
+    {
+      "id": "QS16",
+      "field": "grand_total_USD",
+      "passed": true
+    },
+    {
+      "id": "QS17",
+      "field": "supply_only_amount_USD",
+      "passed": true
+    },
+    {
+      "id": "QS18",
+      "field": "authorized_contract_value",
+      "passed": true
+    },
+    {
+      "id": "H01",
+      "field": "net_installed_rate_USD_m2",
+      "passed": true
+    },
+    {
+      "id": "H02",
+      "field": "combined_USD",
+      "passed": true
+    },
+    {
+      "id": "H03",
+      "field": "authorized_contract_value",
+      "passed": true
+    },
+    {
+      "id": "H03",
+      "field": "cash_paid_by_PC",
+      "passed": true
+    },
+    {
+      "id": "H03",
+      "field": "eventual_total_receipts",
+      "passed": true
+    },
+    {
+      "id": "H05",
+      "field": "current_supply_amount_USD",
+      "passed": true
+    }
+  ],
+  "note": "Checks recompute consequential numeric results from supplied inputs; this is suite verification, not candidate evaluation. No actual private projects or prior test material were read."
+}

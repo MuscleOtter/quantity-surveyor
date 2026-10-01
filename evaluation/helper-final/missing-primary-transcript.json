@@ -1,0 +1,407 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "add",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/first.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"summary\": \"Previous snapshot quantity observation\",\n  \"kind\": \"observation\",\n  \"status\": \"verified\",\n  \"evidence\": [\n    {\n      \"source\": \"synthetic independent fixture\",\n      \"locator\": \"first.json\",\n      \"verification\": \"observed test input\"\n    }\n  ],\n  \"id\": \"80e642c7f1cc4b69b7b3f34e18204f4d\",\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  },\n  \"created_at\": \"2026-10-01T17:29:16.091238+00:00\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "add",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/latest.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"summary\": \"Latest current-only quantity observation\",\n  \"kind\": \"observation\",\n  \"status\": \"verified\",\n  \"evidence\": [\n    {\n      \"source\": \"synthetic independent fixture\",\n      \"locator\": \"latest.json\",\n      \"verification\": \"observed test input\"\n    }\n  ],\n  \"id\": \"8d251392935a4379a11c0b428263cd5b\",\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  },\n  \"created_at\": \"2026-10-01T17:29:16.130534+00:00\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "list",
+      "--status",
+      "all"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"error\": \"primary store missing but previous copy exists; inspect and recover explicitly\"}\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "check"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"error\": \"primary store missing but previous copy exists; inspect and recover explicitly\"}\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "add",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/future.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"error\": \"primary store missing but previous copy exists; inspect and recover explicitly\"}\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "correct",
+      "80e642c7f1cc4b69b7b3f34e18204f4d",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/correction.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"error\": \"primary store missing but previous copy exists; inspect and recover explicitly\"}\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "recover"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"error\": \"recovery requires --confirm after inspecting current and previous copies\"}\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "recover",
+      "--confirm"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"restored\": \"<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory/ac18e5ea8bd094f936afe180461b5b7f1a3cc1950db71a0eddc4eaba878bf81c.json\",\n  \"preserved_current\": null\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "list",
+      "--status",
+      "all"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"summary\": \"Previous snapshot quantity observation\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"first.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"80e642c7f1cc4b69b7b3f34e18204f4d\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.091238+00:00\"\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "check"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"exists\": true,\n  \"records\": 1,\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "add",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/future.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"summary\": \"Safely added after recovery\",\n  \"kind\": \"observation\",\n  \"status\": \"verified\",\n  \"evidence\": [\n    {\n      \"source\": \"synthetic independent fixture\",\n      \"locator\": \"future.json\",\n      \"verification\": \"observed test input\"\n    }\n  ],\n  \"id\": \"4189fb0119c54e18b8b1979f9cfdff02\",\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  },\n  \"created_at\": \"2026-10-01T17:29:16.446686+00:00\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "list",
+      "--status",
+      "all"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"summary\": \"Previous snapshot quantity observation\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"first.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"80e642c7f1cc4b69b7b3f34e18204f4d\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.091238+00:00\"\n  },\n  {\n    \"summary\": \"Safely added after recovery\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"future.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"4189fb0119c54e18b8b1979f9cfdff02\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.446686+00:00\"\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "correct",
+      "80e642c7f1cc4b69b7b3f34e18204f4d",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/correction.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"summary\": \"Verified corrected previous observation\",\n  \"kind\": \"observation\",\n  \"status\": \"verified\",\n  \"evidence\": [\n    {\n      \"source\": \"synthetic independent fixture\",\n      \"locator\": \"correction.json\",\n      \"verification\": \"observed test input\"\n    }\n  ],\n  \"id\": \"229efcef8d5b43db887c59fc863d5612\",\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  },\n  \"created_at\": \"2026-10-01T17:29:16.513980+00:00\",\n  \"replaces\": \"80e642c7f1cc4b69b7b3f34e18204f4d\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "list",
+      "--status",
+      "all"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"summary\": \"Previous snapshot quantity observation\",\n    \"kind\": \"observation\",\n    \"status\": \"superseded\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"first.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"80e642c7f1cc4b69b7b3f34e18204f4d\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.091238+00:00\",\n    \"previous_status\": \"verified\",\n    \"superseded_by\": \"229efcef8d5b43db887c59fc863d5612\",\n    \"superseded_at\": \"2026-10-01T17:29:16.514446+00:00\"\n  },\n  {\n    \"summary\": \"Safely added after recovery\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"future.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"4189fb0119c54e18b8b1979f9cfdff02\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.446686+00:00\"\n  },\n  {\n    \"summary\": \"Verified corrected previous observation\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"correction.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"229efcef8d5b43db887c59fc863d5612\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"synthetic-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.513980+00:00\",\n    \"replaces\": \"80e642c7f1cc4b69b7b3f34e18204f4d\"\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "synthetic-site",
+      "check"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"exists\": true,\n  \"records\": 3,\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"synthetic-site\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "genuinely-new-site",
+      "list"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "genuinely-new-site",
+      "check"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"exists\": false,\n  \"records\": 0,\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"genuinely-new-site\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "genuinely-new-site",
+      "add",
+      "--file",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/future.json"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"summary\": \"Safely added after recovery\",\n  \"kind\": \"observation\",\n  \"status\": \"verified\",\n  \"evidence\": [\n    {\n      \"source\": \"synthetic independent fixture\",\n      \"locator\": \"future.json\",\n      \"verification\": \"observed test input\"\n    }\n  ],\n  \"id\": \"de5f8d3769e64049aba09863b44ea7f3\",\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"genuinely-new-site\"\n  },\n  \"created_at\": \"2026-10-01T17:29:16.682711+00:00\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "genuinely-new-site",
+      "list"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"summary\": \"Safely added after recovery\",\n    \"kind\": \"observation\",\n    \"status\": \"verified\",\n    \"evidence\": [\n      {\n        \"source\": \"synthetic independent fixture\",\n        \"locator\": \"future.json\",\n        \"verification\": \"observed test input\"\n      }\n    ],\n    \"id\": \"de5f8d3769e64049aba09863b44ea7f3\",\n    \"scope\": {\n      \"user\": \"regression-user\",\n      \"project\": \"genuinely-new-site\"\n    },\n    \"created_at\": \"2026-10-01T17:29:16.682711+00:00\"\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.12/bin/python3.12",
+      "-I",
+      "-S",
+      "<workspace>/outputs/quantity-surveyor-portable/scripts/memory.py",
+      "--root",
+      "<workspace>/work/helper-final/missing-primary-1790875756054100000/synthetic scoped memory",
+      "--user",
+      "regression-user",
+      "--project",
+      "genuinely-new-site",
+      "check"
+    ],
+    "cwd": "<workspace>/work/helper-final/missing-primary-1790875756054100000",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"exists\": true,\n  \"records\": 1,\n  \"scope\": {\n    \"user\": \"regression-user\",\n    \"project\": \"genuinely-new-site\"\n  }\n}\n",
+    "stderr": ""
+  }
+]

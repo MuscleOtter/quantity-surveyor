@@ -1,0 +1,477 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "fixtures": [
+    {
+      "id": "QS01",
+      "title": "Luxury retail cost plan with declared percentage bases",
+      "synthetic": true,
+      "tags": [
+        "retail",
+        "arithmetic",
+        "double_count",
+        "cost_plan"
+      ],
+      "prompt": "Prepare a reconciled owner cost plan and USD per internal square foot. Distinguish construction, owner costs and reserve. All figures are synthetic planning inputs; do not replace them with market benchmarks. Show the declared bases for each percentage.",
+      "data": {
+        "currency": "USD",
+        "price_date": "2026-09",
+        "internal_area_ft2": 4800,
+        "construction_elements": {
+          "demolition": 65000,
+          "partitions_and_finishes": 540000,
+          "millwork_supply_and_install": 420000,
+          "MEP_and_controls": 510000,
+          "storefront": 260000
+        },
+        "preliminaries": {
+          "amount": 180000,
+          "already_in_elements": false
+        },
+        "contractor_OHP": {
+          "rate": 0.08,
+          "base": "elements plus preliminaries"
+        },
+        "design_risk_reserve": {
+          "rate": 0.1,
+          "base": "elements plus preliminaries plus OHP"
+        },
+        "owner_direct_costs": {
+          "design_and_consultants": 140000,
+          "IT_and_security_equipment": 75000,
+          "loose_furniture": 60000
+        },
+        "sales_tax": {
+          "amount": 90000,
+          "scope": "fixed separate allowance; not contained elsewhere"
+        },
+        "exclusions": [
+          "rent",
+          "lease deposit",
+          "inventory",
+          "financing"
+        ],
+        "instruction": "Do not apply OHP or reserve to owner costs or tax."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS02",
+      "title": "Imported millwork and facade procurement boundaries",
+      "synthetic": true,
+      "tags": [
+        "retail",
+        "facade",
+        "supply_install",
+        "FX",
+        "double_count"
+      ],
+      "prompt": "Build a supply-and-install reconciliation in USD and list interface responsibilities. The two schedules describe the same work. Do not simply add both schedules. Assume all rates and exchange rates below are contractually fixed.",
+      "data": {
+        "currency": "USD",
+        "supplier_quote": {
+          "EUR_amount": 180000,
+          "EUR_USD": 1.1,
+          "includes": [
+            "fabrication",
+            "packing",
+            "shop drawings"
+          ],
+          "excludes": [
+            "freight",
+            "duty",
+            "site storage",
+            "installation",
+            "final electrical hookup"
+          ]
+        },
+        "logistics_USD": {
+          "freight": 18000,
+          "duty": 12000,
+          "site_storage": 5000
+        },
+        "contractor_schedule": {
+          "installation_labour": 64000,
+          "plant": 6000,
+          "supply_provisional_sum": 220000,
+          "electrical_hookup": 8500,
+          "provisional_sum_definition": "placeholder for supplier fabrication, freight and duty; must be replaced by actual supply cost"
+        },
+        "OHP": {
+          "rate": 0.1,
+          "base": "installation labour and plant only"
+        },
+        "owner_supply_management_fee": {
+          "rate": 0.04,
+          "base": "converted supplier fabrication quote only"
+        },
+        "tax": "excluded; no other tax instruction supplied"
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS03",
+      "title": "Dimension-led takeoff from a resized plan",
+      "synthetic": true,
+      "tags": [
+        "takeoff",
+        "scale",
+        "units",
+        "measurement"
+      ],
+      "prompt": "Provide a takeoff for stone floor, gypsum wall finish, base trim and slab. Written dimensions govern. The plan was resized and its printed scale bar is unreliable. State deductions and keep net installed quantities separate from procurement waste.",
+      "data": {
+        "plan_note": "Originally 1:100, printed at 85%; no usable original sheet. Written dimensions govern.",
+        "units": "metres unless specified",
+        "room": {
+          "length": 12.0,
+          "width": 8.0,
+          "height": 3.2
+        },
+        "floor_exclusions": [
+          {
+            "description": "permanent rectangular core",
+            "length": 2.0,
+            "width": 3.0
+          }
+        ],
+        "wall_openings": [
+          {
+            "description": "entry door",
+            "width": 1.8,
+            "height": 2.4
+          },
+          {
+            "description": "glazing panel",
+            "width": 3.0,
+            "height": 2.0
+          }
+        ],
+        "wall_rule": "Deduct all listed openings from the four perimeter walls; ignore returns and core walls.",
+        "base_trim_rule": "Deduct entry door width only; glazing starts above floor.",
+        "stone_procurement_waste": 0.12,
+        "slab": {
+          "covers": "entire rectangular gross footprint including core",
+          "thickness_mm": 150
+        }
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS04",
+      "title": "Freestanding building scope completeness review",
+      "synthetic": true,
+      "tags": [
+        "full_building",
+        "site",
+        "scope",
+        "missing_evidence"
+      ],
+      "prompt": "Review whether this is a complete project budget for a freestanding luxury retail building. Do not price missing packages without evidence. Produce a concise scope matrix of included, excluded, unknown, and urgent questions.",
+      "data": {
+        "project": {
+          "location": "synthetic site in Arizona, USA",
+          "gross_internal_area_m2": 1250,
+          "storeys": 1,
+          "site_m2": 6000,
+          "stage": "concept",
+          "ground_investigation": "not yet commissioned",
+          "opening_target": "14 months after acquisition"
+        },
+        "included_packages": [
+          "retail interior finishes",
+          "display millwork",
+          "store lighting",
+          "above-ground steel frame",
+          "facade and roof cladding",
+          "in-building HVAC distribution"
+        ],
+        "explicit_exclusions": [
+          "land purchase",
+          "merchandise inventory"
+        ],
+        "unclear_packages": [
+          "substructure",
+          "incoming utilities capacity",
+          "external drainage and attenuation",
+          "parking and landscaping",
+          "fire water supply",
+          "HVAC central plant",
+          "professional fees",
+          "authority fees",
+          "commissioning",
+          "contingency",
+          "tax"
+        ],
+        "brief": "Site is undeveloped. No surveyed levels, geotechnical report, utility capacity letters, energy model, fire strategy or planning decision are provided."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS05",
+      "title": "Complete building elemental budget and area denominator",
+      "synthetic": true,
+      "tags": [
+        "full_building",
+        "arithmetic",
+        "cost_plan"
+      ],
+      "prompt": "Calculate the complete construction and owner development budget. Report both gross building area and retail sales-area benchmarks with clear labels. The project includes site work and building works; avoid presenting its rate as an interiors benchmark.",
+      "data": {
+        "currency": "USD",
+        "gross_building_area_m2": 1250,
+        "retail_sales_area_m2": 850,
+        "base_elements": {
+          "site_preparation_and_earthworks": 160000,
+          "substructure": 410000,
+          "frame": 550000,
+          "envelope": 720000,
+          "roof": 290000,
+          "interiors": 900000,
+          "MEP_full_plant_distribution_controls": 800000,
+          "life_safety": 140000,
+          "external_works_and_utilities": 340000,
+          "testing_and_commissioning": 60000
+        },
+        "preliminaries": 240000,
+        "contractor_OHP": {
+          "rate": 0.07,
+          "base": "all base elements plus preliminaries"
+        },
+        "construction_risk": {
+          "rate": 0.08,
+          "base": "base elements plus preliminaries plus OHP"
+        },
+        "escalation": {
+          "rate": 0.03,
+          "base": "same as construction risk; parallel, not compounded on risk"
+        },
+        "owner_design_fees": 310000,
+        "authority_and_utility_connection_fees": 90000,
+        "owner_equipment": 120000,
+        "tax_allowance": 180000,
+        "exclusions": [
+          "land",
+          "finance costs"
+        ],
+        "instruction": "Owner fees are not contractor works. All percentages use the declared base."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS06",
+      "title": "Tender normalization of provisional supply and taxes",
+      "synthetic": true,
+      "tags": [
+        "tender",
+        "normalization",
+        "supply_install",
+        "procurement"
+      ],
+      "prompt": "Normalize these three bids to the common scope excluding tax. Rank the comparable prices and identify the recommended clarification before award. A lower raw submission is not automatically cheaper.",
+      "data": {
+        "currency": "GBP",
+        "common_scope": [
+          "all works",
+          "facade lighting",
+          "stone supply",
+          "stone install",
+          "signage"
+        ],
+        "bid_A": {
+          "submitted_ex_tax": 1220000,
+          "included_stone_supply_PC_sum": 80000,
+          "facade_lighting": "excluded; add 35000",
+          "signage": "excluded; add 12000"
+        },
+        "bid_B": {
+          "submitted_including_tax": 1512000,
+          "tax_rate": 0.2,
+          "facade_lighting": "included",
+          "stone_supply": "included at firm 95000",
+          "signage": "included"
+        },
+        "bid_C": {
+          "submitted_ex_tax": 1180000,
+          "facade_lighting": "excluded; add 35000",
+          "stone_supply": "excluded; add 95000",
+          "stone_install": "included",
+          "signage": "excluded; add 12000"
+        },
+        "normalization": "Replace A stone PC sum by common 95000 supply allowance. No OHP on adjustments; all adjustments already include relevant OHP. Ignore tax recovery and financing.",
+        "quality_evidence": {
+          "A": "samples compliant; programme 20 weeks",
+          "B": "samples compliant; programme 18 weeks",
+          "C": "no compliant stone sample submitted; programme 16 weeks"
+        },
+        "required_programme_max_weeks": 20
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS07",
+      "title": "Change register states and expected outturn",
+      "synthetic": true,
+      "tags": [
+        "change",
+        "forecast",
+        "commercial_states"
+      ],
+      "prompt": "Produce current authorized contract value, known likely outturn and separately identified risk reserve. Explain approval status and payment status. Do not count the same change twice.",
+      "data": {
+        "currency": "USD",
+        "base_contract": 2400000,
+        "changes": [
+          {
+            "id": "C01",
+            "approved_amount": 60000,
+            "status": "approved",
+            "already_in_base_contract": false,
+            "paid_to_date": 20000
+          },
+          {
+            "id": "C02",
+            "quoted_amount": 45000,
+            "status": "instructed; valuation pending",
+            "forecast_agreed_likely_amount": 40000,
+            "probability_of_payment": 1.0
+          },
+          {
+            "id": "C03",
+            "quoted_amount": 30000,
+            "status": "unapproved proposal; not instructed",
+            "forecast_probability": 0.4
+          },
+          {
+            "id": "C04",
+            "approved_amount": -25000,
+            "status": "approved omission",
+            "already_in_base_contract": false
+          },
+          {
+            "id": "C05",
+            "quoted_amount": 12000,
+            "status": "rejected; not instructed"
+          }
+        ],
+        "risk_reserve": {
+          "amount": 50000,
+          "basis": "residual design risks only; expressly excludes all C01-C05 exposures"
+        },
+        "forecast_convention": "Known likely outturn includes approved changes plus full C02 forecast and probability-weighted C03. No separate quote amount is added after weighted exposure.",
+        "certified_to_date_base_and_changes": 820000
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS08",
+      "title": "Commitment versus spend forecast bridge",
+      "synthetic": true,
+      "tags": [
+        "forecast",
+        "commitments",
+        "cost_to_complete"
+      ],
+      "prompt": "Build the forecast bridge from actual cost to expected final cost and compare it with the budget. Explain the relationship between invoices, commitments, and remaining cost.",
+      "data": {
+        "currency": "USD",
+        "approved_budget": 1850000,
+        "committed_packages": [
+          {
+            "id": "structure",
+            "latest_commitment": 600000,
+            "actual_paid": 350000,
+            "forecast_final": 630000
+          },
+          {
+            "id": "envelope",
+            "latest_commitment": 420000,
+            "actual_paid": 150000,
+            "forecast_final": 400000
+          },
+          {
+            "id": "MEP",
+            "latest_commitment": 300000,
+            "actual_paid": 80000,
+            "forecast_final": 340000
+          }
+        ],
+        "uncommitted_package": {
+          "name": "external works",
+          "forecast_final": 180000,
+          "actual_paid": 0
+        },
+        "owner_direct_costs": {
+          "forecast_final": 100000,
+          "actual_paid": 40000
+        },
+        "residual_contingency": 50000,
+        "convention": "Each forecast_final includes all actual_paid within that package. Residual contingency is additional and excludes identified overruns. All figures exclude tax."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS09",
+      "title": "Cashflow with capped retention and advance recovery",
+      "synthetic": true,
+      "tags": [
+        "cashflow",
+        "retention",
+        "advance",
+        "conservation"
+      ],
+      "prompt": "Create monthly contractor cash receipts, retention balance and advance balance through defects release. Reconcile cumulative gross valuation to final net receipts. Use the supplied fictional contract terms.",
+      "data": {
+        "currency": "USD",
+        "contract_sum": 1000000,
+        "month_0_advance": 100000,
+        "monthly_gross_valuations": [
+          200000,
+          300000,
+          300000,
+          200000
+        ],
+        "retention": {
+          "rate": 0.05,
+          "cap": 40000,
+          "release_at_practical_completion": "50% of accumulated retention after month 4 valuation",
+          "release_at_month_10": "remaining 50%"
+        },
+        "advance_recovery": {
+          "rate": 0.1,
+          "base": "each monthly gross valuation",
+          "capped_at": 100000
+        },
+        "timing": "All net certificates are paid in the month shown; advance paid month 0; PC release paid month 4 in addition to net valuation. No tax or interest.",
+        "requirement": "Show month 0, months 1-4, and month 10; no recovery or retention on retention releases."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    }
+  ]
+}

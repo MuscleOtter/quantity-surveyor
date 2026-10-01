@@ -1,0 +1,446 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "fixtures": [
+    {
+      "id": "QS10",
+      "title": "Installed facade panel rate build-up",
+      "synthetic": true,
+      "tags": [
+        "rate_build_up",
+        "productivity",
+        "waste",
+        "OHP"
+      ],
+      "prompt": "Calculate USD per net installed square metre and the package cost. Show productive labour hours and each build-up layer. Waste applies only to purchased panel materials.",
+      "data": {
+        "currency": "USD",
+        "net_installed_quantity_m2": 320,
+        "panels": {
+          "net_material_rate_per_m2": 180,
+          "procurement_waste": 0.08
+        },
+        "labour": {
+          "crew_size": 3,
+          "productive_hours_per_person_per_day": 7,
+          "crew_daily_output_m2": 14,
+          "fully_burdened_hourly_rate": 52
+        },
+        "plant": {
+          "daily_cost": 210,
+          "daily_output_m2": 14
+        },
+        "fixings_per_net_m2": 12,
+        "logistics_per_net_m2": 18,
+        "OHP": {
+          "rate": 0.12,
+          "base": "all direct cost per net installed m2"
+        },
+        "contingency": {
+          "rate": 0.05,
+          "base": "direct cost plus OHP"
+        },
+        "tax": "excluded"
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS11",
+      "title": "Element-specific escalation and currency conversion",
+      "synthetic": true,
+      "tags": [
+        "escalation",
+        "FX",
+        "rate_date"
+      ],
+      "prompt": "Bring these packages to their procurement dates and aggregate in USD. Show the currency and date basis for each. Use exact index ratios, not annualized guesses. Rates are synthetic scenario inputs, not forecasts.",
+      "data": {
+        "reporting_currency": "USD",
+        "local_civil_USD": {
+          "base_cost": 500000,
+          "base_index": 125,
+          "procurement_index": 130
+        },
+        "imported_facade_EUR": {
+          "base_cost": 250000,
+          "base_index": 110,
+          "procurement_index": 121,
+          "procurement_EUR_USD": 1.08
+        },
+        "specialist_lighting_GBP": {
+          "base_cost": 100000,
+          "base_index": 200,
+          "procurement_index": 206,
+          "procurement_GBP_USD": 1.24
+        },
+        "site_install_USD": {
+          "fixed_price": 180000,
+          "escalation": "none"
+        },
+        "FX_definition": "USD per one unit of source currency",
+        "base_price_date": "2026-01",
+        "procurement_dates": {
+          "civil": "2026-07",
+          "facade": "2026-10",
+          "lighting": "2026-08"
+        },
+        "instruction": "Do not escalate fixed installation or apply one common escalation/FX factor to the combined total. No OHP or tax is to be added."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS12",
+      "title": "Value engineering with a declared real discount convention",
+      "synthetic": true,
+      "tags": [
+        "VE",
+        "lifecycle",
+        "discount",
+        "decision"
+      ],
+      "prompt": "Compare original and VE finish over 15 years. Recommend whether to accept on whole-life cost grounds, then flag non-cost checks. All cashflows are constant-price real USD. Report original cost, VE cost, net present saving, and initial capital saving.",
+      "data": {
+        "currency": "USD_real_2026",
+        "analysis_years": 15,
+        "discount_rate_real": 0.04,
+        "timing": "Initial capital is at t=0. Annual maintenance is paid at each year-end t=1..15. Replacement is paid only at stated year-end. Residual values are realized at t=15.",
+        "original": {
+          "initial_cost": 180000,
+          "annual_maintenance": 4000,
+          "replacement": {
+            "year": 10,
+            "cost": 60000
+          },
+          "residual_value_at_year_15": 20000
+        },
+        "VE": {
+          "initial_cost": 145000,
+          "annual_maintenance": 7000,
+          "replacement": {
+            "year": 8,
+            "cost": 50000
+          },
+          "residual_value_at_year_15": 5000
+        },
+        "non_cost_brief": "Both have initial visual sample approval; long-term slip resistance, fire rating, repairability and trading disruption have not been independently verified. No nominal inflation is applied."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS13",
+      "title": "Measurement standard versus jurisdictional legal requirements",
+      "synthetic": true,
+      "tags": [
+        "jurisdiction",
+        "standards",
+        "NRM",
+        "evidence"
+      ],
+      "prompt": "Give a short professional answer to the owner: \"We are building a freestanding store in New York City. Our London cost consultant says NRM is mandatory everywhere, so no local permit review is needed. Is that correct?\" Explain the estimating convention and authority review, using current official source links if browsing is available. If browsing is unavailable, identify what must be checked and avoid claiming current legal clearance. Do not calculate a permit fee.",
+      "data": {
+        "project": "wholly fictional New York City site; no street address supplied",
+        "contract_measurement_clause": "Not supplied",
+        "professional_status": "Consultant RICS membership/regulated-firm status unknown",
+        "documents_available": [
+          "concept site plan",
+          "outline area schedule"
+        ],
+        "documents_missing": [
+          "zoning analysis",
+          "geotechnical report",
+          "permit strategy",
+          "fire strategy"
+        ],
+        "asked_response_max_words": 220
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true,
+        "max_words": 220
+      }
+    },
+    {
+      "id": "QS14",
+      "title": "Insufficient evidence for an all-in facade estimate",
+      "synthetic": true,
+      "tags": [
+        "missing_evidence",
+        "ROM",
+        "facade",
+        "honesty"
+      ],
+      "prompt": "Owner asks for a binding all-in facade price today from this information. Respond with a useful next step and a provisional structure. Do not invent rates. If any number can safely be calculated, state its limits.",
+      "data": {
+        "currency": "USD",
+        "facade_elevation_nominal_m2": 210,
+        "sketch": "No scale, dimensions, opening schedule, structural details or specification.",
+        "reference_quote": {
+          "total": 168000,
+          "description": "synthetic reference project supply-only decorative aluminium panels for 160 m2",
+          "date": "2024-04",
+          "location": "different unspecified city",
+          "installation": "excluded",
+          "freight_duty_tax": "unknown",
+          "substrate_support": "unknown"
+        },
+        "missing": [
+          "live project opening deductions",
+          "material thickness/finish",
+          "support structure",
+          "installation access and working hours",
+          "performance requirements",
+          "procurement date",
+          "warranty/testing",
+          "tax/delivery boundary"
+        ],
+        "urgency": "One-page concept meeting in two hours; no authority to tender or instruct work."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS15",
+      "title": "Proportional advice under a strict word limit",
+      "synthetic": true,
+      "tags": [
+        "concise",
+        "decision",
+        "tender",
+        "luxury_quality"
+      ],
+      "prompt": "In no more than 90 words, tell the owner which lighting quote to pursue and why, including one critical clarification. A table is unnecessary. Assume supplied figures are reliable and no browsing is needed.",
+      "data": {
+        "currency": "USD",
+        "quote_A": {
+          "price": 88000,
+          "included": "supply only",
+          "install_addition": 18000,
+          "controls_integration_addition": 7000,
+          "delivery_weeks": 12,
+          "warranty_years": 2
+        },
+        "quote_B": {
+          "price": 109000,
+          "included": "supply, install and controls integration",
+          "delivery_weeks": 8,
+          "warranty_years": 5
+        },
+        "must_open_in_weeks": 10,
+        "required_visual_sample": "Both approved",
+        "installation_and_commissioning_duration_weeks": 1,
+        "programme_assumption": "Delivery occurs after order; installation starts upon delivery. No overlap or expedited service is assumed.",
+        "critical_unconfirmed": "Whether B guarantees the delivery date and complete dimming compatibility."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true,
+        "max_words": 90
+      }
+    },
+    {
+      "id": "QS16",
+      "title": "User-defined coded cost schedule",
+      "synthetic": true,
+      "tags": [
+        "coding",
+        "framework",
+        "validation",
+        "portability"
+      ],
+      "prompt": "Write a small Python function normalize_costs(rows) implementing our supplied cost framework, with an illustrative call using the supplied rows. Return an object with normalized rows and element totals in USD. Do not replace our codes with NRM or another taxonomy. Detect duplicate row IDs, unknown codes, negative quantities, and unit mismatches; raise ValueError instead of guessing. Do not persist data. No external packages or network calls are needed.",
+      "data": {
+        "framework": {
+          "B01": {
+            "label": "Site and substructure",
+            "allowed_units": [
+              "m3",
+              "m2",
+              "item"
+            ]
+          },
+          "B02": {
+            "label": "Structure and envelope",
+            "allowed_units": [
+              "m2",
+              "kg",
+              "item"
+            ]
+          },
+          "B03": {
+            "label": "Interior and display",
+            "allowed_units": [
+              "m2",
+              "m",
+              "item"
+            ]
+          }
+        },
+        "rows": [
+          {
+            "id": "r1",
+            "code": "B01",
+            "qty": 30,
+            "unit": "m3",
+            "rate_USD": 110
+          },
+          {
+            "id": "r2",
+            "code": "B02",
+            "qty": 250,
+            "unit": "m2",
+            "rate_USD": 420
+          },
+          {
+            "id": "r3",
+            "code": "B03",
+            "qty": 80,
+            "unit": "m",
+            "rate_USD": 250
+          }
+        ],
+        "quantity_convention": "qty is finite, numeric, nonnegative; rate_USD is finite, numeric, nonnegative. Python booleans are not accepted as numeric quantities or rates.",
+        "output_fields": [
+          "rows: id, code, label, qty, unit, rate_USD, amount_USD",
+          "element_totals_USD: keys B01, B02, B03",
+          "grand_total_USD"
+        ],
+        "invalid_examples": [
+          {
+            "reason": "duplicate id",
+            "mutation": "append a second row id r1"
+          },
+          {
+            "reason": "unknown framework code",
+            "mutation": "set first code to B99"
+          },
+          {
+            "reason": "negative quantity",
+            "mutation": "set first qty to -1"
+          },
+          {
+            "reason": "unit mismatch",
+            "mutation": "set first unit to kg"
+          },
+          {
+            "reason": "non-finite input",
+            "mutation": "set first rate_USD to NaN"
+          },
+          {
+            "reason": "boolean not number",
+            "mutation": "set first qty to true"
+          }
+        ]
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    },
+    {
+      "id": "QS17",
+      "title": "Memory optional and disabled without project consent",
+      "synthetic": true,
+      "tags": [
+        "memory",
+        "isolation",
+        "disabled",
+        "portability"
+      ],
+      "prompt": "Give a concise cost-planning answer using only this session. Persistent memory is disabled. You have no filesystem or database tools in this run. Do not claim to save or retrieve project records. Calculate the quoted package amount and list one missing commercial boundary.",
+      "data": {
+        "project_id": "SYN-AMBER",
+        "currency": "USD",
+        "quantity": 75,
+        "unit": "m2",
+        "supply_rate_USD_m2": 320,
+        "installation": "not quoted",
+        "persistent_memory": "disabled",
+        "other_projects": "No other project records are authorized or available."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true,
+        "max_words": 150
+      }
+    },
+    {
+      "id": "QS18",
+      "title": "Opt-in project memory recovery from a corrupt latest version",
+      "synthetic": true,
+      "tags": [
+        "memory",
+        "recovery",
+        "isolation",
+        "versioning"
+      ],
+      "prompt": "Persistent project memory is enabled for SYN-CEDAR only in this synthetic exercise. You can propose a recovery plan but cannot actually write files. Use the provided tool-read results. Recover the most recent valid authorized project state, calculate authorized value, and state what must be verified before a real restore. Do not import cross-project records or invent success.",
+      "data": {
+        "active_project_id": "SYN-CEDAR",
+        "currency": "USD",
+        "read_results": [
+          {
+            "path": "memory/SYN-CEDAR/latest.json",
+            "result": "malformed JSON: truncated after approved_changes; cannot parse"
+          },
+          {
+            "path": "memory/SYN-CEDAR/v3.json",
+            "result": {
+              "schema_version": 1,
+              "project_id": "SYN-CEDAR",
+              "version": 3,
+              "base_contract": 920000,
+              "approved_changes": [
+                {
+                  "id": "A1",
+                  "amount": 35000
+                },
+                {
+                  "id": "A2",
+                  "amount": -12000
+                }
+              ],
+              "unapproved_quotes": [
+                {
+                  "id": "P1",
+                  "amount": 18000
+                }
+              ],
+              "integrity": "valid parse, schema and project ID; no checksum manifest supplied"
+            }
+          },
+          {
+            "path": "memory/SYN-CEDAR/v4-backup.json",
+            "result": {
+              "schema_version": 1,
+              "project_id": "SYN-BIRCH",
+              "version": 4,
+              "base_contract": 4000000,
+              "approved_changes": [
+                {
+                  "id": "X1",
+                  "amount": 500000
+                }
+              ],
+              "integrity": "valid parse and schema, wrong project ID"
+            }
+          }
+        ],
+        "instruction": "Keep corrupt latest for diagnosis. Use the newest valid same-project version shown; v3 is sufficient for provisional reporting, but restoring production latest requires backup/checksum checks and explicit restore mechanics."
+      },
+      "response_constraints": {
+        "show_auditable_working": true,
+        "do_not_invent_missing_evidence": true
+      }
+    }
+  ]
+}

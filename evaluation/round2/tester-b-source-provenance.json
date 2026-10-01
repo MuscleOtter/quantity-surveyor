@@ -1,0 +1,46 @@
+{
+  "retrieval_date": "2026-10-01",
+  "method": "web tool; official public HTML overview only",
+  "sources": [
+    {
+      "id": "turn27view0",
+      "status": "open succeeded",
+      "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "locator": "lines 6-13",
+      "note": "NRM describes measurement and cost management; reissued October 2022 as practice information without material content changes."
+    },
+    {
+      "id": "turn27view1",
+      "status": "open failed: inaccessible URL",
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/new-building.page",
+      "note": "No usable content retrieved; not relied upon."
+    },
+    {
+      "id": "turn28search0",
+      "status": "search returned official page text",
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/obtaining-a-permit.page",
+      "note": "New Building permits cover new structures; RDP files plans; examination or professional certification applies, with certification subject to audit."
+    },
+    {
+      "id": "turn28search1",
+      "status": "search returned official page text",
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner.page",
+      "note": "Owner engages RDP; code and zoning requirements apply; completion includes inspections, sign-offs and Certificate of Occupancy."
+    },
+    {
+      "id": "turn29view0",
+      "status": "open succeeded",
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/obtaining-a-permit.page",
+      "locator": "lines 24-32",
+      "note": "NB concerns new structures; RDP files plans; DOB examination or professional certification with audit applies."
+    },
+    {
+      "id": "turn29view1",
+      "status": "open succeeded",
+      "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner.page",
+      "locator": "lines 31-32, 46-52, 60-68",
+      "note": "Owner engages RDP; code and zoning requirements apply; new-building completion requires sign-offs and Certificate of Occupancy."
+    }
+  ],
+  "limits": "No site-specific clearance, legal clause review, drawings, professional membership or contract adoption verified. No permit fee calculated."
+}

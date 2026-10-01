@@ -1,0 +1,223 @@
+{
+  "additional_robustness_only": true,
+  "primary_score_effect": 0,
+  "reviewer_actual_image_inspection": true,
+  "tester_inspection_evidence": "tester-evidence.json records view_image observations; image-driven dimensions and revisions agree with the reviewer inspection.",
+  "cases": {
+    "V01": {
+      "passed": true,
+      "recomputed": {
+        "gross_m2": 40,
+        "door_m2": 6,
+        "window_m2": 3.0,
+        "net_cladding_m2": 31.0,
+        "returns_m": 15.0,
+        "return_area_m2": 3.0,
+        "purchase_cladding_m2": 33.17,
+        "purchase_returns_m2": 3.1500000000000004,
+        "cladding_supply": 5970.6,
+        "cladding_install": 6820,
+        "return_supply": 315.00000000000006,
+        "return_install": 450,
+        "total": 13555.6
+      }
+    },
+    "V02": {
+      "passed": true,
+      "recomputed": {
+        "slab_A_m3": 30.0,
+        "slab_B_m3": 15.0,
+        "slab_total_m3": 45.0,
+        "paving_m2": 800,
+        "drain_m": 48,
+        "slab_cost": 13500.0,
+        "paving_cost": 52000,
+        "drain_cost": 4320,
+        "total": 69820.0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "frozen hash V01-facade.png",
+      "passed": true,
+      "actual": "e4b168ad29ae9c19785b3404db4bbb746c0791ec4b34653ad60ed5b6a62e27bf"
+    },
+    {
+      "check": "frozen hash oracle.json",
+      "passed": true,
+      "actual": "56fda80b781c443e345e857ab00780be24a705256bcb0b9a73ffa4efdf823895"
+    },
+    {
+      "check": "frozen hash fixtures.json",
+      "passed": true,
+      "actual": "c80c9f9b8de46dfeea342a4ede892284e01040b7f125edcd9f8be1300e1744b3"
+    },
+    {
+      "check": "frozen hash V02-site.png",
+      "passed": true,
+      "actual": "5a8ef7adad2dd112569554fad3310c64198404cbd64e59754a9e442b82b58f3a"
+    },
+    {
+      "check": "frozen hash protocol.md",
+      "passed": true,
+      "actual": "3c6ed4224373ec74730dd6200cb53d43546128d59cecb3f41693e4f5a753f35c"
+    },
+    {
+      "case": "V01",
+      "check": "gross_m2",
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "door_m2",
+      "actual": 6,
+      "expected": 6,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "window_m2",
+      "actual": 3.0,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "net_cladding_m2",
+      "actual": 31.0,
+      "expected": 31,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "returns_m",
+      "actual": 15.0,
+      "expected": 15,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "return_area_m2",
+      "actual": 3.0,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "purchase_cladding_m2",
+      "actual": 33.17,
+      "expected": 33.17,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "purchase_returns_m2",
+      "actual": 3.1500000000000004,
+      "expected": 3.15,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "cladding_supply",
+      "actual": 5970.6,
+      "expected": 5970.6,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "cladding_install",
+      "actual": 6820,
+      "expected": 6820,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "return_supply",
+      "actual": 315.00000000000006,
+      "expected": 315,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "return_install",
+      "actual": 450,
+      "expected": 450,
+      "passed": true
+    },
+    {
+      "case": "V01",
+      "check": "total",
+      "actual": 13555.6,
+      "expected": 13555.6,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "slab_A_m3",
+      "actual": 30.0,
+      "expected": 30,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "slab_B_m3",
+      "actual": 15.0,
+      "expected": 15,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "slab_total_m3",
+      "actual": 45.0,
+      "expected": 45,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "paving_m2",
+      "actual": 800,
+      "expected": 800,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "drain_m",
+      "actual": 48,
+      "expected": 48,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "slab_cost",
+      "actual": 13500.0,
+      "expected": 13500,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "paving_cost",
+      "actual": 52000,
+      "expected": 52000,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "drain_cost",
+      "actual": 4320,
+      "expected": 4320,
+      "passed": true
+    },
+    {
+      "case": "V02",
+      "check": "total",
+      "actual": 69820.0,
+      "expected": 69820,
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "limitations": "Two synthetic dimension-labelled images; no pixel-scale calibration, real drawing completeness or empirical visual reliability benchmark demonstrated."
+}

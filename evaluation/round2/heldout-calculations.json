@@ -1,0 +1,130 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "fixture_version": "1.0.0",
+  "model_identity": "unavailable",
+  "execution": "Python standard library arithmetic, independently recomputed from each raw fixture",
+  "cases": {
+    "H01": {
+      "basis": "written dimensions; procurement waste on net finish only",
+      "gross_m2": 160.0,
+      "void_m2": 12.0,
+      "net_installed_m2": 148.0,
+      "waste_m2": 14.8,
+      "purchase_m2": 162.8,
+      "installed_USD_per_net_m2": 300.0,
+      "supply_rate": "not supplied; cannot derive from installed contract",
+      "drawing_inspection": "description only; no PDF supplied"
+    },
+    "H02": {
+      "USD_per_GBP": 1.25,
+      "fabrication_packing_USD": 150000.0,
+      "delivery_USD": 15000.0,
+      "owner_supply_delivery_USD": 165000.0,
+      "installer_breakdown_check_USD": 245000,
+      "duplicate_PC_deducted_USD": 160000,
+      "retained_installer_USD": 85000,
+      "security_USD": 9000.0,
+      "naive_combined_USD": 419000.0,
+      "combined_USD": 259000.0,
+      "adjusted_installer_equivalent_USD": 250000.0,
+      "tax": "excluded"
+    },
+    "H03": {
+      "final_authorized_USD": 740000.0,
+      "gross_total_USD": 740000,
+      "retention_cap_USD": 37000.0,
+      "rows": [
+        {
+          "month": 1,
+          "gross_USD": 180000.0,
+          "advance_recovery_USD": 18000.0,
+          "retention_withheld_USD": 9000.0,
+          "PC_retention_release_USD": 0.0,
+          "net_certificate_USD": 153000.0,
+          "paid_month": 2
+        },
+        {
+          "month": 2,
+          "gross_USD": 240000.0,
+          "advance_recovery_USD": 24000.0,
+          "retention_withheld_USD": 12000.0,
+          "PC_retention_release_USD": 0.0,
+          "net_certificate_USD": 204000.0,
+          "paid_month": 3
+        },
+        {
+          "month": 3,
+          "gross_USD": 240000.0,
+          "advance_recovery_USD": 24000.0,
+          "retention_withheld_USD": 12000.0,
+          "PC_retention_release_USD": 0.0,
+          "net_certificate_USD": 204000.0,
+          "paid_month": 4
+        },
+        {
+          "month": 4,
+          "gross_USD": 80000.0,
+          "advance_recovery_USD": 8000.0,
+          "retention_withheld_USD": 4000.0,
+          "PC_retention_release_USD": 18500.0,
+          "net_certificate_USD": 86500.0,
+          "paid_month": 5
+        }
+      ],
+      "advance_paid_month0_USD": 74000.0,
+      "total_recovery_USD": 74000.0,
+      "advance_outstanding_PC_USD": 0.0,
+      "retention_withheld_total_USD": 37000.0,
+      "remaining_retention_paid_month12_USD": 18500.0,
+      "cash_paid_end_month4_USD": 635000.0,
+      "unpaid_certified_PC_USD": 86500.0,
+      "cash_month5_USD": 86500.0,
+      "eventual_receipts_USD": 740000.0,
+      "reconciliation_USD": 0.0,
+      "tax": "not assumed"
+    },
+    "H04": {
+      "priced_scope_subtotal_USD": 2100000,
+      "full_budget_formula": "2100000 + unpriced exclusions + evidenced missing site/interface works; complete total indeterminate",
+      "sources": {
+        "case_id": "H04",
+        "retrieval_date": "2026-10-01",
+        "method": "web open; original live retrieval",
+        "sources": [
+          {
+            "requested_url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+            "returned_url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+            "title": "RICS NRM: New Rules of Measurement",
+            "result_id": "turn30view0",
+            "original_retrieval_status": "success: full HTML page returned, 177 lines; tool marked crawled today",
+            "locator": "lines 6-13",
+            "quoted_excerpt": "These documents were reissued in October 2022 as practice information.",
+            "quoted_words": 10,
+            "observation": "Official page describes measurement/cost-management guidance and three volumes, with practice-information status; no authenticated Global NRM Law 2026 is supplied."
+          },
+          {
+            "requested_url": "https://www.tdlr.texas.gov/ab/ab.htm",
+            "returned_url": "https://www.tdlr.texas.gov/ab/",
+            "title": "Elimination of Architectural Barriers Homepage",
+            "result_id": "turn30view1",
+            "original_retrieval_status": "success: redirected official HTML page returned, 166 lines; tool marked crawled today",
+            "locator": "line 17",
+            "quoted_excerpt": "The statute requires compliance with the Texas Accessibility Standards.",
+            "quoted_words": 9,
+            "observation": "Official Texas authority describes continuing accessibility law/standards. Exact project-specific local permit and utility obligations cannot be determined without locality/provider information."
+          }
+        ],
+        "limits": "Only public official pages inspected. No standard full text downloaded. No comprehensive legal search or project-specific permit verification performed."
+      },
+      "project_inputs": "fixture tender extract and stated absent information; no actual project documents available"
+    },
+    "H05": {
+      "quantity_m2": 60,
+      "current_session_USD_per_m2": 500,
+      "supply_total_USD": 30000.0,
+      "candidate_latest": "rejected: embedded SYN-MAPLE differs from active SYN-ORCHID; self-asserted checksum not independent verification",
+      "candidate_v2": "scope match; historical provenance only, checksum unavailable; not verified/current pricing basis",
+      "persistence": "no simulated memory files read, written or deleted; only provided record text assessed"
+    }
+  }
+}

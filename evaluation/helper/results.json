@@ -1,0 +1,241 @@
+{
+  "package": "<workspace>/outputs/quantity-surveyor-portable",
+  "python": "3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 16.0.0 (clang-1600.0.26.3)]",
+  "executable": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+  "work": "<workspace>/work/helper-testing/run-1790874841254157000",
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "test": "explicit configuration required",
+      "outcome": "PASS",
+      "detail": "All required and whitespace-only configuration failures returned exit 2; no store created.",
+      "events": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "test": "provenance requirements",
+      "outcome": "PASS",
+      "detail": "Missing, empty, unstructured and incomplete provenance all refused before state creation.",
+      "events": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "test": "same-root user and project isolation",
+      "outcome": "PASS",
+      "detail": "Three scopes at the same root hold disjoint records; a fourth sees none.",
+      "events": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "test": "tentative versus verified and identity protection",
+      "outcome": "PASS",
+      "detail": "Default listing returns verified records, tentative suggestions stay separate, identity injection is discarded and tentative correction leaves verified bytes intact.",
+      "events": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "test": "correction history and duplicate refusal",
+      "outcome": "PASS",
+      "detail": "Two successive corrections preserve all three rows and bidirectional links; duplicate and unknown corrections refused without changes.",
+      "events": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "test": "invalid JSON refusal without data loss",
+      "outcome": "PASS",
+      "detail": "Invalid incoming JSON preserves current and previous copies; corrupt stored JSON refuses reads/writes and preserves exact damaged bytes.",
+      "events": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "test": "wrong-scope envelope refusal",
+      "outcome": "PASS",
+      "detail": "Wrong-scope current envelope and previous copy both refused; no mutation or recovery archive produced.",
+      "events": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "test": "confirmed previous-copy recovery and preservation",
+      "outcome": "PASS",
+      "detail": "Recovery requires confirmation, restores validated previous snapshot, preserves damaged bytes in a mode-0600 archive, and visibly rolls back the latest addition.",
+      "events": [
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "test": "unresolved lock refusal",
+      "outcome": "PASS",
+      "detail": "Writes and recovery refuse a preexisting lock, leave lock and state intact; snapshot reader continues to work as documented.",
+      "events": [
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "test": "concurrent subprocess writers",
+      "outcome": "PASS",
+      "detail": {
+        "attempts": 32,
+        "successful_writes": 11,
+        "safely_refused": 21,
+        "surviving_records": 11,
+        "lost_successful_records": 0
+      },
+      "events": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "test": "human-scope collisions and traversal-like IDs",
+      "outcome": "PASS",
+      "detail": "Traversal-like IDs, slash-colliding pairs, Unicode and composed/decomposed Unicode remain distinct hashed scope names in the chosen root.",
+      "events": [
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "test": "relocation and isolated standard-library execution",
+      "outcome": "PASS",
+      "detail": {
+        "cwd_outside_package": true,
+        "relocated_path": "<workspace>/work/helper-testing/run-1790874841254157000/relocated package with spaces",
+        "interpreter_flags": [
+          "-I",
+          "-S"
+        ],
+        "imports": [
+          "argparse",
+          "contextlib",
+          "datetime",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "sys",
+          "tempfile",
+          "uuid"
+        ],
+        "external_dependencies": []
+      },
+      "events": [
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "test": "blank original templates and optional core tools",
+      "outcome": "PASS",
+      "detail": {
+        "changes.csv": "header-only CSV; no filled rows",
+        "estimate.csv": "header-only CSV; no filled rows",
+        "forecast.csv": "header-only CSV; no filled rows",
+        "project-basis.md": "empty prompts; no filled values",
+        "core": "Explicitly requires no service, connector, model or proprietary library; memory optional. No hardcoded private user paths or installed-memory lookup."
+      },
+      "events": []
+    }
+  ]
+}

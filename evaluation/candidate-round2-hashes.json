@@ -1,0 +1,16 @@
+{
+  "LICENSE": "89526fc5f7f316c34ba9d29d4bcf0d67b65f2564436c8fa099cf585062392722",
+  "README.md": "9c3c2b62f01bcc828e4f0ac431c986e6a148631a06bb774d44cef646961069fd",
+  "SKILL.md": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+  "references/lifecycle.md": "cc69a89c6ce217e8eeab030393b1f3f75278eee1192cfaa48ba878b21a536196",
+  "references/measurement-and-estimating.md": "d98945d577701eaf8b74593161e6ee35b61fde566c57091629be0d2be23ab3ca",
+  "references/standards.md": "bf3e395e53f05f845df644ba464bfe2d082ad61a14d3d925a30ce7eaffb35343",
+  "references/evidence-and-interfaces.md": "d6bc6001110de049e3cf645b74e8415ec2e7700b14e1cb77dd1ac59fef831ca4",
+  "references/commercial-control.md": "42acd9aa53cbe37bc57b7544257aa6f2c74aa16306e24f33090bf3f39c755a42",
+  "references/memory-and-review.md": "9f47e569bcdd7e710c07ffeed68f97bc7c3452ef81be0e6299585fa2de6c3f7b",
+  "scripts/memory.py": "9e7eb6bbd3906a120a9567d57a2da273809f1e2ff63154975be5e07fff5962d4",
+  "templates/forecast.csv": "771def4a541813c6c1302ad7794b32e2304c64d7046e7310c1c8d7e46b46dbec",
+  "templates/changes.csv": "d6341a3d1e4dcf4185f5463d8a6fd2c88326ef905359f9950ec1b9d84e34f00c",
+  "templates/estimate.csv": "3080958cfbf53429ee3390edecd348ec62e381266aadafcb442f20bd22ef381f",
+  "templates/project-basis.md": "d4d2770aafac8590fdd472e157bb5c1e25eea22ff12428c03bed5e83018f6a85"
+}

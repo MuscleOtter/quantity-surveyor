@@ -1,0 +1,37 @@
+{
+  "scored_candidate": "candidate-round2",
+  "scored_identity": "quantity-surveyor-portable",
+  "release_identity": "universal-quantity-surveyor",
+  "unchanged": "All six QS references, CSV/Markdown templates, LICENSE and memory helper",
+  "identity_only": "SKILL frontmatter/heading renamed and version/license/repository metadata added; original QS instruction body unchanged",
+  "new_behavior": "Optional update section, reference, read-only checker and version manifest; separately tested, no new QS behavioral score asserted",
+  "removed": [
+    "README.md (superseded by root documentation)"
+  ],
+  "changes": [
+    {
+      "file": "SKILL.md",
+      "kind": "modified",
+      "old_sha256": "b83eb1112891b663bb8e35d092507440b15bc4f93c2130f18fe66e6fe18b3b8d",
+      "release_sha256": "30f1a640aa96a1b305f3693fa95760cdf6dc33939d213ef4619d4479ade30761"
+    },
+    {
+      "file": "references/updates.md",
+      "kind": "added",
+      "old_sha256": null,
+      "release_sha256": "d07490dcf4f1a9b44bfc97eb8b0664403c32ffd1c5666d8806cb3de163dcf556"
+    },
+    {
+      "file": "scripts/check_updates.py",
+      "kind": "added",
+      "old_sha256": null,
+      "release_sha256": "22fe59b4da3aa2b1b16fad5c783e7012e8e42d6eb5f3cfdf16f3cf1e5faf029f"
+    },
+    {
+      "file": "version.json",
+      "kind": "added",
+      "old_sha256": null,
+      "release_sha256": "5c5c5cc517ad76ea62fefd7bc26ce93565cd57b87894254c3f8edd4f0ec376d8"
+    }
+  ]
+}

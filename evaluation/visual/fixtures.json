@@ -1,0 +1,12 @@
+[
+  {
+    "id": "V01",
+    "prompt": "Read the supplied facade image visually and prepare an installed cost schedule in USD using its governing dimensions and client deduction convention. Separate net installation quantities from purchased quantities. Planar cladding supply is USD180/m2 purchased including 7% waste, installation USD220/m2 net. Return lining supply USD100/m2 purchased including 5% waste, installation USD150/m2 net. No other costs, markups or taxes. State covered boundary and absent packages; do not claim NRM compliance. Identify image revision and use only supported quantities.",
+    "image": "V01-facade.png"
+  },
+  {
+    "id": "V02",
+    "prompt": "Visually inspect supplied site plan and take off the defined civils subset in USD: installed slab USD300/m3, paving USD65/m2, shared drain USD90/m. Do not add waste or markups. Show building-specific quantities, shared works once and subtotal; state why this is not a complete freestanding-build estimate and prioritize missing evidence. Use governing dimensions and stated convention, not pixel scale.",
+    "image": "V02-site.png"
+  }
+]

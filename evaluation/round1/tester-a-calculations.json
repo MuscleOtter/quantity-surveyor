@@ -1,0 +1,356 @@
+{
+  "suite_id": "universal-quantity-surveyor-synthetic-v1",
+  "tester": "tester-a",
+  "input": "outputs/evaluation/tester-input-a.json",
+  "calculation_method": "Python decimal.Decimal and integer arithmetic; independently expressed bridges and fixed numeric cross-checks executed",
+  "cases": {
+    "QS01": {
+      "elements": 1795000,
+      "OHP_base": 1975000,
+      "OHP": "158000.00",
+      "construction": "2133000.00",
+      "reserve_base": "2133000.00",
+      "reserve": "213300.000",
+      "owner_direct": 275000,
+      "tax": 90000,
+      "owner_budget": "2711300.000",
+      "USD_per_internal_ft2": "564.8541666666666666666666667"
+    },
+    "QS02": {
+      "USD_per_EUR": "1.10",
+      "supplier_USD": "198000.0",
+      "actual_supply_replacement": "228000.0",
+      "provisional_supply_removed": 220000,
+      "replacement_delta": "8000.0",
+      "installation_base": 70000,
+      "OHP": "7000.0",
+      "management_fee": "7920.000",
+      "total_ex_tax": "326420.000",
+      "schedule_bridge": "326420.000"
+    },
+    "QS03": {
+      "gross_floor_m2": "96.00",
+      "core_deduction_m2": "6.00",
+      "stone_net_m2": "90.00",
+      "perimeter_m": "40.0",
+      "gross_wall_m2": "128.00",
+      "wall_deductions_m2": "10.32",
+      "gypsum_net_m2": "117.68",
+      "base_trim_m": "38.2",
+      "stone_waste_m2": "10.8000",
+      "stone_procurement_m2": "100.8000",
+      "slab_thickness_m": "0.15",
+      "slab_m3": "14.4000"
+    },
+    "QS04": {
+      "included_package_count": 6,
+      "explicit_exclusion_count": 2,
+      "supplied_unclear_package_count": 11,
+      "prices_supplied": false,
+      "priced_missing_scope": false,
+      "verification": "Input scope reviewed; no drawings, surveys, authority documents, prices or programme logic available."
+    },
+    "QS05": {
+      "base_elements": 4370000,
+      "OHP_base": 4610000,
+      "OHP": "322700.00",
+      "risk_and_escalation_base": "4932700.00",
+      "construction_risk": "394616.0000",
+      "escalation": "147981.0000",
+      "construction_budget": "5475297.0000",
+      "owner_costs_ex_tax": 520000,
+      "tax": 180000,
+      "development_budget": "6175297.0000",
+      "construction_USD_per_gross_m2": "4380.2376",
+      "construction_USD_per_sales_m2": "6441.525882352941176470588235",
+      "development_USD_per_gross_m2": "4940.2376",
+      "development_USD_per_sales_m2": "7265.055294117647058823529412"
+    },
+    "QS06": {
+      "A_comparable_ex_tax": 1282000,
+      "B_comparable_ex_tax": "1.26000E+6",
+      "B_tax_removed": "252000",
+      "C_comparable_ex_tax": 1322000,
+      "rank": [
+        "B",
+        "A",
+        "C"
+      ],
+      "B_below_A": "22000",
+      "B_below_C": "62000"
+    },
+    "QS07": {
+      "authorized_contract": 2435000,
+      "C02_forecast": 40000,
+      "C03_weighted_exposure": "12000.0",
+      "known_likely_outturn": "2487000.0",
+      "separate_residual_risk": 50000,
+      "outturn_plus_risk": "2537000.0",
+      "certified_to_date": 820000,
+      "only_recorded_paid_change": 20000
+    },
+    "QS08": {
+      "packages": [
+        {
+          "id": "structure",
+          "latest_commitment": 600000,
+          "actual_paid": 350000,
+          "forecast_final": 630000,
+          "remaining_forecast": 280000,
+          "net_forecast_change": 30000
+        },
+        {
+          "id": "envelope",
+          "latest_commitment": 420000,
+          "actual_paid": 150000,
+          "forecast_final": 400000,
+          "remaining_forecast": 250000,
+          "net_forecast_change": -20000
+        },
+        {
+          "id": "MEP",
+          "latest_commitment": 300000,
+          "actual_paid": 80000,
+          "forecast_final": 340000,
+          "remaining_forecast": 260000,
+          "net_forecast_change": 40000
+        }
+      ],
+      "actual_paid_total": 620000,
+      "latest_contract_commitments": 1320000,
+      "contracted_forecast_total": 1370000,
+      "remaining_ex_contingency": 1030000,
+      "residual_contingency": 50000,
+      "expected_final": 1700000,
+      "commitment_bridge": 1700000,
+      "forecast_minus_budget": -150000
+    },
+    "QS09": {
+      "rows": [
+        {
+          "month": 0,
+          "gross": "0",
+          "advance_paid": "100000",
+          "recovery": "0",
+          "retention_withheld": "0",
+          "net_valuation_receipt": "0",
+          "retention_released": "0",
+          "total_receipt": "100000",
+          "retention_balance": "0",
+          "advance_balance": "100000",
+          "cumulative_receipts": "100000"
+        },
+        {
+          "month": 1,
+          "gross": "200000",
+          "advance_paid": "0",
+          "recovery": "20000.0",
+          "retention_withheld": "10000.00",
+          "net_valuation_receipt": "170000.00",
+          "retention_released": "0",
+          "total_receipt": "170000.00",
+          "retention_balance": "10000.00",
+          "advance_balance": "80000.0",
+          "cumulative_receipts": "270000.00"
+        },
+        {
+          "month": 2,
+          "gross": "300000",
+          "advance_paid": "0",
+          "recovery": "30000.0",
+          "retention_withheld": "15000.00",
+          "net_valuation_receipt": "255000.00",
+          "retention_released": "0",
+          "total_receipt": "255000.00",
+          "retention_balance": "25000.00",
+          "advance_balance": "50000.0",
+          "cumulative_receipts": "525000.00"
+        },
+        {
+          "month": 3,
+          "gross": "300000",
+          "advance_paid": "0",
+          "recovery": "30000.0",
+          "retention_withheld": "15000.00",
+          "net_valuation_receipt": "255000.00",
+          "retention_released": "0",
+          "total_receipt": "255000.00",
+          "retention_balance": "40000.00",
+          "advance_balance": "20000.0",
+          "cumulative_receipts": "780000.00"
+        },
+        {
+          "month": 4,
+          "gross": "200000",
+          "advance_paid": "0",
+          "recovery": "20000.0",
+          "retention_withheld": "0.00",
+          "net_valuation_receipt": "180000.00",
+          "retention_released": "20000.00",
+          "total_receipt": "200000.00",
+          "retention_balance": "20000.00",
+          "advance_balance": "0.0",
+          "cumulative_receipts": "980000.00"
+        },
+        {
+          "month": 10,
+          "gross": "0",
+          "advance_paid": "0",
+          "recovery": "0",
+          "retention_withheld": "0",
+          "net_valuation_receipt": "0",
+          "retention_released": "20000.00",
+          "total_receipt": "20000.00",
+          "retention_balance": "0.00",
+          "advance_balance": "0.0",
+          "cumulative_receipts": "1000000.00"
+        }
+      ],
+      "gross_total": "1000000",
+      "net_valuation_certificates": "860000.00",
+      "advance_paid_total": "100000",
+      "advance_recovered_total": "100000.0",
+      "retention_withheld_total": "40000.00",
+      "retention_released_total": "40000.00",
+      "final_receipts": "1000000.00",
+      "final_retention": "0.00",
+      "final_advance": "0.0"
+    }
+  },
+  "verification": [
+    {
+      "case": "QS01",
+      "check": "total against independent component sum",
+      "actual": "2711300.000",
+      "expected": "2711300",
+      "passed": true
+    },
+    {
+      "case": "QS01",
+      "check": "percentage addition equivalence",
+      "actual": "2133000.00",
+      "expected": "2133000.00",
+      "passed": true
+    },
+    {
+      "case": "QS02",
+      "check": "scope sum versus schedule replacement bridge",
+      "actual": "326420.000",
+      "expected": "326420.000",
+      "passed": true
+    },
+    {
+      "case": "QS02",
+      "check": "total numeric cross-check",
+      "actual": "326420.000",
+      "expected": "326420",
+      "passed": true
+    },
+    {
+      "case": "QS03",
+      "check": "floor net plus deduction",
+      "actual": "96.00",
+      "expected": "96.00",
+      "passed": true
+    },
+    {
+      "case": "QS03",
+      "check": "wall net plus deductions",
+      "actual": "128.00",
+      "expected": "128.00",
+      "passed": true
+    },
+    {
+      "case": "QS03",
+      "check": "slab volume cross-check",
+      "actual": "14.4000",
+      "expected": "14.4",
+      "passed": true
+    },
+    {
+      "case": "QS05",
+      "check": "parallel risk and escalation",
+      "actual": "5475297.0000",
+      "expected": "5475297.0000",
+      "passed": true
+    },
+    {
+      "case": "QS05",
+      "check": "complete budget total",
+      "actual": "6175297.0000",
+      "expected": "6175297",
+      "passed": true
+    },
+    {
+      "case": "QS06",
+      "check": "B tax reversal",
+      "actual": "1512000.0",
+      "expected": "1512000",
+      "passed": true
+    },
+    {
+      "case": "QS06",
+      "check": "A PC replacement delta",
+      "actual": "62000",
+      "expected": "62000",
+      "passed": true
+    },
+    {
+      "case": "QS07",
+      "check": "outturn bridge",
+      "actual": "87000.0",
+      "expected": "87000",
+      "passed": true
+    },
+    {
+      "case": "QS07",
+      "check": "authorized approved changes",
+      "actual": "35000",
+      "expected": "35000",
+      "passed": true
+    },
+    {
+      "case": "QS08",
+      "check": "actual plus remaining versus commitment bridge",
+      "actual": "1700000",
+      "expected": "1700000",
+      "passed": true
+    },
+    {
+      "case": "QS08",
+      "check": "final forecast numeric check",
+      "actual": "1700000",
+      "expected": "1700000",
+      "passed": true
+    },
+    {
+      "case": "QS09",
+      "check": "final receipts equal contract sum",
+      "actual": "1000000.00",
+      "expected": "1000000",
+      "passed": true
+    },
+    {
+      "case": "QS09",
+      "check": "retention fully released",
+      "actual": "40000.00",
+      "expected": "40000.00",
+      "passed": true
+    },
+    {
+      "case": "QS09",
+      "check": "advance fully recovered",
+      "actual": "100000.0",
+      "expected": "100000",
+      "passed": true
+    },
+    {
+      "case": "QS09",
+      "check": "gross-to-net cash conservation",
+      "actual": "1000000.00",
+      "expected": "1000000.00",
+      "passed": true
+    }
+  ],
+  "limitations": "Synthetic fixture calculations only. No live pricing, original drawings, regulatory requirements, invoices, contract clauses beyond supplied fictional terms, or area certification available."
+}

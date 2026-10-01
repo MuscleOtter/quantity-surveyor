@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-01",
+  "host_os": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.6",
+  "harness": "Codex desktop local task with collaboration agents",
+  "agent_models": "Inherited configured model; precise identifier and reasoning setting not exposed to evaluator",
+  "browsing": "Official-source web search available; no cli/browser daemon used",
+  "skills": "Markdown references read directly; native automatic routing not evaluated",
+  "other_harnesses": "Not executed",
+  "other_models": "Not executed"
+}

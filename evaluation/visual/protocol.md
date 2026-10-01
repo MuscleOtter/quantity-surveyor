@@ -1,0 +1,3 @@
+# Additional visual robustness cases
+
+Two original synthetic drawing cases supplement the frozen 23-case primary suite. Created and sealed before visual tester dispatch. Tester sees images, prompts and candidate only; oracle withheld. Tester must actually inspect both images. Reviewer recomputes quantities/costs and checks scope, waste and evidence boundaries. These cases do not change the primary rubric, denominator or score. Report pass only if all oracle quantities/extensions match within display rounding, actual visual inspection occurred and no material scope/evidence error. Same model/harness configuration; no real site/drawing completeness or calibrated pixel take-off demonstration is implied.
