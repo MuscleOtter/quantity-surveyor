@@ -21,5 +21,5 @@ These three synthetic cases have no baseline arm and cannot demonstrate general 
 - [Frozen key](../expected.json)
 - [Run response](../run/response.md)
 - [Run evidence](../run/evidence.md)
-- [Independent calculations](../../../work/public-transfer-critic/calculations.json)
+- [Independent calculations](calculations.json)
 - [Machine-readable grading](results.json)

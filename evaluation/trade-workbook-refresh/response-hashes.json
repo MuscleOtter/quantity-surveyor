@@ -1,7 +1,9 @@
 {
   "run/response.md": "c9160c925df94043fa0b58378dbeef17acfc6950d9d97c6a9e864d57e44d68a5",
-  "run/evidence.md": "6410236ac39b0b2344612a59bac083d0ceca0b1c5a50ca3a4244e3f186055622",
-  "critic/review.md": "ebcd5038cfb99ad860e86f2fde8b617fb005b72303dcabafcae40fb404e1092e",
+  "run/evidence.md": "7ecb314f0e6ab121ed14fd05da331eae5195e9092f85f88fd699a2add1a0a1f2",
+  "run/calculations.json": "6c7d266ab52b9a4e87c6735539f9ccd7deefbf8c8fc6b025787cf11bc37f1bc0",
+  "critic/review.md": "f2a5272c42d797eaaf5a1f7b439fd2e5efd3b4830920bb68391a9dff3d564df6",
   "critic/results.json": "4c7b0fa68cc0c3f55d0fa39e61e84f1c7fe6edd3ad35bdd1abb948cf4959fff7",
+  "critic/calculations.json": "21f74398e696c57a332f9e02b1e73da2849245d810cbee96f3706b520ec9b0f3",
   "workbook-checks.json": "25861ddf6a4185b7e803ed14f0baecd4dcc4f4805f4da5d4312ead268ff67ef0"
 }

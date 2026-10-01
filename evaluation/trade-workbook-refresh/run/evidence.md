@@ -18,7 +18,7 @@ Tolerance **2%** was declared in the evaluation commentary before vector measure
 
 ## Calculation evidence and reconciliation
 
-Calculations used Decimal arithmetic; machine-readable detail is saved in `work/public-transfer-evaluation/calculations.json`.
+Calculations used Decimal arithmetic; machine-readable detail is saved in [calculations.json](calculations.json).
 
 - A R1: gross 7.2×3.1=22.32 m²; opening 1.2×2.1=2.52 m²; net 19.80 m²; purchase 19.80×1.05=20.790 m²; supply 20.790×80=1,663.20 CU; install 19.80×45=891.00 CU; sum=2,554.20 CU.
 - A R2: gross 7.2×3.4=24.48 m²; net 21.96 m²; purchase 23.058 m²; supply=1,844.64 CU; install=988.20 CU; sum=2,832.84 CU.

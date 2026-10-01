@@ -36,6 +36,7 @@ def main():
     refresh_changes=json.loads((refresh/'changes.json').read_text())
     verify_manifest(refresh/'baseline-2.0.3', refresh/'baseline-hashes.json')
     verify_manifest(refresh, refresh/'frozen.json')
+    verify_manifest(refresh, refresh/'response-hashes.json')
     verify_manifest(SKILL, refresh/'candidate-hashes.json')
     def apply_refresh(name, text):
         for before,after in refresh_changes.get(name, []):
