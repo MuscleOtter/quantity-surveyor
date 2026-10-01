@@ -73,3 +73,7 @@ Version 2.0.3 addresses the reported friction by separating simple take-off from
 ## Trade/workbook transfer (2.1.0)
 
 The [new evidence record](../evaluation/trade-workbook-refresh/README.md) preserves the prior public package, an explicit additive delta and a newly frozen three-case drawing exercise with a blind evaluator and separate critic. All three fresh drawing cases passed independent mandatory checks. The optional workbook has 30 recorded input-state checks and structural/export checks; its formulas still need verification in the user's spreadsheet application. Historical scores do not apply to these additions; this bounded exercise cannot establish full-set accuracy or general skill lift.
+
+## Vendor-neutral wording (2.1.1)
+
+The [wording change record](../evaluation/vendor-neutral-wording/README.md) preserves the affected 2.1.0 files and exact substitutions. Current instructions and guides use company cost-code terminology without naming a product. Calculation rules, helpers and the workbook are unchanged. The existing evaluation remains historical evidence; this patch adds no behavioral score.

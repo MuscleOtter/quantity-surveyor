@@ -12,9 +12,9 @@ A drawing register, quantity take-off, itemized estimate, rate build-up, scope-g
 
 Yes. Version 2.1.0 includes an [optional blank workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/latest/download/estimating-template.xlsx) with Summary, Drawings, Takeoff, Rates, Queries, Codes and Revision sheets. It preserves missing quantity/price queries and checks allocations and revision residuals. It covers 100 reserved detail lines; extend all linked ranges together for larger estimates. Verify recalculation in your spreadsheet app. [Workbook guide](ESTIMATING-WORKBOOK.md).
 
-## Does it connect to Unifier?
+## Can it use my company cost-code framework?
 
-Company/Unifier reporting uses definitions, versions and exports you supply. The package provides coding and reconciliation guidance without a bundled company dictionary or Unifier connection. Keep private configuration outside the skill; an observed mapping does not establish approval.
+Company reporting uses definitions, versions and exports you supply. The package provides coding and reconciliation guidance without a bundled company dictionary or system connection. Keep private configuration outside the skill; an observed mapping does not establish approval.
 
 ## Does it automatically scan drawings or supply construction prices?
 

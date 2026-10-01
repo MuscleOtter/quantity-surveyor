@@ -1,9 +1,14 @@
 # Changelog
 
+## 2.1.1 — 2026-10-01
+
+- Use vendor-neutral company cost-code wording in the skill, trade guidance and public guides. Preserve coding evidence and private-configuration requirements.
+- Rebuild installation and chat downloads; retain historical evaluation snapshots. No helper, workbook or calculation changes.
+
 ## 2.1.0 — 2026-10-01
 
 - Add viewport calibration/revision guidance and original trade prompts for partitions/ceilings, stone/finishes, millwork/FF&E, facades/glazing and services interfaces.
-- Retain company/Unifier framework wording using supplied definitions and optional private configuration; no mappings or proprietary libraries are bundled.
+- Retain company framework wording using supplied definitions and optional private configuration; no mappings or proprietary libraries are bundled.
 - Add an optional blank estimating workbook with 100 reserved detail rows, rate/quantity gaps, supported versus scenario costs, literal-code allocation and independent revision reconciliation. Explicit zero-cost allocations remain valid.
 - Preserve the prior public canonical source and historical evaluations; record a new bounded transfer evaluation separately. Do not apply historical scores to these additions.
 - Update installation, feature, workbook, compatibility and troubleshooting guides; include a standalone workbook download with release checksums. Existing installations remain user-controlled.

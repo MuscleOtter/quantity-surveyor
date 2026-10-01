@@ -4,7 +4,7 @@ description: "Construction drawing reviews, take-offs, bills of quantities, esti
 license: MIT
 metadata:
   author: "Bradley Dworkin"
-  version: "2.1.1"
+  version: "2.1.0"
   repository: "https://github.com/MuscleOtter/quantity-surveyor"
 ---
 
@@ -34,7 +34,7 @@ For drawing sets, inventory and select the applicable issue before measuring. Tr
 
 For graphical measurement, add [drawing-takeoff.md](references/drawing-takeoff.md) for per-viewport calibration, independent checks, tolerance and revision evidence. Load only the relevant trade prompts: [partitions/ceilings](references/trade-partitions-ceilings.md), [stone/specialist finishes](references/trade-finishes.md), [millwork/FF&E](references/trade-millwork-ffe.md), [facades/glazing](references/trade-facades-glazing.md), or [services packages/interfaces](references/trade-services.md). These prompts do not replace the selected project measurement rules.
 
-For a company cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
+For a company/Unifier cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
 
 ## Choose an output template only when useful
 

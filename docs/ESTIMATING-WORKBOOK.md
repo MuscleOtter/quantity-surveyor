@@ -25,7 +25,7 @@ Summary separates measured quantities with supported prices from provisional qua
 
 Add supported preliminaries, fees, risk, inflation or tax as separate item lines with explicit cost bases only where required. Confirm they are outside existing rate inclusions. No default percentage is supplied.
 
-## Optional company/Unifier coding
+## Optional company coding
 
 Use Codes only when company reporting is needed. Supply the literal code, selected version and complete definition evidence; private mappings/configuration belong outside the skill. Assign Confirmed, Provisional or Unallocated status. Supported split allocations must total 100% for each priced line.
 

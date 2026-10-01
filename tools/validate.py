@@ -44,12 +44,23 @@ def main():
         filtered={k:v for k,v in original.items() if '__pycache__' not in Path(k).parts and Path(k).suffix not in ('.pyc','.pyo')}
         require(json.loads((refresh/(name+'.json')).read_text())==filtered,'Portable source hashes diverge: '+name)
     verify_manifest(refresh, refresh/'response-hashes.json')
-    verify_manifest(SKILL, refresh/'candidate-hashes.json')
+    wording=EVAL/'vendor-neutral-wording'
+    wording_changes=json.loads((wording/'changes.json').read_text())
+    def apply_wording(name, text):
+        for before,after in wording_changes.get(name, []):
+            require(text.count(before)==1,'Wording source missing or ambiguous: '+name)
+            text=text.replace(before,after)
+        return text
+    for name,expected in json.loads((refresh/'candidate-hashes.json').read_text()).items():
+        source=wording/'released-2.1.0'/name if name in wording_changes else SKILL/name
+        require(digest(source)==expected,'Transfer candidate source changed: '+name)
+        if name in wording_changes:
+            require((SKILL/name).read_text()==apply_wording(name,source.read_text()),'Unexpected wording delta: '+name)
     def apply_refresh(name, text):
         for before,after in refresh_changes.get(name, []):
             require(text == before, 'Unexpected pre-refresh instruction base: '+name)
             text=after
-        return text
+        return apply_wording(name, text)
     def v2_source(name):
         archived=EVAL/'v2-drawing-workflow/released-candidate'/name.removeprefix('skills/quantity-surveyor/')
         baseline=refresh/'baseline-2.0.3'/name.removeprefix('skills/quantity-surveyor/')

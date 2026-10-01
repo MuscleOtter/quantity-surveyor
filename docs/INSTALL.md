@@ -21,7 +21,7 @@ Paste this into Codex:
 
 ```text
 Use skill-installer to install this skill:
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.0/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.1/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Preserve private memory. Show me the installed location
 and how to select quantity-surveyor.

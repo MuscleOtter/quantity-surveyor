@@ -2,7 +2,7 @@
 
 > A portable, MIT-licensed AI agent skill for construction quantity take-off, estimating and commercial cost control, for new buildings, renovations, construction work packages and associated site works.
 
-Published by MuscleOtter. Current source: 2.1.0. Current release: 2.1.0. Skill identifier: quantity-surveyor. Canonical repository: MuscleOtter/quantity-surveyor. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark. A user-reported Claude check records one native Claude Code activation and four correct published-case answers on 2.0.1; it does not validate later releases.
+Published by MuscleOtter. Current source: 2.1.1. Current release: 2.1.1. Skill identifier: quantity-surveyor. Canonical repository: MuscleOtter/quantity-surveyor. Claude, Codex and open-model hosts can use the same instructions; tools and accuracy depend on the host/model. Huge-drawing-set accuracy has not been measured. The historical synthetic rubric score is not an accuracy percentage or a version 2 benchmark. A user-reported Claude check records one native Claude Code activation and four correct published-case answers on 2.0.1; it does not validate later releases.
 
 ## Start
 

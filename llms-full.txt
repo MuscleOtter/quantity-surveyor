@@ -1,6 +1,6 @@
 # Quantity Surveyor — complete chat edition
 
-Version 2.1.0. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original text templates, with a separate link to the binary estimating workbook. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
+Version 2.1.1. Original instructions under MIT. Attach this file and ask the model to apply it to your task. It contains the core instructions, all references and original text templates, with a separate link to the binary estimating workbook. Tools, optional helpers and persistent state depend on your chosen app; they are not enabled by this attachment.
 
 <a id="part-SKILL-md"></a>
 
@@ -30,7 +30,7 @@ For drawing sets, inventory and select the applicable issue before measuring. Tr
 
 For graphical measurement, add [drawing-takeoff.md](#part-references-drawing-takeoff-md) for per-viewport calibration, independent checks, tolerance and revision evidence. Load only the relevant trade prompts: [partitions/ceilings](#part-references-trade-partitions-ceilings-md), [stone/specialist finishes](#part-references-trade-finishes-md), [millwork/FF&E](#part-references-trade-millwork-ffe-md), [facades/glazing](#part-references-trade-facades-glazing-md), or [services packages/interfaces](#part-references-trade-services-md). These prompts do not replace the selected project measurement rules.
 
-For a company/Unifier cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
+For a company cost-code framework, use the user's supplied definitions, source/version and optional local configuration. Keep private mappings and import paths outside the skill. Observed mappings do not establish approval; without the required evidence keep coding unresolved. Separate measurement classification from company financial coding, with a justified crosswalk where needed.
 
 ## Choose an output template only when useful
 
@@ -44,7 +44,7 @@ Use the user's existing format when supplied. These blank templates are optional
 | Change basis, status, inclusion and net forecast effect | [changes.csv](#part-templates-changes-csv) |
 | Issued sheets, revisions, review coverage and open queries | [drawing-register.csv](#part-templates-drawing-register-csv) |
 | Quantity calculations with source/location evidence | [quantity-evidence.csv](#part-templates-quantity-evidence-csv) |
-| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx); read [workbook-pattern.md](#part-references-workbook-pattern-md) |
+| Substantive spreadsheet estimate with rate/code/revision checks | [estimating-template.xlsx](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.1/estimating-template.xlsx); read [workbook-pattern.md](#part-references-workbook-pattern-md) |
 
 ## Preserve these invariants
 
@@ -451,7 +451,7 @@ Inspect finish schedules, plans, elevations, sections and fabrication details. E
 
 Read the source table for the affected finish and its deductions, descriptions and inclusions. Record the net measured quantity, fabrication/procurement quantity and any supported waste allowance separately. Pattern matching, breakage, spare stock and slab yield need project/supplier evidence; never impose a standard luxury-material waste percentage. Waste is not automatically added to installation labour.
 
-Reconcile owner material purchases with the installer's quotation. Check who owns freight, customs, storage, handling, cutting, fixing materials, substrates, ordinary bedding, additional levelling, protection and final cleaning. Retain supplied quotes and their rate basis. Do not count ordinary bedding inside an installation rate and again as floor levelling; use the user's supplied company/Unifier definition if coding is required.
+Reconcile owner material purchases with the installer's quotation. Check who owns freight, customs, storage, handling, cutting, fixing materials, substrates, ordinary bedding, additional levelling, protection and final cleaning. Retain supplied quotes and their rate basis. Do not count ordinary bedding inside an installation rate and again as floor levelling; use the user's supplied company definition if coding is required.
 
 Price mock-ups, samples, specialist access, sequencing and protection only where supported scope or an explicit scenario requires them. Maintain queries for unspecified finish grades, substrate condition, fabrication boundaries or missing local prices. Preserve brand/function and maintenance consequences in value-engineering comparisons.
 
@@ -536,7 +536,7 @@ If current, ahead, offline, rate-limited or malformed metadata, continue work; n
 
 # Auditable estimating workbook
 
-Use [the optional workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.0/estimating-template.xlsx) as an optional starting point for substantive estimates, not as a mandatory format. Copy it to the project deliverable location, retain the supplied company template when required, and remove unused sheets/columns. A small question can use one concise schedule. Use the spreadsheet authoring capability for edits and verify recalculation.
+Use [the optional workbook](https://github.com/MuscleOtter/quantity-surveyor/releases/download/v2.1.1/estimating-template.xlsx) as an optional starting point for substantive estimates, not as a mandatory format. Copy it to the project deliverable location, retain the supplied company template when required, and remove unused sheets/columns. A small question can use one concise schedule. Use the spreadsheet authoring capability for edits and verify recalculation.
 
 The template deliberately starts without quantities, rates or percentage allowances. Its formulas cover 100 reserved lines per detail sheet. Extend every formula, validation, summary and check range together when adding capacity; an out-of-range line must not disappear from totals. Titles/instructions identify the reserved capacity.
 

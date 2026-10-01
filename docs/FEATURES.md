@@ -102,7 +102,7 @@ Trade-specific prompts cover [partitions/ceilings](../skills/quantity-surveyor/r
 
 ## 11. Cost coding and evidence trails
 
-**Supply:** your company/Unifier code definitions, approved version and any authorized crosswalks. Private configuration and original import paths stay outside the skill.
+**Supply:** your company code definitions, approved version and any authorized crosswalks. Private configuration and original import paths stay outside the skill.
 
 **Work:** distinguish measurement classifications, procurement packages and financial codes. Preserve confirmed, provisional and unallocated amounts, including credits, while checking that mappings retain the total. Keep assumptions and queries tied to affected items.
 

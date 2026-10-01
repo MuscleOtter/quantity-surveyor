@@ -19,7 +19,7 @@ Copy this into Codex:
 
 ```text
 Use skill-installer to install the Quantity Surveyor skill from
-https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.0/skills/quantity-surveyor
+https://github.com/MuscleOtter/quantity-surveyor/tree/v2.1.1/skills/quantity-surveyor
 If quantity-surveyor already exists, compare it and preserve a backup before
 proposing replacement. Keep private memory intact; do not overwrite it.
 Then tell me how to invoke the new skill.
@@ -50,7 +50,7 @@ The [feature guide](docs/FEATURES.md) explains inputs, operations, outputs and l
 
 These are workflows for your AI app to carry out. Drawing viewing, calculation, file export and current-source access depend on the host. Optional private memory and release checking are separate helpers, off by default.
 
-Version **2.1.0** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
+Version **2.1.1** uses the name **Quantity Surveyor** and folder **quantity-surveyor**. The repository is now **MuscleOtter/quantity-surveyor**. Earlier installed release checkers need a one-time manual update; see [update guidance](docs/UPDATES.md#repository-rename). [Migration help](docs/INSTALL.md#migrating-from-version-1).
 
 The package is designed to be portable. Automatic discovery, image reading, browsing, file creation and calculation tools depend on the app and model. It does not mean identical accuracy across models. Jurisdiction and project rules remain explicit; UK NRM is not imposed worldwide. [Compatibility details](docs/COMPATIBILITY.md).
 

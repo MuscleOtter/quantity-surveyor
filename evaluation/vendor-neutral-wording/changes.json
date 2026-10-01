@@ -1,0 +1,24 @@
+{
+  "SKILL.md": [
+    [
+      "company/Unifier",
+      "company"
+    ],
+    [
+      "version: \"2.1.0\"",
+      "version: \"2.1.1\""
+    ]
+  ],
+  "references/trade-finishes.md": [
+    [
+      "company/Unifier",
+      "company"
+    ]
+  ],
+  "version.json": [
+    [
+      "\"version\": \"2.1.0\"",
+      "\"version\": \"2.1.1\""
+    ]
+  ]
+}
